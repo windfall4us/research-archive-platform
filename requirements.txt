@@ -1,0 +1,5 @@
+# 资讯研究档案库 · Python 依赖
+# 全部使用 Python 标准库（sqlite3/json/re/urllib/datetime），零第三方依赖
+# Python 3.11+ 即可运行
+
+# 如需 Vision 图片分析（可选）：配合 Hermes auxiliary.vision 或外部 OCR

@@ -1,0 +1,14 @@
+[Unit]
+Description=Research Archive API Server (资讯研究档案库)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/workspace
+ExecStart=/usr/bin/python3 /root/scripts/archive_server.py
+Restart=always
+RestartSec=3
+# 重要：勿用 nohup 手动启动（会端口占用冲突），一律 systemctl
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,25 @@
+# 资讯研究档案库 · crontab 示例
+# 安装：crontab -e 粘贴以下内容
+
+# ── 数据管线（每 30 分钟 8:00-23:00，顺序执行，全部成功才继续）──
+*/30 8-23 * * * cd /root/workspace && \
+  python3 /root/scripts/archive_ingest_v2.py && \
+  python3 /root/scripts/archive_classify_v14.py && \
+  python3 /root/scripts/archive_merge_v3.py && \
+  python3 /root/scripts/archive_events_v15.py && \
+  python3 /root/scripts/archive_events_v16.py && \
+  python3 /root/scripts/archive_momentum_v17.py && \
+  python3 /root/scripts/archive_watchpool_v18.py && \
+  python3 /root/scripts/archive_researchscore_v19.py && \
+  python3 /root/scripts/archive_summary_v20.py && \
+  python3 /root/scripts/archive_validate_v21.py && \
+  python3 /root/scripts/archive_backtest_v21b.py >> /var/log/research-archive.log 2>&1
+
+# ── 股票池 K 线刷新（kline_data.json 数据源，收盘后更新）──
+30 10,13,15 * * * cd /root/stock-kanban/backend && python3 fetch_pool_kline.py >> /tmp/fetch_pool_kline.log 2>&1
+5 0 * * * cd /root/stock-kanban/backend && python3 fetch_pool_kline.py >> /tmp/fetch_pool_kline.log 2>&1
+
+# ── 观点验证追踪（收盘后）──
+30 20 * * 1-5 cd /root/workspace && python3 /root/scripts/archive_verify.py >> /var/log/research-verify.log 2>&1
+
+# 注：每日研究简报由 Hermes cron 调度（0 9 * * *，见 skill/research-daily-brief）
