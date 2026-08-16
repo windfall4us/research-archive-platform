@@ -306,6 +306,75 @@ def main():
         created_at TEXT
     )""")
 
+    # ═══ v2.3 数据治理层：研究对象 ═══
+    cur.execute("""CREATE TABLE IF NOT EXISTS research_document (
+        doc_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        title_clean TEXT,
+        title_raw TEXT,
+        company TEXT,
+        institution TEXT,
+        research_type TEXT,
+        content_nature TEXT,
+        stock_codes_json TEXT,
+        industries_json TEXT,
+        message_ids_json TEXT,
+        source_count INTEGER DEFAULT 0,
+        institution_count INTEGER DEFAULT 0
+    )""")
+
+    # ═══ v2.3 行业实体化（三级结构）═══
+    cur.execute("""CREATE TABLE IF NOT EXISTS industry_entity (
+        entity_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        parent_id INTEGER,
+        level INTEGER,
+        category TEXT,
+        aliases TEXT,
+        status TEXT,
+        created_at TEXT
+    )""")
+    cur.execute("""CREATE TABLE IF NOT EXISTS industry_entity_relation (
+        relation_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        document_id INTEGER,
+        entity_id INTEGER,
+        confidence REAL,
+        source TEXT,
+        created_at TEXT
+    )""")
+
+    # ═══ v2.3 研究图谱（5 实体串联）═══
+    cur.execute("""CREATE TABLE IF NOT EXISTS research_graph_relation (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        source_type TEXT,
+        source_id INTEGER,
+        relation_type TEXT,
+        target_type TEXT,
+        target_id INTEGER,
+        confidence REAL,
+        created_at TEXT
+    )""")
+    cur.execute("""CREATE TABLE IF NOT EXISTS graph_institution (
+        inst_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT
+    )""")
+
+    # ═══ v2.3.4 系统快照（观察期基线）═══
+    cur.execute("""CREATE TABLE IF NOT EXISTS research_system_snapshot (
+        snap_date TEXT PRIMARY KEY,
+        system_version TEXT,
+        doc_total INTEGER,
+        doc_high INTEGER,
+        industry_total INTEGER,
+        graph_relations INTEGER,
+        validation_total INTEGER,
+        t1_done INTEGER,
+        t3_done INTEGER,
+        t5_done INTEGER,
+        rs_80 INTEGER,
+        rs_60_79 INTEGER,
+        market_regime TEXT
+    )""")
+
     # 索引
     for idx in [
         "CREATE INDEX IF NOT EXISTS idx_mc_content_type ON message_classification(content_type)",

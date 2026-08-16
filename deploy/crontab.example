@@ -13,7 +13,15 @@
   python3 /root/scripts/archive_researchscore_v19.py && \
   python3 /root/scripts/archive_summary_v20.py && \
   python3 /root/scripts/archive_validate_v21.py && \
-  python3 /root/scripts/archive_backtest_v21b.py >> /var/log/research-archive.log 2>&1
+  python3 /root/scripts/archive_backtest_v21b.py && \
+  python3 /root/scripts/archive_doc_v230.py && \
+  python3 /root/scripts/archive_industry_v232.py && \
+  python3 /root/scripts/archive_graph_v233.py >> /var/log/research-archive.log 2>&1
+
+# ── 观察期每日任务（收盘后）──
+30 21 * * * python3 /root/scripts/archive_quality_check_v223.py >> /var/log/research-obs.log 2>&1
+40 21 * * * python3 /root/scripts/archive_validation_snapshot_v234c.py >> /var/log/research-obs.log 2>&1
+45 21 * * * python3 /root/scripts/archive_obs_report_v234d.py >> /var/log/research-obs.log 2>&1
 
 # ── 股票池 K 线刷新（kline_data.json 数据源，收盘后更新）──
 30 10,13,15 * * * cd /root/stock-kanban/backend && python3 fetch_pool_kline.py >> /tmp/fetch_pool_kline.log 2>&1

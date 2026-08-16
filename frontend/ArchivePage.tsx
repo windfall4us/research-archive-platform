@@ -137,6 +137,14 @@ export default function ArchivePage() {
   const [scoreDetail, setScoreDetail] = useState<any>(null);
   const [topicName, setTopicName] = useState("");
   const [topicData, setTopicData] = useState<any>(null);
+  const [industries, setIndustries] = useState<any[]>([]);
+  const [indLoading, setIndLoading] = useState(false);
+  const [indDetail, setIndDetail] = useState<any>(null);
+  const [graphMap, setGraphMap] = useState<any[]>([]);
+  const [graphLoading, setGraphLoading] = useState(false);
+  const [graphDetail, setGraphDetail] = useState<any>(null);
+  const [graphQ, setGraphQ] = useState("");
+  const [graphAnalytics, setGraphAnalytics] = useState<any>(null);
   const [query, setQuery] = useState("");
   const [searchData, setSearchData] = useState<any>(null);
   const [reviewQueue, setReviewQueue] = useState<any[]>([]);
@@ -145,6 +153,14 @@ export default function ArchivePage() {
   const [vstats, setVstats] = useState<any>(null);
   const [reportDrawer, setReportDrawer] = useState<any>(null);
   const [reportTypeFilter, setReportTypeFilter] = useState("");
+  const [researchDocs, setResearchDocs] = useState<any[]>([]);
+  const [docStats, setDocStats] = useState<Record<string, any>>({});
+  const [docFilterType, setDocFilterType] = useState("");
+  const [docFilterInst, setDocFilterInst] = useState("");
+  const [docQuality, setDocQuality] = useState("");
+  const [docDetail, setDocDetail] = useState<any>(null);
+  const [qcFold, setQcFold] = useState<Record<string, boolean>>({ "momentum": true, "models": true });
+  const [docLoading, setDocLoading] = useState(false);
   const [eventTab, setEventTab] = useState("score");
   const [evDetailTab, setEvDetailTab] = useState("prop");
   const [watchpool, setWatchpool] = useState<any[]>([]);
@@ -154,7 +170,9 @@ export default function ArchivePage() {
   const [cockpit, setCockpit] = useState<any>(null);
 
   useEffect(() => { loadOverview(); }, []);
-  useEffect(() => { if (tab === "reports") loadReports(); }, [tab]);
+  useEffect(() => { if (tab === "reports") { loadReports(); loadResearchDocs(); } }, [tab, docFilterType, docFilterInst]);
+  useEffect(() => { if (tab === "topic") { loadIndustries(); setIndDetail(null); setTopicData(null); } }, [tab]);
+  useEffect(() => { if (tab === "graph") { loadGraphMap(); setGraphDetail(null); } }, [tab]);
   useEffect(() => { if (tab === "events") loadEvents(); }, [tab]);
   useEffect(() => { if (tab === "watchpool") loadWatchpool(); }, [tab, wpStatus, wpOrder]);
   useEffect(() => { if (tab === "review") loadReview(); }, [tab]);
@@ -208,6 +226,16 @@ export default function ArchivePage() {
     setLoading(false);
   }
   async function loadReports() { setReports((await get<{ reports: Report[] }>(`${API}/reports`))?.reports || []); }
+  async function loadResearchDocs() {
+    setDocLoading(true);
+    const q = new URLSearchParams({ min_quality: "50" });
+    if (docFilterType) q.set("type", docFilterType);
+    if (docFilterInst) q.set("inst", docFilterInst);
+    const d = await get<any>(`${API}/research-documents?${q.toString()}`);
+    if (d) { setResearchDocs(d.documents || []); setDocStats({ type_counts: d.type_counts || {}, stats: d.stats || {}, total: d.total || 0 }); }
+    setDocLoading(false);
+  }
+  async function openDocDetail(id: number) { setDocDetail(await get<any>(`${API}/research-documents?id=${id}`)); }
   async function loadEvents() { setEvents((await get<{ events: EventItem[] }>(`${API}/events`))?.events || []); }
   async function loadWatchpool() {
     const q = `${API}/watchpool${wpStatus ? `?status=${wpStatus}` : ""}${wpOrder && !wpStatus ? `?order=${wpOrder}` : wpStatus ? `&order=${wpOrder}` : ""}`;
@@ -232,7 +260,34 @@ export default function ArchivePage() {
   async function loadQuality() { setQuality(await get<any>(`${API}/quality`)); setVstats(await get<any>(`${API}/validation/stats`)); }
   async function searchStock() { if (!stockCode.trim()) return; const c = stockCode.trim(); setStockData(await get<any>(`${API}/stocks/research?code=${encodeURIComponent(c)}`)); setStockEvents((await get<{ events: any[] }>(`${API}/stocks/events?code=${encodeURIComponent(c)}`))?.events || null); setStockScore(await get<any>(`${API}/research-score?code=${encodeURIComponent(c)}`)); }
   async function searchStockByCode(c: string) { if (!c) return; setStockData(await get<any>(`${API}/stocks/research?code=${encodeURIComponent(c)}`)); setStockEvents((await get<{ events: any[] }>(`${API}/stocks/events?code=${encodeURIComponent(c)}`))?.events || null); setStockScore(await get<any>(`${API}/research-score?code=${encodeURIComponent(c)}`)); }
-  async function searchTopic() { if (!topicName.trim()) return; setTopicData(await get<any>(`${API}/topics/research?topic=${encodeURIComponent(topicName.trim())}`)); }
+  async function searchTopic() { if (!topicName.trim()) return; setTopicData(await get<any>(`${API}/industry?topic=${encodeURIComponent(topicName.trim())}`)); }
+  async function loadIndustries() {
+    setIndLoading(true);
+    const d = await get<any>(`${API}/industries`);
+    if (d) setIndustries(d.industries || []);
+    setIndLoading(false);
+  }
+  async function openIndustry(id: number) { setIndDetail(await get<any>(`${API}/industries?id=${id}`)); }
+  async function loadGraphMap() {
+    setGraphLoading(true);
+    const [d, a] = await Promise.all([
+      get<any>(`${API}/graph?mode=map`),
+      get<any>(`${API}/graph?mode=analytics`),
+    ]);
+    if (d) setGraphMap(d.industries || []);
+    if (a) setGraphAnalytics(a);
+    setGraphLoading(false);
+  }
+  async function openGraphEntity(type: string, id: any) {
+    const d = await get<any>(`${API}/graph?type=${type}&id=${encodeURIComponent(String(id))}`);
+    if (d) setGraphDetail(d);
+  }
+  async function searchGraph() {
+    const q = graphQ.trim();
+    if (!q) return;
+    if (/^\d{6}$/.test(q)) { await openGraphEntity("stock", q); return; }
+    setGraphDetail(await get<any>(`${API}/industry?topic=${encodeURIComponent(q)}`));
+  }
   async function doSearch() { if (!query.trim()) return; setSearchData(await get<any>(`${API}/search?q=${encodeURIComponent(query.trim())}`)); }
   async function openDetail(id: number) { setDetail(await get<any>(`${API}/reports/${id}`)); setDrawer(null); }
   async function openReportDrawer(id: number) { setReportDrawer(await get<any>(`${API}/reports/${id}`)); }
@@ -370,7 +425,7 @@ export default function ArchivePage() {
   // v1.4 视图：今日 / 机构研究 / 事件中心 / 新闻公告 / 个股追踪 / 行业追踪 / 报告检索 / 质量监控
   const TABS = [
     ["overview", "今日"], ["reports", "机构研究"], ["events", "事件中心"], ["watchpool", "研究队列"],
-    ["news", "新闻公告"], ["stock", "个股追踪"], ["topic", "行业追踪"],
+    ["news", "新闻公告"], ["stock", "个股追踪"], ["topic", "行业追踪"], ["graph", "研究图谱"],
     ["search", "报告检索"], ["quality", "质量监控"],
   ] as const;
   const FILTERS = [
@@ -628,64 +683,81 @@ export default function ArchivePage() {
           </>
         )}
 
-        {/* ============ 机构研究（原机构研报） ============ */}
+        {/* ============ 机构研究 → 研究对象中心（v2.3.1） ============ */}
         {tab === "reports" && (
           <div className="arc-reports">
             {(() => {
-              const activeReports = reports.filter((r) => r.status === "active");
-              const candidateReports = reports.filter((r) => r.status === "candidate");
-              const list = activeReports.filter((r) => !reportTypeFilter || r.report_type === reportTypeFilter);
-              const types = ["公司点评", "行业观点", "宏观观点", "行业深度", "公司深度", "调研/纪要", "电话会", "业绩会"];
-              const counts: Record<string, number> = {};
-              types.forEach((t) => { counts[t] = activeReports.filter((r) => r.report_type === t).length; });
+              const typeCounts: Record<string, number> = docStats.type_counts || {};
+              const insts = [...new Set(researchDocs.flatMap((d) => d.institutions || []))].filter(Boolean).sort();
+              const filtered = researchDocs.filter((d) => {
+                if (docQuality === "high" && d.quality_level !== "high") return false;
+                if (docQuality === "medium" && d.quality_level === "low") return false;
+                return true;
+              });
+              const high = (docStats.stats?.high || 0), med = (docStats.stats?.medium || 0);
               return (
                 <>
                   <div className="arc-filters">
-                    <span className="arc-filter-label">📑 机构研究 | 正式研报/即时观点/调研纪要 {activeReports.length}</span>
-                    <div className="arc-filter-group">
-                      <button className={reportTypeFilter === "" ? "active" : ""} onClick={() => setReportTypeFilter("")}>全部</button>
-                      {types.map((t) => (
-                        <button key={t} className={reportTypeFilter === t ? "active" : ""} onClick={() => setReportTypeFilter(t)}>
-                          {t} <em className="arc-group-count">{counts[t]}</em>
+                    <span className="arc-filter-label">📚 研究对象 <b>{docStats.total || filtered.length}</b> <em className="arc-group-count">high {high} · medium {med}</em></span>
+                    <div className="arc-filter-group" style={{ marginTop: 6 }}>
+                      <button className={docQuality === "" ? "active" : ""} onClick={() => setDocQuality("")}>全部质量</button>
+                      <button className={docQuality === "high" ? "active" : ""} onClick={() => setDocQuality("high")}>★★★★★ {high}</button>
+                      <button className={docQuality === "medium" ? "active" : ""} onClick={() => setDocQuality("medium")}>★★★ {med}</button>
+                    </div>
+                    <div className="arc-filter-group" style={{ marginTop: 6 }}>
+                      <button className={docFilterType === "" ? "active" : ""} onClick={() => setDocFilterType("")}>全部类型</button>
+                      {Object.entries(typeCounts).map(([t, n]) => (
+                        <button key={t} className={docFilterType === t ? "active" : ""} onClick={() => setDocFilterType(t)}>
+                          {t} <em className="arc-group-count">{n as number}</em>
                         </button>
                       ))}
                     </div>
+                    <div className="arc-filter-group" style={{ marginTop: 6 }}>
+                      <select className="arc-finput" style={{ width: 200 }} value={docFilterInst} onChange={(e) => setDocFilterInst(e.target.value)}>
+                        <option value="">🏦 全部机构</option>
+                        {insts.map((x) => <option key={x} value={x}>{x}</option>)}
+                      </select>
+                      <span className="arc-tag arc-gray" style={{ marginLeft: 8 }}>点击卡片查看详情</span>
+                    </div>
                   </div>
-                  <div className="arc-report-list">
-                    {list.map((r) => (
-                      <div key={r.series_id} className="arc-report-row arc-clickable" onClick={() => openReportDrawer(r.series_id)}>
-                        <div className="arc-report-inst">{r.institution || "机构未识别"}</div>
-                        <div className="arc-report-title">{r.title}</div>
-                        <span className="arc-tag arc-purple">{r.report_type}</span>
-                        <div className="arc-report-meta">
-                          <span className="arc-tag">v{r.current_version}</span>
-                          <span className="arc-tag">{r.occurrence_count} 次</span>
+                  <div className="arc-doc-list">
+                    {docLoading && <div className="arc-empty">加载中…</div>}
+                    {!docLoading && filtered.length === 0 && <div className="arc-empty">暂无符合条件的研究对象</div>}
+                    {filtered.map((d) => (
+                      <div key={d.doc_id} className="arc-doc-card arc-clickable" onClick={() => openDocDetail(d.doc_id)}>
+                        <div className="arc-doc-head">
+                          <div className="arc-doc-title">{d.title || "未提取标题"}</div>
+                          <div className="arc-doc-score">
+                            <span className={`arc-doc-ql arc-doc-${d.quality_level}`}>{d.quality_level === "high" ? "HIGH" : d.quality_level === "medium" ? "MED" : "LOW"}</span>
+                            <b>{d.quality_score}</b>
+                          </div>
                         </div>
-                        <div className="arc-report-rowstate">
-                          <span className="arc-tag arc-blue">{r.status}</span>
-                          <span className="arc-tag arc-gray">{r.first_seen_at?.slice(5, 10)}</span>
+                        <div className="arc-doc-meta-line">
+                          <span className="arc-tag arc-purple">{d.research_type || "未分类"}</span>
+                          {(d.institutions || []).map((x: string, i: number) => <span key={i} className="arc-tag arc-blue">🏦 {x}</span>)}
+                          <span className="arc-tag">来源 {d.source_count}</span>
+                          <span className="arc-tag arc-gray">{d.first_seen_at?.slice(5, 16)}</span>
                         </div>
+                        {d.summary && <div className="arc-doc-summary">{d.summary}</div>}
+                        {(d.stocks?.length > 0 || d.event_relations?.length > 0) && (
+                          <div className="arc-doc-assoc">
+                            {d.stocks?.length > 0 && (
+                              <div className="arc-doc-row"><b>📈 关联股票</b>
+                                <span>{(d.stocks as any[]).map((s: any, i: number) => <code key={i} className="arc-doc-code" title={s.name || s.code}>{s.name || s.code}</code>)}</span>
+                              </div>
+                            )}
+                            {d.event_relations?.length > 0 && (
+                              <div className="arc-doc-row"><b>🔥 关联事件</b>
+                                <span>{(d.event_relations as any[]).slice(0, 3).map((e: any, i: number) => (
+                                  <span key={i} className="arc-tag arc-orange">{e.title.slice(0, 18)}{e.momentum ? ` · ${e.momentum}` : ""}</span>
+                                ))}</span>
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </div>
                     ))}
-                    {list.length === 0 && <div className="arc-empty">该类型暂无研究</div>}
                   </div>
-                  {candidateReports.length > 0 && (
-                    <div className="arc-candidates">
-                      <div className="arc-section-title">🔬 候选（{candidateReports.length} 篇待确认，未识别机构/未验证内容）</div>
-                      <div className="arc-report-list">
-                        {candidateReports.slice(0, 20).map((r) => (
-                          <div key={r.series_id} className="arc-report-row arc-clickable" onClick={() => openReportDrawer(r.series_id)}>
-                            <div className="arc-report-inst">机构未识别</div>
-                            <div className="arc-report-title">{r.title}</div>
-                            <span className="arc-tag arc-orange">{r.report_type}</span>
-                            <div className="arc-report-meta"><span className="arc-tag">v{r.current_version}</span><span className="arc-tag">{r.occurrence_count} 次</span></div>
-                            <div className="arc-report-rowstate"><span className="arc-tag arc-orange">待确认</span><span className="arc-tag arc-gray">{r.first_seen_at?.slice(5, 10)}</span></div>
-                          </div>
-                        ))}
-                        {candidateReports.length > 20 && <div className="arc-empty">… 还有 {candidateReports.length - 20} 篇（在复核队列中）</div>}
-                      </div>
-                    </div>
-                  )}
                 </>
               );
             })()}
@@ -763,7 +835,7 @@ export default function ArchivePage() {
         {/* ============ 研究队列（v1.8 事件驱动研究候选层 / v2.0 更名） ============ */}
         {tab === "watchpool" && (
           <div className="arc-panel">
-            <div className="arc-section-title">🔬 研究队列 <em className="arc-group-count">{Object.values(wpStats).reduce((a, b) => a + b, 0)}</em> <span className="arc-wp-note">事件驱动研究候选 · 不构成交易建议</span></div>
+            <div className="arc-section-title">🔬 研究队列 <em className="arc-group-count">{Object.values(wpStats).reduce((a, b) => a + b, 0)}</em> <span className="arc-wp-note">股票研究列表（v2.2.2 按股票聚合）· 不构成交易建议</span></div>
             <div className="arc-filter-group" style={{ marginBottom: 10 }}>
               <button className={wpStatus === "" ? "active" : ""} onClick={() => setWpStatus("")}>全部 {Object.values(wpStats).reduce((a, b) => a + b, 0)}</button>
               {["EVENT_FOUND", "RESEARCH", "WATCH", "MODEL_CHECK", "TRIAL_READY"].map((s) => (
@@ -775,32 +847,37 @@ export default function ArchivePage() {
               <button className={`arc-btn ${wpOrder === "confidence" ? "arc-btn-blue" : ""}`} onClick={() => setWpOrder("confidence")}>置信度</button>
             </div>
             <div className="arc-wp-list">
-              {watchpool.map((p: any) => {
+              {watchpool.map((p: any, _wpIdx: number) => {
                 const md = p.model_detail || {};
+                const events = p.events || [];
+                const maxMomentum = Math.max(0, ...events.map((e: any) => e.momentum_score || 0));
                 return (
-                  <div key={p.pool_id} className="arc-wp-card">
+                  <div key={p.stock_code} className="arc-wp-card">
                     <div className="arc-wp-head">
                       <span className="arc-wp-code">{p.stock_code}</span>
                       <span className="arc-wp-name">{p.stock_name || "—"}</span>
-                      <span className={`arc-wp-status arc-wp-st-${p.status.toLowerCase()}`}>{p.status.replace("_", " ")}</span>
+                      <span className={`arc-wp-status arc-wp-st-${(p.state || "EVENT_FOUND").toLowerCase()}`}>{(p.state || "EVENT_FOUND").replace("_", " ")}</span>
+                      {p.rs != null && <span className="arc-tag arc-blue">🧠 RS {p.rs}</span>}
                       {p.model_score > 0 && <span className="arc-tag arc-purple">🤖 模型 {Math.round(p.model_score)}分 {md.model || ""}</span>}
-                      <span className="arc-wp-impact">🔥 {p.momentum_score} · 事件{p.event_score} · 置信{(p.confidence * 100).toFixed(0)}%</span>
+                      <span className="arc-wp-impact">🔥 {maxMomentum} · {events.length} 个事件</span>
                     </div>
-                    <div className="arc-wp-event" onClick={() => { goTab("events"); openEvent(p.event_id); }}>
-                      📌 {p.event_title?.slice(0, 60)} <em>查看事件 →</em>
-                    </div>
-                    <div className="arc-wp-logic">
-                      <span className={`arc-tag ${p.relation_type === "直接受益" ? "arc-red" : "arc-gray"}`}>{p.relation_type}</span>
-                      {p.logic && <span className="arc-wp-logic-text">{p.logic.slice(0, 110)}</span>}
-                    </div>
+                    {events.length > 0 && (
+                      <div className="arc-wp-events">
+                        <div className="arc-wp-events-title">关联事件（{events.length}）</div>
+                        {events.slice(0, 3).map((ev: any, i: number) => (
+                          <div key={i} className="arc-wp-event" onClick={() => { goTab("events"); openEvent(ev.event_id); }}>
+                            🔥 {ev.momentum_score} · {ev.event_title?.slice(0, 50)} <em>查看事件 →</em>
+                          </div>
+                        ))}
+                        {events.length > 3 && <div className="arc-wp-events-more">另有 {events.length - 3} 个事件…</div>}
+                      </div>
+                    )}
                     {md.matched && md.matched.length > 0 && (
                       <div className="arc-wp-model-matches">模型匹配：{md.matched.slice(0, 3).map((m: string, i: number) => <span key={i} className="arc-tag arc-gray">{m.slice(0, 14)}</span>)}</div>
                     )}
                     <div className="arc-wp-ops">
-                      <button className="arc-btn arc-btn-blue" onClick={() => wpAdvance(p.pool_id)}>推进 →</button>
-                      <input className="arc-finput arc-fwatch" placeholder="人工备注…" defaultValue={p.review_note || ""}
-                        onKeyDown={(e: any) => e.key === "Enter" && wpNote(p.pool_id, (e.target as HTMLInputElement).value)} />
-                      {p.review_note && <span className="arc-wp-note-text">📝 {p.review_note}</span>}
+                      <button className="arc-btn arc-btn-blue" onClick={() => p.pool_ids?.[0] && wpAdvance(p.pool_ids[0])}>推进 →</button>
+                      <span className="arc-wp-note-hint">按股票聚合 · 状态取最高优先级</span>
                     </div>
                   </div>
                 );
@@ -853,6 +930,13 @@ export default function ArchivePage() {
             {!stockData && <div className="arc-empty-default"><div className="arc-empty">暂无查询结果——输入股票代码开始追踪</div><div className="arc-hint">📈 可查询 002436（兴森科技）/ 603979（博迈科）/ 688585（上纬新材）</div></div>}
             {stockData && (
               <>
+                {/* 2026-08-12：股票基础信息（代码/名称解析结果） */}
+                <div className="arc-stock-basic">
+                  <span className="arc-stock-code">{stockData.code}</span>
+                  {stockData.name && <span className="arc-stock-name">{stockData.name}</span>}
+                  <span className="arc-tag arc-gray">相关研报 {stockData.report_count}</span>
+                  <span className="arc-tag arc-gray">提及消息 {stockData.message_count}</span>
+                </div>
                 {/* v1.9：🧠 Research Score（研究综合分） */}
                 {stockScore?.score && (
                   <div className="arc-rs-block">
@@ -953,32 +1037,316 @@ export default function ArchivePage() {
                 )) : <div className="arc-empty">暂无相关研报</div>}
                 <div className="arc-section-title">提及消息（{stockData.message_count}）</div>
                 {stockData.messages?.length > 0 ? stockData.messages?.map((m: any, i: number) => (
-                  <div key={i} className="arc-tl-row"><div className="arc-tl-time">{m.date?.slice(5, 16)}</div><span className={CAT_CLASS[m.primary_category] || "arc-tag"}>{CAT_LABEL[m.primary_category]}</span><div className="arc-tl-main"><div className="arc-tl-title">{m.content?.slice(0, 60)}</div></div></div>
+                  <div key={i} className="stock-message-row arc-clickable" onClick={() => m.mid && openDrawer(m.mid)}>
+                    <div className="arc-tl-time">{m.date?.slice(5, 16)}</div>
+                    <span className={`arc-tag stock-message-source ${CAT_CLASS[m.primary_category] || ""}`}>{CAT_LABEL[m.primary_category]}</span>
+                    <div className="arc-tl-main">
+                      <div className="stock-message-title">{m.content?.slice(0, 120)}</div>
+                      {Number(m.dup_cnt) > 1 && <div className="arc-dup-hint">另有 {Number(m.dup_cnt) - 1} 条重复/转发记录</div>}
+                    </div>
+                    <span className="arc-tl-view">详情 →</span>
+                  </div>
                 )) : <div className="arc-empty">暂无提及消息</div>}
               </>
             )}
           </div>
         )}
 
-        {/* ============ 行业追踪 ============ */}
+        {/* ============ 行业追踪 → 行业实体中心（v2.3.2） ============ */}
         {tab === "topic" && (
           <div className="arc-panel">
-            <div className="arc-section-title">🏭 行业/主题追踪</div>
-            <div className="arc-searchbar">
-              <input placeholder="输入主题关键词，如 FPSO / 光模块 / 算力" value={topicName} onChange={(e) => setTopicName(e.target.value)} onKeyDown={(e) => e.key === "Enter" && searchTopic()} />
-              <button onClick={searchTopic}>查询</button>
-            </div>
-            {!topicData && <div className="arc-empty-default"><div className="arc-section-title">🔥 热门行业（近期提及）</div><div className="arc-hot-topics">{hotIndustries().map(([name, n]) => <button key={name} className="arc-hot-chip" onClick={() => { setTopicName(name); searchTopic(); }}>{name} <em>{n}</em></button>)}</div></div>}
-            {topicData && (
+            <div className="arc-section-title">🏭 行业追踪 <em className="arc-group-count" style={{ marginLeft: 6 }}>v2.3.2 行业实体化</em></div>
+            {indDetail ? (
               <>
-                <div className="arc-section-title">相关资讯（{topicData.count}）</div>
-                {topicData.messages?.map((m: any, i: number) => (
-                  <div key={i} className="arc-tl-row"><div className="arc-tl-time">{m.date?.slice(5, 16)}</div><span className={CAT_CLASS[m.primary_category] || "arc-tag"}>{CAT_LABEL[m.primary_category]}</span><div className="arc-tl-main"><div className="arc-tl-title">{m.content?.slice(0, 60)}</div></div></div>
-                ))}
+                <div className="arc-filter-group" style={{ marginBottom: 10 }}>
+                  <button onClick={() => { setIndDetail(null); loadIndustries(); }}>← 返回行业列表</button>
+                  <span className="arc-tag arc-purple">L{indDetail.entity?.level}</span>
+                  <span className="arc-tag arc-blue">🔥 热度 {indDetail.stats?.heat}</span>
+                  <span className="arc-tag">研究对象 {indDetail.stats?.doc_count}</span>
+                  <span className="arc-tag">机构 {indDetail.stats?.inst_count}</span>
+                  <span className="arc-tag">事件 {indDetail.stats?.event_count}</span>
+                  <span className="arc-tag arc-gray">{indDetail.entity?.category || ""}</span>
+                </div>
+                <div className="arc-section-title">🔥 行业事件（{indDetail.events?.length || 0}）</div>
+                {(indDetail.events || []).length > 0 ? (indDetail.events || []).map((ev: any, i: number) => (
+                  <div key={i} className="arc-ind-event" onClick={() => { goTab("events"); openEvent(ev.event_id); }}>
+                    <span className="arc-ind-mom">🔥 {ev.momentum_score}</span>
+                    <span className={`arc-ev-status ${EVENT_STATUS_CLASS[ev.status] || ""}`}>{EVENT_STATUS_LABEL[ev.status] || ev.status}</span>
+                    <div className="arc-ind-event-main">
+                      <div className="arc-ind-event-title">{ev.event_title}</div>
+                      <div className="arc-ind-event-meta">{ev.institution_count || 0} 机构 · {ev.source_count || 0} 来源 · {String(ev.first_seen_at || "").slice(0, 16)}</div>
+                    </div>
+                  </div>
+                )) : <div className="arc-empty">暂无行业事件（事件归并层未生成该行业事件）</div>}
+
+                <div className="arc-section-title">📚 研究对象（{indDetail.documents?.length || 0}）</div>
+                {(indDetail.documents || []).length > 0 ? (indDetail.documents || []).map((d: any, i: number) => (
+                  <div key={i} className="arc-doc-card arc-clickable" onClick={() => openDocDetail(d.doc_id)}>
+                    <div className="arc-doc-head">
+                      <div className="arc-doc-title">{d.title}</div>
+                      <div className="arc-doc-score"><b>{d.quality_score}</b></div>
+                    </div>
+                    {d.institution && <div className="arc-doc-meta-line"><span className="arc-tag arc-blue">🏦 {d.institution}</span></div>}
+                  </div>
+                )) : <div className="arc-empty">暂无研究对象</div>}
+
+                {indDetail.children?.length > 0 && (
+                  <>
+                    <div className="arc-section-title">🗂 子行业</div>
+                    <div className="arc-ind-child-grid">
+                      {indDetail.children.map((c: any, i: number) => (
+                        <div key={i} className="arc-ind-child arc-clickable" onClick={() => openIndustry(c.entity_id)}>
+                          <b>{c.name}</b>
+                          <span className={`arc-ind-heat ${c.heat >= 70 ? "arc-ind-heat-hot" : c.heat >= 40 ? "arc-ind-heat-warm" : ""}`}>🔥 {c.heat}</span>
+                          <span className="arc-tag">{c.doc_count} 对象</span>
+                          <span className="arc-tag">{c.event_count} 事件</span>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </>
+            ) : (
+              <>
+                <div className="arc-searchbar">
+                  <input placeholder="搜索行业实体（如 AI算力 / 光模块 / 新能源车）" value={topicName} onChange={(e) => setTopicName(e.target.value)} onKeyDown={(e) => e.key === "Enter" && searchTopic()} />
+                  <button onClick={searchTopic}>搜索</button>
+                </div>
+                <div className="arc-section-title">🔥 热门行业（Industry Momentum = 对象+机构+事件+Momentum+RS）</div>
+                {indLoading && <div className="arc-empty">加载中…</div>}
+                {!indLoading && industries.length === 0 && <div className="arc-empty">暂无行业数据</div>}
+                <div className="arc-ind-grid">
+                  {industries.filter((x) => x.heat > 0).map((ind: any, i: number) => (
+                    <div key={i} className={`arc-ind-card arc-clickable ${ind.level === 1 ? "arc-ind-card-top" : ""}`} onClick={() => openIndustry(ind.entity_id)}>
+                      <div className="arc-ind-card-head">
+                        <b>{ind.name}</b>
+                        <span className={`arc-ind-heat ${ind.heat >= 70 ? "arc-ind-heat-hot" : ind.heat >= 40 ? "arc-ind-heat-warm" : ""}`}>🔥 {ind.heat}</span>
+                      </div>
+                      <div className="arc-ind-card-meta">
+                        <span>📚 {ind.doc_count}</span>
+                        <span>🏦 {ind.inst_count}</span>
+                        <span>🔥 {ind.event_count}</span>
+                        <span className="arc-tag arc-gray">L{ind.level}</span>
+                      </div>
+                      {ind.top_stocks?.length > 0 && (
+                        <div className="arc-ind-card-stocks">
+                          {(ind.top_stocks as any[]).map((s: any, j: number) => (
+                            <span key={j} className="arc-tag arc-blue">{s.code}{s.rs ? ` RS${s.rs}` : ""}</span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+                {topicData && (
+                  <>
+                    <div className="arc-section-title">🔎 搜索结果：{topicData.industry}</div>
+                    {topicData.events?.length > 0 && (
+                      <>
+                        <div className="arc-section-title">🔥 行业事件</div>
+                        {(topicData.events || []).map((ev: any, i: number) => (
+                          <div key={i} className="arc-ind-event" onClick={() => { goTab("events"); openEvent(ev.event_id); }}>
+                            <span className="arc-ind-mom">🔥 {ev.momentum_score}</span>
+                            <div className="arc-ind-event-main"><div className="arc-ind-event-title">{ev.event_title}</div></div>
+                          </div>
+                        ))}
+                      </>
+                    )}
+                    {topicData.research_stocks?.length > 0 && (
+                      <>
+                        <div className="arc-section-title">🎯 重点研究股票</div>
+                        {(topicData.research_stocks || []).map((s: any, i: number) => (
+                          <div key={i} className="arc-ind-stock" onClick={() => { goTab("stock"); setStockCode(s.stock_code); searchStockByCode(s.stock_code); }}>
+                            <span className="arc-ind-stock-code">{s.stock_code}</span>
+                            <span className="arc-ind-stock-name">{s.stock_name}</span>
+                            <span className="arc-tag arc-blue">🧠 RS {s.rs}</span>
+                          </div>
+                        ))}
+                      </>
+                    )}
+                  </>
+                )}
               </>
             )}
           </div>
         )}
+
+        {/* ============ 研究图谱（v2.3.3 Research Graph） ============ */}
+        {tab === "graph" && (
+          <div className="arc-panel">
+            <div className="arc-section-title">🕸 研究图谱 <em className="arc-group-count" style={{ marginLeft: 6 }}>v2.3.3 研究对象×行业×事件×股票×机构</em></div>
+            <div className="arc-searchbar">
+              <input placeholder="输入股票代码（6位）或行业关键词，如 300502 / AI算力" value={graphQ} onChange={(e) => setGraphQ(e.target.value)} onKeyDown={(e) => e.key === "Enter" && searchGraph()} />
+              <button onClick={searchGraph}>图谱查询</button>
+            </div>
+            {graphDetail ? (
+              <>
+                <div className="arc-filter-group" style={{ marginBottom: 10 }}>
+                  <button onClick={() => setGraphDetail(null)}>← 返回研究地图</button>
+                  <span className="arc-tag arc-purple">{graphDetail.mode === "stock" ? `股票 ${graphDetail.code}` : graphDetail.mode === "entity" ? graphDetail.type : graphDetail.industry || ""}</span>
+                  {graphDetail.name && <b className="arc-graph-name">{graphDetail.name}</b>}
+                  {graphDetail.graph_score != null && <span className="arc-tag arc-blue">🕸 GS {graphDetail.graph_score}</span>}
+                  {graphDetail.rs != null && <span className="arc-tag arc-blue">🧠 RS {graphDetail.rs}</span>}
+                  {graphDetail.centrality?.centrality != null && <span className="arc-tag arc-orange">⭐ 中心度 {graphDetail.centrality.centrality}</span>}
+                  {graphDetail.confidence?.score != null && <span className="arc-tag arc-purple">✅ 可信度 {graphDetail.confidence.score}</span>}
+                  {graphDetail.trend_dir && <span className="arc-tag">趋势 {graphDetail.trend_dir}</span>}
+                  <span className="arc-tag">文档 {graphDetail.doc_count || 0}</span>
+                  <span className="arc-tag">事件 {graphDetail.event_count || 0}</span>
+                  <span className="arc-tag">股票 {graphDetail.stock_count || 0}</span>
+                  <span className="arc-tag">机构 {graphDetail.inst_count || 0}</span>
+                  <span className="arc-tag">行业 {graphDetail.industry_count || 0}</span>
+                </div>
+                {graphDetail.centrality?.reasons?.length > 0 && (
+                  <div className="arc-graph-reasons">{graphDetail.centrality.reasons.map((r: string, i: number) => <span key={i} className="arc-tag arc-gray">{r}</span>)}</div>
+                )}
+                {graphDetail.radar?.length > 0 && (
+                  <div className="arc-graph-reasons"><b style={{ marginRight: 6 }}>优势方向:</b>{graphDetail.radar.map((r: any, i: number) => <span key={i} className="arc-tag arc-blue">{r.name} {r.pct}%</span>)}</div>
+                )}
+                {graphDetail.trend?.length > 0 && (
+                  <div className="arc-graph-trend arc-graph-trend-lg">
+                    {(graphDetail.trend as any[]).map((p: any, i: number) => (
+                      <span key={i} className="arc-graph-trend-bar" style={{ height: Math.max(4, Math.min(40, p.value / 60)) }} title={`${p.date} ${p.value}`} />
+                    ))}
+                  </div>
+                )}
+                {graphDetail.events?.length > 0 && (
+                  <>
+                    <div className="arc-section-title">🔥 关联事件</div>
+                    {(graphDetail.events || []).map((ev: any, i: number) => (
+                      <div key={i} className="arc-ind-event" onClick={() => { setGraphDetail(null); goTab("events"); openEvent(ev.event_id); }}>
+                        <span className="arc-ind-mom">🔥 {ev.momentum}</span>
+                        <span className={`arc-ev-status ${EVENT_STATUS_CLASS[ev.status] || ""}`}>{EVENT_STATUS_LABEL[ev.status] || ev.status}</span>
+                        <div className="arc-ind-event-main"><div className="arc-ind-event-title">{ev.title || ev.event_title}</div></div>
+                      </div>
+                    ))}
+                  </>
+                )}
+                {graphDetail.stocks?.length > 0 && (
+                  <>
+                    <div className="arc-section-title">📈 关联股票</div>
+                    <div className="arc-ind-stock-grid">
+                      {(graphDetail.stocks || []).map((s: any, i: number) => (
+                        <span key={i} className="arc-tag arc-blue arc-clickable" title="查看股票图谱" onClick={() => openGraphEntity("stock", s.code)}>
+                          {s.name || s.code}{s.rs != null ? ` RS${s.rs}` : ""}
+                        </span>
+                      ))}
+                    </div>
+                  </>
+                )}
+                {graphDetail.industries?.length > 0 && (
+                  <>
+                    <div className="arc-section-title">🏭 关联行业</div>
+                    <div className="arc-ind-stock-grid">
+                      {(graphDetail.industries || []).map((x: any, i: number) => (
+                        <span key={i} className="arc-tag arc-orange arc-clickable" onClick={() => openGraphEntity("industry", x.industry_id)}>{x.name}</span>
+                      ))}
+                    </div>
+                  </>
+                )}
+                {graphDetail.institutions?.length > 0 && (
+                  <>
+                    <div className="arc-section-title">🏦 关联机构</div>
+                    <div className="arc-ind-stock-grid">
+                      {(graphDetail.institutions || []).map((x: any, i: number) => (
+                        <span key={i} className="arc-tag">{x.name}</span>
+                      ))}
+                    </div>
+                  </>
+                )}
+                {graphDetail.documents?.length > 0 && (
+                  <>
+                    <div className="arc-section-title">📚 关联研究对象</div>
+                    {(graphDetail.documents || []).slice(0, 8).map((d: any, i: number) => (
+                      <div key={i} className="arc-doc-card arc-clickable" onClick={() => openDocDetail(d.doc_id)}>
+                        <div className="arc-doc-head">
+                          <div className="arc-doc-title">{d.title || d.display_title}</div>
+                          <div className="arc-doc-score"><b>{d.quality_score ?? d.research_value}</b></div>
+                        </div>
+                      </div>
+                    ))}
+                  </>
+                )}
+              </>
+            ) : (
+              <>
+                <div className="arc-section-title">🗺 研究地图（Graph Score = 机构×4 + 文档×3 + 事件×2 + 股票×2 + 行业×1）</div>
+                {graphLoading && <div className="arc-empty">加载中…</div>}
+                {!graphLoading && graphAnalytics && (
+                  <>
+                    <div className="arc-section-title">🔥 热门主题</div>
+                    <div className="arc-ind-grid">
+                      {(graphAnalytics.hot_topics || []).map((t: any, i: number) => (
+                        <div key={i} className={`arc-ind-card arc-clickable ${i === 0 ? "arc-ind-card-top" : ""}`} onClick={() => openGraphEntity("industry", t.entity_id)}>
+                          <div className="arc-ind-card-head">
+                            <b>{t.name}</b>
+                            <span className={`arc-ind-heat ${t.gs >= 300 ? "arc-ind-heat-hot" : t.gs >= 100 ? "arc-ind-heat-warm" : ""}`}>GS {t.gs} <em className="arc-trend">{t.trend_dir}</em></span>
+                          </div>
+                          {t.trend?.length > 0 && (
+                            <div className="arc-graph-trend">
+                              {(t.trend as any[]).slice(-5).map((p: any, j: number) => (
+                                <span key={j} className="arc-graph-trend-bar" style={{ height: Math.max(4, Math.min(28, p.value / 100)) }} title={`${p.date} ${p.value}`} />
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                    <div className="arc-section-title">⭐ 核心股票（研究中心度）</div>
+                    <div className="arc-graph-stocks">
+                      {(graphAnalytics.core_stocks || []).slice(0, 10).map((s: any, i: number) => (
+                        <span key={i} className="arc-graph-stock arc-clickable" onClick={() => openGraphEntity("stock", s.code)}>
+                          {s.name || s.code} <b>{s.centrality}</b>
+                        </span>
+                      ))}
+                    </div>
+                    <div className="arc-section-title">🏦 核心机构（研究影响力）</div>
+                    <div className="arc-graph-stocks">
+                      {(graphAnalytics.core_institutions || []).slice(0, 8).map((x: any, i: number) => (
+                        <span key={i} className="arc-graph-stock arc-clickable" onClick={() => openGraphEntity("institution", x.inst_id)}>
+                          {x.name} <b>{x.graph_score}</b>
+                        </span>
+                      ))}
+                    </div>
+                  </>
+                )}
+                <div className="arc-section-title">🗂 行业研究地图</div>
+                {!graphLoading && graphMap.length === 0 && <div className="arc-empty">暂无图谱数据</div>}
+                <div className="arc-graph-map">
+                  {graphMap.map((top: any, i: number) => (
+                    <div key={i} className="arc-graph-top">
+                      <div className="arc-graph-top-head arc-clickable" onClick={() => openGraphEntity("industry", top.entity_id)}>
+                        <b>{top.name}</b>
+                        <span className="arc-tag arc-blue">总GS {top._agg?.graph_score}</span>
+                        <span className="arc-tag">{top._agg?.doc_count} 文档</span>
+                        <span className="arc-tag">{top._agg?.event_count} 事件</span>
+                        <span className="arc-tag">{top._agg?.stock_count} 股票</span>
+                        <span className="arc-tag">{top._agg?.inst_count} 机构</span>
+                        {top.trend_dir && <span className="arc-tag arc-gray">趋势 {top.trend_dir}</span>}
+                      </div>
+                      {(top.contributions || []).length > 0 && (
+                        <div className="arc-graph-contrib">
+                          <span className="arc-graph-contrib-label">驱动:</span>
+                          {(top.contributions as any[]).slice(0, 3).map((c: any, j: number) => (
+                            <span key={j} className="arc-graph-contrib-item">{"①②③"[j] || "•"} {c.name} {c.pct}%</span>
+                          ))}
+                        </div>
+                      )}
+                      <div className="arc-graph-children">
+                        {(top.children || []).slice(0, 5).map((ch: any, j: number) => (
+                          <span key={j} className="arc-graph-child arc-clickable" onClick={() => openGraphEntity("industry", ch.entity_id)}>
+                            {ch.name} <em>GS{ch.graph_score}</em>
+                          </span>
+                        ))}
+                        {(top.children || []).length > 5 && <span className="arc-graph-more">+{(top.children || []).length - 5} 更多</span>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
+        )}
+
 
         {/* ============ 报告检索 ============ */}
         {tab === "search" && (
@@ -1038,9 +1406,123 @@ export default function ArchivePage() {
           </div>
         )}
 
-        {/* ============ 质量监控 ============ */}
+        {/* ============ 质量监控（v2.3.4 Observation Mode） ============ */}
         {tab === "quality" && (
           <div className="arc-panel">
+            {/* v2.3.4f 第一层：今日健康概览（健康评分 + 状态灯） */}
+            {quality?.quality_center?.health && (
+              <div className="arc-qc-health">
+                <div className="arc-qc-health-score">
+                  <div className="arc-qc-health-ring" style={{ background: `conic-gradient(#22c55e ${quality.quality_center.health.score * 3.6}deg, #e5e7eb 0deg)` }}>
+                    <div className="arc-qc-health-ring-in"><b>{quality.quality_center.health.score}</b><span>/100</span></div>
+                  </div>
+                  <div className="arc-qc-health-label">Research<br />Health</div>
+                </div>
+                <div className="arc-qc-health-dims">
+                  {Object.entries(quality.quality_center.health.dims || {}).map(([k, v]: [string, any], i: number) => (
+                    <div key={i} className="arc-qc-health-dim">
+                      <span>{k}</span>
+                      <div className="arc-qc-health-bar"><div className={`arc-qc-health-fill ${v >= 70 ? "arc-qc-fill-good" : v >= 40 ? "arc-qc-fill-warn" : "arc-qc-fill-bad"}`} style={{ width: `${v}%` }} /></div>
+                      <b>{v}</b>
+                    </div>
+                  ))}
+                </div>
+                <div className="arc-qc-status">
+                  {(quality.quality_center.system_status && Object.entries(quality.quality_center.system_status).filter(([k]) => k !== "recent_run").map(([k, v]: [string, any], i: number) => (
+                    <span key={i} className={`arc-qc-status-item ${v === "正常" ? "arc-qc-status-ok" : "arc-qc-status-warn"}`}>{k} <b>{v === "正常" ? "●" : "◐"}</b></span>
+                  )))}
+                  <span className="arc-qc-status-run">最近运行 {quality.quality_center.system_status?.recent_run}</span>
+                </div>
+              </div>
+            )}
+            {/* v2.3.4 Observation Mode：研究系统健康 */}
+            {quality?.observation?.system_health && (
+              <div className="arc-obs-block">
+                <div className="arc-section-title">🧭 研究系统健康 <em className="arc-group-count">v2.3.4 Observation Mode · 稳定积累期</em></div>
+                <div className="arc-stats arc-stats-6">
+                  <div className="arc-stat"><b>{quality.observation.system_health.doc_total}</b><span>研究对象</span></div>
+                  <div className="arc-stat"><b>{quality.observation.system_health.doc_high}</b><span>高质量≥50</span></div>
+                  <div className="arc-stat"><b>{quality.observation.system_health.industry_total}</b><span>行业实体</span></div>
+                  <div className="arc-stat"><b>{quality.observation.system_health.graph_relations}</b><span>图谱关系</span></div>
+                  <div className="arc-stat"><b>{quality.observation.system_health.validation_total}</b><span>验证样本</span></div>
+                  <div className={`arc-stat ${(quality.observation.system_health.t5_done || 0) >= 100 ? "" : "arc-warn"}`}><b>{quality.observation.system_health.t5_done}<em style={{fontSize:11,fontWeight:400}}>/{quality.observation.system_health.target_t5}</em></b><span>T+5 完成</span></div>
+                </div>
+                <div className="arc-obs-meta">T+1 {quality.observation.system_health.t1_done} · T+3 {quality.observation.system_health.t3_done} · 目标 T+5≥{quality.observation.system_health.target_t5} / 交易日≥{quality.observation.system_health.target_days} 后评估 v2.4</div>
+                {quality.observation.rs_layers && Object.keys(quality.observation.rs_layers).length > 0 && (
+                  <>
+                    <div className="arc-section-title">🎯 RS 排序能力（分层 × 表现）</div>
+                    <div className="arc-val-tiers">
+                      {Object.entries(quality.observation.rs_layers).map((entry: [string, any]) => {
+                        const k = entry[0]; const v = entry[1];
+                        if (!v.n) return null;
+                        return (
+                          <div key={k} className={`arc-val-tier ${(v.hit_rate || 0) >= 70 ? "arc-val-tier-good" : (v.hit_rate || 0) >= 40 ? "" : "arc-val-tier-bad"}`}>
+                            <b>{k}</b>
+                            <span>n={v.n}</span>
+                            <span>T+1 <b>{v.t1_avg ?? "—"}%</b></span>
+                            <span>T+3 <b>{v.t3_avg ?? "—"}%</b></span>
+                            <span>T+5 <b className="arc-val-up">{v.t5_avg ?? "—"}%</b></span>
+                            <span>命中率 <b>{v.hit_rate ?? "—"}%</b></span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </>
+                )}
+                <div className="arc-section-title arc-qc-foldable" onClick={() => setQcFold({ ...qcFold, momentum: !qcFold.momentum })}>
+                  {qcFold.momentum ? "▶" : "▼"} 🔥 Event Momentum 分层（事件热度验证）
+                </div>
+                {!qcFold.momentum && quality.observation.momentum_layers && Object.keys(quality.observation.momentum_layers).length > 0 && (
+                  <>
+                    <div className="arc-section-title" style={{ display: "none" }}>🔥 Event Momentum 分层（事件热度验证）</div>
+                    <div className="arc-val-tiers">
+                      {Object.entries(quality.observation.momentum_layers).map((entry: [string, any]) => {
+                        const k = entry[0]; const v = entry[1];
+                        if (!v.n) return null;
+                        return (
+                          <div key={k} className={`arc-val-tier ${(v.hit_rate || 0) >= 65 ? "arc-val-tier-good" : (v.hit_rate || 0) >= 50 ? "" : "arc-val-tier-bad"}`}>
+                            <b>🔥 {k}</b>
+                            <span>n={v.n}</span>
+                            <span>命中率 <b>{v.hit_rate ?? "—"}%</b></span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </>
+                )}
+                <div className="arc-section-title arc-qc-foldable" onClick={() => setQcFold({ ...qcFold, models: !qcFold.models })}>
+                  {qcFold.models ? "▶" : "▼"} 🧮 十大模型贡献（权重不变，只统计）
+                </div>
+                {!qcFold.models && quality.observation.model_contrib && Object.keys(quality.observation.model_contrib).length > 0 && (
+                  <>
+                    <div className="arc-section-title" style={{ display: "none" }}>🧮 十大模型贡献（权重不变，只统计）</div>
+                    <div className="arc-val-tiers">
+                      {Object.entries(quality.observation.model_contrib).sort((a: any, b: any) => b[1].n - a[1].n).slice(0, 8).map((entry: [string, any]) => {
+                        const k = entry[0]; const v = entry[1];
+                        if (!v.n) return null;
+                        return (
+                          <div key={k} className={`arc-val-tier ${(v.hit_rate || 0) >= 70 ? "arc-val-tier-good" : ""}`}>
+                            <b>{k}</b>
+                            <span>n={v.n}</span>
+                            <span>命中率 <b>{v.hit_rate ?? "—"}%</b></span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </>
+                )}
+                {quality.observation.snapshots?.length > 0 && (
+                  <>
+                    <div className="arc-section-title">📈 每日快照（v2.4 调参历史）</div>
+                    <div className="arc-obs-snaps">
+                      {quality.observation.snapshots.slice(0, 7).map((s: any, i: number) => (
+                        <span key={i} className="arc-obs-snap">{s.snap_date?.slice(5)} <b>样本{s.validation_total}</b> <em>T+5:{s.t5_done}</em></span>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            )}
             {/* v2.1：研究验证统计 */}
             {vstats && (
               <div className="arc-val-block">
@@ -1053,30 +1535,141 @@ export default function ArchivePage() {
                   <div className="arc-stat"><b>{vstats.stats?.flat || 0}</b><span>持平</span></div>
                   <div className="arc-stat arc-warn"><b>{vstats.stats?.miss || 0}</b><span>未命中</span></div>
                 </div>
-                {vstats.rs_tiers && Object.keys(vstats.rs_tiers).length > 0 && (
-                  <>
-                    <div className="arc-section-title">📊 RS 分层有效性（T+3 平均表现）</div>
-                    <div className="arc-val-tiers">
-                      {Object.entries(vstats.rs_tiers).map((entry: [string, any]) => {
-                        const tier = entry[0];
-                        const v = entry[1];
-                        return (
-                          <div key={tier} className={`arc-val-tier ${v.hit_rate >= 70 ? "arc-val-tier-good" : v.hit_rate >= 40 ? "" : "arc-val-tier-bad"}`}>
-                            <b>{tier}</b>
-                            <span>n={v.n}</span>
-                            <span>T+3均 <b className="arc-val-up">{v.avg_t3}%</b></span>
-                            <span>最大涨 <b className="arc-val-up">{v.avg_maxup}%</b></span>
-                            <span>命中率 <b>{v.hit_rate}%</b></span>
+                <div className="arc-val-note">⏳ {vstats.note} · 真实前瞻验证随每日 cron 自动累积 · 📸 v2.3.4c 起每样本保存 model/event/graph 快照（可解释当时评分）</div>
+              </div>
+            )}
+            {quality?.quality_center && (
+              <>
+                <div className="arc-section-title">🟢 系统健康 · 研究链完整性</div>
+                <div className="arc-qc-pipeline">
+                  {(() => {
+                    const p = quality.quality_center.pipeline || {};
+                    const stages = [
+                      ["原始消息", p.raw], ["归一化", p.normalized], ["研究对象", p.document],
+                      ["RS评分股", p.rs_stocks], ["验证样本", p.validation],
+                    ];
+                    return (
+                      <>
+                        <div className="arc-qc-flow">
+                          {stages.map((s, i) => (
+                            <div key={i} className="arc-qc-flow-item">
+                              <div className="arc-qc-stage">
+                                <b>{s[1] ?? 0}</b><span>{s[0]}</span>
+                              </div>
+                              {i < stages.length - 1 && <div className="arc-qc-arrow">→</div>}
+                            </div>
+                          ))}
+                        </div>
+                        <div className="arc-qc-rate">
+                          <span className="arc-tag arc-blue">📈 股票关联率 <b>{(p.doc_stock_rate ?? 0) * 10}%</b></span>
+                          <span className="arc-tag arc-blue">🔗 事件关联率 <b>{p.doc_event_rate ?? 0}%</b></span>
+                          <span className="arc-tag arc-gray">归一化 {p.normalized}/{p.raw} ({(p.normalized && p.raw) ? Math.round(p.normalized / p.raw * 100) : 0}%)</span>
+                        </div>
+                      </>
+                    );
+                  })()}
+                </div>
+
+                <div className="arc-section-title">🧹 数据异常中心（异常排行榜）</div>
+                <div className="arc-qc-anomaly">
+                  {(() => {
+                    const ia = quality.quality_center.institution_anomalies || {};
+                    const real = (ia.real || []).slice(0, 10); const noise = (ia.noise || []).slice(0, 10);
+                    return (
+                      <>
+                        <div className="arc-qc-anom-col">
+                          <div className="arc-qc-anom-title">🏛 机构异常 TOP10</div>
+                          <div className="arc-qc-leaderboard">
+                            {(real || []).map((x, i) => (
+                              <div key={i} className="arc-qc-lb-row">
+                                <span className="arc-qc-lb-rank">{i + 1}</span>
+                                <span className="arc-qc-lb-name">{x.name}</span>
+                                <b className="arc-qc-lb-count">{x.count}次</b>
+                                <span className={`arc-qc-lb-type ${x.type?.includes("噪声") ? "arc-qc-type-noise" : x.type?.includes("待确认") ? "arc-qc-type-warn" : "arc-qc-type-good"}`}>{x.type}</span>
+                              </div>
+                            ))}
                           </div>
-                        );
-                      })}
+                        </div>
+                        <div className="arc-qc-anom-col">
+                          <div className="arc-qc-anom-title">🚫 B类噪声（自动忽略 <b>{ia.noise_total || 0}</b> 次）</div>
+                          <div className="arc-qc-leaderboard">
+                            {(noise || []).map((x, i) => (
+                              <div key={i} className="arc-qc-lb-row">
+                                <span className="arc-qc-lb-rank">{i + 1}</span>
+                                <span className="arc-qc-lb-name">{x.name}</span>
+                                <b className="arc-qc-lb-count">{x.count}次</b>
+                                <span className="arc-qc-lb-type arc-qc-type-noise">{x.type}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </>
+                    );
+                  })()}
+                </div>
+
+                <div className="arc-section-title">🛠 低置信度修复建议</div>
+                <div className="arc-qc-repair">
+                  {(quality.quality_center.repair_suggestions || []).map((r: any, i: number) => (
+                    <div key={i} className="arc-qc-repair-item">
+                      <div className="arc-qc-repair-head">
+                        <b>{r.issue}</b>
+                        <span className="arc-tag arc-orange">{r.count}</span>
+                      </div>
+                      <div className="arc-qc-repair-body">
+                        <span className="arc-tag arc-blue">⚙ 可自动 {r.auto}</span>
+                        <span className="arc-tag arc-gray">👤 需人工 {r.manual}</span>
+                        <span className="arc-qc-repair-action">{r.action}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="arc-section-title">📊 低置信度原因分布（{quality.quality_center.low_conf_reasons?.reduce((a, b) => a + b.count, 0) || 0}）</div>
+                <div className="arc-qc-reasons">
+                  {(quality.quality_center.low_conf_reasons || []).map((r: any, i: number) => (
+                    <div key={i} className="arc-qc-reason">
+                      <span className="arc-qc-reason-name">{r.reason}</span>
+                      <div className="arc-qc-reason-bar"><div className="arc-qc-reason-fill" style={{ width: `${r.pct}%` }} /></div>
+                      <b>{r.count}</b><em>{r.pct}%</em>
+                    </div>
+                  ))}
+                </div>
+
+                {(() => { const mb = quality.quality_center.merge_benefit || {}; return mb.documents ? (
+                  <div className="arc-qc-merge">
+                    <div className="arc-section-title">🗜 归并效果（research_document 聚合）</div>
+                    <div className="arc-qc-merge-body">
+                      <span>原消息 <b>{mb.orig_messages}</b></span>
+                      <span className="arc-qc-merge-arrow">→</span>
+                      <span>研究对象 <b>{mb.documents}</b></span>
+                      <span className="arc-qc-merge-arrow">→</span>
+                      <span className="arc-tag arc-blue">减少 <b>{mb.reduction}%</b></span>
+                      <span className="arc-tag arc-gray">多源归并 {mb.merged_docs} 组</span>
+                    </div>
+                  </div>
+                ) : null; })()}
+                {quality.quality_center.duplicate_documents?.length > 0 && (
+                  <>
+                    <div className="arc-section-title">🔁 重复研究对象（document 级）</div>
+                    <div className="arc-qc-dupdocs">
+                      {(quality.quality_center.duplicate_documents || []).map((d: any, i: number) => (
+                        <div key={i} className="arc-qc-dupdoc">
+                          <div className="arc-qc-dupdoc-title">{d.title}</div>
+                          <div className="arc-qc-dupdoc-meta">
+                            <span className="arc-tag">{d.docs} 条文档</span>
+                            <span className="arc-tag">{d.sources} 个来源</span>
+                            <span className="arc-tag">{d.institutions} 家机构</span>
+                            <span className="arc-tag arc-gray">doc #{d.doc_ids.join(", ")}</span>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </>
                 )}
-                <div className="arc-val-note">⏳ {vstats.note} · 真实前瞻验证随每日 cron 自动累积</div>
-              </div>
+              </>
             )}
-            <div className="arc-section-title">🩺 质量监控（数据健康度）</div>
+            <div className="arc-section-title">🩺 待处理任务（Action Queue）</div>
             {!quality ? <div className="arc-empty">加载中…</div> : (
               <>
                 <div className="arc-stats arc-stats-6">
@@ -1092,7 +1685,7 @@ export default function ArchivePage() {
                 <div className="arc-section-title">🏛 机构名称未匹配（{quality.unmatched_institutions?.length || 0}）</div>
                 <div className="arc-timeline">
                   {(quality.unmatched_institutions || []).map((x: any, i: number) => (
-                    <div key={i} className="arc-tl-row">
+                    <div key={i} className="arc-unmatched-row">
                       <span className="arc-tag arc-orange">{x.name}</span>
                       <div className="arc-tl-main">
                         <div className="arc-tl-title">出现 {x.count} 次 · 未收录映射表</div>
@@ -1106,10 +1699,22 @@ export default function ArchivePage() {
                 </div>
 
                 <div className="arc-section-title">🖼 Vision 待处理（{quality.vision_failed?.count || 0}）</div>
-                <div className="arc-timeline">
-                  {(quality.vision_failed?.items || []).map((x: any, i: number) => (
-                    <div key={i} className="arc-tl-row"><div className="arc-tl-time">{x.date?.slice(5, 16)}</div><span className="arc-tag arc-orange">{x.vision_status}</span><div className="arc-tl-main"><div className="arc-tl-title">{x.message_id}</div></div></div>
-                  ))}
+                <div className="arc-qc-vision">
+                  {(quality.vision_failed?.items || []).map((x: any, i: number) => {
+                    const mid = String(x.message_id || "");
+                    const id = mid.split(":")[1] || mid;
+                    return (
+                      <div key={i} className="arc-qc-vision-item">
+                        <div className="arc-qc-vision-main">
+                          <span className="arc-tag arc-orange">🖼 {x.vision_status === "queued" ? "等待OCR" : x.vision_status}</span>
+                          <span className="arc-tag">📰 图片研报</span>
+                          <span className="arc-tag">🕓 {x.date?.slice(5, 16)}</span>
+                          <span className="arc-tag arc-gray">📱 Telegram</span>
+                          <span className="arc-tag arc-blue">ID {id}</span>
+                        </div>
+                      </div>
+                    );
+                  })}
                   {!quality.vision_failed?.count && <div className="arc-empty">Vision 队列已清空 ✅</div>}
                 </div>
 
@@ -1337,6 +1942,73 @@ export default function ArchivePage() {
               </>
             )}
             <div className="arc-rs-safety">安全边界：研究排序层，不构成买入建议，不改变交易状态</div>
+          </div>
+        </div>
+      )}
+
+      {/* 研究对象详情抽屉（v2.3.1） */}
+      {docDetail && (
+        <div className="arc-drawer-mask" onClick={() => setDocDetail(null)}>
+          <div className="arc-drawer arc-doc-drawer" onClick={(e) => e.stopPropagation()}>
+            <div className="arc-doc-drawer-head">
+              <div className="arc-drawer-title">{docDetail.title || "未提取标题"}</div>
+              <button className="arc-detail-close" onClick={() => setDocDetail(null)}>✕</button>
+            </div>
+            <div className="arc-drawer-meta-line">
+              <span className={`arc-doc-ql arc-doc-${docDetail.quality_level}`}>{docDetail.quality_level === "high" ? "HIGH" : docDetail.quality_level === "medium" ? "MEDIUM" : "LOW"}</span>
+              <b className="arc-doc-score-big">{docDetail.quality_score}</b>
+              <span className="arc-tag arc-purple">{docDetail.research_type || "未分类"}</span>
+              {(docDetail.institutions || []).map((x: string, i: number) => <span key={i} className="arc-tag arc-blue">🏦 {x}</span>)}
+              <span className="arc-tag">来源 {docDetail.source_count}</span>
+              <span className="arc-tag arc-gray">{docDetail.first_seen_at?.slice(0, 16)}</span>
+            </div>
+            <div className="arc-drawer-meta-line">
+              <span className="arc-tag arc-gray">最近 {docDetail.last_seen_at?.slice(0, 16)}</span>
+              <span className="arc-tag">机构 {docDetail.institution_count}</span>
+            </div>
+            {docDetail.summary && (
+              <div className="arc-doc-drawer-summary">
+                <div className="arc-section-title">💡 核心观点</div>
+                <div className="arc-doc-summary-text">{docDetail.summary}</div>
+              </div>
+            )}
+            {(docDetail.stocks?.length > 0 || docDetail.event_relations?.length > 0) && (
+              <div className="arc-doc-drawer-assoc">
+                <div className="arc-section-title">🔗 关联</div>
+                {docDetail.stocks?.length > 0 && (
+                  <div className="arc-detail-row"><b>📈 股票</b><span>
+                    {(docDetail.stocks as any[]).map((s: any, i: number) => <code key={i} className="arc-doc-code">{s.name || s.code}</code>)}
+                  </span></div>
+                )}
+                {docDetail.event_relations?.length > 0 && (
+                  <div className="arc-detail-row"><b>🔥 事件</b><span>
+                    {(docDetail.event_relations as any[]).map((e: any, i: number) => (
+                      <span key={i} className="arc-tag arc-orange">{e.title}{e.momentum ? ` · ${e.momentum}` : ""}</span>
+                    ))}
+                  </span></div>
+                )}
+              </div>
+            )}
+            {docDetail.source_chain?.length > 0 && (
+              <div className="arc-doc-chain">
+                <div className="arc-section-title">🕓 来源链（{docDetail.source_chain.length}）</div>
+                {docDetail.source_chain.map((c: any, i: number) => (
+                  <div key={i} className="arc-doc-chain-item">
+                    <div className="arc-doc-chain-head">
+                      <span className="arc-tag arc-cyan">{c.date?.slice(5, 16)}</span>
+                      <span className="arc-tag">{c.source_topic || "—"}</span>
+                      {c.institution ? <span className="arc-tag arc-blue">🏦 {c.institution}</span> : null}
+                      <span className="arc-tag arc-gray">{c.from_user || "—"}</span>
+                    </div>
+                    <details className="arc-doc-chain-raw">
+                      <summary>展开原文 ▼</summary>
+                      <pre className="arc-doc-chain-pre">{c.raw_text}</pre>
+                    </details>
+                  </div>
+                ))}
+              </div>
+            )}
+            <div className="arc-rs-safety" style={{ marginTop: 10 }}>研究对象 = 归并后的多来源资讯聚合 · 质量分 = 机构/研报/股票/摘要加权 · 数据治理层 v2.3.1</div>
           </div>
         </div>
       )}

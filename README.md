@@ -3,8 +3,8 @@
 > **事件驱动型 A 股研究决策辅助平台**
 > 从 Telegram 六源资讯自动构建「事件 → 个股 → 研究排序 → 人工决策」完整闭环。
 
-![version](https://img.shields.io/badge/version-v2.2.1-blue)
-![status](https://img.shields.io/badge/status-stability_observation-green)
+![version](https://img.shields.io/badge/version-v2.3.4e-blue)
+![status](https://img.shields.io/badge/status-observation_lock-green)
 
 ---
 
@@ -24,6 +24,10 @@
 - 事件热度（Momentum）实时监测
 - 事件→个股映射 + 持仓联动
 - 十大模型融合的 Research Score 研究排序
+- **研究对象中心（v2.3.0）**：多来源研报归并为研究文档
+- **行业实体化（v2.3.2）**：三级行业树，解决「关键词命中≠行业关系」
+- **研究图谱（v2.3.3）**：5 实体（文档/股票/事件/行业/机构）互连 + Graph Score
+- **观察仪表盘（v2.3.4）**：市场环境判定 + 系统快照 + 每日观察日报
 - 每日研究简报自动推送（Hermes Skill）
 - T+1/T+3/T+5 研究后验验证
 
@@ -108,6 +112,21 @@ python3 archive_researchscore_v19.py  # Research Score
 python3 archive_summary_v20.py        # 研究结论
 python3 archive_validate_v21.py       # T+验证
 python3 archive_backtest_v21b.py      # 历史回填验证
+
+# v2.3 链尾三脚本（研究对象/行业/图谱）
+python3 archive_doc_v230.py           # 研究对象归并
+python3 archive_industry_v232.py      # 行业实体化
+python3 archive_graph_v233.py         # 研究图谱 + Graph Score
+```
+
+### 第 4b 步：观察期每日任务
+
+```bash
+# 每日（cron）
+30 21 * * * python3 /root/scripts/archive_quality_check_v223.py      # 质量检查
+40 21 * * * python3 /root/scripts/archive_validation_snapshot_v234c.py # 验证快照
+45 21 * * * python3 /root/scripts/archive_obs_report_v234d.py          # 观察日报
+# 及 archive_obs_v234.py（观察模式统计）
 ```
 
 ### 第 5 步：启动 API 服务
@@ -209,21 +228,29 @@ research-archive-platform/
 │   ├── VERSION.md                  # 版本与参数冻结
 │   ├── CHANGELOG.md                # 版本演进
 │   └── v2.2.1_观察期说明.md        # 观察期定义
-├── scripts/                       # 数据管线 22 个脚本
-│   ├── archive_schema_init.py     # 完整建库（第一步）
-│   ├── archive_ingest_v2.py
-│   ├── archive_classify_v14.py
-│   ├── archive_merge_v3.py
-│   ├── archive_events_v15.py
-│   ├── archive_events_v16.py
-│   ├── archive_momentum_v17.py
-│   ├── archive_watchpool_v18.py
-│   ├── archive_researchscore_v19.py
-│   ├── archive_summary_v20.py
-│   ├── archive_validate_v21.py
-│   ├── archive_backtest_v21b.py
-│   ├── archive_server.py           # REST API
-│   ├── institution_map.py          # 机构名标准化
+├── scripts/                       # 数据管线 30+ 个脚本
+│   ├── archive_schema_init.py     # 完整建库（第一步，24 表）
+│   ├── archive_init_v1.py         # 初始建库（兼容旧版）
+│   ├── archive_ingest_v2.py       # 入库+清洗
+│   ├── archive_classify_v14.py    # 8类分类
+│   ├── archive_merge_v3.py        # 研报归并
+│   ├── archive_events_v15.py      # 事件聚类
+│   ├── archive_events_v16.py      # 事件→股票映射
+│   ├── archive_momentum_v17.py    # 事件热度
+│   ├── archive_watchpool_v18.py   # 研究队列
+│   ├── archive_researchscore_v19.py # Research Score
+│   ├── archive_summary_v20.py     # 研究结论
+│   ├── archive_validate_v21.py    # T+验证
+│   ├── archive_backtest_v21b.py   # 历史回填验证
+│   ├── archive_quality_check_v223.py # 质量检查（观察期）
+│   ├── archive_doc_v230.py        # 研究对象归并
+│   ├── archive_industry_v232.py   # 行业实体化
+│   ├── archive_graph_v233.py      # 研究图谱 + Graph Score
+│   ├── archive_obs_v234.py        # 观察模式统计
+│   ├── archive_validation_snapshot_v234c.py # 验证快照
+│   ├── archive_obs_report_v234d.py # 观察日报
+│   ├── archive_server.py          # REST API（29 端点）
+│   ├── institution_map.py         # 机构名标准化
 │   └── archive_v{14..21}_migrate.py # 版本迁移脚本
 ├── frontend/
 │   └── ArchivePage.tsx            # 资讯研究终端组件
@@ -267,6 +294,28 @@ research-archive-platform/
 EVENT_FOUND → RESEARCH → WATCH → MODEL_CHECK → TRIAL_READY
 ```
 
+### 研究对象（v2.3.0）
+多来源研报按「标题相似>90% + 同股票 + 24h 内」归并为研究文档，质量评分：
+```
+机构 +30 / 研报调研 +20 / 股票明确 +20 / 摘要完整 +15
+重复转发>3 条 -20 / 无来源无股票 -30（<50 不进重点研究）
+```
+
+### 行业实体化（v2.3.2）
+三级行业树（industry_entity），文档↔行业通过实体关系关联（非关键词命中），
+Industry Momentum = 行业关联文档的事件热度聚合。
+
+### 研究图谱（v2.3.3）
+5 实体互连：`Research Document ↔ Stock / Event / Industry / Institution`
+7 类边：in / belongs_to / impact / confirmed_by / involves / published_by / mentions
+```
+Graph Score（研究影响力，辅助指标不进 RS）：
+GS = min(100, 机构×4 + 文档×3 + 事件×2 + 股票×2 + 行业×1)
+```
+
+### 图谱统计优化（v2.3.4）
+① 行业贡献拆分（热度去重）② 股票中心度 ③ 机构研究雷达 ④ 研究对象可信度 ⑤ GS 时间趋势
+
 ### 研究验证
 - T+1 / T+3 / T+5 表现 + 最大涨幅/回撤
 - 结果：hit / miss / flat / pending
@@ -291,11 +340,11 @@ EVENT_FOUND → RESEARCH → WATCH → MODEL_CHECK → TRIAL_READY
 
 | 文档 | 说明 |
 |---|---|
-| [docs/系统说明书.md](docs/系统说明书.md) | 完整使用说明书（17 章） |
+| [docs/系统说明书.md](docs/系统说明书.md) | 完整使用说明书（20 章，v2.3.4e） |
 | [docs/数据流设计图.md](docs/数据流设计图.md) | 数据管线全图（8 阶段） |
 | [docs/数据清洗阶段.md](docs/数据清洗阶段.md) | 清洗阶段详解 |
 | [docs/VERSION.md](docs/VERSION.md) | 版本与参数冻结 |
-| [docs/CHANGELOG.md](docs/CHANGELOG.md) | 版本演进记录 |
+| [docs/CHANGELOG.md](docs/CHANGELOG.md) | 版本演进记录（至 v2.3.4e） |
 
 ---
 
@@ -325,7 +374,17 @@ cp /root/workspace/research_archive.db /backup/research_archive_$(date +%Y%m%d).
 | v1.7-v1.8 | Momentum / 研究队列 |
 | v1.9-v2.0 | Research Score / 研究终端 |
 | v2.1-v2.2 | 验证体系 / 每日简报 |
-| v2.2.1 | **稳定观察期（当前）** |
+| v2.2.2 | 研究队列股票级聚合 |
+| v2.3.0 | 研究对象归并（数据治理层） |
+| v2.3.1 | 机构研究 Tab → 研究对象中心 |
+| v2.3.2 | 行业实体化（三级行业树） |
+| v2.3.3 | 研究图谱融合 + Graph Score |
+| v2.3.4 | 图谱统计优化 + 观察模式 |
+| v2.3.4c | 验证快照完整化（可解释层） |
+| v2.3.4d | 每日观察日报 |
+| v2.3.4e | Quality Center + 市场环境判定 |
+| v4.3.0 | 问股 Strategy Engine |
+| **v2.3.4e** | **Observation Lock（当前）** |
 
 ---
 
