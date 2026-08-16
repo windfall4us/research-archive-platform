@@ -227,7 +227,7 @@ research-archive-platform/
 │   ├── 数据清洗阶段.md             # 清洗阶段说明
 │   ├── VERSION.md                  # 版本与参数冻结
 │   ├── CHANGELOG.md                # 版本演进
-│   └── v2.2.1_观察期说明.md        # 观察期定义
+│   └── v2.3.4e_观察期说明.md      # Observation Lock 运行阶段定义
 ├── scripts/                       # 数据管线 30+ 个脚本
 │   ├── archive_schema_init.py     # 完整建库（第一步，24 表）
 │   ├── archive_init_v1.py         # 初始建库（兼容旧版）
@@ -345,6 +345,7 @@ GS = min(100, 机构×4 + 文档×3 + 事件×2 + 股票×2 + 行业×1)
 | [docs/数据清洗阶段.md](docs/数据清洗阶段.md) | 清洗阶段详解 |
 | [docs/VERSION.md](docs/VERSION.md) | 版本与参数冻结 |
 | [docs/CHANGELOG.md](docs/CHANGELOG.md) | 版本演进记录（至 v2.3.4e） |
+| [docs/v2.3.4e_观察期说明.md](docs/v2.3.4e_观察期说明.md) | Observation Lock 运行阶段定义（冻结基线/观察指标/日报流水线/v2.4 启动清单） |
 
 ---
 
