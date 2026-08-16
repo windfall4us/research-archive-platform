@@ -72,7 +72,10 @@ cd research-archive-platform
 
 ```bash
 cd scripts
-# 依序执行迁移（建表 + 加列，幂等）
+# ① 完整建库（18 张表，幂等）
+python3 archive_schema_init.py
+
+# ② 依序执行版本迁移（加列，幂等）
 python3 archive_v14_migrate.py   # 分类维度列 + event 表
 python3 archive_v15_migrate.py   # 事件评分/状态列
 python3 archive_v16_migrate.py   # 事件-股票关系表
@@ -83,7 +86,12 @@ python3 archive_v20_migrate.py   # 研究结论表
 python3 archive_v21_migrate.py   # 验证表
 ```
 
-生成 `research_archive.db`（19 张表）。
+生成 `research_archive.db`（18+ 张表）。
+
+> **外部依赖说明**：v16/v18/v19 阶段依赖两个可选数据源——
+> ① 备选股池 `stocks.db`（股票名→代码映射，无则跳过股票扫描）
+> ② 十大模型 API（`http://127.0.0.1:3100/api/models`，无则模型维度为 0）
+> 两者缺失不影响主链路运行，仅对应维度为空。
 
 ### 第 4 步：跑数据管线
 
@@ -201,7 +209,8 @@ research-archive-platform/
 │   ├── VERSION.md                  # 版本与参数冻结
 │   ├── CHANGELOG.md                # 版本演进
 │   └── v2.2.1_观察期说明.md        # 观察期定义
-├── scripts/                       # 数据管线 21 个脚本
+├── scripts/                       # 数据管线 22 个脚本
+│   ├── archive_schema_init.py     # 完整建库（第一步）
 │   ├── archive_ingest_v2.py
 │   ├── archive_classify_v14.py
 │   ├── archive_merge_v3.py
@@ -215,7 +224,7 @@ research-archive-platform/
 │   ├── archive_backtest_v21b.py
 │   ├── archive_server.py           # REST API
 │   ├── institution_map.py          # 机构名标准化
-│   └── archive_v{14..21}_migrate.py # 迁移脚本
+│   └── archive_v{14..21}_migrate.py # 版本迁移脚本
 ├── frontend/
 │   └── ArchivePage.tsx            # 资讯研究终端组件
 ├── skill/
