@@ -294,7 +294,7 @@ class Handler(BaseHTTPRequestHandler):
             LEFT JOIN research_summary su ON su.stock_code = s.stock_code
                 AND su.created_at LIKE ?
             WHERE s.created_at LIKE ? AND s.research_score >= 70
-            ORDER BY s.research_score DESC LIMIT 12""", (score_day + "%", score_day + "%")).fetchall()]
+            ORDER BY s.research_score DESC""", (score_day + "%", score_day + "%")).fetchall()]
         for f in focus:
             try:
                 f["positive_factors"] = _json.loads(f.get("positive_factors") or "[]")

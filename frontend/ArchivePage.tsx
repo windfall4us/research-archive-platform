@@ -119,6 +119,7 @@ export default function ArchivePage() {
   const [dateFrom, setDateFrom] = useState("");
   const [dateTo, setDateTo] = useState("");
   const [imgExpanded, setImgExpanded] = useState(false);
+  const [focusExpanded, setFocusExpanded] = useState(false);
   const [subtypeExpand, setSubtypeExpand] = useState(false);
   const [toolbarExpand, setToolbarExpand] = useState(false);
   const [dupOpen, setDupOpen] = useState<Set<string>>(new Set());
@@ -516,7 +517,7 @@ export default function ArchivePage() {
                 <div className="arc-cp-section">
                   <div className="arc-cp-title">💡 今日重点研究 <em className="arc-group-count">{(cockpit.focus_stocks || []).length}</em></div>
                   <div className="arc-cp-focus">
-                    {(cockpit.focus_stocks || []).slice(0, 6).map((f: any, i: number) => (
+                    {(cockpit.focus_stocks || []).slice(0, focusExpanded ? undefined : 6).map((f: any, i: number) => (
                       <div key={i} className="arc-cp-focus-item" onClick={() => { goTab("stock"); setStockCode(f.stock_code); searchStockByCode(f.stock_code); }}>
                         <span className="arc-cp-rank">{i + 1}</span>
                         <div className="arc-cp-focus-main">
@@ -531,6 +532,11 @@ export default function ArchivePage() {
                     ))}
                     {(cockpit.focus_stocks || []).length === 0 && <div className="arc-empty">今日暂无重点研究（RS≥70）</div>}
                   </div>
+                  {(cockpit.focus_stocks || []).length > 6 && (
+                    <button className="arc-cp-focus-toggle" onClick={() => setFocusExpanded(!focusExpanded)}>
+                      {focusExpanded ? "收起 ▲" : `展开全部（${(cockpit.focus_stocks || []).length}）▼`}
+                    </button>
+                  )}
                 </div>
               </div>
             )}
