@@ -168,8 +168,9 @@ export default function ArchivePage() {
   const [wpStatus, setWpStatus] = useState("");
   const [wpOrder, setWpOrder] = useState("model");
   const [cockpit, setCockpit] = useState<any>(null);
+  const [archiveVer, setArchiveVer] = useState("");
 
-  useEffect(() => { loadOverview(); }, []);
+  useEffect(() => { loadOverview(); loadVersion(); }, []);
   useEffect(() => { if (tab === "reports") { loadReports(); loadResearchDocs(); } }, [tab, docFilterType, docFilterInst]);
   useEffect(() => { if (tab === "topic") { loadIndustries(); setIndDetail(null); setTopicData(null); } }, [tab]);
   useEffect(() => { if (tab === "graph") { loadGraphMap(); setGraphDetail(null); } }, [tab]);
@@ -217,6 +218,12 @@ export default function ArchivePage() {
     setFilterInst(""); setFilterStock(""); setFilterIndustry(""); setDateFrom(""); setDateTo("");
   };
 
+  async function loadVersion() {
+    try {
+      const res = await fetch(`${API}/version`, { cache: "no-store" });
+      if (res.ok) { const j = await res.json(); if (j && j.version) setArchiveVer(j.version); }
+    } catch { /* 保留默认 */ }
+  }
   async function loadOverview() {
     setLoading(true);
     const [s, t, c] = await Promise.all([get<Summary>(`${API}/dashboard/summary`), get<{ timeline: TimelineItem[] }>(`${API}/timeline?limit=150`), get<any>(`${API}/dashboard/cockpit`)]);
@@ -467,7 +474,7 @@ export default function ArchivePage() {
     <div className="arc-page">
       <div className="arc-head">
         <h1>📚 资讯研究</h1>
-        <p>六源资讯 → 8类归档 → 事件归并 → 研报追踪（v2.2.1 · 稳定观察期 · 参数冻结）</p>
+        <p>六源资讯 → 8类归档 → 事件归并 → 研报追踪（档案库 {archiveVer || "v2.3.4c"} · 观察期 · 参数冻结）</p>
       </div>
       <div className="arc-tabs">
         {TABS.map(([id, label]) => (

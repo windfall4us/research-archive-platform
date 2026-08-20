@@ -227,6 +227,8 @@ class Handler(BaseHTTPRequestHandler):
                 self._today_top()
             elif path.endswith("/api/reclassify"):
                 self._reclassify()
+            elif path.endswith("/api/version"):
+                self._version()
             elif path.endswith("/api/verifications"):
                 self._verifications(qs)
             else:
@@ -235,6 +237,18 @@ class Handler(BaseHTTPRequestHandler):
             self._json({"error": str(e)}, 500)
 
     # ---------- API ----------
+
+    def _version(self):
+        """档案库后端版本（动态，读 research_system_snapshot 最新 system_version）"""
+        con = db()
+        row = con.execute(
+            "SELECT snap_date, system_version FROM research_system_snapshot ORDER BY snap_date DESC LIMIT 1"
+        ).fetchone()
+        if not row:
+            self._json({"version": "unknown", "updated": None})
+            return
+        self._json({"version": row[1], "updated": row[0]})
+
 
 
     def _cockpit(self):
