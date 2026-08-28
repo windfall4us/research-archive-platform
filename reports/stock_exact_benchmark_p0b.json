@@ -1,0 +1,797 @@
+{
+ "stats": {
+  "gold_total": 97,
+  "a_share_resolvable": 89,
+  "out_of_scope": 1,
+  "ambiguous": 0,
+  "excluded": 7,
+  "exact": 86,
+  "alias": 3,
+  "context": 0,
+  "fuzzy": 0,
+  "unresolved": 0,
+  "wrong_match": 0,
+  "exact_precision": 1.0,
+  "exact_recall": 0.9663,
+  "exact_alias_precision": 1.0,
+  "exact_alias_recall": 1.0,
+  "overall_precision": 1.0,
+  "overall_recall": 1.0,
+  "unresolved_top": []
+ },
+ "details": [
+  {
+   "sample_id": "1",
+   "raw_target": "腾景科技",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "688195",
+   "matched": "688195"
+  },
+  {
+   "sample_id": "2",
+   "raw_target": "四方股份(601126)",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT_INLINE_CODE",
+   "code": "601126",
+   "matched": "601126"
+  },
+  {
+   "sample_id": "4",
+   "raw_target": "太辰光",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "300570",
+   "matched": "300570"
+  },
+  {
+   "sample_id": "5",
+   "raw_target": "长飞光纤",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "601869",
+   "matched": "601869"
+  },
+  {
+   "sample_id": "6",
+   "raw_target": "天孚通信",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "300394",
+   "matched": "300394"
+  },
+  {
+   "sample_id": "7",
+   "raw_target": "赤峰黄金",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "600988",
+   "matched": "600988"
+  },
+  {
+   "sample_id": "8",
+   "raw_target": "杰瑞股份",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002353",
+   "matched": "002353"
+  },
+  {
+   "sample_id": "9",
+   "raw_target": "药明康德",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "603259",
+   "matched": "603259"
+  },
+  {
+   "sample_id": "10",
+   "raw_target": "融捷股份",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002192",
+   "matched": "002192"
+  },
+  {
+   "sample_id": "11",
+   "raw_target": "兴业科技",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002674",
+   "matched": "002674"
+  },
+  {
+   "sample_id": "12",
+   "raw_target": "中际旭创",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "300308",
+   "matched": "300308"
+  },
+  {
+   "sample_id": "13",
+   "raw_target": "半导体材料",
+   "bucket": "EXCLUDED_THEME",
+   "method": "EXCLUDED",
+   "matched": null
+  },
+  {
+   "sample_id": "14",
+   "raw_target": "万和电气",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002543",
+   "matched": "002543"
+  },
+  {
+   "sample_id": "15",
+   "raw_target": "赛微电子",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "300456",
+   "matched": "300456"
+  },
+  {
+   "sample_id": "16",
+   "raw_target": "广钢气体",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "688548",
+   "matched": "688548"
+  },
+  {
+   "sample_id": "17",
+   "raw_target": "立新能源",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "001258",
+   "matched": "001258"
+  },
+  {
+   "sample_id": "18",
+   "raw_target": "深中华A",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "000017",
+   "matched": "000017"
+  },
+  {
+   "sample_id": "19",
+   "raw_target": "汉森制药",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002412",
+   "matched": "002412"
+  },
+  {
+   "sample_id": "20",
+   "raw_target": "恩捷股份(002812)",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT_INLINE_CODE",
+   "code": "002812",
+   "matched": "002812"
+  },
+  {
+   "sample_id": "21",
+   "raw_target": "百济神州(688235)",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT_INLINE_CODE",
+   "code": "688235",
+   "matched": "688235"
+  },
+  {
+   "sample_id": "22",
+   "raw_target": "中际旭创(300308)",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT_INLINE_CODE",
+   "code": "300308",
+   "matched": "300308"
+  },
+  {
+   "sample_id": "23",
+   "raw_target": "中国金茂",
+   "bucket": "OUT_OF_SCOPE",
+   "method": "OUT_OF_SCOPE",
+   "matched": null
+  },
+  {
+   "sample_id": "24",
+   "raw_target": "兆易创新",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "603986",
+   "matched": "603986"
+  },
+  {
+   "sample_id": "25",
+   "raw_target": "禾望电气",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "603063",
+   "matched": "603063"
+  },
+  {
+   "sample_id": "26",
+   "raw_target": "黄河旋风",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "600172",
+   "matched": "600172"
+  },
+  {
+   "sample_id": "27",
+   "raw_target": "中石科技",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "300684",
+   "matched": "300684"
+  },
+  {
+   "sample_id": "28",
+   "raw_target": "华勤技术",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "603296",
+   "matched": "603296"
+  },
+  {
+   "sample_id": "29",
+   "raw_target": "宇树科技相关",
+   "bucket": "EXCLUDED_THEME",
+   "method": "EXCLUDED",
+   "matched": null
+  },
+  {
+   "sample_id": "30",
+   "raw_target": "沃格光电",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "603773",
+   "matched": "603773"
+  },
+  {
+   "sample_id": "31",
+   "raw_target": "华正新材",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "603186",
+   "matched": "603186"
+  },
+  {
+   "sample_id": "32",
+   "raw_target": "百花医药",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "600721",
+   "matched": "600721"
+  },
+  {
+   "sample_id": "33",
+   "raw_target": "通鼎互联",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002491",
+   "matched": "002491"
+  },
+  {
+   "sample_id": "34",
+   "raw_target": "海科新源",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "301292",
+   "matched": "301292"
+  },
+  {
+   "sample_id": "35",
+   "raw_target": "剑桥科技",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "603083",
+   "matched": "603083"
+  },
+  {
+   "sample_id": "36",
+   "raw_target": "芯原股份",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "688521",
+   "matched": "688521"
+  },
+  {
+   "sample_id": "37",
+   "raw_target": "通富微电",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002156",
+   "matched": "002156"
+  },
+  {
+   "sample_id": "38",
+   "raw_target": "半导体硅片",
+   "bucket": "EXCLUDED_THEME",
+   "method": "EXCLUDED",
+   "matched": null
+  },
+  {
+   "sample_id": "39",
+   "raw_target": "鹏鼎控股",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002938",
+   "matched": "002938"
+  },
+  {
+   "sample_id": "40",
+   "raw_target": "景旺电子",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "603228",
+   "matched": "603228"
+  },
+  {
+   "sample_id": "41",
+   "raw_target": "秋乐种业",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "920087",
+   "matched": "920087"
+  },
+  {
+   "sample_id": "42",
+   "raw_target": "哈森股份",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "603958",
+   "matched": "603958"
+  },
+  {
+   "sample_id": "43",
+   "raw_target": "神农种业",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "300189",
+   "matched": "300189"
+  },
+  {
+   "sample_id": "44",
+   "raw_target": "瑞芯微",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "603893",
+   "matched": "603893"
+  },
+  {
+   "sample_id": "45",
+   "raw_target": "国瓷材料",
+   "bucket": "EXCLUDED_THEME",
+   "method": "EXCLUDED",
+   "matched": null
+  },
+  {
+   "sample_id": "46",
+   "raw_target": "源杰科技",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "688498",
+   "matched": "688498"
+  },
+  {
+   "sample_id": "47",
+   "raw_target": "天孚通信",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "300394",
+   "matched": "300394"
+  },
+  {
+   "sample_id": "48",
+   "raw_target": "沃森生物(300142)",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT_INLINE_CODE",
+   "code": "300142",
+   "matched": "300142"
+  },
+  {
+   "sample_id": "49",
+   "raw_target": "天山铝业(002532)",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT_INLINE_CODE",
+   "code": "002532",
+   "matched": "002532"
+  },
+  {
+   "sample_id": "50",
+   "raw_target": "资源金属",
+   "bucket": "EXCLUDED_THEME",
+   "method": "EXCLUDED",
+   "matched": null
+  },
+  {
+   "sample_id": "51",
+   "raw_target": "华虹公司",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "ALIAS",
+   "code": "688347",
+   "matched": "688347"
+  },
+  {
+   "sample_id": "52",
+   "raw_target": "景旺电子",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "603228",
+   "matched": "603228"
+  },
+  {
+   "sample_id": "53",
+   "raw_target": "卫星化学",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002648",
+   "matched": "002648"
+  },
+  {
+   "sample_id": "54",
+   "raw_target": "生益科技",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "600183",
+   "matched": "600183"
+  },
+  {
+   "sample_id": "55",
+   "raw_target": "云南锗业",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002428",
+   "matched": "002428"
+  },
+  {
+   "sample_id": "56",
+   "raw_target": "亨通光电",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "600487",
+   "matched": "600487"
+  },
+  {
+   "sample_id": "57",
+   "raw_target": "折叠屏",
+   "bucket": "EXCLUDED_THEME",
+   "method": "EXCLUDED",
+   "matched": null
+  },
+  {
+   "sample_id": "58",
+   "raw_target": "冷液",
+   "bucket": "EXCLUDED_THEME",
+   "method": "EXCLUDED",
+   "matched": null
+  },
+  {
+   "sample_id": "59",
+   "raw_target": "西点药业",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "301130",
+   "matched": "301130"
+  },
+  {
+   "sample_id": "60",
+   "raw_target": "湖南白银",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002716",
+   "matched": "002716"
+  },
+  {
+   "sample_id": "62",
+   "raw_target": "中际旭创",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "300308",
+   "matched": "300308"
+  },
+  {
+   "sample_id": "63",
+   "raw_target": "贝斯特(300580)",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT_INLINE_CODE",
+   "code": "300580",
+   "matched": "300580"
+  },
+  {
+   "sample_id": "64",
+   "raw_target": "海光信息",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "688041",
+   "matched": "688041"
+  },
+  {
+   "sample_id": "65",
+   "raw_target": "华勤技术",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "603296",
+   "matched": "603296"
+  },
+  {
+   "sample_id": "66",
+   "raw_target": "风华高科",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "000636",
+   "matched": "000636"
+  },
+  {
+   "sample_id": "67",
+   "raw_target": "雅克科技",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002409",
+   "matched": "002409"
+  },
+  {
+   "sample_id": "68",
+   "raw_target": "锐捷网络",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "301165",
+   "matched": "301165"
+  },
+  {
+   "sample_id": "69",
+   "raw_target": "长川科技",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "300604",
+   "matched": "300604"
+  },
+  {
+   "sample_id": "70",
+   "raw_target": "天孚通信",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "300394",
+   "matched": "300394"
+  },
+  {
+   "sample_id": "71",
+   "raw_target": "大金重工",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002487",
+   "matched": "002487"
+  },
+  {
+   "sample_id": "72",
+   "raw_target": "拓普集团",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "601689",
+   "matched": "601689"
+  },
+  {
+   "sample_id": "73",
+   "raw_target": "中恒电气(002364)",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT_INLINE_CODE",
+   "code": "002364",
+   "matched": "002364"
+  },
+  {
+   "sample_id": "74",
+   "raw_target": "协鑫能科",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002015",
+   "matched": "002015"
+  },
+  {
+   "sample_id": "75",
+   "raw_target": "有研硅",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "688432",
+   "matched": "688432"
+  },
+  {
+   "sample_id": "76",
+   "raw_target": "兖矿能源",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "600188",
+   "matched": "600188"
+  },
+  {
+   "sample_id": "77",
+   "raw_target": "康盛股份",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002418",
+   "matched": "002418"
+  },
+  {
+   "sample_id": "78",
+   "raw_target": "立讯精密",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002475",
+   "matched": "002475"
+  },
+  {
+   "sample_id": "79",
+   "raw_target": "宝鼎科技",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002552",
+   "matched": "002552"
+  },
+  {
+   "sample_id": "80",
+   "raw_target": "共进股份",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "603118",
+   "matched": "603118"
+  },
+  {
+   "sample_id": "81",
+   "raw_target": "西部矿业",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "601168",
+   "matched": "601168"
+  },
+  {
+   "sample_id": "82",
+   "raw_target": "茂莱光学",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "688502",
+   "matched": "688502"
+  },
+  {
+   "sample_id": "83",
+   "raw_target": "宏景",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "ALIAS",
+   "code": "301396",
+   "matched": "301396"
+  },
+  {
+   "sample_id": "84",
+   "raw_target": "中国中免",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "601888",
+   "matched": "601888"
+  },
+  {
+   "sample_id": "85",
+   "raw_target": "泰格医药",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "300347",
+   "matched": "300347"
+  },
+  {
+   "sample_id": "86",
+   "raw_target": "海康威视",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002415",
+   "matched": "002415"
+  },
+  {
+   "sample_id": "87",
+   "raw_target": "国风新材",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "000859",
+   "matched": "000859"
+  },
+  {
+   "sample_id": "88",
+   "raw_target": "ST闻泰",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "ALIAS",
+   "code": "600745",
+   "matched": "600745"
+  },
+  {
+   "sample_id": "89",
+   "raw_target": "长飞光纤",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "601869",
+   "matched": "601869"
+  },
+  {
+   "sample_id": "90",
+   "raw_target": "天孚通信",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "300394",
+   "matched": "300394"
+  },
+  {
+   "sample_id": "91",
+   "raw_target": "德明利(001309)",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT_INLINE_CODE",
+   "code": "001309",
+   "matched": "001309"
+  },
+  {
+   "sample_id": "92",
+   "raw_target": "长飞光纤",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "601869",
+   "matched": "601869"
+  },
+  {
+   "sample_id": "93",
+   "raw_target": "宏景科技",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "301396",
+   "matched": "301396"
+  },
+  {
+   "sample_id": "94",
+   "raw_target": "芯源微(688037)",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT_INLINE_CODE",
+   "code": "688037",
+   "matched": "688037"
+  },
+  {
+   "sample_id": "95",
+   "raw_target": "汉森制药",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002412",
+   "matched": "002412"
+  },
+  {
+   "sample_id": "96",
+   "raw_target": "康盛股份",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "002418",
+   "matched": "002418"
+  },
+  {
+   "sample_id": "97",
+   "raw_target": "长盈通",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "688143",
+   "matched": "688143"
+  },
+  {
+   "sample_id": "99",
+   "raw_target": "腾景科技",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT",
+   "code": "688195",
+   "matched": "688195"
+  },
+  {
+   "sample_id": "100",
+   "raw_target": "屹唐股份(688729)",
+   "bucket": "A_SHARE_RESOLVABLE",
+   "method": "EXACT_INLINE_CODE",
+   "code": "688729",
+   "matched": "688729"
+  }
+ ],
+ "non_stock_buckets": {
+  "3": "MARKET",
+  "61": "MARKET",
+  "98": "MARKET"
+ }
+}

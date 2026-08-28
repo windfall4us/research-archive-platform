@@ -1,0 +1,34 @@
+[
+ {
+  "raw_name": "华虹公司",
+  "candidate": "华虹宏力",
+  "code": "688347",
+  "alias_type": "COMMON_NAME",
+  "confidence": 1.0,
+  "note": "博主常用简称，正式名华虹宏力"
+ },
+ {
+  "raw_name": "宏景",
+  "candidate": "宏景科技",
+  "code": "301396",
+  "alias_type": "SHORT_NAME",
+  "confidence": 1.0,
+  "note": "宏景科技简称"
+ },
+ {
+  "raw_name": "ST闻泰",
+  "candidate": "*ST闻泰",
+  "code": "600745",
+  "alias_type": "NAME_VARIANT",
+  "confidence": 0.95,
+  "note": "master 为*ST闻泰，博主省略星号"
+ },
+ {
+  "raw_name": "中国金茂",
+  "candidate": null,
+  "code": null,
+  "alias_type": "UNKNOWN",
+  "confidence": 0.0,
+  "note": "A股master无此标的，疑为港股00817或未上市，需人工确认是否进Non-A-share"
+ }
+]

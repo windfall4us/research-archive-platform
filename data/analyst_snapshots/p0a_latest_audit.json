@@ -1,0 +1,383 @@
+{
+  "captured_at": "2026-08-27T23:19:52.030642+08:00",
+  "url": "https://reports.wmsora.vip/analysts/vip0_timeline.html",
+  "snapshot_path": "data/analyst_snapshots/vip0_timeline_20260827_231951.html",
+  "sha256": "11ece0966566e0e432256773b2fee41d0cac751ae34361a8b6be1c9cac77e351",
+  "bytes": 394654,
+  "analyst_days": 68,
+  "analysts": [
+    "一线天渔哥",
+    "天赢居",
+    "妖股刺客",
+    "李梦尘",
+    "格兰投研",
+    "清北游资",
+    "游资混江龙",
+    "潘凤",
+    "老樊",
+    "震哥本尊"
+  ],
+  "dates": [
+    "2026-08-13",
+    "2026-08-14",
+    "2026-08-15",
+    "2026-08-16",
+    "2026-08-17",
+    "2026-08-18",
+    "2026-08-19",
+    "2026-08-26",
+    "2026-08-27"
+  ],
+  "actions": 846,
+  "entity_type_counts": {
+    "UNKNOWN": 525,
+    "STOCK": 312,
+    "MARKET": 3,
+    "THEME": 6
+  },
+  "section_counts": {
+    "daily_action": 846
+  },
+  "unknown_samples": [
+    {
+      "source_record_id": "vip0:老樊:2026-08-27:daily_action:001",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-27",
+      "section_type": "daily_action",
+      "raw_target": "飞龙股份",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "飞龙股份",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "液冷+移动平均带强弱对比锁定，板块内最先封板，回踩买点结构仍可博弈",
+      "raw_action_text": "涨停封板，回踩买点仍可博弈",
+      "raw_direction": "持有",
+      "raw_date": "2026-08-27"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-27:daily_action:002",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-27",
+      "section_type": "daily_action",
+      "raw_target": "联瑞新材",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "联瑞新材",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "AI填料硅微粉最正宗，最先出现突破买点结构",
+      "raw_action_text": "突破买点结构，重点关注",
+      "raw_direction": "买入",
+      "raw_date": "2026-08-27"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-27:daily_action:003",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-27",
+      "section_type": "daily_action",
+      "raw_target": "国瓷材料",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "国瓷材料",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "稀土断供不可逆+中国陶瓷粉体份额提升+氧化锆受益，双逻辑加持",
+      "raw_action_text": "走出突破买点结构可能性偏高",
+      "raw_direction": "观察",
+      "raw_date": "2026-08-27"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-27:daily_action:005",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-27",
+      "section_type": "daily_action",
+      "raw_target": "兖矿能源",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "兖矿能源",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "煤炭弱回踩买点结构，圈内品种，继续持股策略",
+      "raw_action_text": "弱回踩买点，持股；30%乖离附近半仓止盈",
+      "raw_direction": "持有",
+      "raw_date": "2026-08-27"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-27:daily_action:006",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-27",
+      "section_type": "daily_action",
+      "raw_target": "淮北矿业",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "淮北矿业",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "煤炭小仓位博弈品种，逻辑未加强前控节奏",
+      "raw_action_text": "小仓位博弈，30%乖离附近半仓止盈",
+      "raw_direction": "持有",
+      "raw_date": "2026-08-27"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-27:daily_action:007",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-27",
+      "section_type": "daily_action",
+      "raw_target": "荣盛石化",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "荣盛石化",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "大炼化前瞻性挖掘，持有浙江石化51%股权",
+      "raw_action_text": "持股，30%乖离附近上攻乏力半仓止盈",
+      "raw_direction": "持有",
+      "raw_date": "2026-08-27"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-27:daily_action:008",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-27",
+      "section_type": "daily_action",
+      "raw_target": "桐昆股份",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "桐昆股份",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "持有浙江石化20%股权+涤纶长丝弹性最大品种，今日涨停",
+      "raw_action_text": "涨停，大炼化弹性品种",
+      "raw_direction": "买入",
+      "raw_date": "2026-08-27"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-27:daily_action:009",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-27",
+      "section_type": "daily_action",
+      "raw_target": "妙可蓝多",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "妙可蓝多",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "回踩中期均线组，波段买点",
+      "raw_action_text": "波段买点，可关注",
+      "raw_direction": "买入",
+      "raw_date": "2026-08-27"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-27:daily_action:010",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-27",
+      "section_type": "daily_action",
+      "raw_target": "万华化学",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "万华化学",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "超弱回踩买点结构，阳线涨幅<5%且量能不够",
+      "raw_action_text": "结构偏弱，谨慎",
+      "raw_direction": "观察",
+      "raw_date": "2026-08-27"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-26:daily_action:001",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-26",
+      "section_type": "daily_action",
+      "raw_target": "芯原股份",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "芯原股份",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "国产算力ASIC，股价现乖离买点结构；股权激励修订加入利润考核，市场从交易订单转向交易利润，小级别利好",
+      "raw_action_text": "逢绿盘打底仓，左侧仅底仓策略",
+      "raw_direction": "低吸",
+      "raw_date": "2026-08-26"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-26:daily_action:002",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-26",
+      "section_type": "daily_action",
+      "raw_target": "西部矿业",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "西部矿业",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "铜，8/7乖离值30%触发半仓止盈躲过调整，现率先在中期均线组偏上方企稳",
+      "raw_action_text": "若今日不封涨停则1/3-半仓止盈控节奏；等杰克逊霍尔落地后择机接回",
+      "raw_direction": "减仓",
+      "raw_date": "2026-08-26"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-26:daily_action:003",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-26",
+      "section_type": "daily_action",
+      "raw_target": "紫金矿业",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "紫金矿业",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "铜，圈内品种，移动平均带强弱对比弱于西部矿业",
+      "raw_action_text": "铜板块中线持有，跟随趋势",
+      "raw_direction": "持有",
+      "raw_date": "2026-08-26"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-26:daily_action:005",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-26",
+      "section_type": "daily_action",
+      "raw_target": "国瓷材料",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "国瓷材料",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "PTFE进展加速，硅微粉部分规格已小批量供货，等待跨过验证拐点",
+      "raw_action_text": "小底仓可拿，新开仓等股价站回中期均线组",
+      "raw_direction": "持有",
+      "raw_date": "2026-08-26"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-26:daily_action:006",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-26",
+      "section_type": "daily_action",
+      "raw_target": "通鼎互联",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "通鼎互联",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "光纤小票，光棒-光纤-光缆一体化，明年产能带来利润弹性",
+      "raw_action_text": "中期均线组偏上方绿盘时小仓博弈",
+      "raw_direction": "短线",
+      "raw_date": "2026-08-26"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-26:daily_action:007",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-26",
+      "section_type": "daily_action",
+      "raw_target": "迈为股份",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "迈为股份",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "半导体设备补涨，连续2根中阳线现乖离买点；前道订单20e上修至25e",
+      "raw_action_text": "补涨行情，新开仓以试错仓为主",
+      "raw_direction": "试错",
+      "raw_date": "2026-08-26"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-26:daily_action:008",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-26",
+      "section_type": "daily_action",
+      "raw_target": "剑桥科技",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "剑桥科技",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "突破买点结构，但需观察大光（中际旭创等）是否企稳",
+      "raw_action_text": "中高偏好中期均线组上面绿盘时低吸",
+      "raw_direction": "低吸",
+      "raw_date": "2026-08-26"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-26:daily_action:009",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-26",
+      "section_type": "daily_action",
+      "raw_target": "美格智能",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "美格智能",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "高算力模组，突破买点结构；模组板块其他品种不同步",
+      "raw_action_text": "观察，暂未见特别利好，可能资金博弈业绩",
+      "raw_direction": "观察",
+      "raw_date": "2026-08-26"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-26:daily_action:010",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-26",
+      "section_type": "daily_action",
+      "raw_target": "顺钠股份",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "顺钠股份",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "标准回踩买点+探路尖兵模型，电网/电力轮动的情绪载体",
+      "raw_action_text": "短线可关注，模型加持有炒作潜力",
+      "raw_direction": "短线",
+      "raw_date": "2026-08-26"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-26:daily_action:011",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-26",
+      "section_type": "daily_action",
+      "raw_target": "上海洗霸",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "上海洗霸",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "固态电池被轮动，上海十五五规划催化；短期看政策，中期看验证",
+      "raw_action_text": "风格激进可小仓位试错",
+      "raw_direction": "试错",
+      "raw_date": "2026-08-26"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-26:daily_action:012",
+      "analyst": "老樊",
+      "analysis_date": "2026-08-26",
+      "section_type": "daily_action",
+      "raw_target": "盛科通信",
+      "target": {
+        "entity_type": "UNKNOWN",
+        "raw_target": "盛科通信",
+        "stock_code": null,
+        "match_method": "UNRESOLVED"
+      },
+      "raw_logic": "弱回踩买点结构（量能差点），尾盘不回落可试错",
+      "raw_action_text": "可试错仓",
+      "raw_direction": "试错",
+      "raw_date": "2026-08-26"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+# Phase 0B：Gold Sample + 代码解析 + Diff/Revision（v2，纳入用户决策）
+
+> 前置：Phase 0A 完成（No-Go 进 Phase 1）。数据边界 = 22:40 日终快照（22:30 夜盘成品）。
+> 本版本按用户 2026-08-28 决策全面修订：双轨数据模型、并行执行、7 个子版本、Precision 优先。
+
+## 核心原则（全引擎硬规则）
+1. **UNKNOWN 可以存在，错误识别成 STOCK 不可以**——不猜代码，保留原文
+2. **操作事件 ≠ 持仓状态**（用户决策 1 修订）：
+   - ①「最新持仓汇总」本身**不得**生成 BUY/ADD/LOW_BUY 等当日操作事件
+   - ② 持仓汇总只生成 `position_state = HOLDING`
+   - ③ 当日正文明确出现 买入/低吸/加仓/减仓/卖出 → 额外生成 `analyst_stock_event`
+   - ④ 同一股票可同时：`TODAY + EXECUTED + LOW_BUY` 与 `CURRENT_STATE + HOLDING`
+   - ⑤ 不能因股票出现在持仓汇总，就删除正文真实发生的当日操作
+3. **Precision 优先于 Recall**：漏掉 1 条 = 少一点信号；把 A 识别成 B = 制造错误共识
+4. 时间语义必须保留：TODAY / PAST / CURRENT_STATE / FUTURE_PLAN / CONDITIONAL / UNKNOWN
+
+## ⚠️ 关键数据发现（2026-08-28）
+`render_vip0_timeline.py:178-198`：**「最新持仓汇总」并非独立数据，而是把最新一天的 `days[latest_day].ops` 重新渲染一遍**。
+- 当前 JSON（vip0_timeline.json）**没有独立的持仓状态表**
+- 「持仓汇总」与「日内操作」同源同表 → 无法区分「当前持有」vs「今日买入」
+- 结论：双轨数据模型不能只在解析层做，**必须在 Phase 1 数据层单独建 `analyst_position_snapshots` 表**
+- Gold Sample 第 4/5 类（当前持仓/今日买入+仍持）需要人工结合正文判断，不能依赖现有 latest-summary 字段
+
+---
+
+## Phase 0B 拆成 7 个子版本（用户决策 8）
+
+```
+Phase 0B.1  Gold Schema + 10 条高难度样例          ✅ PASS
+Phase 0B.2  100 条 Gold Sample（分层扩展）         🟡 规则修正完成，待最终人工锁定
+Phase 0B.3  Stock Master + EXACT 匹配             ✅ PASS
+Phase 0B.4  Alias + Entity Type                   ✅ PASS
+Phase 0B.5  Action / Temporal Parser              ⏳
+Phase 0B.6  Cross-day Diff + Revision（MODIFIED）  🟡 单测 PASS，待真实跨天验收
+Phase 0B.7  Accuracy Benchmark（成绩单）           ⏳
+```
+
+### 执行策略（用户决策 3/4/5）：三线并行，不等快照
+```
+快照持续积累 ──┬─→ B1/B0B.6 跨天 Diff（等 ≥3 天后正式验收，但模型现在先写好）
+              └─→ 每天 22:40 自动归档（已有）
+立即开始：
+  B2.1/0B.1 10 行 Gold Sample → 确认 Schema → 0B.2 100 条
+  并行 0B.3 Stock Master → 0B.4 Alias → 0B.6 Diff/Revision 模型设计
+```
+
+---
+
+## 0B.1：Gold Sample Schema v1（用户决策 2）
+
+必填字段（尤其 actions[] / action_status / temporal_type 不能省）：
+
+```
+sample_id
+analyst_id
+analysis_date
+raw_text
+raw_target
+entity_type              STOCK/THEME/MARKET/UNKNOWN
+stock_code
+stock_name
+stock_match_method        EXACT/ALIAS/CONTEXT/FUZZY/UNRESOLVED
+stock_match_confidence
+actions[]                多动作数组（BUY/ADD/LOW_BUY/TRIAL/HOLD/WATCH/DO_T/REDUCE/SELL/CLEAR/STOP_LOSS）
+action_status             EXECUTED/INTENDED/CONDITIONAL/POSITION_STATE/UNKNOWN
+temporal_type             TODAY/PAST/CURRENT_STATE/FUTURE_PLAN/CONDITIONAL/UNKNOWN
+position_state            持仓状态（HOLDING/无）
+raw_theme
+normalized_theme
+human_confidence
+review_note
+```
+
+### 10 行高难度样本覆盖矩阵（用户指定）
+| # | 必须覆盖 | 说明 |
+|--|--|--|
+| 1 | 明确买入 | 买点/建仓/扫货 |
+| 2 | 明确低吸 | 低吸 |
+| 3 | 明确加仓 | 加仓/补仓 |
+| 4 | 当前持仓、今天没买 | position=HOLDING, 无当日操作事件 |
+| 5 | 今日买入+当前仍持仓 | 双轨：TODAY+EXECUTED+LOW_BUY 且 CURRENT_STATE+HOLDING |
+| 6 | 减仓但未清仓 | REDUCE, position 仍在 |
+| 7 | 已走/清仓 | CLEAR/SELL |
+| 8 | "回踩可买"等条件计划 | CONDITIONAL / INTENDED |
+| 9 | "做T/低吃+做T"等复合动作 | actions=[LOW_BUY, DO_T] |
+| 10 | 非个股/无法解析对象 | entity_type=THEME/MARKET/UNKNOWN |
+
+### 动作归一化字典（固定）
+BUY +2.0 / ADD +1.5 / LOW_BUY +1.2 / TRIAL +0.8 / HOLD +0.5 / WATCH 0 / DO_T 0 / REDUCE -1.0 / SELL -1.5 / CLEAR -2.0 / STOP_LOSS -2.0
+
+---
+
+## 0B.6：Diff + Revision 模型（用户决策 4/5/6，现在先设计，等快照验收）
+
+### 双层 ID（用户决策 4）
+```
+logical_key  = vip0:{analyst}:{date}:{section_type}:{entity}   # 判断"可能同一逻辑记录"
+record_id    = vip0:{analyst}:{date}:{section_type}:{entity}:action:{NNN}  # 记录指纹
+```
+- 不能用 `analyst+date+stock` 当唯一 key（同一天 上午低吸/下午减仓 是两条，不是 revision）
+- Diff 状态：ADDED / REMOVED / UNCHANGED / **MODIFIED**
+
+### Revision 记录字段（用户决策 5）
+```
+revision_id
+logical_record_id
+snapshot_date
+detected_at
+revision_no
+change_type
+old_hash / new_hash
+old_value / new_value
+changed_fields        ← 关键：区分「股票名称变化」vs「操作 HOLD→SELL」严重程度
+```
+
+### 跨天验收报告（用户决策 6，等 ≥3 天快照）
+```
+2026-08-27 → 2026-08-28
+原记录：846
+UNCHANGED 731 / ADDED 82 / REMOVED 21 / MODIFIED 12
+拆解：新增当天 / 旧日期补录 / 旧日期文本修改 / 持仓汇总修改 / 操作动作修改
+Historical Mutation Rate = 旧日期修改数 / 旧日期记录总数
+   <1%  → revision 是辅助机制
+   5-10%+ → HTML 是持续修订产品，Revision Store 成为核心架构
+```
+
+---
+
+## 0B.3/0B.4：股票代码解析（用户决策 7，Precision 优先）
+
+### 分层匹配与阈值
+```
+EXACT    自动通过        （芯原股份 → 688521）
+ALIAS    自动通过        （芯原 → 芯原股份；必须人工维护/审核，不放任模糊）
+CONTEXT  高置信通过      （结合主线/逻辑消歧重名）
+FUZZY    默认 review     （绝不直接判 STOCK）
+UNKNOWN  不计算          （保留原文，进人工队列）
+```
+- Stock Master 与平台股票池/金融 API **用同一标准库**，避免 688521 一个认一个不认
+- 第一版**不上大范围 FUZZY**
+
+### B3.3 锁定（用户确认 2026-08-28）
+
+```text
+Phase 0B.3 Security Master / Stock Resolver
+Status: PASS
+
+Scope:
+- A股 Security Master：5563
+- EXACT Resolver：PASS
+- ALIAS Resolver：PASS
+- OUT_OF_SCOPE 分流：PASS
+- FUZZY：Disabled by design
+
+Benchmark:
+- A_SHARE_RESOLVABLE = 89
+- EXACT matched = 86
+- ALIAS matched = 3
+- UNRESOLVED = 0
+- WRONG_MATCH = 0
+- EXACT Precision = 100%
+- EXACT Recall = 96.6%
+- EXACT+ALIAS Precision = 100%
+- EXACT+ALIAS Recall = 100%
+
+Decision:
+Precision-first gate passed.
+No need to enable FUZZY in Phase 0B.
+```
+
+**已批准 ALIAS（stock_aliases, CONFIRMED）**：华虹公司→688347 (COMMON_NAME 1.00) / 宏景→301396 (SHORT_NAME 0.98) / ST闻泰→600745 (NAME_VARIANT 0.99)。中国金茂→OUT_OF_SCOPE（不进 stock_aliases）。
+
+**解析状态枚举（正式）**：`EXACT / ALIAS / CONTEXT / FUZZY / UNRESOLVED / OUT_OF_SCOPE`
+
+### 🔒 设计边界（锁定，禁止"优化"时误改）
+
+```text
+1. EXACT 不删除 * / ST / U 等证券名称标记
+2. 人工确认简称进入 ALIAS，不放宽 EXACT
+3. OUT_OF_SCOPE 不计入 A 股 Resolver Recall 分母
+4. UNRESOLVED 与 OUT_OF_SCOPE 严格分离
+5. FUZZY 默认关闭
+6. 只有未来真实 UNRESOLVED 样本证明有必要时才评估 CONTEXT/FUZZY
+```
+
+---
+
+## 验收成绩单（Phase 0B.7，达门槛才进 Phase 1）
+| 指标 | Gold 目标 |
+|---|---:|
+| Entity Type | 98% |
+| 股票识别 | 97% |
+| Code Match | 97% |
+| Action | 95% |
+| Executed/Plan | 97% |
+| Today/Past/State | 96% |
+| 持仓→买入误判 | 0% |
+| Overall | 96.x% |
+
+---
+
+## 执行队列（当前，2026-08-28 更新）
+```text
+✅ 0B.1：10 行 Gold Sample + Schema 确认
+✅ 0B.2：扩 100 条（规则修正完成，待最终人工锁定）
+✅ 0B.3：Stock Master（5563）+ EXACT 匹配
+✅ 0B.4：ALIAS（3条批准）+ OUT_OF_SCOPE 分流 —— B3.3 已锁定
+→ 0B.5：Action / Temporal Parser
+→ 0B.6：今晚 22:40 真实跨天 Diff 验收（08-27 → 08-28，独立提交）
+→ 0B.7：Benchmark 成绩单 → Go/No-Go → Phase 1
+```
+不提前碰市场温度/主题热度（数据基础未就绪）。FUZZY 保持关闭。

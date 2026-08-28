@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+
+# 22:40 日终快照归档（每日新增，不入库，从快照目录恢复）
+data/analyst_snapshots/vip0_timeline_*.html
+data/analyst_snapshots/vip0_timeline_*.json
+
+# Phase 0A 解析中间产物（可脚本再生成）
+data/analyst_snapshots/p0a_parsed_records.json

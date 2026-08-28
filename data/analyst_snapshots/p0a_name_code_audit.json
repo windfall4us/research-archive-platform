@@ -1,0 +1,370 @@
+{
+  "html": "/home/windfall/workspace/research-archive-platform/data/analyst_snapshots/vip0_timeline_20260827_231951.html",
+  "total_actions": 846,
+  "master_rows": 41,
+  "counts": {
+    "EXACT": 22,
+    "ALIAS": 0,
+    "CODE": 312,
+    "UNRESOLVED": 503,
+    "NON_STOCK": 9
+  },
+  "resolved_samples": [
+    {
+      "source_record_id": "vip0:老樊:2026-08-27:daily_action:002",
+      "raw_target": "联瑞新材",
+      "code": "688300",
+      "name": "联瑞新材",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-16:daily_action:002",
+      "raw_target": "华勤技术",
+      "code": "603296",
+      "name": "华勤技术",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-16:daily_action:003",
+      "raw_target": "华正新材",
+      "code": "603186",
+      "name": "华正新材",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-14:daily_action:004",
+      "raw_target": "三环集团",
+      "code": "300408",
+      "name": "三环集团",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-13:daily_action:005",
+      "raw_target": "三环集团",
+      "code": "300408",
+      "name": "三环集团",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:震哥本尊:2026-08-14:daily_action:004",
+      "raw_target": "紫光",
+      "code": "000938",
+      "name": "紫光股份",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-27:daily_action:009",
+      "raw_target": "兴森科技",
+      "code": "002436",
+      "name": "兴森科技",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-19:daily_action:002",
+      "raw_target": "兴森科技",
+      "code": "002436",
+      "name": "兴森科技",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-17:daily_action:002",
+      "raw_target": "兴森科技",
+      "code": "002436",
+      "name": "兴森科技",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-27:daily_action:004",
+      "raw_target": "华勤技术",
+      "code": "603296",
+      "name": "华勤技术",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-26:daily_action:001",
+      "raw_target": "华勤技术",
+      "code": "603296",
+      "name": "华勤技术",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-19:daily_action:009",
+      "raw_target": "华勤技术",
+      "code": "603296",
+      "name": "华勤技术",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-18:daily_action:004",
+      "raw_target": "华勤技术",
+      "code": "603296",
+      "name": "华勤技术",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-17:daily_action:005",
+      "raw_target": "飞荣达",
+      "code": "300602",
+      "name": "飞荣达",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-14:daily_action:011",
+      "raw_target": "华勤技术",
+      "code": "603296",
+      "name": "华勤技术",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-13:daily_action:001",
+      "raw_target": "华勤技术",
+      "code": "603296",
+      "name": "华勤技术",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:清北游资:2026-08-18:daily_action:004",
+      "raw_target": "华正新材",
+      "code": "603186",
+      "name": "华正新材",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:清北游资:2026-08-17:daily_action:002",
+      "raw_target": "华正新材",
+      "code": "603186",
+      "name": "华正新材",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:妖股刺客:2026-08-17:daily_action:005",
+      "raw_target": "三环集团",
+      "code": "300408",
+      "name": "三环集团",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:妖股刺客:2026-08-13:daily_action:002",
+      "raw_target": "三环集团",
+      "code": "300408",
+      "name": "三环集团",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-27:daily_action:001",
+      "raw_target": "联瑞新材",
+      "code": "688300",
+      "name": "联瑞新材",
+      "method": "EXACT"
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-26:daily_action:001",
+      "raw_target": "联瑞新材",
+      "code": "688300",
+      "name": "联瑞新材",
+      "method": "EXACT"
+    }
+  ],
+  "unresolved_samples": [
+    {
+      "raw_target": "飞龙股份",
+      "action": "涨停封板，回踩买点仍可博弈"
+    },
+    {
+      "raw_target": "国瓷材料",
+      "action": "走出突破买点结构可能性偏高"
+    },
+    {
+      "raw_target": "兖矿能源",
+      "action": "弱回踩买点，持股；30%乖离附近半仓止盈"
+    },
+    {
+      "raw_target": "淮北矿业",
+      "action": "小仓位博弈，30%乖离附近半仓止盈"
+    },
+    {
+      "raw_target": "荣盛石化",
+      "action": "持股，30%乖离附近上攻乏力半仓止盈"
+    },
+    {
+      "raw_target": "桐昆股份",
+      "action": "涨停，大炼化弹性品种"
+    },
+    {
+      "raw_target": "妙可蓝多",
+      "action": "波段买点，可关注"
+    },
+    {
+      "raw_target": "万华化学",
+      "action": "结构偏弱，谨慎"
+    },
+    {
+      "raw_target": "芯原股份",
+      "action": "逢绿盘打底仓，左侧仅底仓策略"
+    },
+    {
+      "raw_target": "西部矿业",
+      "action": "若今日不封涨停则1/3-半仓止盈控节奏；等杰克逊霍尔落地后择机接回"
+    },
+    {
+      "raw_target": "紫金矿业",
+      "action": "铜板块中线持有，跟随趋势"
+    },
+    {
+      "raw_target": "国瓷材料",
+      "action": "小底仓可拿，新开仓等股价站回中期均线组"
+    },
+    {
+      "raw_target": "通鼎互联",
+      "action": "中期均线组偏上方绿盘时小仓博弈"
+    },
+    {
+      "raw_target": "迈为股份",
+      "action": "补涨行情，新开仓以试错仓为主"
+    },
+    {
+      "raw_target": "剑桥科技",
+      "action": "中高偏好中期均线组上面绿盘时低吸"
+    },
+    {
+      "raw_target": "美格智能",
+      "action": "观察，暂未见特别利好，可能资金博弈业绩"
+    },
+    {
+      "raw_target": "顺钠股份",
+      "action": "短线可关注，模型加持有炒作潜力"
+    },
+    {
+      "raw_target": "上海洗霸",
+      "action": "风格激进可小仓位试错"
+    },
+    {
+      "raw_target": "盛科通信",
+      "action": "可试错仓"
+    },
+    {
+      "raw_target": "海兴电力",
+      "action": "观察，看业绩等三季报"
+    },
+    {
+      "raw_target": "新洁能",
+      "action": "遇阻回落减仓止盈可留底仓；中线突破中期均线组是大概率"
+    },
+    {
+      "raw_target": "风华高科",
+      "action": "部分减仓止盈，未选择方向前不重仓"
+    },
+    {
+      "raw_target": "国瓷材料",
+      "action": "部分减仓止盈；中高偏好可留底仓"
+    },
+    {
+      "raw_target": "航天电器",
+      "action": "不建仓，回避"
+    },
+    {
+      "raw_target": "广钢气体",
+      "action": "观察，跌到中期均线组下方概率不高"
+    },
+    {
+      "raw_target": "潞安环能",
+      "action": "观察第三要素是否出现再定"
+    },
+    {
+      "raw_target": "紫燕食品",
+      "action": "不参与该模型逻辑"
+    },
+    {
+      "raw_target": "中交发展",
+      "action": "仅作模型观察，不追"
+    },
+    {
+      "raw_target": "斯达半导",
+      "action": "圈外品种走势独立，参考不追高"
+    },
+    {
+      "raw_target": "杨杰科技",
+      "action": "获利持有者按自身策略"
+    },
+    {
+      "raw_target": "湖南黄金",
+      "action": "打底仓等回踩买点结构，不急于进场"
+    },
+    {
+      "raw_target": "万和电气",
+      "action": "模型观察，不追"
+    },
+    {
+      "raw_target": "上海合晶",
+      "action": "中后排跟随止盈，不参与"
+    },
+    {
+      "raw_target": "金风科技",
+      "action": "不追，等标准突破结构"
+    },
+    {
+      "raw_target": "华通线缆",
+      "action": "模型参考，达标后走出后续行情"
+    },
+    {
+      "raw_target": "芯原股份",
+      "action": "底仓可拿，短期股价继续磨"
+    },
+    {
+      "raw_target": "有研硅",
+      "action": "再度大涨继续领跑，持有"
+    },
+    {
+      "raw_target": "立昂微",
+      "action": "用做波段，求稳可减仓防守"
+    },
+    {
+      "raw_target": "锐捷网络",
+      "action": "部分减仓止盈"
+    },
+    {
+      "raw_target": "盛和资源",
+      "action": "求稳可减仓防守"
+    },
+    {
+      "raw_target": "新洁能",
+      "action": "按中期均线组突破策略跟踪"
+    },
+    {
+      "raw_target": "安集科技",
+      "action": "突破买点确认，可关注"
+    },
+    {
+      "raw_target": "埃斯顿",
+      "action": "突破买点结构，可关注"
+    },
+    {
+      "raw_target": "绿的谐波",
+      "action": "高偏好可打观察仓"
+    },
+    {
+      "raw_target": "中国软件",
+      "action": "小仓位博弈，加仓性价比不高"
+    },
+    {
+      "raw_target": "瑞芯微",
+      "action": "中期均线组上方不破趋势没坏，持有"
+    },
+    {
+      "raw_target": "迈为股份",
+      "action": "中期均线组冲不过去减仓止盈"
+    },
+    {
+      "raw_target": "茂莱光学",
+      "action": "等站上中期均线组再考虑建仓"
+    },
+    {
+      "raw_target": "科达利",
+      "action": "分时绿盘低吸，可小仓位建仓"
+    },
+    {
+      "raw_target": "粮食/油籽类",
+      "action": "概念炒作，跟踪不追高"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+ "code": 0,
+ "message": "success",
+ "request_id": "47af7b4682e74459b102052f117bfefe",
+ "data": {
+  "timestamp": 1787901280878,
+  "item": [
+   {
+    "thscode": "600000.SH",
+    "ticker": "600000",
+    "name": "浦发银行",
+    "exchange": "SH",
+    "asset_type": "a-share",
+    "currency": "CNY"
+   },
+   {
+    "thscode": "600004.SH",
+    "ticker": "600004",
+    "name": "白云机场",
+    "exchange": "SH",
+    "asset_type": "a-share",
+    "currency": "CNY"
+   },
+   {
+    "thscode": "600006.SH",
+    "ticker": "600006",
+    "name": "东风股份",
+    "exchange": "SH",
+    "asset_type": "a-share",
+    "currency": "CNY"
+   },
+   {
+    "thscode": "600007.SH",
+    "ticker": "600007",
+    "name": "中国国贸",
+    "exchange": "SH",
+    "asset_type": "a-share",
+    "currency": "CNY"
+   },
+   {
+    "thscode": "600008.SH",
+    "ticker": "600008",
+    "name": "首创环保",
+    "exchange": "SH",
+    "asset_type": "a-share",
+    "currency": "CNY"
+   }
+  ]
+ }
+}
