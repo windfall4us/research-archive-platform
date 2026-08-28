@@ -1,0 +1,101 @@
+sample_id,analyst,date,raw_target,raw_action,parser_actions,parser_temporal,parser_position,draft_act,draft_status,draft_temporal,agree_action,agree_status,agree_temporal
+1,老樊,2026-08-28,腾景科技,试错思维对待，控制仓位,"[[""TRIAL"", ""INTENDED""]]",TODAY,,TRIAL,CONDITIONAL,CONDITIONAL,True,False,False
+2,天赢居,2026-08-14,四方股份(601126),试盘仓守8月12日低点支撑,"[[""TRIAL"", ""INTENDED""]]",TODAY,,TRIAL,INTENDED,UNKNOWN,True,True,False
+3,妖股刺客,2026-08-17,VC板块,分仓试错,"[[""TRIAL"", ""INTENDED""]]",TODAY,,TRIAL,INTENDED,UNKNOWN,True,True,False
+4,潘凤,2026-08-17,太辰光,0.5仓试错,"[[""TRIAL"", ""INTENDED""], [""BUY"", ""INTENDED""]]",TODAY,,TRIAL,INTENDED,UNKNOWN,True,True,False
+5,老樊,2026-08-18,长飞光纤,部分减仓止盈，放量突破则小幅加仓,"[[""REDUCE"", ""EXECUTED""], [""ADD"", ""CONDITIONAL""]]",CONDITIONAL,,REDUCE,INTENDED,UNKNOWN,True,False,False
+6,震哥本尊,2026-08-17,天孚通信,已减仓，不追高,"[[""REDUCE"", ""EXECUTED""]]",TODAY,,REDUCE,EXECUTED,CURRENT_STATE,True,True,False
+7,天赢居,2026-08-26,赤峰黄金,收回5日均线持股，收不回减持，等13日均线再考虑回补,"[[""HOLD"", ""POSITION_STATE""], [""REDUCE"", ""CONDITIONAL""], [""ADD"", ""CONDITIONAL""]]",CONDITIONAL,HOLDING,REDUCE,CONDITIONAL,CONDITIONAL,False,False,True
+8,格兰投研,2026-08-17,杰瑞股份,不连板则止盈,"[[""REDUCE"", ""CONDITIONAL""]]",CONDITIONAL,,REDUCE,INTENDED,UNKNOWN,True,False,False
+9,游资混江龙,2026-08-14,药明康德,之前减仓的可以继续跑,"[[""REDUCE"", ""CONDITIONAL""]]",CONDITIONAL,,REDUCE,EXECUTED,UNKNOWN,True,False,False
+10,清北游资,2026-08-26,融捷股份,73.5左右减一半，另一半74以上出完，本月结束,"[[""REDUCE"", ""INTENDED""], [""SELL"", ""INTENDED""]]",TODAY,,REDUCE,INTENDED,UNKNOWN,True,True,False
+11,妖股刺客,2026-08-19,兴业科技,尾盘减仓，兑现修复收益,"[[""REDUCE"", ""EXECUTED""], [""SELL"", ""EXECUTED""]]",TODAY,,REDUCE,INTENDED,UNKNOWN,True,False,False
+12,潘凤,2026-08-28,中际旭创,反弹尾声信号，不追高，注意反弹结束,"[[""WATCH"", ""INTENDED""]]",UNKNOWN,,REDUCE,INTENDED,UNKNOWN,False,True,True
+13,李梦尘,2026-08-17,半导体材料,止盈卖出,"[[""REDUCE"", ""EXECUTED""], [""SELL"", ""EXECUTED""]]",TODAY,,REDUCE,INTENDED,UNKNOWN,True,False,False
+14,老樊,2026-08-19,万和电气,模型观察，不追,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+15,老樊,2026-08-28,赛微电子,主题催化弹性大，仓位上控制，小作文难辨真伪,"[[""UNKNOWN"", ""INTENDED""]]",UNKNOWN,,WATCH,INTENDED,UNKNOWN,False,True,True
+16,老樊,2026-08-19,广钢气体,观察，跌到中期均线组下方概率不高,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+17,震哥本尊,2026-08-28,立新能源,位置不够低，先自选观察,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+18,震哥本尊,2026-08-28,深中华A,开盘看承接，能博弈,"[[""WATCH"", ""INTENDED""], [""TRIAL"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+19,震哥本尊,2026-08-27,汉森制药,修复新高观察,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+20,天赢居,2026-08-17,恩捷股份(002812),耐心跟踪13日均线通道防守,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+21,天赢居,2026-08-17,百济神州(688235),更多做主线轮动，跟踪为主,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+22,天赢居,2026-08-17,中际旭创(300308),观察,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+23,格兰投研,2026-08-19,中国金茂,指数级反弹行情，观察核心城市企稳,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+24,格兰投研,2026-08-14,兆易创新,关注,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+25,格兰投研,2026-08-14,禾望电气,关注,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+26,游资混江龙,2026-08-17,黄河旋风,开盘零进已涨停，短线强势跟踪,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,EXECUTED,CURRENT_STATE,True,False,False
+27,游资混江龙,2026-08-26,中石科技,持续跟踪反复做,"[[""DO_T"", ""INTENDED""], [""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,False,True,False
+28,游资混江龙,2026-08-27,华勤技术,提前拿筹码控仓位，博弈资金回流,"[[""HOLD"", ""POSITION_STATE""], [""TRIAL"", ""INTENDED""]]",TODAY,HOLDING,WATCH,INTENDED,UNKNOWN,False,False,False
+29,清北游资,2026-08-18,宇树科技相关,操作谨慎，今日兑现为主,"[[""SELL"", ""EXECUTED""]]",TODAY,,WATCH,INTENDED,TODAY,False,False,True
+30,清北游资,2026-08-18,沃格光电,关注，择机参考,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+31,清北游资,2026-08-17,华正新材,换板可以操作,"[[""UNKNOWN"", ""INTENDED""]]",UNKNOWN,,WATCH,INTENDED,UNKNOWN,False,True,True
+32,妖股刺客,2026-08-28,百花医药,情绪一致，等分歧看最先转强支持强者,"[[""WATCH"", ""INTENDED""]]",CONDITIONAL,,WATCH,INTENDED,UNKNOWN,True,True,False
+33,妖股刺客,2026-08-26,通鼎互联,回避，科技套牢盘太重,"[[""UNKNOWN"", ""INTENDED""]]",UNKNOWN,,WATCH,INTENDED,UNKNOWN,False,True,True
+34,妖股刺客,2026-08-17,海科新源,关注拉升持续性,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+35,潘凤,2026-08-27,剑桥科技,一字预期，相信,"[[""UNKNOWN"", ""INTENDED""]]",UNKNOWN,,WATCH,INTENDED,UNKNOWN,False,True,True
+36,潘凤,2026-08-17,芯原股份,关注,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+37,潘凤,2026-08-17,通富微电,观察助攻持续性,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+38,李梦尘,2026-08-18,半导体硅片,关注强势延续,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+39,李梦尘,2026-08-17,鹏鼎控股,受益标的,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+40,李梦尘,2026-08-17,景旺电子,受益标的,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+41,一线天渔哥,2026-08-28,秋乐种业,关注,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+42,一线天渔哥,2026-08-27,哈森股份,跟踪,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+43,一线天渔哥,2026-08-28,神农种业,关注,"[[""WATCH"", ""INTENDED""]]",TODAY,,WATCH,INTENDED,UNKNOWN,True,True,False
+44,老樊,2026-08-18,瑞芯微,中期均线组上方不破趋势没坏，持有,"[[""HOLD"", ""POSITION_STATE""]]",CURRENT_STATE,HOLDING,HOLD,POSITION_STATE,UNKNOWN,True,True,False
+45,老樊,2026-08-17,国瓷材料,策略暂时无变化,"[[""HOLD"", ""POSITION_STATE""]]",CURRENT_STATE,HOLDING,HOLD,POSITION_STATE,UNKNOWN,True,True,False
+46,震哥本尊,2026-08-27,源杰科技,短线持有，不打算动,"[[""HOLD"", ""POSITION_STATE""]]",CURRENT_STATE,HOLDING,HOLD,POSITION_STATE,UNKNOWN,True,True,False
+47,震哥本尊,2026-08-26,天孚通信,持有观察,"[[""HOLD"", ""POSITION_STATE""]]",CURRENT_STATE,HOLDING,HOLD,POSITION_STATE,UNKNOWN,True,True,False
+48,天赢居,2026-08-19,沃森生物(300142),底仓顺21月均线持有观察,"[[""HOLD"", ""POSITION_STATE""]]",CURRENT_STATE,HOLDING,HOLD,POSITION_STATE,UNKNOWN,True,True,False
+49,天赢居,2026-08-19,天山铝业(002532),区域内持有观察,"[[""HOLD"", ""POSITION_STATE""]]",CURRENT_STATE,HOLDING,HOLD,POSITION_STATE,UNKNOWN,True,True,False
+50,格兰投研,2026-08-27,资源金属,持有观察,"[[""HOLD"", ""POSITION_STATE""]]",CURRENT_STATE,HOLDING,HOLD,POSITION_STATE,UNKNOWN,True,True,False
+51,格兰投研,2026-08-26,华虹公司,持有,"[[""HOLD"", ""POSITION_STATE""]]",CURRENT_STATE,HOLDING,HOLD,POSITION_STATE,UNKNOWN,True,True,False
+52,游资混江龙,2026-08-26,景旺电子,以20日均线为锚点，不破不走人,"[[""HOLD"", ""POSITION_STATE""]]",CONDITIONAL,HOLDING,HOLD,POSITION_STATE,UNKNOWN,True,True,False
+53,游资混江龙,2026-08-26,卫星化学,拿着筹码继续看,"[[""HOLD"", ""POSITION_STATE""]]",CURRENT_STATE,HOLDING,HOLD,POSITION_STATE,UNKNOWN,True,True,False
+54,妖股刺客,2026-08-28,生益科技,科技没问题，关注,"[[""WATCH"", ""INTENDED""]]",TODAY,,HOLD,POSITION_STATE,UNKNOWN,False,False,False
+55,妖股刺客,2026-08-19,云南锗业,持有,"[[""HOLD"", ""POSITION_STATE""]]",CURRENT_STATE,HOLDING,HOLD,POSITION_STATE,UNKNOWN,True,True,False
+56,潘凤,2026-08-26,亨通光电,持有，若有则加,"[[""HOLD"", ""POSITION_STATE""], [""ADD"", ""CONDITIONAL""]]",CONDITIONAL,HOLDING,HOLD,POSITION_STATE,CONDITIONAL,True,True,True
+57,李梦尘,2026-08-28,折叠屏,打地鼠模式，电源偏恶心，剩余子弹不动,"[[""DO_T"", ""INTENDED""], [""HOLD"", ""POSITION_STATE""]]",CURRENT_STATE,HOLDING,HOLD,POSITION_STATE,UNKNOWN,False,False,False
+58,李梦尘,2026-08-28,冷液,打地鼠模式，电源偏恶心，剩余子弹不动,"[[""DO_T"", ""INTENDED""], [""HOLD"", ""POSITION_STATE""]]",CURRENT_STATE,HOLDING,HOLD,POSITION_STATE,UNKNOWN,False,False,False
+59,一线天渔哥,2026-08-28,西点药业,滚动操作，涨多减/5日线之上加,"[[""DO_T"", ""INTENDED""], [""REDUCE"", ""EXECUTED""], [""ADD"", ""INTENDED""]]",TODAY,,HOLD,POSITION_STATE,UNKNOWN,False,False,False
+60,一线天渔哥,2026-08-28,湖南白银,滚动操作,"[[""DO_T"", ""INTENDED""]]",TODAY,,HOLD,POSITION_STATE,UNKNOWN,False,False,False
+61,老樊,2026-08-27,大盘,卡节奏慢慢做，不追高，低吸为主,"[[""LOW_BUY"", ""INTENDED""]]",TODAY,,LOW_BUY,INTENDED,UNKNOWN,True,True,False
+62,震哥本尊,2026-08-17,中际旭创,低吸持有,"[[""LOW_BUY"", ""INTENDED""], [""HOLD"", ""POSITION_STATE""]]",TODAY,HOLDING,LOW_BUY,INTENDED,UNKNOWN,True,True,False
+63,天赢居,2026-08-14,贝斯特(300580),分批慢慢建底仓，先守21日均线支撑,"[[""BUY"", ""INTENDED""]]",TODAY,,LOW_BUY,INTENDED,UNKNOWN,False,True,False
+64,格兰投研,2026-08-18,海光信息,低吸持有,"[[""LOW_BUY"", ""INTENDED""], [""HOLD"", ""POSITION_STATE""]]",TODAY,HOLDING,LOW_BUY,INTENDED,UNKNOWN,True,True,False
+65,游资混江龙,2026-08-18,华勤技术,控制好仓位持有,"[[""HOLD"", ""POSITION_STATE""]]",CURRENT_STATE,HOLDING,LOW_BUY,INTENDED,UNKNOWN,False,False,False
+66,妖股刺客,2026-08-28,风华高科,分歧低吸,"[[""LOW_BUY"", ""INTENDED""]]",TODAY,,LOW_BUY,INTENDED,UNKNOWN,True,True,False
+67,潘凤,2026-08-18,雅克科技,低吸了一点，慢慢来不着急,"[[""LOW_BUY"", ""INTENDED""]]",TODAY,,LOW_BUY,INTENDED,UNKNOWN,True,True,False
+68,李梦尘,2026-08-14,锐捷网络,绿盘低吃，冲高择机做T,"[[""LOW_BUY"", ""INTENDED""], [""DO_T"", ""INTENDED""]]",TODAY,,LOW_BUY,INTENDED,UNKNOWN,True,True,False
+69,老樊,2026-08-17,长川科技,打底仓（盘中不追高）；圈内暂不加仓，等半导体设备指数收盘确认突破后绿盘小加仓,"[[""BUY"", ""EXECUTED""], [""ADD"", ""CONDITIONAL""]]",CONDITIONAL,,ADD,CONDITIONAL,CONDITIONAL,False,False,True
+70,震哥本尊,2026-08-14,天孚通信,加仓,"[[""ADD"", ""INTENDED""]]",TODAY,,ADD,INTENDED,UNKNOWN,True,True,False
+71,天赢居,2026-08-26,大金重工,等底分结构确立再回补，等待放量金叉,"[[""ADD"", ""CONDITIONAL""]]",CONDITIONAL,,ADD,CONDITIONAL,CONDITIONAL,True,True,True
+72,格兰投研,2026-08-28,拓普集团,财报利空出尽，今天跌下来是最好的补仓机会,"[[""ADD"", ""INTENDED""]]",TODAY,,ADD,INTENDED,TODAY,True,True,True
+73,游资混江龙,2026-08-14,中恒电气(002364),圈友已加仓，走独立行情可继续持有,"[[""ADD"", ""EXECUTED""], [""HOLD"", ""POSITION_STATE""]]",CONDITIONAL,HOLDING,ADD,EXECUTED,CURRENT_STATE,True,True,False
+74,妖股刺客,2026-08-27,协鑫能科,冲涨停出局/接回,"[[""SELL"", ""EXECUTED""], [""ADD"", ""INTENDED""]]",TODAY,,ADD,INTENDED,UNKNOWN,False,False,False
+75,李梦尘,2026-08-14,有研硅,回补持有,"[[""ADD"", ""INTENDED""], [""HOLD"", ""POSITION_STATE""]]",TODAY,HOLDING,ADD,INTENDED,UNKNOWN,True,True,False
+76,老樊,2026-08-16,兖矿能源,突破买点结构后走出探路尖兵模型迹象，可小仓位博弈（上涨可能不连贯）,"[[""BUY"", ""CONDITIONAL""], [""TRIAL"", ""CONDITIONAL""]]",CONDITIONAL,,UNKNOWN,CONDITIONAL,UNKNOWN,False,True,False
+77,震哥本尊,2026-08-28,康盛股份,择强打板,"[[""BUY"", ""INTENDED""]]",TODAY,,UNKNOWN,INTENDED,UNKNOWN,False,True,False
+78,格兰投研,2026-08-17,立讯精密,A股换港股操作,"[[""UNKNOWN"", ""INTENDED""]]",UNKNOWN,,UNKNOWN,INTENDED,UNKNOWN,True,True,True
+79,游资混江龙,2026-08-27,宝鼎科技,早盘强承接上车，短线,"[[""BUY"", ""EXECUTED""]]",TODAY,,UNKNOWN,INTENDED,UNKNOWN,False,False,False
+80,清北游资,2026-08-17,共进股份,秒板不用动，连留断走；09:55换手够还不能回封可考虑出,"[[""UNKNOWN"", ""INTENDED""]]",UNKNOWN,,UNKNOWN,CONDITIONAL,UNKNOWN,True,False,True
+81,潘凤,2026-08-26,西部矿业,能板就加0.5,"[[""ADD"", ""CONDITIONAL""]]",CONDITIONAL,,UNKNOWN,INTENDED,UNKNOWN,False,False,False
+82,老樊,2026-08-18,茂莱光学,等站上中期均线组再考虑建仓,"[[""BUY"", ""CONDITIONAL""]]",CONDITIONAL,,BUY,CONDITIONAL,CONDITIONAL,True,True,True
+83,震哥本尊,2026-08-17,宏景,尾盘买入建仓,"[[""BUY"", ""EXECUTED""]]",TODAY,,BUY,INTENDED,UNKNOWN,True,False,False
+84,天赢居,2026-08-14,中国中免,关注60分钟黄色区间底部支撑,"[[""WATCH"", ""INTENDED""]]",TODAY,,BUY,INTENDED,UNKNOWN,False,True,False
+85,格兰投研,2026-08-19,泰格医药,板块再迎大行情逻辑，关注龙头,"[[""WATCH"", ""INTENDED""]]",TODAY,,BUY,INTENDED,CONDITIONAL,False,True,False
+86,游资混江龙,2026-08-19,海康威视,回踩60均线构成中线六二法买点，控制仓位拿点筹码,"[[""BUY"", ""CONDITIONAL""]]",CONDITIONAL,,BUY,CONDITIONAL,CONDITIONAL,True,True,True
+87,清北游资,2026-08-14,国风新材,三日持股吃肉,"[[""HOLD"", ""POSITION_STATE""]]",CURRENT_STATE,HOLDING,BUY,INTENDED,UNKNOWN,False,False,False
+88,妖股刺客,2026-08-27,ST闻泰,早盘介入,"[[""BUY"", ""EXECUTED""]]",TODAY,,BUY,INTENDED,UNKNOWN,True,False,False
+89,潘凤,2026-08-27,长飞光纤,半路0.5仓,"[[""BUY"", ""INTENDED""]]",TODAY,,BUY,INTENDED,UNKNOWN,True,True,False
+90,李梦尘,2026-08-17,天孚通信,核心推荐标的,"[[""WATCH"", ""INTENDED""]]",TODAY,,BUY,INTENDED,UNKNOWN,False,True,False
+91,一线天渔哥,2026-08-28,德明利(001309),参考区间410-450，仓位1成,"[[""WATCH"", ""INTENDED""], [""BUY"", ""INTENDED""]]",TODAY,,BUY,INTENDED,UNKNOWN,False,True,False
+92,老樊,2026-08-19,长飞光纤,减仓止盈（短线同学清仓）；长协超预期走出突破买点后圈子接回,"[[""REDUCE"", ""EXECUTED""], [""CLEAR"", ""EXECUTED""], [""ADD"", ""CONDITIONAL""], [""BUY"", ""CONDITIONAL""]]",CONDITIONAL,,CLEAR,INTENDED,CURRENT_STATE,False,False,False
+93,震哥本尊,2026-08-18,宏景科技,清仓兑现,"[[""CLEAR"", ""EXECUTED""]]",TODAY,,CLEAR,INTENDED,CURRENT_STATE,True,False,False
+94,天赢居,2026-08-17,芯源微(688037),止盈离场,"[[""REDUCE"", ""EXECUTED""], [""SELL"", ""EXECUTED""]]",TODAY,,CLEAR,INTENDED,UNKNOWN,False,False,False
+95,游资混江龙,2026-08-27,汉森制药,回本离场,"[[""SELL"", ""EXECUTED""]]",TODAY,,CLEAR,INTENDED,UNKNOWN,False,False,False
+96,妖股刺客,2026-08-28,康盛股份,明天能否超预期决定板块强度，不能强更强加速则后排落袋,"[[""REDUCE"", ""CONDITIONAL""], [""ADD"", ""CONDITIONAL""]]",FUTURE_PLAN,,CLEAR,INTENDED,UNKNOWN,False,False,False
+97,潘凤,2026-08-26,长盈通,已清仓,"[[""CLEAR"", ""EXECUTED""]]",TODAY,,CLEAR,EXECUTED,CURRENT_STATE,True,True,False
+98,李梦尘,2026-08-27,特高压方向,已走,"[[""CLEAR"", ""EXECUTED""]]",TODAY,,CLEAR,EXECUTED,CURRENT_STATE,True,True,False
+99,震哥本尊,2026-08-14,腾景科技,卖出,"[[""SELL"", ""EXECUTED""]]",TODAY,,SELL,INTENDED,UNKNOWN,True,False,False
+100,天赢居,2026-08-17,屹唐股份(688729),持股观察，破13日线减出,"[[""HOLD"", ""POSITION_STATE""], [""REDUCE"", ""EXECUTED""]]",TODAY,HOLDING,SELL,INTENDED,UNKNOWN,False,False,False

@@ -1,0 +1,17 @@
+{
+ "n": 100,
+ "agree_action": 68,
+ "agree_status": 69,
+ "agree_temporal": 15,
+ "action_agreement": 0.68,
+ "status_agreement": 0.69,
+ "temporal_agreement": 0.15,
+ "high_risk": {
+  "R1_watch_to_hold": 0,
+  "R2_hold_to_buy": 0,
+  "R3_plan_to_executed": 0,
+  "R4_cond_to_executed": 0,
+  "R5_past_to_today_buy": 0
+ },
+ "n_disagreements": 94
+}

@@ -30,7 +30,7 @@ Phase 0B.1  Gold Schema + 10 条高难度样例          ✅ PASS
 Phase 0B.2  100 条 Gold Sample（分层扩展）         🟡 规则修正完成，待最终人工锁定
 Phase 0B.3  Stock Master + EXACT 匹配             ✅ PASS
 Phase 0B.4  Alias + Entity Type                   ✅ PASS
-Phase 0B.5  Action / Temporal Parser              ⏳
+Phase 0B.5  Action / Temporal Parser              🟡 规则版v1完成，高风险=0，Status 100%，待draft补标
 Phase 0B.6  Cross-day Diff + Revision（MODIFIED）  🟡 单测 PASS，待真实跨天验收
 Phase 0B.7  Accuracy Benchmark（成绩单）           ⏳
 ```
@@ -182,6 +182,33 @@ No need to enable FUZZY in Phase 0B.
 5. FUZZY 默认关闭
 6. 只有未来真实 UNRESOLVED 样本证明有必要时才评估 CONTEXT/FUZZY
 ```
+
+---
+
+## 0B.5：Action / Temporal Parser（规则版 v1，2026-08-28）
+
+脚本: `scripts/action_temporal_parser_p0b.py` + `action_temporal_benchmark_p0b.py` + `confirmed10_benchmark_p0b.py`
+
+### v1 规则（从已确认 10 行协议推导）
+```text
+动作: 长词优先词典扫描（91句式→11类），分句扫描
+状态: 已/时段→EXECUTED；若/等/回踩/站上→CONDITIONAL；持有→POSITION_STATE(双轨)；WATCH恒INTENDED；清仓默认EXECUTED；减/卖默认EXECUTED(除非条件/计划标记 左右/以上/以下)
+时间: 明日/将→FUTURE_PLAN；动作分句条件词→CONDITIONAL；今日/早盘/尾盘→TODAY；持有→CURRENT_STATE；之前→PAST；默认 TODAY(当日分析)
+```
+
+### v1 成绩
+```text
+确认10行: Status 9/9=100% ✅ | Action 8/9=89%(唯一差=BUY vs LOW_BUY 子类) | Temporal 9/10=90%
+100行 vs draft: Action 68% / Status 69%（draft 有已知错误，parser 常更准）
+5项高风险: 全部 0 ✅（WATCH→HOLD / 持仓→BUY / 计划→EXECUTED / 回踩→EXECUTED / 过去→今日BUY）
+```
+
+### ⚠️ temporal 基准问题
+100 行 draft 的 temporal_type_draft **83% 是 UNKNOWN**，无法作 temporal 基准。已确认 10 行才是权威时间真值。0B.2 人工锁定时需补标 temporal 列。
+
+### 已知接受差异（非高风险）
+- [华勤] BUY vs LOW_BUY（买入族子类）+ CONDITIONAL vs FUTURE_PLAN（语义细微差）
+- 大盘/市场实体 → 动作不计（实体门控，非 parser 职责）
 
 ---
 
