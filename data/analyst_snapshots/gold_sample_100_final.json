@@ -1,0 +1,2469 @@
+[
+ {
+  "sample_id": "1",
+  "analyst": "老樊",
+  "date": "2026-08-28",
+  "raw_target": "腾景科技",
+  "raw_action": "试错思维对待，控制仓位",
+  "raw_logic": "谷歌链OCS三剑客，突破买点结构",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "TRIAL",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "试错思维对待→TRIAL/INTENDED/TODAY; draft CONDITIONAL是logic'突破买点'干扰"
+ },
+ {
+  "sample_id": "2",
+  "analyst": "天赢居",
+  "date": "2026-08-14",
+  "raw_target": "四方股份(601126)",
+  "raw_action": "试盘仓守8月12日低点支撑",
+  "raw_logic": "现价试盘，支撑参考8月12日低点",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "TRIAL",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "3",
+  "analyst": "妖股刺客",
+  "date": "2026-08-17",
+  "raw_target": "VC板块",
+  "raw_action": "分仓试错",
+  "raw_logic": "赌VC板块加强，创新药超预期",
+  "direction": "观察",
+  "entity_type": "MARKET",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "TRIAL",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "4",
+  "analyst": "潘凤",
+  "date": "2026-08-17",
+  "raw_target": "太辰光",
+  "raw_action": "0.5仓试错",
+  "raw_logic": "半路0.5",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "TRIAL",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "5",
+  "analyst": "老樊",
+  "date": "2026-08-18",
+  "raw_target": "长飞光纤",
+  "raw_action": "部分减仓止盈，放量突破则小幅加仓",
+  "raw_logic": "涨价链扩散锚，昨日已涨，中期均线组遇阻回落",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "REDUCE",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   },
+   {
+    "action": "ADD",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "双事件(协议11): REDUCE/EXECUTED/TODAY + ADD/CONDITIONAL/CONDITIONAL(放量突破则小幅加仓); parser temporal CONDITIONAL 被条件子句带偏→主动作TODAY(缺口H)"
+ },
+ {
+  "sample_id": "6",
+  "analyst": "震哥本尊",
+  "date": "2026-08-17",
+  "raw_target": "天孚通信",
+  "raw_action": "已减仓，不追高",
+  "raw_logic": "基本在早盘减仓位置，别追高",
+  "direction": "减仓",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "REDUCE",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "已减仓→EXECUTED/TODAY(logic早盘减仓位置); draft CURRENT_STATE错"
+ },
+ {
+  "sample_id": "7",
+  "analyst": "天赢居",
+  "date": "2026-08-26",
+  "raw_target": "赤峰黄金",
+  "raw_action": "收回5日均线持股，收不回减持，等13日均线再考虑回补",
+  "raw_logic": "600988，早市低开破位5日均线",
+  "direction": "减仓",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CONDITIONAL"
+   },
+   {
+    "action": "REDUCE",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   },
+   {
+    "action": "ADD",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "BOTH_WRONG",
+  "review_note": "多动作: HOLD|REDUCE(COND)|ADD(COND); '收不回减持'等13日线回补。parser仅抓HOLD(缺口A), draft仅抓REDUCE"
+ },
+ {
+  "sample_id": "8",
+  "analyst": "格兰投研",
+  "date": "2026-08-17",
+  "raw_target": "杰瑞股份",
+  "raw_action": "不连板则止盈",
+  "raw_logic": "明天如果不能连续涨停就要自己注意止盈一点",
+  "direction": "减仓",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "REDUCE",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "9",
+  "analyst": "游资混江龙",
+  "date": "2026-08-14",
+  "raw_target": "药明康德",
+  "raw_action": "之前减仓的可以继续跑",
+  "raw_logic": "破5日线，估计到阶段性高位",
+  "direction": "减仓",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "REDUCE",
+    "action_status": "EXECUTED",
+    "temporal_type": "PAST"
+   },
+   {
+    "action": "HOLD",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "BOTH_WRONG",
+  "review_note": "双事件(用户修订): REDUCE/EXECUTED/PAST(之前减仓=历史事实) + HOLD/INTENDED/TODAY(可以继续跑=剩余仓位持有建议); draft状态对但漏HOLD; parser CONDITIONAL错(可以=许可非条件,缺口F)"
+ },
+ {
+  "sample_id": "10",
+  "analyst": "清北游资",
+  "date": "2026-08-26",
+  "raw_target": "融捷股份",
+  "raw_action": "73.5左右减一半，另一半74以上出完，本月结束",
+  "raw_logic": "拉升至73.5附近",
+  "direction": "减仓",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "REDUCE",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "FUTURE_PLAN"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": true,
+  "ambig": true,
+  "stance": null,
+  "arbiter_result": "AMBIGUOUS",
+  "review_note": "⚠️动作窗口/持有期限歧义: '73.5左右减一半'=条件/计划动作(REDUCE/CONDITIONAL), '本月结束'可能是持有周期/退出窗口而非明确执行日期; FUTURE_PLAN 暂落地但不当强规则样本(缺口O); holding_horizon=MONTH_END"
+ },
+ {
+  "sample_id": "11",
+  "analyst": "妖股刺客",
+  "date": "2026-08-19",
+  "raw_target": "兴业科技",
+  "raw_action": "尾盘减仓，兑现修复收益",
+  "raw_logic": "昨日加仓后今日尾盘拉红修复，14:54尾盘减仓兑现",
+  "direction": "减仓",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "REDUCE",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "尾盘减仓→EXECUTED(减仓=完成态,协议12不冲突)"
+ },
+ {
+  "sample_id": "12",
+  "analyst": "潘凤",
+  "date": "2026-08-28",
+  "raw_target": "中际旭创",
+  "raw_action": "反弹尾声信号，不追高，注意反弹结束",
+  "raw_logic": "科技反弹终止的哨子，看到8000亿",
+  "direction": "减仓",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "'不追高'+反弹尾声警告→无买入, WATCH。draft REDUCE 误判"
+ },
+ {
+  "sample_id": "13",
+  "analyst": "李梦尘",
+  "date": "2026-08-17",
+  "raw_target": "半导体材料",
+  "raw_action": "止盈卖出",
+  "raw_logic": "今日强势但已卖",
+  "direction": "卖出",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "REDUCE",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "止盈卖出(logic已卖)→EXECUTED"
+ },
+ {
+  "sample_id": "14",
+  "analyst": "老樊",
+  "date": "2026-08-19",
+  "raw_target": "万和电气",
+  "raw_action": "模型观察，不追",
+  "raw_logic": "n式倍量双涨停模型，基本面看点不足，倾向筹码博弈",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "15",
+  "analyst": "老樊",
+  "date": "2026-08-28",
+  "raw_target": "赛微电子",
+  "raw_action": "主题催化弹性大，仓位上控制，小作文难辨真伪",
+  "raw_logic": "OCS主题催化+小作文：瑞典Silex(45.24%)为谷歌独家代工MEMS-OCS芯片，北京FAB3试产月产能1.5万片",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": "CAUTION",
+  "arbiter_result": "DRAFT_CORRECT",
+  "review_note": "姿态句'主题催化弹性大，仓位上控制'→WATCH(缺口K); parser UNKNOWN 过于保守; review: negative_watch/stance=CAUTION"
+ },
+ {
+  "sample_id": "16",
+  "analyst": "老樊",
+  "date": "2026-08-19",
+  "raw_target": "广钢气体",
+  "raw_action": "观察，跌到中期均线组下方概率不高",
+  "raw_logic": "涨价链承压但未放量中大阴线；解禁是利空但非股价核心矛盾",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "17",
+  "analyst": "震哥本尊",
+  "date": "2026-08-28",
+  "raw_target": "立新能源",
+  "raw_action": "位置不够低，先自选观察",
+  "raw_logic": "可能反复活跃",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "18",
+  "analyst": "震哥本尊",
+  "date": "2026-08-28",
+  "raw_target": "深中华A",
+  "raw_action": "开盘看承接，能博弈",
+  "raw_logic": "最高板妖股，贵金属回流+投机核心",
+  "direction": "短线",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "19",
+  "analyst": "震哥本尊",
+  "date": "2026-08-27",
+  "raw_target": "汉森制药",
+  "raw_action": "修复新高观察",
+  "raw_logic": "医药最高板，昨天炸板今天修复新高",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "20",
+  "analyst": "天赢居",
+  "date": "2026-08-17",
+  "raw_target": "恩捷股份(002812)",
+  "raw_action": "耐心跟踪13日均线通道防守",
+  "raw_logic": "企稳233日均线8小时才能补仓",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "21",
+  "analyst": "天赢居",
+  "date": "2026-08-17",
+  "raw_target": "百济神州(688235)",
+  "raw_action": "更多做主线轮动，跟踪为主",
+  "raw_logic": "医药中期跟踪个股",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "22",
+  "analyst": "天赢居",
+  "date": "2026-08-17",
+  "raw_target": "中际旭创(300308)",
+  "raw_action": "观察",
+  "raw_logic": "先看55日均线反压压力",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "23",
+  "analyst": "格兰投研",
+  "date": "2026-08-19",
+  "raw_target": "中国金茂",
+  "raw_action": "指数级反弹行情，观察核心城市企稳",
+  "raw_logic": "公积金条例修订：利率决定机制改由国务院决定，下调概率提升",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "OUT_OF_SCOPE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "24",
+  "analyst": "格兰投研",
+  "date": "2026-08-14",
+  "raw_target": "兆易创新",
+  "raw_action": "关注",
+  "raw_logic": "存储映射：闪迪+13%强化AI推理大容量闪存需求",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "25",
+  "analyst": "格兰投研",
+  "date": "2026-08-14",
+  "raw_target": "禾望电气",
+  "raw_action": "关注",
+  "raw_logic": "底部票有戏，耐心等等",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "26",
+  "analyst": "游资混江龙",
+  "date": "2026-08-17",
+  "raw_target": "黄河旋风",
+  "raw_action": "开盘零进已涨停，短线强势跟踪",
+  "raw_logic": "金刚石散热驱动涨停，AI算力散热环节，前期热点分支补涨，钻石散热已认证出货",
+  "direction": "短线",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "开盘零进已涨停=市场状态非动作; 短线强势跟踪→WATCH/INTENDED; draft EXECUTED错"
+ },
+ {
+  "sample_id": "27",
+  "analyst": "游资混江龙",
+  "date": "2026-08-26",
+  "raw_target": "中石科技",
+  "raw_action": "持续跟踪反复做",
+  "raw_logic": "科技，反复炒的票",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "DO_T",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "'持续跟踪反复做'=做T。draft WATCH 误判"
+ },
+ {
+  "sample_id": "28",
+  "analyst": "游资混江龙",
+  "date": "2026-08-27",
+  "raw_target": "华勤技术",
+  "raw_action": "提前拿筹码控仓位，博弈资金回流",
+  "raw_logic": "破60均线符合第一个标准但爆量不够",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "BUY",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "BOTH_WRONG",
+  "review_note": "'提前拿筹码控仓位'=获取仓位意图→BUY/INTENDED(缺口L: 拿筹码是上下文词非固定动作); parser 命中'拿筹码'→HOLD 词典歧义, draft WATCH 错"
+ },
+ {
+  "sample_id": "29",
+  "analyst": "清北游资",
+  "date": "2026-08-18",
+  "raw_target": "宇树科技相关",
+  "raw_action": "操作谨慎，今日兑现为主",
+  "raw_logic": "明日上市，今日资金兑现",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "SELL",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "BOTH_WRONG",
+  "review_note": "'今日兑现为主'=操作倾向→INTENDED(协议10,缺口D); draft动作错(WATCH), parser状态错(EXECUTED)"
+ },
+ {
+  "sample_id": "30",
+  "analyst": "清北游资",
+  "date": "2026-08-18",
+  "raw_target": "沃格光电",
+  "raw_action": "关注，择机参考",
+  "raw_logic": "新发参考票",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "31",
+  "analyst": "清北游资",
+  "date": "2026-08-17",
+  "raw_target": "华正新材",
+  "raw_action": "换板可以操作",
+  "raw_logic": "加自选观察",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "DRAFT_CORRECT",
+  "review_note": "姿态句'换板可以操作'+logic加自选观察→WATCH; parser UNKNOWN 过于保守"
+ },
+ {
+  "sample_id": "32",
+  "analyst": "妖股刺客",
+  "date": "2026-08-28",
+  "raw_target": "百花医药",
+  "raw_action": "情绪一致，等分歧看最先转强支持强者",
+  "raw_logic": "博傻抱团高标",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "33",
+  "analyst": "妖股刺客",
+  "date": "2026-08-26",
+  "raw_target": "通鼎互联",
+  "raw_action": "回避，科技套牢盘太重",
+  "raw_logic": "液冷整体走弱，都在杀跌",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": "AVOID",
+  "arbiter_result": "DRAFT_CORRECT",
+  "review_note": "'回避'=负向姿态→WATCH/INTENDED(枚举暂无AVOID,留stance扩展点,缺口P); review: stance=AVOID(negative_watch)"
+ },
+ {
+  "sample_id": "34",
+  "analyst": "妖股刺客",
+  "date": "2026-08-17",
+  "raw_target": "海科新源",
+  "raw_action": "关注拉升持续性",
+  "raw_logic": "VC概念，午后拉升",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "35",
+  "analyst": "潘凤",
+  "date": "2026-08-27",
+  "raw_target": "剑桥科技",
+  "raw_action": "一字预期，相信",
+  "raw_logic": "英伟达FY28指引+70%重构AI游戏规则，预期一字",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": "POSITIVE",
+  "arbiter_result": "DRAFT_CORRECT",
+  "review_note": "姿态句'一字预期，相信'→WATCH(关注无交易动作); parser UNKNOWN 过于保守; review: stance=POSITIVE"
+ },
+ {
+  "sample_id": "36",
+  "analyst": "潘凤",
+  "date": "2026-08-17",
+  "raw_target": "芯原股份",
+  "raw_action": "关注",
+  "raw_logic": "比易中天强不少",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "37",
+  "analyst": "潘凤",
+  "date": "2026-08-17",
+  "raw_target": "通富微电",
+  "raw_action": "观察助攻持续性",
+  "raw_logic": "下午给百合花助攻，国产扩产逻辑",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "38",
+  "analyst": "李梦尘",
+  "date": "2026-08-18",
+  "raw_target": "半导体硅片",
+  "raw_action": "关注强势延续",
+  "raw_logic": "今日唯一走强方向",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "THEME",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "39",
+  "analyst": "李梦尘",
+  "date": "2026-08-17",
+  "raw_target": "鹏鼎控股",
+  "raw_action": "受益标的",
+  "raw_logic": "mSAP PCB弹性大",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "40",
+  "analyst": "李梦尘",
+  "date": "2026-08-17",
+  "raw_target": "景旺电子",
+  "raw_action": "受益标的",
+  "raw_logic": "mSAP PCB弹性大",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "41",
+  "analyst": "一线天渔哥",
+  "date": "2026-08-28",
+  "raw_target": "秋乐种业",
+  "raw_action": "关注",
+  "raw_logic": "农业最有辨识度",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "42",
+  "analyst": "一线天渔哥",
+  "date": "2026-08-27",
+  "raw_target": "哈森股份",
+  "raw_action": "跟踪",
+  "raw_logic": "持续跟踪标的",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "43",
+  "analyst": "一线天渔哥",
+  "date": "2026-08-28",
+  "raw_target": "神农种业",
+  "raw_action": "关注",
+  "raw_logic": "农业最有辨识度",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "44",
+  "analyst": "老樊",
+  "date": "2026-08-18",
+  "raw_target": "瑞芯微",
+  "raw_action": "中期均线组上方不破趋势没坏，持有",
+  "raw_logic": "中报符合预期，H1毛利率45.79%提升3.5pct，高端产品导入良好、业绩韧性强",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "45",
+  "analyst": "老樊",
+  "date": "2026-08-17",
+  "raw_target": "国瓷材料",
+  "raw_action": "策略暂时无变化",
+  "raw_logic": "围绕中期均线组来回测试",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "46",
+  "analyst": "震哥本尊",
+  "date": "2026-08-27",
+  "raw_target": "源杰科技",
+  "raw_action": "短线持有，不打算动",
+  "raw_logic": "短线光，周一起买分歧做T",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "47",
+  "analyst": "震哥本尊",
+  "date": "2026-08-26",
+  "raw_target": "天孚通信",
+  "raw_action": "持有观察",
+  "raw_logic": "短线光模块",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "48",
+  "analyst": "天赢居",
+  "date": "2026-08-19",
+  "raw_target": "沃森生物(300142)",
+  "raw_action": "底仓顺21月均线持有观察",
+  "raw_logic": "偏中线；上个交易日价差止盈部分，目前未企稳",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "49",
+  "analyst": "天赢居",
+  "date": "2026-08-19",
+  "raw_target": "天山铝业(002532)",
+  "raw_action": "区域内持有观察",
+  "raw_logic": "有色：233小时均线与55日均线附近接回",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "50",
+  "analyst": "格兰投研",
+  "date": "2026-08-27",
+  "raw_target": "资源金属",
+  "raw_action": "持有观察",
+  "raw_logic": "继续拿，等周五演讲结果",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "51",
+  "analyst": "格兰投研",
+  "date": "2026-08-26",
+  "raw_target": "华虹公司",
+  "raw_action": "持有",
+  "raw_logic": "华虹7个点",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "52",
+  "analyst": "游资混江龙",
+  "date": "2026-08-26",
+  "raw_target": "景旺电子",
+  "raw_action": "以20日均线为锚点，不破不走人",
+  "raw_logic": "科技，之前做过留了点仓位",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "53",
+  "analyst": "游资混江龙",
+  "date": "2026-08-26",
+  "raw_target": "卫星化学",
+  "raw_action": "拿着筹码继续看",
+  "raw_logic": "白马核心票",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "54",
+  "analyst": "妖股刺客",
+  "date": "2026-08-28",
+  "raw_target": "生益科技",
+  "raw_action": "科技没问题，关注",
+  "raw_logic": "科技中军，超预期",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "55",
+  "analyst": "妖股刺客",
+  "date": "2026-08-19",
+  "raw_target": "云南锗业",
+  "raw_action": "持有",
+  "raw_logic": "拉红，走势强",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "56",
+  "analyst": "潘凤",
+  "date": "2026-08-26",
+  "raw_target": "亨通光电",
+  "raw_action": "持有，若有则加",
+  "raw_logic": "买了一点0.5仓位",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "AGREED",
+  "review_note": ""
+ },
+ {
+  "sample_id": "57",
+  "analyst": "李梦尘",
+  "date": "2026-08-28",
+  "raw_target": "折叠屏",
+  "raw_action": "打地鼠模式，电源偏恶心，剩余子弹不动",
+  "raw_logic": "组合持仓",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "THEME",
+  "events": [],
+  "position_state": null,
+  "exclude_from_core_benchmark": true,
+  "ambig": true,
+  "stance": null,
+  "arbiter_result": "AMBIGUOUS",
+  "review_note": "组合层'打地鼠模式…剩余子弹不动',无法下沉到单只股票(折叠屏=题材)"
+ },
+ {
+  "sample_id": "58",
+  "analyst": "李梦尘",
+  "date": "2026-08-28",
+  "raw_target": "冷液",
+  "raw_action": "打地鼠模式，电源偏恶心，剩余子弹不动",
+  "raw_logic": "组合持仓",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "THEME",
+  "events": [],
+  "position_state": null,
+  "exclude_from_core_benchmark": true,
+  "ambig": true,
+  "stance": null,
+  "arbiter_result": "AMBIGUOUS",
+  "review_note": "组合层'打地鼠模式…剩余子弹不动',无法下沉到单只股票(冷液=题材)"
+ },
+ {
+  "sample_id": "59",
+  "analyst": "一线天渔哥",
+  "date": "2026-08-28",
+  "raw_target": "西点药业",
+  "raw_action": "滚动操作，涨多减/5日线之上加",
+  "raw_logic": "跟踪标的",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "DO_T",
+    "action_status": "INTENDED",
+    "temporal_type": "CONDITIONAL"
+   },
+   {
+    "action": "REDUCE",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   },
+   {
+    "action": "ADD",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "BOTH_WRONG",
+  "review_note": "多动作: DO_T|REDUCE(COND)|ADD(COND); '涨多减/5日线之上加'条件。parser仅DO_T(缺口A), draft仅HOLD"
+ },
+ {
+  "sample_id": "60",
+  "analyst": "一线天渔哥",
+  "date": "2026-08-28",
+  "raw_target": "湖南白银",
+  "raw_action": "滚动操作",
+  "raw_logic": "跟踪标的",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "DO_T",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "'滚动操作'=DO_T。draft HOLD 误判"
+ },
+ {
+  "sample_id": "61",
+  "analyst": "老樊",
+  "date": "2026-08-27",
+  "raw_target": "大盘",
+  "raw_action": "卡节奏慢慢做，不追高，低吸为主",
+  "raw_logic": "放量3000亿，机构配置盘回归，等杰克逊霍尔落地量能回归",
+  "direction": "观察",
+  "entity_type": "MARKET",
+  "entity_scope": "MARKET",
+  "events": [
+   {
+    "action": "UNKNOWN",
+    "action_status": "UNKNOWN",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": true,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "MARKET_EXCLUDED",
+  "review_note": "大盘=MARKET实体(协议7), '低吸为主'=市场级操作风格不生成个股动作; 与确认10行[10]同原文同裁; exclude_from_stock_consensus"
+ },
+ {
+  "sample_id": "62",
+  "analyst": "震哥本尊",
+  "date": "2026-08-17",
+  "raw_target": "中际旭创",
+  "raw_action": "低吸持有",
+  "raw_logic": "30日线压制，分歧够大低吸了一些",
+  "direction": "低吸",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "LOW_BUY",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   },
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "63",
+  "analyst": "天赢居",
+  "date": "2026-08-14",
+  "raw_target": "贝斯特(300580)",
+  "raw_action": "分批慢慢建底仓，先守21日均线支撑",
+  "raw_logic": "紫线压力未过，现价试盘分批建底仓",
+  "direction": "低吸",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "BUY",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "分批慢慢建底仓→BUY(建底仓=BUY规则,无低吸/回踩吸价格语义→非LOW_BUY)/INTENDED/TODAY; draft LOW_BUY错"
+ },
+ {
+  "sample_id": "64",
+  "analyst": "格兰投研",
+  "date": "2026-08-18",
+  "raw_target": "海光信息",
+  "raw_action": "低吸持有",
+  "raw_logic": "底部已加仓，等通富/中芯涨完轮到",
+  "direction": "低吸",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "LOW_BUY",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   },
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "65",
+  "analyst": "游资混江龙",
+  "date": "2026-08-18",
+  "raw_target": "华勤技术",
+  "raw_action": "控制好仓位持有",
+  "raw_logic": "科技核心人气股，一成仓低吸",
+  "direction": "低吸",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "'控制好仓位持有'→HOLD; draft把logic'一成仓低吸'混入动作"
+ },
+ {
+  "sample_id": "66",
+  "analyst": "妖股刺客",
+  "date": "2026-08-28",
+  "raw_target": "风华高科",
+  "raw_action": "分歧低吸",
+  "raw_logic": "MLCC核心股",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "LOW_BUY",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "67",
+  "analyst": "潘凤",
+  "date": "2026-08-18",
+  "raw_target": "雅克科技",
+  "raw_action": "低吸了一点，慢慢来不着急",
+  "raw_logic": "科技方向，-1以下低吸",
+  "direction": "低吸",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "LOW_BUY",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "68",
+  "analyst": "李梦尘",
+  "date": "2026-08-14",
+  "raw_target": "锐捷网络",
+  "raw_action": "绿盘低吃，冲高择机做T",
+  "raw_logic": "手里持仓，红S绿B做T",
+  "direction": "短线",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "LOW_BUY",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   },
+   {
+    "action": "DO_T",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "69",
+  "analyst": "老樊",
+  "date": "2026-08-17",
+  "raw_target": "长川科技",
+  "raw_action": "打底仓（盘中不追高）；圈内暂不加仓，等半导体设备指数收盘确认突破后绿盘小加仓",
+  "raw_logic": "半导体设备代表率先现突破买点结构，与富创精密同享beta",
+  "direction": "低吸",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "BUY",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   },
+   {
+    "action": "ADD",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "BOTH_WRONG",
+  "review_note": "双事件(用户修订): BUY/INTENDED/TODAY(打底仓=计划,盘中时段词≠EXECUTED,协议12) + ADD/CONDITIONAL/CONDITIONAL(等确认突破后小加仓); parser'盘中'误升EXECUTED(缺口I), draft动作错"
+ },
+ {
+  "sample_id": "70",
+  "analyst": "震哥本尊",
+  "date": "2026-08-14",
+  "raw_target": "天孚通信",
+  "raw_action": "加仓",
+  "raw_logic": "CPO方向，早盘相对更强",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "ADD",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "71",
+  "analyst": "天赢居",
+  "date": "2026-08-26",
+  "raw_target": "大金重工",
+  "raw_action": "等底分结构确立再回补，等待放量金叉",
+  "raw_logic": "002487，观察修复，KDJ超卖，35.6前低企稳是基础",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "ADD",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "AGREED",
+  "review_note": ""
+ },
+ {
+  "sample_id": "72",
+  "analyst": "格兰投研",
+  "date": "2026-08-28",
+  "raw_target": "拓普集团",
+  "raw_action": "财报利空出尽，今天跌下来是最好的补仓机会",
+  "raw_logic": "机器人执行器收入确认+Optimus量产准备",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "ADD",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "AGREED",
+  "review_note": ""
+ },
+ {
+  "sample_id": "73",
+  "analyst": "游资混江龙",
+  "date": "2026-08-14",
+  "raw_target": "中恒电气(002364)",
+  "raw_action": "圈友已加仓，走独立行情可继续持有",
+  "raw_logic": "圈内旧票被重新炒作逻辑未变，圈友周三41元进1层今日再加1层，走独立行情；华勤技术继续拿震荡未卖",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "ADD",
+    "action_status": "EXECUTED",
+    "temporal_type": "PAST"
+   },
+   {
+    "action": "HOLD",
+    "action_status": "INTENDED",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "BOTH_WRONG",
+  "review_note": "双事件(协议11): ADD/EXECUTED/PAST(圈友周三已加仓) + HOLD/INTENDED/CONDITIONAL(走独立行情可继续持有=条件建议); draft CURRENT_STATE被持有子句带偏, parser CONDITIONAL(缺口G+H)"
+ },
+ {
+  "sample_id": "74",
+  "analyst": "妖股刺客",
+  "date": "2026-08-27",
+  "raw_target": "协鑫能科",
+  "raw_action": "冲涨停出局/接回",
+  "raw_logic": "冲涨停出局，接回002015",
+  "direction": "短线",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "SELL",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   },
+   {
+    "action": "ADD",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "BOTH_WRONG",
+  "review_note": "多动作: SELL(COND)|ADD(COND); '冲涨停出局'=触发条件非已执行(缺口B); parser状态错EXECUTED, draft漏SELL"
+ },
+ {
+  "sample_id": "75",
+  "analyst": "李梦尘",
+  "date": "2026-08-14",
+  "raw_target": "有研硅",
+  "raw_action": "回补持有",
+  "raw_logic": "五虎中只回了有研硅（回去的是最强的）",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "ADD",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   },
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "BOTH_WRONG",
+  "review_note": "双事件: ADD/EXECUTED/TODAY(logic'只回了有研硅'=完成态证据,缺口N) + HOLD/POSITION_STATE/CURRENT_STATE(持有); draft/parser 都标 INTENDED 错"
+ },
+ {
+  "sample_id": "76",
+  "analyst": "老樊",
+  "date": "2026-08-16",
+  "raw_target": "兖矿能源",
+  "raw_action": "突破买点结构后走出探路尖兵模型迹象，可小仓位博弈（上涨可能不连贯）",
+  "raw_logic": "煤炭机构再平衡受益：动力煤量增+现货占比高弹性品种，煤化工业务提供业绩弹性，煤企中少有全球资源属性+高分红代表",
+  "direction": "短线",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "TRIAL",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "BOTH_WRONG",
+  "review_note": "'突破买点结构后…可小仓位博弈'→TRIAL(小仓位博弈=试错,缺口M); '突破…后'前置条件→status/temporal=CONDITIONAL(用户精修); parser BUY/CONDITIONAL, draft UNKNOWN"
+ },
+ {
+  "sample_id": "77",
+  "analyst": "震哥本尊",
+  "date": "2026-08-28",
+  "raw_target": "康盛股份",
+  "raw_action": "择强打板",
+  "raw_logic": "3进4梯队（液冷）",
+  "direction": "短线",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "BUY",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "78",
+  "analyst": "格兰投研",
+  "date": "2026-08-17",
+  "raw_target": "立讯精密",
+  "raw_action": "A股换港股操作",
+  "raw_logic": "有能力的A股可换立讯港股（筹码结构好）",
+  "direction": "换股",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "UNKNOWN",
+    "action_status": "INTENDED",
+    "temporal_type": "UNKNOWN"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "AGREED",
+  "review_note": ""
+ },
+ {
+  "sample_id": "79",
+  "analyst": "游资混江龙",
+  "date": "2026-08-27",
+  "raw_target": "宝鼎科技",
+  "raw_action": "早盘强承接上车，短线",
+  "raw_logic": "妖股强承接涨停，科技反弹博弈",
+  "direction": "短线",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "BUY",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "早盘强承接上车→EXECUTED(上车=完成态,协议12不冲突)"
+ },
+ {
+  "sample_id": "80",
+  "analyst": "清北游资",
+  "date": "2026-08-17",
+  "raw_target": "共进股份",
+  "raw_action": "秒板不用动，连留断走；09:55换手够还不能回封可考虑出",
+  "raw_logic": "周五锻炼学习票，高开大肉，09:34开盘秒板",
+  "direction": "短线",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CURRENT_STATE"
+   },
+   {
+    "action": "SELL",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "BOTH_WRONG",
+  "review_note": "双事件(用户确认): HOLD/POSITION_STATE/CURRENT_STATE(condition=秒板不用动) + SELL/CONDITIONAL/CONDITIONAL(condition=断板/不能回封可考虑出); draft UNKNOWN/CONDITIONAL, parser UNKNOWN 都漏 HOLD"
+ },
+ {
+  "sample_id": "81",
+  "analyst": "潘凤",
+  "date": "2026-08-26",
+  "raw_target": "西部矿业",
+  "raw_action": "能板就加0.5",
+  "raw_logic": "半路0.5仓位，有色铜",
+  "direction": "短线",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "ADD",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "82",
+  "analyst": "老樊",
+  "date": "2026-08-18",
+  "raw_target": "茂莱光学",
+  "raw_action": "等站上中期均线组再考虑建仓",
+  "raw_logic": "标准冲高回落，受中期均线组压制",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "BUY",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "AGREED",
+  "review_note": ""
+ },
+ {
+  "sample_id": "83",
+  "analyst": "震哥本尊",
+  "date": "2026-08-17",
+  "raw_target": "宏景",
+  "raw_action": "尾盘买入建仓",
+  "raw_logic": "尾盘2%附近买入",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "BUY",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "尾盘买入建仓→EXECUTED(买入=完成态)"
+ },
+ {
+  "sample_id": "84",
+  "analyst": "天赢居",
+  "date": "2026-08-14",
+  "raw_target": "中国中免",
+  "raw_action": "关注60分钟黄色区间底部支撑",
+  "raw_logic": "短线左侧买点",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "'关注支撑'→WATCH。draft BUY 误判"
+ },
+ {
+  "sample_id": "85",
+  "analyst": "格兰投研",
+  "date": "2026-08-19",
+  "raw_target": "泰格医药",
+  "raw_action": "板块再迎大行情逻辑，关注龙头",
+  "raw_logic": "CXO重磅深度（浙商医药）：估值历史底部、业绩重回15-30%增速、创新药研发成本人民币化",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "'关注龙头'→WATCH(协议9推荐≠买入)。draft BUY 误判"
+ },
+ {
+  "sample_id": "86",
+  "analyst": "游资混江龙",
+  "date": "2026-08-19",
+  "raw_target": "海康威视",
+  "raw_action": "回踩60均线构成中线六二法买点，控制仓位拿点筹码",
+  "raw_logic": "白马困境反转故事：海外制裁解除、创新业务32%、应收380→274亿、百亿分红、冯柳减仓但底部有人接（裘国根30亿）",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "BUY",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "AGREED",
+  "review_note": ""
+ },
+ {
+  "sample_id": "87",
+  "analyst": "清北游资",
+  "date": "2026-08-14",
+  "raw_target": "国风新材",
+  "raw_action": "三日持股吃肉",
+  "raw_logic": "本周分享标的",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [],
+  "position_state": null,
+  "exclude_from_core_benchmark": true,
+  "ambig": true,
+  "stance": null,
+  "arbiter_result": "AMBIGUOUS",
+  "review_note": "'三日持股吃肉'(本周分享标的),持股措辞含糊,不強标BUY"
+ },
+ {
+  "sample_id": "88",
+  "analyst": "妖股刺客",
+  "date": "2026-08-27",
+  "raw_target": "ST闻泰",
+  "raw_action": "早盘介入",
+  "raw_logic": "早盘介入",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "BUY",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "早盘介入→EXECUTED(介入=完成态)"
+ },
+ {
+  "sample_id": "89",
+  "analyst": "潘凤",
+  "date": "2026-08-27",
+  "raw_target": "长飞光纤",
+  "raw_action": "半路0.5仓",
+  "raw_logic": "英伟达链+光通信",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "BUY",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "90",
+  "analyst": "李梦尘",
+  "date": "2026-08-17",
+  "raw_target": "天孚通信",
+  "raw_action": "核心推荐标的",
+  "raw_logic": "光器件首推，大光中最不受FCC影响",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "WATCH",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "'核心推荐标的'=推荐关系非交易动作→WATCH(协议9)。draft BUY 误判"
+ },
+ {
+  "sample_id": "91",
+  "analyst": "一线天渔哥",
+  "date": "2026-08-28",
+  "raw_target": "德明利(001309)",
+  "raw_action": "参考区间410-450，仓位1成",
+  "raw_logic": "科技核心，企业级存储进入头部互联网/服务器供应链稳定出货",
+  "direction": "买入",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "BUY",
+    "action_status": "INTENDED",
+    "temporal_type": "FUTURE_PLAN"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "DRAFT_CORRECT",
+  "review_note": "'参考区间410-450,仓位1成'=计划建仓(缺口C); temporal按盘后语境取FUTURE_PLAN"
+ },
+ {
+  "sample_id": "92",
+  "analyst": "老樊",
+  "date": "2026-08-19",
+  "raw_target": "长飞光纤",
+  "raw_action": "减仓止盈（短线同学清仓）；长协超预期走出突破买点后圈子接回",
+  "raw_logic": "圈内品种，碰触中期均线组遇阻回落；海外存储大厂回落拖累AI涨价链；短期催化看长协",
+  "direction": "减仓",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "REDUCE",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   },
+   {
+    "action": "CLEAR",
+    "action_status": "INTENDED",
+    "temporal_type": "TODAY"
+   },
+   {
+    "action": "ADD",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "减仓止盈→EXECUTED(协议6); 多事件: 短线同学清仓=secondary CLEAR, 突破后接回=secondary ADD/COND; draft CLEAR过头"
+ },
+ {
+  "sample_id": "93",
+  "analyst": "震哥本尊",
+  "date": "2026-08-18",
+  "raw_target": "宏景科技",
+  "raw_action": "清仓兑现",
+  "raw_logic": "光模块概念，-2%附近清仓",
+  "direction": "卖出",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "CLEAR",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "清仓兑现→EXECUTED(协议7)"
+ },
+ {
+  "sample_id": "94",
+  "analyst": "天赢居",
+  "date": "2026-08-17",
+  "raw_target": "芯源微(688037)",
+  "raw_action": "止盈离场",
+  "raw_logic": "今日止盈",
+  "direction": "卖出",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "SELL",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "BOTH_WRONG",
+  "review_note": "止盈离场→SELL(协议13: 离场优先于止盈→REDUCE); parser动作错(受止盈), draft动作错(CLEAR过头), 状态均EXECUTED(缺口J)"
+ },
+ {
+  "sample_id": "95",
+  "analyst": "游资混江龙",
+  "date": "2026-08-27",
+  "raw_target": "汉森制药",
+  "raw_action": "回本离场",
+  "raw_logic": "昨天弱转强，回本后跑，不做强势延续",
+  "direction": "卖出",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "SELL",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "回本离场→SELL/EXECUTED(协议13); draft CLEAR过头"
+ },
+ {
+  "sample_id": "96",
+  "analyst": "妖股刺客",
+  "date": "2026-08-28",
+  "raw_target": "康盛股份",
+  "raw_action": "明天能否超预期决定板块强度，不能强更强加速则后排落袋",
+  "raw_logic": "液冷连板龙头",
+  "direction": "观察",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "REDUCE",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "FUTURE_PLAN"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": ""
+ },
+ {
+  "sample_id": "97",
+  "analyst": "潘凤",
+  "date": "2026-08-26",
+  "raw_target": "长盈通",
+  "raw_action": "已清仓",
+  "raw_logic": "开盘全部卖出",
+  "direction": "卖出",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "CLEAR",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "已清仓(logic开盘全部卖出)→EXECUTED/TODAY"
+ },
+ {
+  "sample_id": "98",
+  "analyst": "李梦尘",
+  "date": "2026-08-27",
+  "raw_target": "特高压方向",
+  "raw_action": "已走",
+  "raw_logic": "国网十五五capex超4.5万亿但今日已走",
+  "direction": "卖出",
+  "entity_type": "MARKET",
+  "entity_scope": "THEME",
+  "events": [
+   {
+    "action": "CLEAR",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "已走→CLEAR/EXECUTED/TODAY; ⚠️特高压方向=题材实体,个股共识层面可能OUT_OF_SCOPE(0B.7裁决),动作解析照常"
+ },
+ {
+  "sample_id": "99",
+  "analyst": "震哥本尊",
+  "date": "2026-08-14",
+  "raw_target": "腾景科技",
+  "raw_action": "卖出",
+  "raw_logic": "CPO方向，早盘判断不如天孚强",
+  "direction": "卖出",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "SELL",
+    "action_status": "EXECUTED",
+    "temporal_type": "TODAY"
+   }
+  ],
+  "position_state": null,
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "PARSER_CORRECT",
+  "review_note": "卖出→EXECUTED(logic早盘判断)"
+ },
+ {
+  "sample_id": "100",
+  "analyst": "天赢居",
+  "date": "2026-08-17",
+  "raw_target": "屹唐股份(688729)",
+  "raw_action": "持股观察，破13日线减出",
+  "raw_logic": "13日均线防守，55日均线反压消化",
+  "direction": "持有",
+  "entity_type": "STOCK",
+  "entity_scope": "A_SHARE",
+  "events": [
+   {
+    "action": "HOLD",
+    "action_status": "POSITION_STATE",
+    "temporal_type": "CONDITIONAL"
+   },
+   {
+    "action": "REDUCE",
+    "action_status": "CONDITIONAL",
+    "temporal_type": "CONDITIONAL"
+   }
+  ],
+  "position_state": "HOLDING",
+  "exclude_from_core_benchmark": false,
+  "ambig": false,
+  "stance": null,
+  "arbiter_result": "BOTH_WRONG",
+  "review_note": "多动作: HOLD|REDUCE(COND); '破13日线减出'条件。parser仅HOLD(缺口A), draft仅SELL"
+ }
+]

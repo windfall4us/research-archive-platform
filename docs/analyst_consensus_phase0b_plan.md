@@ -27,7 +27,7 @@
 
 ```
 Phase 0B.1  Gold Schema + 10 条高难度样例          ✅ PASS
-Phase 0B.2  100 条 Gold Sample（分层扩展）         🟡 规则修正完成，待最终人工锁定
+Phase 0B.2  100 条 Gold Sample（分层扩展）         ✅ 已锁定（gold_sample_100_final.json 事件级，P1-P6 仲裁94条）
 Phase 0B.3  Stock Master + EXACT 匹配             ✅ PASS
 Phase 0B.4  Alias + Entity Type                   ✅ PASS
 Phase 0B.5  Action / Temporal Parser              🟡 规则版v1完成，高风险=0，Status 100%，待draft补标
@@ -212,17 +212,63 @@ No need to enable FUZZY in Phase 0B.
 
 ---
 
+## 0B.5 仲裁 + Gold Sample v1 FINAL（2026-08-28）
+
+### P1-P6 仲裁（94 条分歧全部人工锁定）
+```text
+PARSER_CORRECT 71 | BOTH_WRONG 13 | DRAFT_CORRECT 5 | AMBIGUOUS 4 | MARKET_EXCLUDED 1
+5 项高风险 = 0；exclude 5 条（[10][57][58][61][87]）
+```
+仲裁期间新增协议: 协议9(推荐≠买入) / 10(今日XX为主≠已执行) / 11(动作级Temporal/Status隔离) / 12(时段词≠执行态) / 13(仓位动作程度分级)
+backlog A-P（parser v1.1 待办，仲裁期间不改代码）: docs/parser_gap_backlog.md
+
+### Gold Sample v1 FINAL（事件级）
+```text
+ROW LEVEL（100 样本）
+  CORE rows      95  | AMBIGUOUS rows 4 ([10][57][58][87]) | EXCLUDED rows 5 ([10][57][58][61][87])
+  EXCLUDED = 非core；其中 4 条同时 AMBIGUOUS，1 条([61]) 仅 MARKET 排除；ambig ⊆ exclude（[10] 双计，去重 5 行）
+EVENT LEVEL（114 事件 = 100 行 + 14 多事件行）
+  CORE events    112 | AMBIGUOUS events 1 ([10]) | EXCLUDED events 1 ([61])
+  （[57][58][87] 无事件；Benchmark 输入 = CORE events 112）
+Action: WATCH32/HOLD21/REDUCE12/ADD12/BUY11/SELL6/TRIAL5/LOW_BUY5/DO_T4/CLEAR4/UNKNOWN2
+Status: INTENDED58/CONDITIONAL19/POSITION_STATE19/EXECUTED17/UNKNOWN1
+Temporal: TODAY69/CONDITIONAL24/CURRENT_STATE15/FUTURE_PLAN3/PAST2/UNKNOWN1
+统计详情: reports/gold_sample_final_stats_p0b.md
+```
+每个事件独立 status+temporal（协议11）；position_state=HOLDING 双轨 19 行；无显著偏斜
+Gold Edge / Ambiguous Set（[10][57][58][61][87]）保留为复杂语义 Parser v1.2+/v2 的进化语料，不删除
+
+### 下一步
+```text
+① 用户确认 Gold FINAL 无偏斜
+② 统一处理 backlog A-P → Parser v1.1（事件级输出）
+③ 重跑正式 Benchmark（对 Core 95）
+④ 达标 → 0B.5 PASS → 0B.7 总 Benchmark
+```
+
+---
+
 ## 验收成绩单（Phase 0B.7，达门槛才进 Phase 1）
-| 指标 | Gold 目标 |
+Benchmark 输入 = **CORE events（112）**（Gold Sample v1 FINAL，排除 ambig/excluded 5 行），非 Core rows
+| 指标 | 正式门槛 |
 |---|---:|
 | Entity Type | 98% |
 | 股票识别 | 97% |
 | Code Match | 97% |
-| Action | 95% |
-| Executed/Plan | 97% |
-| Today/Past/State | 96% |
+| Action exact accuracy | ≥95% |
+| Action-family accuracy | 建议同时报告（买入族/卖出族合并看） |
+| Status accuracy | ≥97% |
+| Temporal accuracy | ≥95% |
+| Event-count accuracy | 建议新增（Gold 事件集 vs Predicted 事件集，缺/多事件判定） |
+| Event Precision / Recall / F1 | 建议新增（事件级 P/R/F1） |
 | 持仓→买入误判 | 0% |
+| false executed buy / false executed sell | **0**（最核心 Gate，污染共识操作流） |
+| High-risk error（WATCH→BUY、INTENDED→EXECUTED、推荐→BUY 等） | 0 |
 | Overall | 96.x% |
+
+> 事件级指标定义：Gold events vs Predicted events 按行对齐后统计 Missing/Extra；
+> Event Precision = 正确事件/(正确+多余事件)；Recall = 正确事件/(正确+缺失事件)。
+> 高风险错误矩阵单独输出，不并入 Overall 掩盖。
 
 ---
 

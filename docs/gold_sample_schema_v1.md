@@ -48,3 +48,8 @@ BUY +2.0 / ADD +1.5 / LOW_BUY +1.2 / TRIAL +0.8 / HOLD +0.5 / WATCH 0 / DO_T 0 /
 6. 「高抛低吸」= DO_T，不拆 SELL+LOW_BUY
 7. 「大盘/市场/指数」→ MARKET，不进个股共识
 8. 持仓汇总只生成 position_state=HOLDING，不生成当日操作事件（双轨，见 phase0b_plan v2）
+9. 「推荐/核心推荐/看好/重点关注」默认不是 BUY → WATCH / INTENDED 或 recommendation-only（推荐≠买入，防污染 Action Flow）
+10. 「今日兑现为主/今天减仓为主/以卖为主」= 操作倾向 → INTENDED；仅「已卖/已出/已兑现/减了」等完成态词才 EXECUTED（"今日XX为主" ≠ 已执行）
+11. **动作级 Temporal/Status 隔离**：一条文本含多个动作时，每个动作独立解析 action_status + temporal_type；后续条件/计划/持有子句不得覆盖前序已完成动作；已完成动作优先采用自身明确时间词；条件动作只影响对应动作事件
+12. **时段词 ≠ 执行态**：「盘中/早盘/尾盘/今天」等时间词只能辅助 temporal_type，不能单独把 INTENDED/CONDITIONAL 升级为 EXECUTED；只有「已/买了/加了/卖出/减仓/离场/清仓」等明确完成态证据才判 EXECUTED
+13. **仓位动作程度分级（缺口 J 配套）**：清仓/全走/全部卖出→CLEAR；离场/出局/卖出→SELL；部分止盈/减仓→REDUCE；「止盈」描述原因不决定动作，离场/出局优先
