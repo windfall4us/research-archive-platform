@@ -1,0 +1,269 @@
+{
+  "benchmark": "P2.0B Market View Ingest",
+  "parser": "market_view_parser_v1",
+  "gold_version": "market_view_gold_v1 (LOCKED 2026-08-30)",
+  "denominators": {
+    "all": 50,
+    "eligible": 46,
+    "excluded": 4
+  },
+  "metrics": {
+    "scope_accuracy": {
+      "value": 34,
+      "denom": 50,
+      "pct": 68.0,
+      "gate": 0
+    },
+    "direction_accuracy": {
+      "value": 45,
+      "denom": 46,
+      "pct": 97.8,
+      "gate": 95
+    },
+    "risk_accuracy": {
+      "value": 44,
+      "denom": 46,
+      "pct": 95.7,
+      "gate": 90
+    },
+    "bias_accuracy": {
+      "value": 44,
+      "denom": 46,
+      "pct": 95.7,
+      "gate": 90
+    },
+    "excluded_two_way": {
+      "value": 50,
+      "denom": 50,
+      "pct": 100.0,
+      "gate": 100
+    }
+  },
+  "gates": {
+    "G1_STOCK_ONLY_no_marketview": {
+      "pass": true,
+      "bad": 0,
+      "detail": []
+    },
+    "G2_UNKNOWN_no_view_direction": {
+      "pass": true,
+      "bad": 0,
+      "detail": []
+    },
+    "G3_direction_reversal_zero": {
+      "pass": true,
+      "bad": 0,
+      "detail": []
+    },
+    "G4_MV1_score_mapping": {
+      "pass": true,
+      "bad": 0
+    },
+    "G6_excluded_two_way_100": {
+      "pass": true,
+      "bad": 0,
+      "detail": []
+    },
+    "G5_MV2_axis_independent": {
+      "pass": true,
+      "note": "结构独立；分布见 report"
+    }
+  },
+  "overall": "GO",
+  "error_detail": {
+    "direction": [
+      {
+        "gold_id": "G045",
+        "analyst": "youzi",
+        "date": "2026-08-18",
+        "gold": "BULLISH",
+        "pred": "NEUTRAL",
+        "explain": "scope=MIXED(市句12/股句6); dir净分=+0.2(多+7.8/空-7.5/中0)→NEUTRAL; risk高6/低4/降险2→MEDIUM; bias：CONTROL_POSITION=2, REDUCE=1, HOLD=0"
+      }
+    ],
+    "risk": [
+      {
+        "gold_id": "G006",
+        "gold": "HIGH",
+        "pred": "MEDIUM"
+      },
+      {
+        "gold_id": "G044",
+        "gold": "MEDIUM",
+        "pred": "HIGH"
+      }
+    ],
+    "bias": [
+      {
+        "gold_id": "G015",
+        "gold": "CONTROL_POSITION",
+        "pred": "ADD_ON_DIP"
+      },
+      {
+        "gold_id": "G024",
+        "gold": "ADD_ON_DIP",
+        "pred": "HOLD"
+      }
+    ],
+    "scope": [
+      {
+        "gold_id": "G002",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      },
+      {
+        "gold_id": "G005",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      },
+      {
+        "gold_id": "G008",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      },
+      {
+        "gold_id": "G013",
+        "gold": "MIXED",
+        "pred": "MARKET"
+      },
+      {
+        "gold_id": "G016",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      },
+      {
+        "gold_id": "G017",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      },
+      {
+        "gold_id": "G018",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      },
+      {
+        "gold_id": "G019",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      },
+      {
+        "gold_id": "G025",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      },
+      {
+        "gold_id": "G027",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      },
+      {
+        "gold_id": "G030",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      },
+      {
+        "gold_id": "G031",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      },
+      {
+        "gold_id": "G032",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      },
+      {
+        "gold_id": "G033",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      },
+      {
+        "gold_id": "G043",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      },
+      {
+        "gold_id": "G050",
+        "gold": "MARKET",
+        "pred": "MIXED"
+      }
+    ]
+  },
+  "distribution": {
+    "gold_direction": {
+      "NEUTRAL": 17,
+      "BEARISH": 9,
+      "BULLISH": 20,
+      "UNKNOWN": 4
+    },
+    "pred_direction": {
+      "NEUTRAL": 18,
+      "BEARISH": 9,
+      "BULLISH": 19,
+      "UNKNOWN": 4
+    },
+    "gold_risk": {
+      "HIGH": 18,
+      "MEDIUM": 26,
+      "LOW": 2
+    },
+    "pred_risk": {
+      "HIGH": 18,
+      "MEDIUM": 26,
+      "LOW": 2
+    },
+    "gold_bias": {
+      "WAIT": 6,
+      "AGGRESSIVE": 7,
+      "CONTROL_POSITION": 18,
+      "ADD_ON_DIP": 9,
+      "HOLD": 4,
+      "REDUCE": 2
+    },
+    "pred_bias": {
+      "WAIT": 6,
+      "AGGRESSIVE": 7,
+      "CONTROL_POSITION": 17,
+      "ADD_ON_DIP": 9,
+      "HOLD": 5,
+      "REDUCE": 2
+    },
+    "axis_pairs": {
+      "dir_x_risk": {
+        "NEUTRAL|HIGH": 8,
+        "BEARISH|MEDIUM": 1,
+        "BEARISH|HIGH": 8,
+        "BULLISH|MEDIUM": 15,
+        "BULLISH|LOW": 2,
+        "NEUTRAL|MEDIUM": 10,
+        "BULLISH|HIGH": 2
+      },
+      "dir_x_bias": {
+        "NEUTRAL|WAIT": 2,
+        "BEARISH|WAIT": 4,
+        "BEARISH|AGGRESSIVE": 1,
+        "BEARISH|CONTROL_POSITION": 2,
+        "BULLISH|CONTROL_POSITION": 4,
+        "BULLISH|ADD_ON_DIP": 5,
+        "NEUTRAL|CONTROL_POSITION": 11,
+        "BULLISH|HOLD": 4,
+        "NEUTRAL|ADD_ON_DIP": 4,
+        "BULLISH|AGGRESSIVE": 6,
+        "BEARISH|REDUCE": 2,
+        "NEUTRAL|HOLD": 1
+      },
+      "risk_x_bias": {
+        "HIGH|WAIT": 4,
+        "MEDIUM|WAIT": 2,
+        "HIGH|AGGRESSIVE": 1,
+        "HIGH|CONTROL_POSITION": 8,
+        "MEDIUM|CONTROL_POSITION": 9,
+        "LOW|ADD_ON_DIP": 2,
+        "MEDIUM|HOLD": 5,
+        "MEDIUM|ADD_ON_DIP": 4,
+        "MEDIUM|AGGRESSIVE": 6,
+        "HIGH|REDUCE": 2,
+        "HIGH|ADD_ON_DIP": 3
+      }
+    }
+  }
+}
