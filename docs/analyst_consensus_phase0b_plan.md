@@ -31,7 +31,7 @@ Phase 0B.2  100 条 Gold Sample（分层扩展）         ✅ 已锁定（gold_s
 Phase 0B.3  Stock Master + EXACT 匹配             ✅ PASS
 Phase 0B.4  Alias + Entity Type                   ✅ PASS
 Phase 0B.5  Action / Temporal Parser              ✅ PASS / LOCKED（v1.1，Gold 112/112，High-risk=0，confirmed10 100%）
-Phase 0B.6  Cross-day Diff + Revision（MODIFIED）  🟡 单测 PASS，待真实跨天验收
+Phase 0B.6  Cross-day Diff + Revision（MODIFIED）  ✅ PASS（真实跨天 08-27→08-28：role 翻转→MODIFIED(ROLE)，内容修改=0，增量完整性✓）
 Phase 0B.7  Accuracy Benchmark（成绩单）           ⏳
 ```
 

@@ -1,0 +1,96 @@
+{
+  "before_records": 851,
+  "after_records": 1088,
+  "added": 237,
+  "removed": 0,
+  "unchanged": 752,
+  "modified": 99,
+  "modified_breakdown": {
+    "ROLE:role": 99
+  },
+  "role_only_changes": 99,
+  "samples": {
+    "added": [
+      {
+        "record_id": "vip0:老樊:2026-08-28:通富微电:action:000",
+        "new": {
+          "stock": "通富微电",
+          "logic": "中报符合预期(扣非预告中值)，下半年看国产算力催化(华为韬方向)",
+          "action": "等股价实质突破中期均线组再看",
+          "direction": "观察",
+          "date": "2026-08-28"
+        }
+      },
+      {
+        "record_id": "vip0:老樊:2026-08-28:矽电股份:action:001",
+        "new": {
+          "stock": "矽电股份",
+          "logic": "NPO逻辑，META/NV需求释放，硅光探针台核心配套联讯，NPO/CPO检测放量",
+          "action": "中期均线组有压制，减仓止盈(交易纪律好)",
+          "direction": "减仓",
+          "date": "2026-08-28"
+        }
+      },
+      {
+        "record_id": "vip0:老樊:2026-08-28:国际复材:action:002",
+        "new": {
+          "stock": "国际复材",
+          "logic": "已跌穿中期均线组；PTFE≠不用电子布，2026年二代低介电布逻辑未砍，砍的是2027升级想象",
+          "action": "短线选股可以不留",
+          "direction": "减仓",
+          "date": "2026-08-28"
+        }
+      }
+    ],
+    "removed": [],
+    "modified": [
+      {
+        "record_id": "vip0:老樊:2026-08-27:飞龙股份:action:000",
+        "old_hash": "8bf63d5c7d7bc2ee",
+        "new_hash": "8bf63d5c7d7bc2ee",
+        "old_value": {
+          "role": "position_summary"
+        },
+        "new_value": {
+          "role": "daily_action"
+        },
+        "changed_fields": [
+          "role"
+        ],
+        "severity": "ROLE"
+      },
+      {
+        "record_id": "vip0:老樊:2026-08-27:联瑞新材:action:001",
+        "old_hash": "dd390783ac5c2857",
+        "new_hash": "dd390783ac5c2857",
+        "old_value": {
+          "role": "position_summary"
+        },
+        "new_value": {
+          "role": "daily_action"
+        },
+        "changed_fields": [
+          "role"
+        ],
+        "severity": "ROLE"
+      },
+      {
+        "record_id": "vip0:老樊:2026-08-27:国瓷材料:action:002",
+        "old_hash": "2135aedf3bc21e19",
+        "new_hash": "2135aedf3bc21e19",
+        "old_value": {
+          "role": "position_summary"
+        },
+        "new_value": {
+          "role": "daily_action"
+        },
+        "changed_fields": [
+          "role"
+        ],
+        "severity": "ROLE"
+      }
+    ]
+  },
+  "before": "data/analyst_snapshots/vip0_timeline_20260827.json",
+  "after": "data/analyst_snapshots/vip0_timeline_20260828.json"
+}
