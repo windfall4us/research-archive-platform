@@ -41,7 +41,11 @@ Diff/Revision（vs 上一 source_snapshot）
 ## 3. 数据库 Schema（SQLite，`data/analyst_consensus.db`）
 
 > stock_master 仍在 `data/security_master.db`（Phase 0B.3），ingest 时只读引用，不复制。
-> 所有表带 `created_at` / `updated_at`；所有"事实"行带 `first_seen_at` / `last_seen_at` / `revision_no`。
+> 所有表带 `created_at` / `updated_at`（**统一规则**：事件/快照等可审计表两者都要；
+> append-only 表至少 `created_at`；DDL 统一给所有表两者，简化审计）；
+> 所有"事实"行带 `first_seen_at` / `last_seen_at` / `revision_no`。
+> **schema_version 用 `PRAGMA user_version = 1` 管理**（用户 2026-08-28，不单独建第 9 张表；
+> 后续迁移只升 user_version，不靠猜结构）。所有枚举列加 CHECK 约束。
 
 ### 3.1 analyst_profiles —— 分析师档案
 | 字段 | 类型 | 说明 |
@@ -101,7 +105,7 @@ Diff/Revision（vs 上一 source_snapshot）
 |---|---|---|
 | event_id | INTEGER **PK** | |
 | source_record_id | TEXT | 源记录身份 `vip0:{analyst}:{date}:{entity}:action:{NNN}`（0B.6 口径，role 不在身份内） |
-| logical_key | TEXT | `vip0:{analyst}:{date}:{entity}` |
+| logical_record_id | TEXT | 逻辑记录组 `vip0:{analyst}:{date}:{entity}`（=0B.6 的 logical_key，索引见下） |
 | role | TEXT | daily_action / position_summary（可 revision 字段） |
 | event_index | INTEGER | 同 source_record_id 下第几个事件（多事件行） |
 | analyst_id | TEXT FK | |
@@ -110,7 +114,7 @@ Diff/Revision（vs 上一 source_snapshot）
 | stock_code | TEXT | 解析出的 A 股代码（UNRESOLVED 时 NULL） |
 | stock_name | TEXT | 标准证券名 |
 | raw_target | TEXT | 原文标的（可含歧义/非A股） |
-| action | TEXT | 11 类动作 |
+| action_type | TEXT | 11 类动作（parser 的 action 字段映射） |
 | **event_category** | TEXT | TRADE / OBSERVATION / STATE / COMPOSITE_TACTICAL / UNKNOWN（上表映射） |
 | action_status | TEXT | EXECUTED/INTENDED/CONDITIONAL/POSITION_STATE/UNKNOWN |
 | stance | TEXT | FOLLOW/AVOID/WAIT/POSITIVE/NEGATIVE（**WATCH 必填**，其余可空） |
@@ -125,7 +129,14 @@ Diff/Revision（vs 上一 source_snapshot）
 | revision_no | INTEGER | |
 
 - 唯一键（幂等锚点）：`(source_record_id, event_index)` —— 同源同序事件只落一次
-- 索引：`(analyst_id, event_date)`、`(stock_code, event_date)`、`(action, action_status)`
+- 普通索引（用户 2026-08-28，Phase 2/3 聚合频繁用）：
+  - `(analyst_id, event_date)`
+  - `(stock_code, event_date)`
+  - `(action_type, event_date)`
+  - `(logical_record_id)`
+- CHECK 约束：`action` ∈ 11+UNKNOWN；`event_category` ∈ TRADE/OBSERVATION/STATE/COMPOSITE_TACTICAL/UNKNOWN；
+  `action_status` ∈ 5；`temporal_type` ∈ 6；`stance` ∈ FOLLOW/AVOID/WAIT/POSITIVE/NEGATIVE；
+  `resolve_method` ∈ 6；`role` ∈ daily_action/position_summary
 
 ### 3.5 analyst_position_snapshots —— 持仓快照（双轨第二轨）
 > 每个分析师"最新一天 ops"即当日持仓视图（role=position_summary）。**position_state 恒为 HOLDING**，
@@ -142,6 +153,7 @@ Diff/Revision（vs 上一 source_snapshot）
 | raw_action | TEXT | 原文 |
 | raw_logic | TEXT | 原文逻辑 |
 | source_record_id | TEXT | |
+| logical_record_id | TEXT | 逻辑记录组（=0B.6 logical_key） |
 | resolve_method | TEXT | |
 | source_snapshot_id | INTEGER FK | |
 | record_hash | TEXT | |
@@ -170,7 +182,8 @@ Diff/Revision（vs 上一 source_snapshot）
 | 字段 | 类型 | 说明 |
 |---|---|---|
 | revision_id | INTEGER **PK** | |
-| logical_record_id | TEXT | 稳定逻辑记录 id（logical_key 或 record_id） |
+| source_record_id | TEXT | 细粒度锚点（=analyst_stock_events.source_record_id，ADDED/REMOVED/MODIFIED 作用对象） |
+| logical_record_id | TEXT | 粗粒度逻辑组（=0B.6 logical_key，跨表共用锚点） |
 | table_name | TEXT | 受影响的表 |
 | snapshot_date | TEXT | 检测到变化的快照日 |
 | detected_at | TEXT | |
@@ -179,10 +192,12 @@ Diff/Revision（vs 上一 source_snapshot）
 | severity | TEXT | ROLE / TEXT / SEVERE（0B.6 分级） |
 | old_hash / new_hash | TEXT | |
 | old_value / new_value | TEXT | JSON 快照（旧值永不删除） |
-| changed_fields | TEXT | JSON 数组 |
+| changed_fields_json | TEXT | JSON 数组（用户 2026-08-28 命名） |
 | source_snapshot_id | INTEGER FK | |
+| created_at | TEXT | |
 
-- 唯一键：`(logical_record_id, snapshot_date)`
+- 唯一键：`(source_record_id, snapshot_date)`
+- CHECK：`change_type` ∈ 4；`severity` ∈ ROLE/TEXT/SEVERE
 - 规则：事实行的 UPDATE 一律**禁止物理覆盖**——新状态作为新 revision 落 `record_revisions`，
   业务表保留最新值 + `revision_no` 指向最新 revision。
 
@@ -276,7 +291,7 @@ raw op（day.ops 一行）
 
 | 阶段 | 内容 | 验收 | 独立 commit 命名 |
 |---|---|---|---|
-| **P1.1** | Schema DDL（8 表）+ 本设计评审通过 | DDL 可建库、唯一键约束生效、`analyst_consensus.db` 空库就绪 | `feat(phase1): consensus data layer schema (8 tables)` |
+| **P1.1** | Schema DDL（8 表）+ 索引/CHECK/时间戳 + `PRAGMA user_version=1`；**只建结构，不导入快照、不写 ingest** | ① 8 表存在 + 唯一键存在；② FK/logical 引用字段齐全；③ 所有枚举列受 CHECK；④ 重复插入唯一键失败；⑤ `PRAGMA user_version`=1；⑥ 空库可 `DROP/CREATE` 重放 | `feat(phase1): consensus data layer schema (8 tables)` |
 | **P1.2** | Event Ingest：vip0_timeline → Resolver → Parser → `analyst_stock_events` + `analyst_daily_views` | 事件数=parser 生产数；source lineage 100%；幂等复跑 duplicate=0 | `feat(phase1): event ingest pipeline (idempotent)` |
 | **P1.3** | Position 双轨落库：`analyst_position_snapshots` | HOLDING→BUY=0；同一股票 ADD+HOLDING 并存合法；每日 snapshot 形成 | `feat(phase1): dual-track position snapshots` |
 | **P1.4** | Revision 持久化：ingest 后 diff → `record_revisions` | revision 可追踪 100%；历史不可物理覆盖（无 UPDATE 删除旧值） | `feat(phase1): persist revisions from cross-day diff` |
