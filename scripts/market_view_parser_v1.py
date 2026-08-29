@@ -471,8 +471,9 @@ def _unknown_result(reason):
 def load_daily_view_text(db_path, analyst_id, view_date):
     import sqlite3
     db = sqlite3.connect(db_path)
+    # 只读原始 3 类（core_theme/trend/logic）；排除派生的 view_type='market' 行，避免 self-pollution
     rows = db.execute(
-        "SELECT view_type, content FROM analyst_daily_views WHERE analyst_id=? AND view_date=? ORDER BY view_type",
+        "SELECT view_type, content FROM analyst_daily_views WHERE analyst_id=? AND view_date=? AND view_type != 'market' ORDER BY view_type",
         (analyst_id, view_date)).fetchall()
     db.close()
     if not rows:

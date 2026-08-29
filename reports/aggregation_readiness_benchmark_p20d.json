@@ -1,0 +1,88 @@
+{
+  "benchmark": "P2.0D Aggregation Readiness",
+  "schema_version": 6,
+  "key_numbers": {
+    "physical_stock_events": 937,
+    "excluded_stock_events": 3,
+    "aggregation_eligible_stock_events": 934,
+    "aggregation_eligible_market_views": 60,
+    "aggregation_eligible_theme_mentions": 186
+  },
+  "gates": {
+    "G1_COMPOSITE_residual": {
+      "pass": true,
+      "misresolved_in_eligible": 0,
+      "legit_composite_tactical_in_eligible": 18,
+      "note": "COMPOSITE_TACTICAL 为合法组合战术操作（P2.0A 仅治理 MISRESOLVED 3 条），非残留错误"
+    },
+    "G2_daily_view_lineage": {
+      "pass": true,
+      "total": 262,
+      "null_snapshot": 0,
+      "orphan_snapshot": 0
+    },
+    "G3_theme_mention_lineage": {
+      "pass": true,
+      "total": 186,
+      "orphan_record": 0,
+      "null_snapshot": 0,
+      "orphan_snapshot": 0
+    },
+    "G4_duplicate_ingest": {
+      "pass": true,
+      "dup_event_id": 0,
+      "dup_daily_view_key": 0,
+      "dup_theme_key": 0,
+      "unconverged_ingest": []
+    },
+    "G5_market_view_unknown": {
+      "pass": true,
+      "total": 69,
+      "unknown": 9,
+      "unknown_rate": 13.0,
+      "threshold": "≤20%",
+      "eligible": 60,
+      "excluded_from_aggregation": 9,
+      "note": "excluded(direction=UNKNOWN) 不进入 Market Consensus 聚合口径"
+    },
+    "G6_theme_normalization": {
+      "pass": true,
+      "id_inconsistent": [],
+      "keyword_multi_l2": {}
+    }
+  },
+  "overall": "GO",
+  "lineage": {
+    "stock_events": {
+      "physical": 937,
+      "excluded": 3,
+      "eligible": 934
+    },
+    "daily_views": {
+      "total": 262,
+      "core_theme": 69,
+      "trend": 62,
+      "logic": 62,
+      "market": 69
+    },
+    "theme_mentions": {
+      "total": 186,
+      "eligible": 186
+    },
+    "source_snapshots": 2,
+    "ingest_runs": 16
+  },
+  "eligible_stock_events_category": {
+    "TRADE": 354,
+    "OBSERVATION": 426,
+    "COMPOSITE_TACTICAL": 18,
+    "STATE": 134,
+    "UNKNOWN": 2
+  },
+  "market_view_direction_dist": {
+    "NEUTRAL": 26,
+    "UNKNOWN": 9,
+    "BULLISH": 24,
+    "BEARISH": 10
+  }
+}
