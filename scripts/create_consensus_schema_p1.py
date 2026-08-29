@@ -14,7 +14,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "data/analyst_consensus.db"
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
+# v1→v2 (2026-08-28, P1.2 前用户决策): ingest_runs 去掉 UNIQUE(source_snapshot_id, parser_version, resolver_version)
+# → run_id 唯一主键 + 普通索引 idx_runs_snapshot_versions，允许同版本重复运行留下独立 run history（幂等重跑审计）。
 
 DDL = """
 -- ============ 1. analyst_profiles 分析师档案 ============
@@ -163,24 +165,27 @@ CREATE TABLE IF NOT EXISTS record_revisions (
 );
 CREATE INDEX IF NOT EXISTS idx_rev_logical ON record_revisions (logical_record_id, snapshot_date);
 
--- ============ 8. ingest_runs 摄入批次（幂等 + 可重放） ============
+-- ============ 8. ingest_runs 摄入批次（幂等 + 可重放；v2 允许同版本重跑独立留痕） ============
 CREATE TABLE IF NOT EXISTS ingest_runs (
-    run_id            INTEGER PRIMARY KEY AUTOINCREMENT,
-    source_snapshot_id INTEGER NOT NULL REFERENCES source_snapshots(snapshot_id),
-    parser_version    TEXT NOT NULL,
-    resolver_version  TEXT NOT NULL,
-    schema_version    TEXT NOT NULL,
-    started_at        TEXT NOT NULL,
-    finished_at       TEXT,
-    status            TEXT NOT NULL CHECK (status IN ('running','success','failed')),
-    input_records     INTEGER,
-    events_created    INTEGER,
-    events_dup_skipped INTEGER,
-    errors            TEXT,
-    created_at        TEXT NOT NULL,
-    updated_at        TEXT NOT NULL,
-    UNIQUE (source_snapshot_id, parser_version, resolver_version)
+    run_id                 INTEGER PRIMARY KEY AUTOINCREMENT,
+    source_snapshot_id     INTEGER NOT NULL REFERENCES source_snapshots(snapshot_id),
+    parser_version         TEXT NOT NULL,
+    resolver_version       TEXT NOT NULL,
+    schema_version         TEXT NOT NULL,
+    started_at             TEXT NOT NULL,
+    finished_at            TEXT,
+    status                 TEXT NOT NULL CHECK (status IN ('running','success','failed')),
+    source_record_count    INTEGER,
+    parsed_event_count     INTEGER,
+    inserted_event_count   INTEGER,
+    skipped_existing_count INTEGER,
+    error_count            INTEGER,
+    result_hash            TEXT,
+    errors                 TEXT,
+    created_at             TEXT NOT NULL,
+    updated_at             TEXT NOT NULL
 );
+CREATE INDEX IF NOT EXISTS idx_runs_snapshot_versions ON ingest_runs (source_snapshot_id, parser_version, resolver_version);
 """
 
 

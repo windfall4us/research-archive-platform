@@ -30,7 +30,6 @@ EXPECT_UNIQUE = {
     "analyst_position_snapshots": "UNIQUE (analyst_id, snapshot_date, source_record_id)",
     "analyst_theme_mentions": "UNIQUE (analyst_id, mention_date, theme_name, source_record_id)",
     "record_revisions": "UNIQUE (source_record_id, snapshot_date)",
-    "ingest_runs": "UNIQUE (source_snapshot_id, parser_version, resolver_version)",
 }
 # 期望的枚举 CHECK 子串（每表若干）
 EXPECT_CHECK = {
@@ -54,7 +53,9 @@ EXPECT_COLS = {
                                    "source_snapshot_id", "snapshot_date", "position_state"],
     "record_revisions": ["source_record_id", "logical_record_id", "source_snapshot_id",
                          "snapshot_date", "change_type", "severity", "changed_fields_json"],
-    "ingest_runs": ["source_snapshot_id", "parser_version", "resolver_version", "status"],
+    "ingest_runs": ["source_snapshot_id", "parser_version", "resolver_version", "status",
+                    "started_at", "finished_at", "source_record_count", "parsed_event_count",
+                    "inserted_event_count", "skipped_existing_count", "error_count", "result_hash"],
     "source_snapshots": ["snapshot_id", "source", "snapshot_date", "page_sha256", "raw_json_path"],
     "analyst_daily_views": ["analyst_id", "view_date", "view_type", "content", "record_hash"],
     "analyst_theme_mentions": ["analyst_id", "mention_date", "theme_name", "theme_id"],
@@ -62,6 +63,7 @@ EXPECT_COLS = {
 EXPECT_INDEXES = {
     "idx_events_analyst_date", "idx_events_code_date", "idx_events_action_date", "idx_events_logical",
     "idx_pos_analyst_date", "idx_pos_code_date", "idx_pos_logical", "idx_rev_logical",
+    "idx_runs_snapshot_versions",
 }
 
 
@@ -77,8 +79,11 @@ def check_tables_and_uniques(con):
         if t not in tables:
             fails.append(f"[①] 缺表 {t}")
     # 唯一键：检查 sqlite_autoindex 存在（UNIQUE 自动建的唯一索引）
+    # 例外: ingest_runs v2 仅 run_id 主键、无 UNIQUE（同版本重跑留独立 run history）
     idxs = {r[0] for r in con.execute("SELECT name FROM sqlite_master WHERE type='index'")}
     for t in EXPECT_TABLES:
+        if t == "ingest_runs":
+            continue
         auto = [i for i in idxs if i.startswith(f"sqlite_autoindex_{t}_")]
         if not auto:
             fails.append(f"[①] 缺 {t} 唯一键(autoindex)")
@@ -179,8 +184,8 @@ def main() -> int:
         all_fails += check_indexes(con)
         all_fails += check_duplicate_and_check_constraint(con)
         uv = con.execute("PRAGMA user_version").fetchone()[0]
-        if uv != 1:
-            all_fails.append(f"[⑤] user_version={uv}，期望 1")
+        if uv != 2:
+            all_fails.append(f"[⑤] user_version={uv}，期望 2")
 
         # ⑥ 重放：空库可重跑 create（IF NOT EXISTS 幂等），结构一致
         import subprocess
@@ -212,7 +217,7 @@ def main() -> int:
     print("  ✅ ② FK / logical 引用字段齐全")
     print("  ✅ ③ 枚举列全部受 CHECK（含非法值拦截实测）")
     print("  ✅ ④ 重复插入唯一键 → IntegrityError（实测）")
-    print("  ✅ ⑤ PRAGMA user_version = 1")
+    print("  ✅ ⑤ PRAGMA user_version = 2")
     print("  ✅ ⑥ 空库 create 重放无错，结构一致")
     print("  ✅ 验收后为空库（无测试残留）")
     print("结果: PASS")
