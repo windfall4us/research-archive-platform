@@ -55,3 +55,6 @@
 - N. **Logic 可提供完成态证据**（[75] 有研硅 "只回了"）：只能补强结构化动作，不允许 logic 中无关词覆盖主 action
 - O. **未来窗口词**（[10] 融捷）：明日/下周/月内/月底等可贡献 FUTURE_PLAN，但必须判断它修饰"动作时间"还是"持有周期/目标期限"
 - P. **WATCH stance 扩展点**（[33] 回避）：未来 WATCH 可能需要 stance 子字段 FOLLOW/AVOID/WAIT/POSITIVE/NEGATIVE；否则"重点关注"与"建议回避"都变 WATCH 会丢方向信息；Phase 0B 不扩 Action 枚举，先保留扩展点
+- Q. **[P1.3 direction-only 审计] "继续持有"系列主 HOLD 状态丢失**（老樊有研硅/震哥蘅东光/格兰通富微电/芯原/中芯 6 条）："继续持有/继续持有未动/继续持有做T" Parser 判 HOLD/INTENDED，应优先 HOLD/POSITION_STATE（继续持有=当前持仓状态确认）；gap A 的实际样本
+- R. **[P1.3] "底仓"语义 = 持仓证据**（老樊芯原/国瓷/飞龙 等）："底仓可拿/乖离买点底仓继续拿/小底仓可拿/底仓继续留意" 被判 WATCH/INTENDED；"底仓"是已建仓持有的显式表述，应贡献 HOLD/POSITION_STATE 候选
+- S. **[P1.3] 浮盈陈述 = PAST 持仓确认**（游资混江龙 7 条）："赚/小赚/大赚35个点/浮盈40点" 被判 WATCH/INTENDED；这是事后收益陈述（已持有），temporal 应 PAST + 持仓确认，不是观察建议

@@ -1,0 +1,1764 @@
+{
+  "sets": {
+    "hold_parser_a_share": 124,
+    "direction_total": 201,
+    "direction_a_share": 185,
+    "union": 229,
+    "inter": 96,
+    "parser_only": 28,
+    "direction_only_total": 105,
+    "direction_only_a_share": 89,
+    "direction_only_non_a_share": 16,
+    "both": 96
+  },
+  "direction_only_non_a_share": [
+    {
+      "source_record_id": "vip0:老樊:2026-08-17:国瓷材料:action:001",
+      "analyst": "老樊",
+      "stock": "国瓷材料",
+      "action": "策略暂时无变化",
+      "resolve": "THEME"
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-26:国瓷材料:action:001",
+      "analyst": "老樊",
+      "stock": "国瓷材料",
+      "action": "小底仓可拿，新开仓等股价站回中期均线组",
+      "resolve": "THEME"
+    },
+    {
+      "source_record_id": "vip0:震哥本尊:2026-08-14:紫光:action:001",
+      "analyst": "震哥本尊",
+      "stock": "紫光",
+      "action": "持有",
+      "resolve": "UNKNOWN"
+    },
+    {
+      "source_record_id": "vip0:震哥本尊:2026-08-28:腾景科技/德科立/光库科技:action:001",
+      "analyst": "震哥本尊",
+      "stock": "腾景科技/德科立/光库科技",
+      "action": "偏格局，盘中看T还是减",
+      "resolve": "COMPOSITE"
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-14:西部材料:action:001",
+      "analyst": "天赢居",
+      "stock": "西部材料",
+      "action": "继续持股",
+      "resolve": "THEME"
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-26:拓尔思/三六零:action:001",
+      "analyst": "天赢居",
+      "stock": "拓尔思/三六零",
+      "action": "底仓持有，暂不开仓不加仓",
+      "resolve": "COMPOSITE"
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-26:阳光电源/锦浪科技:action:001",
+      "analyst": "天赢居",
+      "stock": "阳光电源/锦浪科技",
+      "action": "底仓持有观察，不开新仓不加仓",
+      "resolve": "COMPOSITE"
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-27:大盘:action:001",
+      "analyst": "天赢居",
+      "stock": "大盘",
+      "action": "大仓位持股，让利润奔跑",
+      "resolve": "MARKET"
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-28:大盘(8月28日策略):action:001",
+      "analyst": "天赢居",
+      "stock": "大盘(8月28日策略)",
+      "action": "上升趋势持股，回撤3927-3955良性，方向看3995(233日)→4013-4027(89/144日)",
+      "resolve": "MARKET"
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-19:阿里巴巴:action:001",
+      "analyst": "格兰投研",
+      "stock": "阿里巴巴",
+      "action": "持有",
+      "resolve": "OUT_OF_SCOPE"
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-27:资源金属:action:001",
+      "analyst": "格兰投研",
+      "stock": "资源金属",
+      "action": "持有观察",
+      "resolve": "THEME"
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-26:海康威视/美的集团/卫星化学/中国船舶:action:001",
+      "analyst": "游资混江龙",
+      "stock": "海康威视/美的集团/卫星化学/中国船舶",
+      "action": "拿着筹码继续看",
+      "resolve": "COMPOSITE"
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-17:中际旭创/新易盛/东山精密/光迅科技:action:001",
+      "analyst": "李梦尘",
+      "stock": "中际旭创/新易盛/东山精密/光迅科技",
+      "action": "核心持有方向",
+      "resolve": "COMPOSITE"
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-26:特高压（2只）:action:001",
+      "analyst": "李梦尘",
+      "stock": "特高压（2只）",
+      "action": "持有，明天再看",
+      "resolve": "THEME"
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-26:燕子家族:action:001",
+      "analyst": "李梦尘",
+      "stock": "燕子家族",
+      "action": "持有观察",
+      "resolve": "THEME"
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-28:硅微粉/硅片/靶材/折叠屏/冷液/电源:action:001",
+      "analyst": "李梦尘",
+      "stock": "硅微粉/硅片/靶材/折叠屏/冷液/电源",
+      "action": "打地鼠模式，电源偏恶心，剩余子弹不动",
+      "resolve": "THEME"
+    }
+  ],
+  "direction_only_categories": {
+    "其他": 32,
+    "纯持仓确认": 25,
+    "观察/计划": 18,
+    "纯条件/计划": 11,
+    "卖出/减仓": 11,
+    "条件+持仓": 6,
+    "减/卖+持仓或条件": 1,
+    "减/卖+条件": 1
+  },
+  "direction_only_parser_output": {
+    "WATCH/INTENDED": 65,
+    "HOLD/POSITION_STATE": 14,
+    "REDUCE/EXECUTED": 12,
+    "REDUCE/CONDITIONAL": 7,
+    "HOLD/INTENDED": 6,
+    "ADD/CONDITIONAL": 5,
+    "DO_T/INTENDED": 5,
+    "LOW_BUY/INTENDED": 3,
+    "ADD/INTENDED": 3,
+    "TRIAL/CONDITIONAL": 1,
+    "BUY/INTENDED": 1,
+    "TRIAL/INTENDED": 1
+  },
+  "direction_only": [
+    {
+      "source_record_id": "vip0:老樊:2026-08-14:药明康德:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-14",
+      "stock": "药明康德",
+      "action": "不在卖点结构上出，等回落贴近中期均线组再打试错仓",
+      "resolve": "STOCK",
+      "category": "纯条件/计划",
+      "parser_events": [
+        "TRIAL/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-17:芯原股份:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-17",
+      "stock": "芯原股份",
+      "action": "乖离买点底仓继续拿，突破买点出现前仓位不变",
+      "resolve": "STOCK",
+      "category": "条件+持仓",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-17:中石科技:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-17",
+      "stock": "中石科技",
+      "action": "连板行情不能继续再考虑止盈，目前可留",
+      "resolve": "STOCK",
+      "category": "减/卖+持仓或条件",
+      "parser_events": [
+        "REDUCE/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-17:生益科技:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-17",
+      "stock": "生益科技",
+      "action": "已打底仓可留，后续绿盘加仓等突破买点结构",
+      "resolve": "STOCK",
+      "category": "条件+持仓",
+      "parser_events": [
+        "BUY/INTENDED/TODAY",
+        "ADD/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-17:国瓷材料:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-17",
+      "stock": "国瓷材料",
+      "action": "策略暂时无变化",
+      "resolve": "THEME",
+      "category": "其他",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-17:长鑫科技:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-17",
+      "stock": "长鑫科技",
+      "action": "持仓跟踪，泡沫阶段注意节奏",
+      "resolve": "STOCK",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-17:有研硅(688432):action:001",
+      "analyst": "老樊",
+      "date": "2026-08-17",
+      "stock": "有研硅(688432)",
+      "action": "继续持有",
+      "resolve": "STOCK",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-18:芯原股份:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-18",
+      "stock": "芯原股份",
+      "action": "底仓可拿，短期股价继续磨",
+      "resolve": "STOCK",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-18:立昂微:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-18",
+      "stock": "立昂微",
+      "action": "用做波段，求稳可减仓防守",
+      "resolve": "STOCK",
+      "category": "卖出/减仓",
+      "parser_events": [
+        "REDUCE/EXECUTED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-18:长飞光纤:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-18",
+      "stock": "长飞光纤",
+      "action": "部分减仓止盈，放量突破则小幅加仓",
+      "resolve": "STOCK",
+      "category": "减/卖+条件",
+      "parser_events": [
+        "REDUCE/EXECUTED/TODAY",
+        "ADD/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-18:天孚通信:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-18",
+      "stock": "天孚通信",
+      "action": "可继续拿，不想承担波动可先止盈部分",
+      "resolve": "STOCK",
+      "category": "卖出/减仓",
+      "parser_events": [
+        "REDUCE/EXECUTED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-26:国瓷材料:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-26",
+      "stock": "国瓷材料",
+      "action": "小底仓可拿，新开仓等股价站回中期均线组",
+      "resolve": "THEME",
+      "category": "条件+持仓",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-27:飞龙股份:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-27",
+      "stock": "飞龙股份",
+      "action": "涨停封板，回踩买点仍可博弈",
+      "resolve": "STOCK",
+      "category": "纯条件/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-27:淮北矿业:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-27",
+      "stock": "淮北矿业",
+      "action": "小仓位博弈，30%乖离附近半仓止盈",
+      "resolve": "STOCK",
+      "category": "卖出/减仓",
+      "parser_events": [
+        "TRIAL/INTENDED/TODAY",
+        "REDUCE/EXECUTED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-28:芯原股份:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-28",
+      "stock": "芯原股份",
+      "action": "圈内乖离买点结构左侧入场，暂不做仓位调整",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:震哥本尊:2026-08-14:紫光:action:001",
+      "analyst": "震哥本尊",
+      "date": "2026-08-14",
+      "stock": "紫光",
+      "action": "持有",
+      "resolve": "UNKNOWN",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:震哥本尊:2026-08-26:源杰科技:action:001",
+      "analyst": "震哥本尊",
+      "date": "2026-08-26",
+      "stock": "源杰科技",
+      "action": "有低吸冲高做T",
+      "resolve": "STOCK",
+      "category": "纯条件/计划",
+      "parser_events": [
+        "LOW_BUY/INTENDED/TODAY",
+        "DO_T/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:震哥本尊:2026-08-26:联特科技:action:001",
+      "analyst": "震哥本尊",
+      "date": "2026-08-26",
+      "stock": "联特科技",
+      "action": "科技整体修复时有望翻红",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:震哥本尊:2026-08-27:中际旭创:action:001",
+      "analyst": "震哥本尊",
+      "date": "2026-08-27",
+      "stock": "中际旭创",
+      "action": "竞价强，观察延续",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:震哥本尊:2026-08-27:蘅东光:action:001",
+      "analyst": "震哥本尊",
+      "date": "2026-08-27",
+      "stock": "蘅东光",
+      "action": "继续持有，未动",
+      "resolve": "STOCK",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:震哥本尊:2026-08-28:腾景科技/德科立/光库科技:action:001",
+      "analyst": "震哥本尊",
+      "date": "2026-08-28",
+      "stock": "腾景科技/德科立/光库科技",
+      "action": "偏格局，盘中看T还是减",
+      "resolve": "COMPOSITE",
+      "category": "观察/计划",
+      "parser_events": [
+        "REDUCE/EXECUTED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-14:易点天下:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-14",
+      "stock": "易点天下",
+      "action": "破线再减仓",
+      "resolve": "STOCK",
+      "category": "卖出/减仓",
+      "parser_events": [
+        "REDUCE/EXECUTED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-14:三六零:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-14",
+      "stock": "三六零",
+      "action": "回踩55日均线之上就观察为主",
+      "resolve": "STOCK",
+      "category": "纯条件/计划",
+      "parser_events": [
+        "WATCH/INTENDED/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-14:西部材料:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-14",
+      "stock": "西部材料",
+      "action": "继续持股",
+      "resolve": "THEME",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-14:金螳螂(002081):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-14",
+      "stock": "金螳螂(002081)",
+      "action": "不破板继续持有，观察下周一走势",
+      "resolve": "STOCK",
+      "category": "条件+持仓",
+      "parser_events": [
+        "HOLD/INTENDED/FUTURE_PLAN",
+        "WATCH/INTENDED/FUTURE_PLAN"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-17:科创新源(300731):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-17",
+      "stock": "科创新源(300731)",
+      "action": "分时黄线上继续观察，破位防守",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-17:药石科技(300725):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-17",
+      "stock": "药石科技(300725)",
+      "action": "5/8日均线之上可观察，破位或5/8日均线死叉则减出",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY",
+        "REDUCE/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-17:国科微(300672):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-17",
+      "stock": "国科微(300672)",
+      "action": "8日均线上可观察",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-17:东方铁塔(002545):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-17",
+      "stock": "东方铁塔(002545)",
+      "action": "线上观察，破位减仓",
+      "resolve": "STOCK",
+      "category": "卖出/减仓",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY",
+        "REDUCE/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-17:利尔化学(002258):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-17",
+      "stock": "利尔化学(002258)",
+      "action": "右侧突破144日均线继续观察，缩量则价差",
+      "resolve": "STOCK",
+      "category": "纯条件/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-17:顺钠股份(000533):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-17",
+      "stock": "顺钠股份(000533)",
+      "action": "21日均线线上持仓观察消化",
+      "resolve": "STOCK",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-17:太极实业(600667):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-17",
+      "stock": "太极实业(600667)",
+      "action": "两级支撑分级防守",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-17:金牛化工(600722):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-17",
+      "stock": "金牛化工(600722)",
+      "action": "破位做价差到144日均线附近接回",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "ADD/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-17:有研新材(688432):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-17",
+      "stock": "有研新材(688432)",
+      "action": "守住观察",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-17:元利科技(603217):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-17",
+      "stock": "元利科技(603217)",
+      "action": "线上持仓",
+      "resolve": "STOCK",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-17:英维克(002837):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-17",
+      "stock": "英维克(002837)",
+      "action": "守8日线",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:士兰微:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "士兰微",
+      "action": "做好防守观察",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:欧科亿:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "欧科亿",
+      "action": "留意短期消化结构",
+      "resolve": "STOCK",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:恩捷股份:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "恩捷股份",
+      "action": "顺短期多头均线通道跟踪",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:澜起科技:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "澜起科技",
+      "action": "线上跟踪",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:太极实业:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "太极实业",
+      "action": "观察横向平台支撑",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:大金重工:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "大金重工",
+      "action": "底仓继续留意",
+      "resolve": "STOCK",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:西藏珠峰:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "西藏珠峰",
+      "action": "右侧突破55日均线再扩大仓位",
+      "resolve": "STOCK",
+      "category": "纯条件/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:西藏矿业:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "西藏矿业",
+      "action": "守21日均线，破位减仓",
+      "resolve": "STOCK",
+      "category": "卖出/减仓",
+      "parser_events": [
+        "REDUCE/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:寒锐钴业:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "寒锐钴业",
+      "action": "继续留意",
+      "resolve": "STOCK",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:昆仑万维:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "昆仑万维",
+      "action": "耐心等待，线上观察反压消化",
+      "resolve": "STOCK",
+      "category": "纯条件/计划",
+      "parser_events": [
+        "WATCH/INTENDED/CONDITIONAL",
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:三六零:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "三六零",
+      "action": "守住联合支撑观察，守不住做防守",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:奥瑞德:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "奥瑞德",
+      "action": "短期防守",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-19:青山纸业(600103):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-19",
+      "stock": "青山纸业(600103)",
+      "action": "破位价差；今日到21日线暂不补仓",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-19:三变科技(002112):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-19",
+      "stock": "三变科技(002112)",
+      "action": "尾盘破55日均线先减仓观察",
+      "resolve": "STOCK",
+      "category": "卖出/减仓",
+      "parser_events": [
+        "REDUCE/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-19:大连电瓷(002606):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-19",
+      "stock": "大连电瓷(002606)",
+      "action": "尾盘站不上紫线短线先减仓",
+      "resolve": "STOCK",
+      "category": "卖出/减仓",
+      "parser_events": [
+        "REDUCE/EXECUTED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-19:晓程科技(300139):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-19",
+      "stock": "晓程科技(300139)",
+      "action": "守不住46元减仓；30分钟55MA压制可日T（低吸反弹T出）",
+      "resolve": "STOCK",
+      "category": "卖出/减仓",
+      "parser_events": [
+        "REDUCE/EXECUTED/TODAY",
+        "LOW_BUY/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-19:西藏珠峰(600338):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-19",
+      "stock": "西藏珠峰(600338)",
+      "action": "60分钟通道下轨破位暂时观望",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-19:兆日科技(300333):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-19",
+      "stock": "兆日科技(300333)",
+      "action": "守60分钟紫线区间底部支撑（8月13日一字板价格）",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-19:信邦智能(301112):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-19",
+      "stock": "信邦智能(301112)",
+      "action": "先守55日均线",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-26:招金黄金:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-26",
+      "stock": "招金黄金",
+      "action": "破位5日均线做价差，13日均线企稳接回",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "ADD/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-26:天山铝业:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-26",
+      "stock": "天山铝业",
+      "action": "突破21日均线打开上行空间，激进可适当加仓守紫线",
+      "resolve": "STOCK",
+      "category": "纯条件/计划",
+      "parser_events": [
+        "ADD/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-26:西藏矿业:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-26",
+      "stock": "西藏矿业",
+      "action": "关注冲涨377日均线附近的高抛机会",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY",
+        "REDUCE/EXECUTED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-26:昆仑万维:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-26",
+      "stock": "昆仑万维",
+      "action": "破位144周均线需减持观察",
+      "resolve": "STOCK",
+      "category": "卖出/减仓",
+      "parser_events": [
+        "REDUCE/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-26:拓尔思/三六零:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-26",
+      "stock": "拓尔思/三六零",
+      "action": "底仓持有，暂不开仓不加仓",
+      "resolve": "COMPOSITE",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-26:厦门钨业:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-26",
+      "stock": "厦门钨业",
+      "action": "关注51.05元一带共振支撑",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-26:阳光电源/锦浪科技:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-26",
+      "stock": "阳光电源/锦浪科技",
+      "action": "底仓持有观察，不开新仓不加仓",
+      "resolve": "COMPOSITE",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-27:大盘:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-27",
+      "stock": "大盘",
+      "action": "大仓位持股，让利润奔跑",
+      "resolve": "MARKET",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-27:688308澜起科技:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-27",
+      "stock": "688308澜起科技",
+      "action": "守住底仓观察，突破55日均线补仓",
+      "resolve": "STOCK",
+      "category": "条件+持仓",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY",
+        "ADD/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-27:301205联特科技:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-27",
+      "stock": "301205联特科技",
+      "action": "观察缺口反压消化",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-27:300229拓尔思:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-27",
+      "stock": "300229拓尔思",
+      "action": "不开新仓不加仓",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-27:601360三六零:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-27",
+      "stock": "601360三六零",
+      "action": "不开新仓不加仓",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-28:大盘(8月28日策略):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-28",
+      "stock": "大盘(8月28日策略)",
+      "action": "上升趋势持股，回撤3927-3955良性，方向看3995(233日)→4013-4027(89/144日)",
+      "resolve": "MARKET",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE",
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-28:拓斯达(300607):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-28",
+      "stock": "拓斯达(300607)",
+      "action": "看37.8/38.18前高，不能突破高抛价差，突破看缺口",
+      "resolve": "STOCK",
+      "category": "纯条件/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY",
+        "REDUCE/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-28:德邦科技(688035):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-28",
+      "stock": "德邦科技(688035)",
+      "action": "短线阻力144日均线，有效突破企稳可加仓，否则价差",
+      "resolve": "STOCK",
+      "category": "纯条件/计划",
+      "parser_events": [
+        "ADD/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-28:西藏珠峰(600338):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-28",
+      "stock": "西藏珠峰(600338)",
+      "action": "破位价差",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-28:西藏矿业(000762):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-28",
+      "stock": "西藏矿业(000762)",
+      "action": "破位价差",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-28:晶晨股份(688099):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-28",
+      "stock": "晶晨股份(688099)",
+      "action": "守紫线区间底部支撑，上方55日均线95一带",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-14:中兴通讯:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-14",
+      "stock": "中兴通讯",
+      "action": "震荡降本",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-17:通富微电:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-17",
+      "stock": "通富微电",
+      "action": "已先行，强势跟踪",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-18:通富微电:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-18",
+      "stock": "通富微电",
+      "action": "继续持有",
+      "resolve": "STOCK",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-18:茂莱光学:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-18",
+      "stock": "茂莱光学",
+      "action": "仓位集中，下半年CPO全流程检测设备兑现，波动大但拿住",
+      "resolve": "STOCK",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "REDUCE/EXECUTED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-18:深信服:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-18",
+      "stock": "深信服",
+      "action": "配好当防守",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-18:芯原股份:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-18",
+      "stock": "芯原股份",
+      "action": "继续持有做T",
+      "resolve": "STOCK",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/INTENDED/TODAY",
+        "DO_T/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-19:阿里巴巴:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-19",
+      "stock": "阿里巴巴",
+      "action": "持有",
+      "resolve": "OUT_OF_SCOPE",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-19:立讯精密:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-19",
+      "stock": "立讯精密",
+      "action": "等催化不着急，这位置跌不到哪去了",
+      "resolve": "STOCK",
+      "category": "纯条件/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-26:中芯国际:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-26",
+      "stock": "中芯国际",
+      "action": "继续持有，正T起来",
+      "resolve": "STOCK",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-26:新易盛:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-26",
+      "stock": "新易盛",
+      "action": "收盘371破了就砍",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-26:立讯精密:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-26",
+      "stock": "立讯精密",
+      "action": "低吸了上去了抛",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "LOW_BUY/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-26:同花顺:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-26",
+      "stock": "同花顺",
+      "action": "涨多了把补的抛掉",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-27:立讯精密:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-27",
+      "stock": "立讯精密",
+      "action": "重点做好，光模块趋势",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-27:资源金属:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-27",
+      "stock": "资源金属",
+      "action": "持有观察",
+      "resolve": "THEME",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-14:海康威视:action:001",
+      "analyst": "游资混江龙",
+      "date": "2026-08-14",
+      "stock": "海康威视",
+      "action": "仓位轻可拿一拿，仓位重减仓",
+      "resolve": "STOCK",
+      "category": "卖出/减仓",
+      "parser_events": [
+        "REDUCE/EXECUTED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-17:药明康德:action:001",
+      "analyst": "游资混江龙",
+      "date": "2026-08-17",
+      "stock": "药明康德",
+      "action": "沿5日线慢慢飘",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-18:中远海特:action:001",
+      "analyst": "游资混江龙",
+      "date": "2026-08-18",
+      "stock": "中远海特",
+      "action": "底仓不要丢，可反复做T，等突破爆发点",
+      "resolve": "STOCK",
+      "category": "条件+持仓",
+      "parser_events": [
+        "DO_T/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-18:风范股份:action:001",
+      "analyst": "游资混江龙",
+      "date": "2026-08-18",
+      "stock": "风范股份",
+      "action": "以零轴为支撑，破零轴收不回来彻底跑路",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-26:海康威视/美的集团/卫星化学/中国船舶:action:001",
+      "analyst": "游资混江龙",
+      "date": "2026-08-26",
+      "stock": "海康威视/美的集团/卫星化学/中国船舶",
+      "action": "拿着筹码继续看",
+      "resolve": "COMPOSITE",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-28:药明康德:action:001",
+      "analyst": "游资混江龙",
+      "date": "2026-08-28",
+      "stock": "药明康德",
+      "action": "大赚(8月交易计划总结)",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-28:卫星化学:action:001",
+      "analyst": "游资混江龙",
+      "date": "2026-08-28",
+      "stock": "卫星化学",
+      "action": "大赚35个点浮盈",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-28:美的集团:action:001",
+      "analyst": "游资混江龙",
+      "date": "2026-08-28",
+      "stock": "美的集团",
+      "action": "小赚",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-28:景旺电子:action:001",
+      "analyst": "游资混江龙",
+      "date": "2026-08-28",
+      "stock": "景旺电子",
+      "action": "赚",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-28:长鑫科技:action:001",
+      "analyst": "游资混江龙",
+      "date": "2026-08-28",
+      "stock": "长鑫科技",
+      "action": "赚十几个点",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-28:桐昆股份:action:001",
+      "analyst": "游资混江龙",
+      "date": "2026-08-28",
+      "stock": "桐昆股份",
+      "action": "浮盈40点自己决定，不追涨（化工更好票多）",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:妖股刺客:2026-08-17:日科化学:action:001",
+      "analyst": "妖股刺客",
+      "date": "2026-08-17",
+      "stock": "日科化学",
+      "action": "减的部分接回来了",
+      "resolve": "STOCK",
+      "category": "其他",
+      "parser_events": [
+        "REDUCE/EXECUTED/TODAY",
+        "ADD/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:妖股刺客:2026-08-28:生益科技:action:001",
+      "analyst": "妖股刺客",
+      "date": "2026-08-28",
+      "stock": "生益科技",
+      "action": "科技没问题，关注",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY"
+      ]
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-17:中际旭创/新易盛/东山精密/光迅科技:action:001",
+      "analyst": "李梦尘",
+      "date": "2026-08-17",
+      "stock": "中际旭创/新易盛/东山精密/光迅科技",
+      "action": "核心持有方向",
+      "resolve": "COMPOSITE",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-26:特高压（2只）:action:001",
+      "analyst": "李梦尘",
+      "date": "2026-08-26",
+      "stock": "特高压（2只）",
+      "action": "持有，明天再看",
+      "resolve": "THEME",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE",
+        "WATCH/INTENDED/FUTURE_PLAN"
+      ]
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-26:燕子家族:action:001",
+      "analyst": "李梦尘",
+      "date": "2026-08-26",
+      "stock": "燕子家族",
+      "action": "持有观察",
+      "resolve": "THEME",
+      "category": "纯持仓确认",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-28:硅微粉/硅片/靶材/折叠屏/冷液/电源:action:001",
+      "analyst": "李梦尘",
+      "date": "2026-08-28",
+      "stock": "硅微粉/硅片/靶材/折叠屏/冷液/电源",
+      "action": "打地鼠模式，电源偏恶心，剩余子弹不动",
+      "resolve": "THEME",
+      "category": "其他",
+      "parser_events": [
+        "DO_T/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:一线天渔哥:2026-08-28:湖南白银:action:001",
+      "analyst": "一线天渔哥",
+      "date": "2026-08-28",
+      "stock": "湖南白银",
+      "action": "滚动操作，跟踪",
+      "resolve": "STOCK",
+      "category": "观察/计划",
+      "parser_events": [
+        "DO_T/INTENDED/TODAY",
+        "WATCH/INTENDED/TODAY"
+      ]
+    }
+  ],
+  "parser_only": [
+    {
+      "source_record_id": "vip0:老樊:2026-08-26:顺钠股份:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-26",
+      "stock": "顺钠股份",
+      "action": "短线可关注，模型加持有炒作潜力",
+      "direction": "短线",
+      "parser_events": [
+        "WATCH/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:老樊:2026-08-28:华正新材:action:001",
+      "analyst": "老樊",
+      "date": "2026-08-28",
+      "stock": "华正新材",
+      "action": "需反复做T降本，过程考验持股",
+      "direction": "观察",
+      "parser_events": [
+        "DO_T/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:震哥本尊:2026-08-17:中际旭创:action:001",
+      "analyst": "震哥本尊",
+      "date": "2026-08-17",
+      "stock": "中际旭创",
+      "action": "低吸持有",
+      "direction": "低吸",
+      "parser_events": [
+        "LOW_BUY/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:震哥本尊:2026-08-18:太辰光:action:001",
+      "analyst": "震哥本尊",
+      "date": "2026-08-18",
+      "stock": "太辰光",
+      "action": "2%多加仓，持有等产能落地业绩放量",
+      "direction": "买入",
+      "parser_events": [
+        "ADD/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:震哥本尊:2026-08-26:蘅东光:action:001",
+      "analyst": "震哥本尊",
+      "date": "2026-08-26",
+      "stock": "蘅东光",
+      "action": "低吸持有",
+      "direction": "低吸",
+      "parser_events": [
+        "LOW_BUY/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-14:晶晨股份:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-14",
+      "stock": "晶晨股份",
+      "action": "顺21周均线持有观察，破位减出",
+      "direction": "减仓",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE",
+        "REDUCE/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-17:招金黄金(000506):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-17",
+      "stock": "招金黄金(000506)",
+      "action": "逢低慢慢接回，持有观察，上方5、8日均线交汇短线压制",
+      "direction": "低吸",
+      "parser_events": [
+        "ADD/CONDITIONAL/CONDITIONAL",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-17:天山铝业(002352):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-17",
+      "stock": "天山铝业(002352)",
+      "action": "沿233小时均线或55日均线慢慢接回，持有观察",
+      "direction": "低吸",
+      "parser_events": [
+        "ADD/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:江波龙:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "江波龙",
+      "action": "低吸后顺8日均线持有观察",
+      "direction": "低吸",
+      "parser_events": [
+        "LOW_BUY/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:屹唐股份:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "屹唐股份",
+      "action": "低吸后顺关口持有观察",
+      "direction": "低吸",
+      "parser_events": [
+        "LOW_BUY/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-18:沃森生物:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-18",
+      "stock": "沃森生物",
+      "action": "剩余底仓顺21月均线持有观察",
+      "direction": "减仓",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-19:昆仑万维(300418):action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-19",
+      "stock": "昆仑万维(300418)",
+      "action": "377小时/377日均线之间高抛低吸，或右侧沿377日均线持股",
+      "direction": "网格",
+      "parser_events": [
+        "DO_T/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-26:赤峰黄金:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-26",
+      "stock": "赤峰黄金",
+      "action": "收回5日均线持股，收不回减持，等13日均线再考虑回补",
+      "direction": "减仓",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CONDITIONAL",
+        "REDUCE/CONDITIONAL/CONDITIONAL",
+        "ADD/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-27:002532天山铝业:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-27",
+      "stock": "002532天山铝业",
+      "action": "持有不加仓",
+      "direction": "观察",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-28:600367:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-28",
+      "stock": "600367",
+      "action": "持有观察，下周一能否站稳关键",
+      "direction": "观察",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:天赢居:2026-08-28:002648:action:001",
+      "analyst": "天赢居",
+      "date": "2026-08-28",
+      "stock": "002648",
+      "action": "持有观察",
+      "direction": "观察",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:格兰投研:2026-08-18:海光信息:action:001",
+      "analyst": "格兰投研",
+      "date": "2026-08-18",
+      "stock": "海光信息",
+      "action": "低吸持有",
+      "direction": "低吸",
+      "parser_events": [
+        "LOW_BUY/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:游资混江龙:2026-08-18:华勤技术:action:001",
+      "analyst": "游资混江龙",
+      "date": "2026-08-18",
+      "stock": "华勤技术",
+      "action": "控制好仓位持有",
+      "direction": "低吸",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:清北游资:2026-08-14:国风新材:action:001",
+      "analyst": "清北游资",
+      "date": "2026-08-14",
+      "stock": "国风新材",
+      "action": "三日持股吃肉",
+      "direction": "买入",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:清北游资:2026-08-17:共进股份:action:001",
+      "analyst": "清北游资",
+      "date": "2026-08-17",
+      "stock": "共进股份",
+      "action": "秒板不用动，连留断走；09:55换手够还不能回封可考虑出",
+      "direction": "短线",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE",
+        "SELL/CONDITIONAL/CONDITIONAL"
+      ]
+    },
+    {
+      "source_record_id": "vip0:妖股刺客:2026-08-19:风华高科(000636):action:001",
+      "analyst": "妖股刺客",
+      "date": "2026-08-19",
+      "stock": "风华高科(000636)",
+      "action": "已低吸，持有待修复",
+      "direction": "买入",
+      "parser_events": [
+        "LOW_BUY/EXECUTED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:妖股刺客:2026-08-26:协鑫能科:action:001",
+      "analyst": "妖股刺客",
+      "date": "2026-08-26",
+      "stock": "协鑫能科",
+      "action": "5分钟不涨停就落袋，涨停持有",
+      "direction": "短线",
+      "parser_events": [
+        "REDUCE/EXECUTED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:妖股刺客:2026-08-27:生益科技:action:001",
+      "analyst": "妖股刺客",
+      "date": "2026-08-27",
+      "stock": "生益科技",
+      "action": "封涨停，中军持有",
+      "direction": "买入",
+      "parser_events": [
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-14:有研硅:action:001",
+      "analyst": "李梦尘",
+      "date": "2026-08-14",
+      "stock": "有研硅",
+      "action": "回补持有",
+      "direction": "买入",
+      "parser_events": [
+        "ADD/EXECUTED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-19:有研新材:action:001",
+      "analyst": "李梦尘",
+      "date": "2026-08-19",
+      "stock": "有研新材",
+      "action": "低吸持有，绿吃红T",
+      "direction": "买入",
+      "parser_events": [
+        "LOW_BUY/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-26:联瑞新材:action:001",
+      "analyst": "李梦尘",
+      "date": "2026-08-26",
+      "stock": "联瑞新材",
+      "action": "尾盘先手买入，持有",
+      "direction": "低吸",
+      "parser_events": [
+        "BUY/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-27:有研硅:action:001",
+      "analyst": "李梦尘",
+      "date": "2026-08-27",
+      "stock": "有研硅",
+      "action": "低吃持有",
+      "direction": "买入",
+      "parser_events": [
+        "LOW_BUY/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    },
+    {
+      "source_record_id": "vip0:李梦尘:2026-08-27:有研新材:action:001",
+      "analyst": "李梦尘",
+      "date": "2026-08-27",
+      "stock": "有研新材",
+      "action": "低吃持有",
+      "direction": "买入",
+      "parser_events": [
+        "LOW_BUY/INTENDED/TODAY",
+        "HOLD/POSITION_STATE/CURRENT_STATE"
+      ]
+    }
+  ]
+}
