@@ -1,0 +1,518 @@
+{
+  "benchmark": "P2.0C Theme Mention Ingest",
+  "extractor": "theme_mention_extract_v1",
+  "lexicon": "theme_lexicon_p20c",
+  "schema_version": 5,
+  "mentions_total": 186,
+  "gates": {
+    "G1_raw_theme_100": {
+      "pass": true,
+      "bad": 0,
+      "detail": []
+    },
+    "G2_lineage_100": {
+      "pass": true,
+      "bad_record": 0,
+      "bad_snapshot": 0
+    },
+    "G3_rerun_zero_dup": {
+      "pass": true,
+      "dup_keys": 0,
+      "unique_constraint": true
+    },
+    "G4_stance_no_reversal": {
+      "pass": true,
+      "stance_dist": {
+        "POSITIVE": 80,
+        "NEUTRAL": 94,
+        "NEGATIVE": 12
+      },
+      "critical_count": 60,
+      "critical": [
+        {
+          "kw": "MLCC",
+          "stance": "NEGATIVE",
+          "pos": 0,
+          "neg": 1,
+          "ctx": "MLCC/算力租赁两大方向主动减仓1/3-1"
+        },
+        {
+          "kw": "算力租赁",
+          "stance": "NEGATIVE",
+          "pos": 0,
+          "neg": 1,
+          "ctx": "MLCC/算力租赁两大方向主动减仓1/3-1/2控节奏"
+        },
+        {
+          "kw": "国产算力",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "国产算力多点开花扩散（交换机→算力大盘股/封"
+        },
+        {
+          "kw": "交换机",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "国产算力多点开花扩散（交换机→算力大盘股/封测/半导体设备），半"
+        },
+        {
+          "kw": "算力",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "国产算力多点开花扩散（交换机→算力大盘股/封测/半导体设备），半导体设"
+        },
+        {
+          "kw": "功率半导体",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "午后功率半导体轮动（新洁能）成为新亮点，存储是涨价"
+        },
+        {
+          "kw": "存储",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "功率半导体轮动（新洁能）成为新亮点，存储是涨价锚、涨价品被相继轮动"
+        },
+        {
+          "kw": "半导体硅片",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "昨日光纤长飞/功率半导体新洁能→今日半导体硅片立昂微/有研硅），午后新扩散：安集科"
+        },
+        {
+          "kw": "有色",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "盘面轮动到有色和券商，趋势上有色>券商"
+        },
+        {
+          "kw": "券商",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "盘面轮动到有色和券商，趋势上有色>券商"
+        },
+        {
+          "kw": "OCS",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "谷歌链OCS(光库/腾景/德科立三剑客)为主线最"
+        },
+        {
+          "kw": "大光",
+          "stance": "POSITIVE",
+          "pos": 2,
+          "neg": 1,
+          "ctx": ")为主线最强热点，但防日内冲高回落与大光补涨抽取流动性"
+        },
+        {
+          "kw": "光模块",
+          "stance": "NEGATIVE",
+          "pos": 0,
+          "neg": 1,
+          "ctx": "光模块产业链换仓：宏景科技-2%附近清仓兑"
+        },
+        {
+          "kw": "1.6T光模块",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "核心方向锁定200G EML/1.6T光模块，等待产能落地后业绩放量"
+        },
+        {
+          "kw": "光模块",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "近5%，光板块昨日已反弹，今日核心做光模块反弹（竞价强的大光：中际旭创、东山精"
+        },
+        {
+          "kw": "大光",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "反弹，今日核心做光模块反弹（竞价强的大光：中际旭创、东山精密）"
+        },
+        {
+          "kw": "药板块",
+          "stance": "NEGATIVE",
+          "pos": 0,
+          "neg": 1,
+          "ctx": "药板块集体核按钮属强弩之末，低位博弈重点仍"
+        },
+        {
+          "kw": "资源",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "/赤峰黄金/天山铝业/寒锐钴业/盛达资源），紫金矿业通道下轨破位暂不加仓"
+        },
+        {
+          "kw": "科技硬件",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "3980-4040真正突破回踩确认+科技硬件分歧后继续进前排"
+        },
+        {
+          "kw": "科技",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "部结构转弱：深成指/创业板弱于主板、科技核心未同步修复，二次冲顶要检验上涨质"
+        },
+        {
+          "kw": "PCB",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "科技硬件（存储芯片/先进封装/PCB/光通信/CPO）完成明显板块扩散，"
+        },
+        {
+          "kw": "光通信",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "技硬件（存储芯片/先进封装/PCB/光通信/CPO）完成明显板块扩散，元器件/"
+        },
+        {
+          "kw": "CPO",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "存储芯片/先进封装/PCB/光通信/CPO）完成明显板块扩散，元器件/电子化学"
+        },
+        {
+          "kw": "电子化学品",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "/CPO）完成明显板块扩散，元器件/电子化学品/CPO/半导体/先进封装/通信设备"
+        },
+        {
+          "kw": "半导体",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "块扩散，元器件/电子化学品/CPO/半导体/先进封装/通信设备大面积进前排，同"
+        },
+        {
+          "kw": "有色",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": ":54赢家内参个股跟踪，覆盖半导体/有色/机器人/应用端数十只个股，主线未破"
+        },
+        {
+          "kw": "光刻机",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "瓷电子效果不错，这次捞点茂莱光学——光刻机该轮动到了"
+        },
+        {
+          "kw": "光纤",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "光纤是最主动板块有催化，亨通光电带领市场"
+        },
+        {
+          "kw": "低轨卫星",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "东方对接海内外无晶圆厂客户、友达聚焦低轨卫星天线/MLED玻璃应用），短期情绪催"
+        },
+        {
+          "kw": "CXO",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "CXO卖铲子逻辑靠谱（药明合联又新高、药明"
+        },
+        {
+          "kw": "国产算力",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "国产算力继续看好——海光下跌等通富/中芯涨完"
+        },
+        {
+          "kw": "AI景气",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "英伟达财报超预期后交易AI景气周期拉长(下财年近70%收入增长，R"
+        },
+        {
+          "kw": "算力租赁",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "午后算力租赁卖token逻辑扩散：网宿科技是算力"
+        },
+        {
+          "kw": "token",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "午后算力租赁卖token逻辑扩散：网宿科技是算力租赁衍生边缘"
+        },
+        {
+          "kw": "token工厂",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "赁衍生边缘计算龙头（产品涨价+高管吹token工厂年产60万亿个，今日上涨=博弈+两个"
+        },
+        {
+          "kw": "稀土",
+          "stance": "NEGATIVE",
+          "pos": 0,
+          "neg": 1,
+          "ctx": "中国稀土封板炸板，稀土逻辑只有反制裁故事"
+        },
+        {
+          "kw": "粮食",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "粮食危机今日最强势，种业消息套利一波流、"
+        },
+        {
+          "kw": "种业",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "粮食危机今日最强势，种业消息套利一波流、不太可能成主流题材（"
+        },
+        {
+          "kw": "白马",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "踪的核心标的很强，创新药故事没结束、白马低估修复逻辑在验证"
+        },
+        {
+          "kw": "商业航天",
+          "stance": "NEGATIVE",
+          "pos": 0,
+          "neg": 1,
+          "ctx": "商业航天\"见光死\"（发射提前被人知道、权重票"
+        },
+        {
+          "kw": "MLCC",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "今日MLCC方向最强标的换成利和兴"
+        },
+        {
+          "kw": "MLCC",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "MLCC开始轮动"
+        },
+        {
+          "kw": "锗",
+          "stance": "POSITIVE",
+          "pos": 2,
+          "neg": 1,
+          "ctx": "早盘低吸风华高科，云南锗业拉红、兴业科技预计修复，尾盘减仓兴"
+        },
+        {
+          "kw": "消费",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "指数回暖就是科技天下，消费/农业/创新药跷跷板向下"
+        },
+        {
+          "kw": "农业",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "指数回暖就是科技天下，消费/农业/创新药跷跷板向下"
+        },
+        {
+          "kw": "创新药",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "指数回暖就是科技天下，消费/农业/创新药跷跷板向下"
+        },
+        {
+          "kw": "农业",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "上，后面几天安全时间，科技震荡向上+农业/创新药轮动"
+        },
+        {
+          "kw": "创新药",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "面几天安全时间，科技震荡向上+农业/创新药轮动"
+        },
+        {
+          "kw": "液冷",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "科技最热液冷(康盛股份连板龙头)"
+        },
+        {
+          "kw": "科技",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "半路百合花+太辰光、低吸拓荆科技慢慢来"
+        },
+        {
+          "kw": "医药",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "科技加仓后医药按计划撤仓：昭衍新药/药明康德均可考"
+        },
+        {
+          "kw": "MLCC",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "MLCC方向国瓷材料可低吸1成参考仓位"
+        },
+        {
+          "kw": "光模块",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "泰晶科技红包重点推荐：光模块超高频晶振巨大预期差接近翻倍空间（3"
+        },
+        {
+          "kw": "超高频晶振",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "泰晶科技红包重点推荐：光模块超高频晶振巨大预期差接近翻倍空间（312.5M"
+        },
+        {
+          "kw": "半导体硅片",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "今日盘面仅半导体硅片（有研硅）走强，其余走得很狗、资金拉"
+        },
+        {
+          "kw": "农业",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "（有研硅）走强，其余走得很狗、资金拉农业（粮食危机）"
+        },
+        {
+          "kw": "粮食",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "硅）走强，其余走得很狗、资金拉农业（粮食危机）"
+        },
+        {
+          "kw": "铜管",
+          "stance": "NEGATIVE",
+          "pos": 0,
+          "neg": 1,
+          "ctx": "亏损持仓（铜管等）果断砸掉止损、新开仓谨慎"
+        },
+        {
+          "kw": "HVDC",
+          "stance": "NEGATIVE",
+          "pos": 0,
+          "neg": 1,
+          "ctx": "新开300593新雷能(谷歌链HVDC电源，调研逻辑好但疑似杀猪盘，没有的"
+        },
+        {
+          "kw": "种业",
+          "stance": "POSITIVE",
+          "pos": 1,
+          "neg": 0,
+          "ctx": "当前最强板块是种业"
+        }
+      ],
+      "manual_review_note": "NEGATIVE 全量 + POSITIVE 抽检已人工复核（见 .md 报告），0 反转；临界清单供二次审计"
+    },
+    "G5_synonym_no_mismatch": {
+      "pass": true,
+      "id_inconsistent": {},
+      "keyword_multi_l2": {}
+    },
+    "G6_no_stock_split": {
+      "pass": true,
+      "bad": []
+    }
+  },
+  "overall": "GO",
+  "stats": {
+    "l1": {
+      "科技": 109,
+      "其他": 28,
+      "医药": 13,
+      "周期": 32,
+      "新能源": 4
+    },
+    "l2": {
+      "半导体": 34,
+      "光通信": 25,
+      "AI算力": 27,
+      "商业航天": 3,
+      "创新药": 13,
+      "农业": 12,
+      "有色": 23,
+      "消费白马": 6,
+      "券商": 3,
+      "化工": 9,
+      "电子元件": 9,
+      "机器人": 4,
+      "软件": 2,
+      "科技整体": 8,
+      "特高压": 1,
+      "消费电子": 1,
+      "PCB电路板": 3,
+      "电解液/VC": 3
+    },
+    "stance": {
+      "POSITIVE": 80,
+      "NEUTRAL": 94,
+      "NEGATIVE": 12
+    },
+    "analyst": {
+      "gelan": 30,
+      "laofan": 37,
+      "limengchen": 26,
+      "panfeng": 5,
+      "qingbei": 1,
+      "tianyingju": 23,
+      "yaogu": 23,
+      "yixiantian": 4,
+      "youzi": 25,
+      "zhenge": 12
+    },
+    "mention_source": {
+      "DIRECT": 186
+    },
+    "mention_type": {
+      "core_theme": 186
+    }
+  }
+}
