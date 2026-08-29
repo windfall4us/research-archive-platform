@@ -291,7 +291,7 @@ raw op（day.ops 一行）
 
 | 阶段 | 内容 | 验收 | 独立 commit 命名 |
 |---|---|---|---|
-| **P1.1** | Schema DDL（8 表）+ 索引/CHECK/时间戳 + `PRAGMA user_version=1`；**只建结构，不导入快照、不写 ingest** | ① 8 表存在 + 唯一键存在；② FK/logical 引用字段齐全；③ 所有枚举列受 CHECK；④ 重复插入唯一键失败；⑤ `PRAGMA user_version`=1；⑥ 空库可 `DROP/CREATE` 重放 | `feat(phase1): consensus data layer schema (8 tables)` |
+| **P1.1** | ✅ Schema DDL（8 表）+ 索引/CHECK/时间戳 + `PRAGMA user_version=1`；只建结构，不导入快照、不写 ingest（`507712b`） | ① 8 表存在 + 唯一键存在；② FK/logical 引用字段齐全；③ 所有枚举列受 CHECK；④ 重复插入唯一键失败；⑤ `PRAGMA user_version`=1；⑥ 空库可 `DROP/CREATE` 重放 — **6/6 PASS** | `feat(phase1): consensus data layer schema (8 tables)` |
 | **P1.2** | Event Ingest：vip0_timeline → Resolver → Parser → `analyst_stock_events` + `analyst_daily_views` | 事件数=parser 生产数；source lineage 100%；幂等复跑 duplicate=0 | `feat(phase1): event ingest pipeline (idempotent)` |
 | **P1.3** | Position 双轨落库：`analyst_position_snapshots` | HOLDING→BUY=0；同一股票 ADD+HOLDING 并存合法；每日 snapshot 形成 | `feat(phase1): dual-track position snapshots` |
 | **P1.4** | Revision 持久化：ingest 后 diff → `record_revisions` | revision 可追踪 100%；历史不可物理覆盖（无 UPDATE 删除旧值） | `feat(phase1): persist revisions from cross-day diff` |
