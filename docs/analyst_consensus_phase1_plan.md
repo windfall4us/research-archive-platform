@@ -202,21 +202,27 @@ Diff/Revision（vs 上一 source_snapshot）
   业务表保留最新值 + `revision_no` 指向最新 revision。
 
 ### 3.8 ingest_runs —— 摄入批次（幂等 + 可重放）
+**v2 修正（2026-08-28，P1.2 前用户决策）**：去掉 `UNIQUE(source_snapshot_id, parser_version, resolver_version)`，
+改 `run_id` 唯一主键 + 普通索引 `(source_snapshot_id, parser_version, resolver_version)` ——
+允许同版本同快照**重复运行**留下独立 run history（幂等重跑的审计证据），不因"已跑过"而静默跳过。
+`PRAGMA user_version` 1 → 2。
+
 | 字段 | 类型 | 说明 |
 |---|---|---|
-| run_id | INTEGER **PK** | |
+| run_id | INTEGER **PK** | 自增，每次运行一条 |
 | source_snapshot_id | INTEGER FK | |
 | parser_version | TEXT | 'v1.1' |
-| resolver_version | TEXT | 'b3.3' |
-| schema_version | TEXT | 'p1.1' |
+| resolver_version | TEXT | 'exact-alias-v1' |
+| schema_version | TEXT | '2' |
 | started_at / finished_at | TEXT | |
 | status | TEXT | running / success / failed |
-| input_records | INTEGER | 输入 section 数 |
-| events_created | INTEGER | 新落事件数 |
-| events_dup_skipped | INTEGER | 幂等跳过数 |
+| source_record_count | INTEGER | 输入 source records 数（v2 改名，原 input_records） |
+| parsed_event_count | INTEGER | parser 总事件数（v2 新增） |
+| inserted_event_count | INTEGER | 新落事件数（v2 改名，原 events_created） |
+| skipped_existing_count | INTEGER | 幂等跳过数（v2 改名，原 events_dup_skipped） |
+| error_count | INTEGER | 错误数（v2 新增，硬 gate = 0） |
+| result_hash | TEXT | 落库后 events 全表确定性 hash（重跑一致性 gate，v2 新增） |
 | errors | TEXT | 失败明细（JSON） |
-
-- 唯一键：`(source_snapshot_id, parser_version, resolver_version)` —— 同版本同快照只跑一次
 
 ## 4. 事件生命周期
 
@@ -237,8 +243,8 @@ raw op（day.ops 一行）
 
 ## 5. 幂等规则
 
-1. **批次级**：ingest 前查 `ingest_runs` —— 同 `(source_snapshot_id, parser_version, resolver_version)`
-   已 success → 直接跳过（重放安全）。
+1. **批次级（v2）**：每次运行都插入一条 `ingest_runs`（run_id 自增）——同版本同快照重复运行
+   留独立 run history（不静默跳过）；`inserted_event_count` 第二次 = 0，`result_hash` 与首次一致。
 2. **行级**：`analyst_stock_events` 唯一键 `(source_record_id, event_index)` +
    `analyst_daily_views` `(analyst_id, view_date, view_type)` + `analyst_position_snapshots`
    `(analyst_id, snapshot_date, source_record_id)` —— `INSERT … ON CONFLICT DO NOTHING`。
@@ -292,7 +298,7 @@ raw op（day.ops 一行）
 | 阶段 | 内容 | 验收 | 独立 commit 命名 |
 |---|---|---|---|
 | **P1.1** | ✅ Schema DDL（8 表）+ 索引/CHECK/时间戳 + `PRAGMA user_version=1`；只建结构，不导入快照、不写 ingest（`507712b`） | ① 8 表存在 + 唯一键存在；② FK/logical 引用字段齐全；③ 所有枚举列受 CHECK；④ 重复插入唯一键失败；⑤ `PRAGMA user_version`=1；⑥ 空库可 `DROP/CREATE` 重放 — **6/6 PASS** | `feat(phase1): consensus data layer schema (8 tables)` |
-| **P1.2** | Event Ingest：vip0_timeline → Resolver → Parser → `analyst_stock_events` + `analyst_daily_views` | 事件数=parser 生产数；source lineage 100%；幂等复跑 duplicate=0 | `feat(phase1): event ingest pipeline (idempotent)` |
+| **P1.2** | ✅ Event Ingest：vip0_timeline → Resolver → Parser v1.1 → `analyst_stock_events` + `analyst_daily_views` → `ingest_runs` 记账（幂等 DO NOTHING，append-only） | **8/8 PASS + error_count=0**：G1 快照登记 100%；G2 eligible 908 = 库当前视角 908；G3 个股代码解析 100%；G4 lineage 100%；G5 唯一键 100%；G6 重跑 0 new；G7 重跑 hash 一致（`df425dd3…`）；G8 false-exec=0 / HOLDING 正确识别；分层 902 records→1032 events（A股908/OOS1/THEME28/MARKET9/COMPOSITE35/UNRESOLVED49） | `feat(phase1): event ingest pipeline (idempotent)` |
 | **P1.3** | Position 双轨落库：`analyst_position_snapshots` | HOLDING→BUY=0；同一股票 ADD+HOLDING 并存合法；每日 snapshot 形成 | `feat(phase1): dual-track position snapshots` |
 | **P1.4** | Revision 持久化：ingest 后 diff → `record_revisions` | revision 可追踪 100%；历史不可物理覆盖（无 UPDATE 删除旧值） | `feat(phase1): persist revisions from cross-day diff` |
 | **P1.5** | Data Layer Benchmark：全 gate 复现 + 报告 | 7 项 gate 全 PASS → Phase 1 收口 → Phase 2 市场方向/Theme Heat | `feat(phase1): data layer benchmark (7 gates)` |
