@@ -57,6 +57,11 @@ NON_STOCK = {"大盘", "市场", "科技线", "科技", "半导体", "光模块"
              "农业", "AI", "AI硬件", "半导体材料", "光通信", "算力", "持仓", "手里几个科技票"}
 MARKET_HINTS = ("大盘", "指数", "市场", "市场风格", "主线")
 THEME_SUFFIX_RE = re.compile(r"(材料|硅片|资源|金属|折叠屏|冷液|液冷|产业链|相关$|板块|方向|概念)")
+# 概念/组合词（P1.2 裁决补充，精确匹配）→ THEME（Phase 2 Theme Heat 聚合）
+CONCEPTS = {"MLCC", "商业航天", "创新药CXO", "创新药高位股", "科技连板(低位)",
+            "铜管持仓", "燕子家族", "特高压（2只）"}
+# 市场数据 → MARKET
+MARKET_EXTRA = {"两融余额"}
 
 
 def classify_entity(raw, name_part):
@@ -66,6 +71,10 @@ def classify_entity(raw, name_part):
         return "MARKET", "NON_STOCK_MARKET"
     if raw in NON_STOCK:
         return "THEME", "NON_STOCK"
+    if raw in MARKET_EXTRA:
+        return "MARKET", "MARKET_DATA"
+    if raw in CONCEPTS:
+        return "THEME", "CONCEPT"
     if any(h in name_part for h in MARKET_HINTS):
         return "MARKET", "MARKET_HINT"
     if THEME_SUFFIX_RE.search(name_part):
