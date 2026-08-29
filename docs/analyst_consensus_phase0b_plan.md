@@ -30,7 +30,7 @@ Phase 0B.1  Gold Schema + 10 条高难度样例          ✅ PASS
 Phase 0B.2  100 条 Gold Sample（分层扩展）         ✅ 已锁定（gold_sample_100_final.json 事件级，P1-P6 仲裁94条）
 Phase 0B.3  Stock Master + EXACT 匹配             ✅ PASS
 Phase 0B.4  Alias + Entity Type                   ✅ PASS
-Phase 0B.5  Action / Temporal Parser              🟡 规则版v1完成，高风险=0，Status 100%，待draft补标
+Phase 0B.5  Action / Temporal Parser              ✅ PASS / LOCKED（v1.1，Gold 112/112，High-risk=0，confirmed10 100%）
 Phase 0B.6  Cross-day Diff + Revision（MODIFIED）  🟡 单测 PASS，待真实跨天验收
 Phase 0B.7  Accuracy Benchmark（成绩单）           ⏳
 ```
@@ -240,10 +240,11 @@ Gold Edge / Ambiguous Set（[10][57][58][61][87]）保留为复杂语义 Parser 
 
 ### 下一步
 ```text
-① 用户确认 Gold FINAL 无偏斜
-② 统一处理 backlog A-P → Parser v1.1（事件级输出）
-③ 重跑正式 Benchmark（对 Core 95）
-④ 达标 → 0B.5 PASS → 0B.7 总 Benchmark
+① ✅ 用户确认 Gold FINAL 无偏斜（2026-08-28）
+② ✅ backlog A-P 全部落地 → Parser v1.1（事件级）
+③ ✅ 对 CORE events 112 盲测：Action 100% / Status 100% / Temporal 100% / Event F1 1.0 / 高风险 0
+④ ✅ confirmed10 交叉回归 100%
+⑤ → 标记 0B.5 PASS → 0B.7 总 Benchmark
 ```
 
 ---

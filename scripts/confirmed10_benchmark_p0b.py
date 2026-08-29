@@ -11,7 +11,7 @@
 import csv, re, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
-from action_temporal_parser_p0b import parse
+from action_temporal_parser_v11_p0b import parse
 
 ROOT = Path("/home/windfall/workspace/research-archive-platform")
 GS10 = ROOT / "data/analyst_snapshots/gold_sample_10.csv"
@@ -66,11 +66,10 @@ for r in rows:
     exp_act, exp_status, exp_temporal = CONFIRMED[sid]
     action_phrase, logic, tag = split_raw_text(r["raw_text"])
     p = parse(action_phrase, logic)
-    acts = [a for a, _ in p["actions"]]
-    statuses = [s for _, s in p["actions"]]
-    primary = acts[0] if acts else "UNKNOWN"
-    primary_status = statuses[0] if statuses else "UNKNOWN"
-    temporal = p["temporal_type"]
+    events = p["events"]
+    primary = events[0]["action"] if events else "UNKNOWN"
+    primary_status = events[0]["action_status"] if events else "UNKNOWN"
+    temporal = events[0]["temporal_type"] if events else "UNKNOWN"
 
     if is_market:
         # MARKET：action/status 不参与个股动作评分，仅报告 temporal
@@ -85,7 +84,8 @@ for r in rows:
 
     results.append({
         "sample_id": sid, "target": r["raw_target"], "action_phrase": action_phrase,
-        "direction_tag": tag, "parser": p["actions"], "parser_temporal": temporal,
+        "direction_tag": tag, "parser": [(e["action"], e["action_status"]) for e in events],
+        "parser_temporal": temporal,
         "parser_position": p["position_state"],
         "confirmed": (exp_act, exp_status, exp_temporal),
         "match": (a_ok, s_ok, t_ok),
