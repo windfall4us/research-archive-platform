@@ -1,0 +1,116 @@
+{
+  "generated": "2026-08-28",
+  "phase": "0B",
+  "gold_sample": {
+    "rows_total": 100,
+    "rows_core": 95,
+    "rows_ambig": 4,
+    "rows_excluded": 5,
+    "events_total": 114,
+    "events_core": 112,
+    "events_ambig": 1,
+    "events_excluded": 1,
+    "multi_event_rows": 14
+  },
+  "master": {
+    "master_total": 5563,
+    "a_share": 5563,
+    "dup_code": 0,
+    "empty_name": 0
+  },
+  "resolver": {
+    "gold_total": 97,
+    "resolvable": 89,
+    "out_of_scope": 1,
+    "unresolved": 0,
+    "wrong_match": 0,
+    "exact_p": 1.0,
+    "exact_r": 0.9663,
+    "alias_p": 1.0,
+    "alias_r": 1.0
+  },
+  "parser": {
+    "gold_events": 112,
+    "pred_events": 112,
+    "matched": 112,
+    "event_precision": 1.0,
+    "event_recall": 1.0,
+    "event_f1": 1.0,
+    "action_exact": 1.0,
+    "action_family": 1.0,
+    "status_acc": 1.0,
+    "temporal_acc": 1.0,
+    "event_count_rows": 95,
+    "rows": 95,
+    "event_count_acc": 1.0,
+    "row_perfect": 95,
+    "high_risk": {
+      "false executed buy": 0,
+      "false executed sell": 0,
+      "持仓→今日BUY": 0,
+      "WATCH→BUY族": 0,
+      "INTENDED→EXECUTED": 0,
+      "CONDITIONAL→EXECUTED": 0,
+      "PAST BUY→TODAY BUY": 0,
+      "推荐→BUY(executed)": 0
+    }
+  },
+  "diff": {
+    "before_records": 851,
+    "after_records": 1088,
+    "added": 237,
+    "removed": 0,
+    "unchanged": 752,
+    "modified": 99,
+    "role_only": 99,
+    "content_modified": 0,
+    "breakdown": {
+      "ROLE:role": 99
+    }
+  },
+  "production": {
+    "ops": 902,
+    "analyst_count": 10,
+    "action_dist": {
+      "TRIAL": 32,
+      "REDUCE": 128,
+      "WATCH": 485,
+      "DO_T": 19,
+      "HOLD": 148,
+      "ADD": 92,
+      "BUY": 42,
+      "LOW_BUY": 51,
+      "CLEAR": 6,
+      "SELL": 27,
+      "UNKNOWN": 2
+    },
+    "status_dist": {
+      "CONDITIONAL": 92,
+      "EXECUTED": 129,
+      "INTENDED": 673,
+      "POSITION_STATE": 138
+    },
+    "temporal_dist": {
+      "CONDITIONAL": 127,
+      "TODAY": 758,
+      "PAST": 4,
+      "CURRENT_STATE": 128,
+      "FUTURE_PLAN": 13,
+      "UNKNOWN": 2
+    },
+    "holding_position_state": 138,
+    "multi_event_rows": 124,
+    "unknown_action": 2,
+    "unknown_action_ratio": 0.0022
+  },
+  "gates": {
+    "Security Resolver": true,
+    "Action Parser": true,
+    "Temporal Parser": true,
+    "Status Parser": true,
+    "Event Model": true,
+    "Risk Gates": true,
+    "Revision Engine": true
+  },
+  "overall": "GO"
+}

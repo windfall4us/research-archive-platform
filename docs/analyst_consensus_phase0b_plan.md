@@ -32,7 +32,7 @@ Phase 0B.3  Stock Master + EXACT 匹配             ✅ PASS
 Phase 0B.4  Alias + Entity Type                   ✅ PASS
 Phase 0B.5  Action / Temporal Parser              ✅ PASS / LOCKED（v1.1，Gold 112/112，High-risk=0，confirmed10 100%）
 Phase 0B.6  Cross-day Diff + Revision（MODIFIED）  ✅ PASS（真实跨天 08-27→08-28：role 翻转→MODIFIED(ROLE)，内容修改=0，增量完整性✓）
-Phase 0B.7  Accuracy Benchmark（成绩单）           ⏳
+Phase 0B.7  Accuracy Benchmark（成绩单）           ✅ PASS（Overall=GO，7/7 gates，112/112，高风险=0）
 ```
 
 ### 执行策略（用户决策 3/4/5）：三线并行，不等快照
@@ -251,36 +251,54 @@ Gold Edge / Ambiguous Set（[10][57][58][61][87]）保留为复杂语义 Parser 
 
 ## 验收成绩单（Phase 0B.7，达门槛才进 Phase 1）
 Benchmark 输入 = **CORE events（112）**（Gold Sample v1 FINAL，排除 ambig/excluded 5 行），非 Core rows
-| 指标 | 正式门槛 |
-|---|---:|
-| Entity Type | 98% |
-| 股票识别 | 97% |
-| Code Match | 97% |
-| Action exact accuracy | ≥95% |
-| Action-family accuracy | 建议同时报告（买入族/卖出族合并看） |
-| Status accuracy | ≥97% |
-| Temporal accuracy | ≥95% |
-| Event-count accuracy | 建议新增（Gold 事件集 vs Predicted 事件集，缺/多事件判定） |
-| Event Precision / Recall / F1 | 建议新增（事件级 P/R/F1） |
-| 持仓→买入误判 | 0% |
-| false executed buy / false executed sell | **0**（最核心 Gate，污染共识操作流） |
-| High-risk error（WATCH→BUY、INTENDED→EXECUTED、推荐→BUY 等） | 0 |
-| Overall | 96.x% |
+| 指标 | 正式门槛 | 实际结果 |
+|---|---:|:--|
+| Entity Type | 98% | 100% |
+| 股票识别 | 97% | EXACT+ALIAS 100%（EXACT Recall 96.6%→ALIAS 补齐） |
+| Code Match | 97% | 100%（Wrong Match 0） |
+| Action exact accuracy | ≥95% | **100%** |
+| Action-family accuracy | 建议同时报告（买入族/卖出族合并看） | 100% |
+| Status accuracy | ≥97% | **100%** |
+| Temporal accuracy | ≥95% | **100%** |
+| Event-count accuracy | 建议新增（Gold 事件集 vs Predicted 事件集，缺/多事件判定） | 100%（95/95 行） |
+| Event Precision / Recall / F1 | 建议新增（事件级 P/R/F1） | 1.0000 / 1.0000 / 1.0000 |
+| 持仓→买入误判 | 0% | 0 |
+| false executed buy / false executed sell | **0**（最核心 Gate，污染共识操作流） | **0 / 0** |
+| High-risk error（WATCH→BUY、INTENDED→EXECUTED、推荐→BUY 等） | 0 | 全 8 项 = 0 |
+| Diff / Revision（0B.6 真实跨天） | 单测 + 真实跨天 | PASS（内容修改=0，增量完整） |
+| Overall | 96.x% | **GO**（7/7 gates PASS） |
 
 > 事件级指标定义：Gold events vs Predicted events 按行对齐后统计 Missing/Extra；
 > Event Precision = 正确事件/(正确+多余事件)；Recall = 正确事件/(正确+缺失事件)。
 > 高风险错误矩阵单独输出，不并入 Overall 掩盖。
+> 完整成绩单: `reports/benchmark_total_p0b.md`（`scripts/benchmark_total_p0b.py` 可复现）
+
+## Phase 0 收口结论（2026-08-28）
+```text
+Security Resolver   PASS  (EXACT 100% / +ALIAS 100% / Wrong 0)
+Action Parser       PASS  (100%)
+Temporal Parser     PASS  (100%)
+Status Parser       PASS  (100%)
+Event Model         PASS  (P/R/F1 1.0, count 100%)
+Risk Gates          PASS  (8 项全 0)
+Revision Engine     PASS  (真实跨天 08-27→08-28 验收通过)
+Production sanity   PASS  (902 ops, HOLDING=POSITION_STATE 自洽, UNKNOWN 0.2%)
+
+Overall: GO
+→ Phase 0 整体收口，进入 Phase 1 Consensus Data Layer
+```
 
 ---
 
 ## 执行队列（当前，2026-08-28 更新）
 ```text
 ✅ 0B.1：10 行 Gold Sample + Schema 确认
-✅ 0B.2：扩 100 条（规则修正完成，待最终人工锁定）
-✅ 0B.3：Stock Master（5563）+ EXACT 匹配
+✅ 0B.2：扩 100 条（P1-P6 仲裁 94 条锁定，Gold v1 FINAL 冻结）
+✅ 0B.3：Stock Master（5563）+ EXACT 匹配（B3.3 锁定）
 ✅ 0B.4：ALIAS（3条批准）+ OUT_OF_SCOPE 分流 —— B3.3 已锁定
-→ 0B.5：Action / Temporal Parser
-→ 0B.6：今晚 22:40 真实跨天 Diff 验收（08-27 → 08-28，独立提交）
-→ 0B.7：Benchmark 成绩单 → Go/No-Go → Phase 1
+✅ 0B.5：Action/Temporal Parser v1.1（Gold 112/112，High-risk=0，独立提交 0323a7b）
+✅ 0B.6：真实跨天 Diff 验收（08-27→08-28，role 翻转→MODIFIED(ROLE)，独立提交 2eb9125）
+✅ 0B.7：Benchmark 成绩单 → **GO**（7/7 gates）→ Phase 0 收口
+→ 下一步: Phase 1 Consensus Data Layer
 ```
 不提前碰市场温度/主题热度（数据基础未就绪）。FUZZY 保持关闭。
