@@ -1,0 +1,22 @@
+{
+  "date": "2026-08-15",
+  "direction_score": null,
+  "direction": "UNKNOWN",
+  "eligible_analysts": 0,
+  "coverage_status": "INSUFFICIENT",
+  "market_direction_status": "INSUFFICIENT_DATA",
+  "bullish": 0,
+  "neutral": 0,
+  "bearish": 0,
+  "dominant_share": 0.0,
+  "consensus_level": "LOW_CONSENSUS",
+  "risk": {
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "dominant": "UNKNOWN"
+  },
+  "position_bias": {},
+  "style_groups": {},
+  "style_available": true
+}

@@ -1,0 +1,66 @@
+{
+  "date": "2026-08-27",
+  "direction_score": 0.6667,
+  "direction": "BULLISH",
+  "eligible_analysts": 9,
+  "coverage_status": "NORMAL",
+  "market_direction_status": "BULLISH",
+  "bullish": 6,
+  "neutral": 3,
+  "bearish": 0,
+  "dominant_share": 0.6667,
+  "consensus_level": "MEDIUM_CONSENSUS",
+  "risk": {
+    "high": 3,
+    "medium": 5,
+    "low": 1,
+    "dominant": "MEDIUM"
+  },
+  "position_bias": {
+    "ADD_ON_DIP": 2,
+    "AGGRESSIVE": 1,
+    "CONTROL_POSITION": 3,
+    "HOLD": 1,
+    "REDUCE": 1,
+    "WAIT": 1
+  },
+  "style_groups": {
+    "LONG_TERM": {
+      "count": 2,
+      "group_total": 2,
+      "coverage_rate": 1.0,
+      "coverage_status": "NORMAL",
+      "sample_size_warning": false,
+      "direction_score": 0.5,
+      "direction": "BULLISH"
+    },
+    "SWING": {
+      "count": 3,
+      "group_total": 3,
+      "coverage_rate": 1.0,
+      "coverage_status": "NORMAL",
+      "sample_size_warning": false,
+      "direction_score": 1.0,
+      "direction": "BULLISH"
+    },
+    "SHORT": {
+      "count": 3,
+      "group_total": 3,
+      "coverage_rate": 1.0,
+      "coverage_status": "NORMAL",
+      "sample_size_warning": false,
+      "direction_score": 0.6667,
+      "direction": "BULLISH"
+    },
+    "ULTRA_SHORT": {
+      "count": 1,
+      "group_total": 2,
+      "coverage_rate": 0.5,
+      "coverage_status": "NORMAL",
+      "sample_size_warning": true,
+      "direction_score": 0.0,
+      "direction": "NEUTRAL"
+    }
+  },
+  "style_available": true
+}

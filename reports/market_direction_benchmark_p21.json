@@ -1,0 +1,176 @@
+{
+  "benchmark": "P2.1 Market Direction",
+  "gates": {
+    "G1_unknown_in_score": {
+      "pass": true,
+      "unknown_with_score": 0,
+      "eligible_null_score": 0
+    },
+    "G2_sameday_dup_weight": {
+      "pass": true,
+      "dups": []
+    },
+    "G3_manual_recompute": {
+      "pass": true,
+      "mismatches": []
+    },
+    "G4_direction_bucket": {
+      "pass": true,
+      "mismatches": [],
+      "edge_fail": {}
+    },
+    "G5_risk_does_not_change_direction": {
+      "pass": true,
+      "consistent_days": 9
+    },
+    "G6_bias_does_not_change_direction": {
+      "pass": true,
+      "note": "与 G5 同源：独立复算仅用 market_score"
+    },
+    "G7_coverage_lt3_no_formal_direction": {
+      "pass": true,
+      "failures": []
+    }
+  },
+  "overall": "GO",
+  "style_population_invariant": {
+    "pass": true,
+    "distribution": {
+      "SWING": 3,
+      "SHORT": 3,
+      "LONG_TERM": 2,
+      "ULTRA_SHORT": 2
+    },
+    "total": 10
+  },
+  "audit_daily": [
+    {
+      "date": "2026-08-14",
+      "eligible": 7,
+      "direction": "NEUTRAL",
+      "style_coverage": {
+        "LONG_TERM": "1/2",
+        "SWING": "3/3",
+        "SHORT": "2/3",
+        "ULTRA_SHORT": "1/2"
+      },
+      "style_warnings": {
+        "LONG_TERM": true,
+        "ULTRA_SHORT": true
+      }
+    },
+    {
+      "date": "2026-08-15",
+      "eligible": 0,
+      "direction": "UNKNOWN",
+      "style_coverage": {},
+      "style_warnings": {}
+    },
+    {
+      "date": "2026-08-16",
+      "eligible": 1,
+      "direction": "NEUTRAL",
+      "style_coverage": {
+        "SWING": "1/3"
+      },
+      "style_warnings": {
+        "SWING": true
+      }
+    },
+    {
+      "date": "2026-08-17",
+      "eligible": 8,
+      "direction": "BULLISH",
+      "style_coverage": {
+        "LONG_TERM": "1/2",
+        "SWING": "3/3",
+        "SHORT": "3/3",
+        "ULTRA_SHORT": "1/2"
+      },
+      "style_warnings": {
+        "LONG_TERM": true,
+        "ULTRA_SHORT": true
+      }
+    },
+    {
+      "date": "2026-08-18",
+      "eligible": 9,
+      "direction": "NEUTRAL",
+      "style_coverage": {
+        "LONG_TERM": "1/2",
+        "SWING": "3/3",
+        "SHORT": "3/3",
+        "ULTRA_SHORT": "2/2"
+      },
+      "style_warnings": {
+        "LONG_TERM": true
+      }
+    },
+    {
+      "date": "2026-08-19",
+      "eligible": 7,
+      "direction": "BEARISH",
+      "style_coverage": {
+        "LONG_TERM": "1/2",
+        "SWING": "3/3",
+        "SHORT": "1/3",
+        "ULTRA_SHORT": "2/2"
+      },
+      "style_warnings": {
+        "LONG_TERM": true,
+        "SHORT": true
+      }
+    },
+    {
+      "date": "2026-08-26",
+      "eligible": 9,
+      "direction": "NEUTRAL",
+      "style_coverage": {
+        "LONG_TERM": "1/2",
+        "SWING": "3/3",
+        "SHORT": "3/3",
+        "ULTRA_SHORT": "2/2"
+      },
+      "style_warnings": {
+        "LONG_TERM": true
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "eligible": 9,
+      "direction": "BULLISH",
+      "style_coverage": {
+        "LONG_TERM": "2/2",
+        "SWING": "3/3",
+        "SHORT": "3/3",
+        "ULTRA_SHORT": "1/2"
+      },
+      "style_warnings": {
+        "ULTRA_SHORT": true
+      }
+    },
+    {
+      "date": "2026-08-28",
+      "eligible": 10,
+      "direction": "BULLISH",
+      "style_coverage": {
+        "LONG_TERM": "2/2",
+        "SWING": "3/3",
+        "SHORT": "3/3",
+        "ULTRA_SHORT": "2/2"
+      },
+      "style_warnings": {}
+    }
+  ],
+  "daily_direction_distribution": {
+    "2026-08-14": "NEUTRAL",
+    "2026-08-15": "UNKNOWN",
+    "2026-08-16": "NEUTRAL",
+    "2026-08-17": "BULLISH",
+    "2026-08-18": "NEUTRAL",
+    "2026-08-19": "BEARISH",
+    "2026-08-26": "NEUTRAL",
+    "2026-08-27": "BULLISH",
+    "2026-08-28": "BULLISH"
+  }
+}
