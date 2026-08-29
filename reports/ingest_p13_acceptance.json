@@ -1,0 +1,47 @@
+{
+  "gates": {
+    "G1_pos_to_holding": {
+      "pass": true,
+      "detail": "total=124, not_holding=0"
+    },
+    "G5_a_share_resolvable": {
+      "pass": true,
+      "detail": "null_code=0, non_EXACT/ALIAS=0"
+    },
+    "G3_position_lineage": {
+      "pass": true,
+      "detail": "missing_lineage=0, events_orphan=0"
+    },
+    "G2_no_auto_buy": {
+      "pass": true,
+      "detail": "position_state CHECK 强制 HOLDING；events 表 BUY 族总事件数=205（由 P1.2 生成，非 P1.3）"
+    },
+    "G6_dual_track_coexist": {
+      "pass": true,
+      "detail": "并存 37 条: {('ADD', 'EXECUTED'): 2, ('ADD', 'CONDITIONAL'): 3, ('ADD', 'INTENDED'): 3, ('BUY', 'INTENDED'): 1, ('DO_T', 'INTENDED'): 3, ('LOW_BUY', 'INTENDED'): 8, ('LOW_BUY', 'EXECUTED'): 1, ('REDUCE', 'EXECUTED'): 4, ('REDUCE', 'CONDITIONAL'): 5, ('SELL', 'CONDITIONAL'): 1, ('WATCH', 'INTENDED'): 6}"
+    },
+    "A1_clear_holding_conflicts": {
+      "count": 0,
+      "items": []
+    },
+    "A2_sell_holding_occurrences": {
+      "count": 1,
+      "items": [
+        {
+          "raw_target": "共进股份",
+          "analyst_id": "qingbei",
+          "snapshot_date": "2026-08-17",
+          "action_status": "CONDITIONAL",
+          "raw_action": "秒板不用动，连留断走；09:55换手够还不能回封可考虑出"
+        }
+      ]
+    },
+    "G4_rerun_0new": {
+      "pass": true,
+      "detail": "recent_runs=[{'run_id': 8, 'inserted_event_count': 0, 'result_hash': '8826975fa9b8fb147804bd502c542e96324ddaf6ca1add7d7045abb850d4ea64', 'parser_version': 'v1.1'}, {'run_id': 7, 'inserted_event_count': 124, 'result_hash': '8826975fa9b8fb147804bd502c542e96324ddaf6ca1add7d7045abb850d4ea64', 'parser_version': 'v1.1'}]"
+    },
+    "Overall": "PASS"
+  },
+  "position_rows": 124,
+  "overall": "PASS"
+}
