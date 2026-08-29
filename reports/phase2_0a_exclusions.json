@@ -1,0 +1,30 @@
+{
+  "schema_version": 4,
+  "events_physical": 937,
+  "phase2_exclusions": 3,
+  "aggregation_eligible": 934,
+  "events_hash_unchanged": "478a7c4f712b8bce",
+  "excluded_detail": [
+    [
+      1093,
+      "WATCH",
+      "东微半导(688261)/瑞芯微(603893)",
+      "EXACT",
+      "COMPOSITE_MISRESOLVED"
+    ],
+    [
+      1095,
+      "REDUCE",
+      "天齐锂业(002466)/赣锋锂业(002460)",
+      "EXACT",
+      "COMPOSITE_MISRESOLVED"
+    ],
+    [
+      1107,
+      "WATCH",
+      "黄河旋风(600172)/四方达(300179)",
+      "EXACT",
+      "COMPOSITE_MISRESOLVED"
+    ]
+  ]
+}
