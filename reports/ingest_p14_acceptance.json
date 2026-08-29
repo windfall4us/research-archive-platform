@@ -1,0 +1,44 @@
+{
+  "gates": {
+    "G1_rerun_0duplicate": {
+      "pass": true,
+      "detail": "recent=[{'run_id': 10, 'inserted': 0, 'hash': '24e470236701e0e1'}, {'run_id': 9, 'inserted': 336, 'hash': '24e470236701e0e1'}]"
+    },
+    "G2_revision_no_contiguous": {
+      "pass": true,
+      "detail": "logicals=335, non_contiguous=0"
+    },
+    "G3_old_new_hash": {
+      "pass": true,
+      "detail": "modified=99, missing_hash=0"
+    },
+    "G4_changed_fields_parseable": {
+      "pass": true,
+      "detail": "unparseable=0"
+    },
+    "G5_role_keeps_semantics": {
+      "pass": true,
+      "detail": "role_rows=99, semantic_broken=0"
+    },
+    "G6_severe_payload_replay": {
+      "pass": true,
+      "detail": "severe_modified=0, broken=0; added_payload_missing=0, removed_payload_missing=0"
+    },
+    "G7_no_physical_overwrite": {
+      "pass": true,
+      "detail": "events_hash=478a7c4f712b8bce (基线 478a7c4f712b8bce); positions_hash=8826975fa9b8fb14 (基线 8826975fa9b8fb14)"
+    },
+    "A1_orphan_revision": {
+      "pass": true,
+      "detail": "orphan=0",
+      "items": []
+    },
+    "A2_source_lineage": {
+      "pass": true,
+      "detail": "snapshots=2, null_snapshot_id=0, dangling=0"
+    }
+  },
+  "Gates": "PASS",
+  "Audit": "PASS",
+  "Overall": "PASS"
+}

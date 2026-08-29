@@ -191,7 +191,7 @@ Diff/Revision（vs 上一 source_snapshot）
 | change_type | TEXT | ADDED / REMOVED / UNCHANGED / MODIFIED |
 | severity | TEXT | ROLE / TEXT / SEVERE（0B.6 分级） |
 | old_hash / new_hash | TEXT | |
-| old_value / new_value | TEXT | JSON 快照（旧值永不删除） |
+| old_payload_json / new_payload_json | TEXT | JSON 完整 payload（raw_fields+role，schema v3 可回放"当时改了什么"） |
 | changed_fields_json | TEXT | JSON 数组（用户 2026-08-28 命名） |
 | source_snapshot_id | INTEGER FK | |
 | created_at | TEXT | |
@@ -300,7 +300,7 @@ raw op（day.ops 一行）
 | **P1.1** | ✅ Schema DDL（8 表）+ 索引/CHECK/时间戳 + `PRAGMA user_version=1`；只建结构，不导入快照、不写 ingest（`507712b`） | ① 8 表存在 + 唯一键存在；② FK/logical 引用字段齐全；③ 所有枚举列受 CHECK；④ 重复插入唯一键失败；⑤ `PRAGMA user_version`=1；⑥ 空库可 `DROP/CREATE` 重放 — **6/6 PASS** | `feat(phase1): consensus data layer schema (8 tables)` |
 | **P1.2** | ✅ Event Ingest：vip0_timeline → Resolver → Parser v1.1 → `analyst_stock_events` + `analyst_daily_views` → `ingest_runs` 记账（幂等 DO NOTHING，append-only） | **8/8 PASS + error_count=0**：G1 快照登记 100%；G2 eligible 934 = 库视角 934；G3 个股代码解析 100%（仅 A_SHARE_RESOLVABLE）；G4 lineage 100%；G5 唯一键 100%；G6 重跑 0 new；G7 重跑 hash 一致（`478a7c4f…`）；G8 false-exec=0 / HOLDING 正确识别；UNRESOLVED 49→5（alias 16 + OOS 10 + 概念词 8，裁决 `58a7d8b`）；分层 902→1032 events（A股934/OOS11/THEME37/MARKET10/COMPOSITE35/UNRESOLVED5） | `feat(phase1): event ingest pipeline (idempotent)` + `feat(phase1): resolve P1.2 UNRESOLVED via verified alias/OOS patch` |
 | **P1.3** | ✅ Position 双轨落库：`analyst_position_snapshots`（`ingest_position_p13.py`，--source-mode hold 默认 = Parser POSITION_STATE 判定，124 条） | **6/6 PASS + error_count=0**：G1 持仓→HOLDING 100%（124/124，CHECK 强制）；G2 HOLDING→自动 BUY=0；G3 position lineage 100%（反查 events 同源 op 无孤儿）；G4 重跑 0 new + hash 一致（`8826975f…`）；G5 A_SHARE_RESOLVABLE 100%（EXACT 118/ALIAS 6）；G6 双轨并存合法（37 条：ADD×8 / LOW_BUY×9 / REDUCE×9 / BUY×1 / DO_T×3 / SELL×1 / WATCH×6）；审计 A1 CLEAR+HOLDING=**0 冲突**、A2 SELL+HOLDING=1（共进股份 CONDITIONAL，合法） | `feat(phase1): position dual-track snapshots (P1.3)` |
-| **P1.4** | Revision 持久化：ingest 后 diff → `record_revisions` | revision 可追踪 100%；历史不可物理覆盖（无 UPDATE 删除旧值） | `feat(phase1): persist revisions from cross-day diff` |
+| **P1.4** | ✅ Revision 持久化（`ingest_revision_p14.py`，schema v3：record_revisions 补 old_payload_json/new_payload_json 完整 payload） | **7/7 Gate + 2/2 审计 PASS + error_count=0**：G1 重跑 0 duplicate（run9=336→run10=0，hash `24e47023…` 一致）；G2 revision_no 按 logical 连续 100%（335 logicals 无跳号）；G3 old/new hash 完整 100%；G4 changed_fields 可解析 100%；G5 ROLE 不改事件语义 100%（99 行 action/direction/stock/date 全等）；G6 SEVERE/ADDED/REMOVED payload 可回放 100%；G7 历史物理覆盖=**0**（events hash `478a7c4f…`/positions hash `8826975f…` 与 P1.2/P1.3 基线一致）；审计 A1 orphan=0、A2 source lineage 100%；diff 08-27→08-28：ADDED 237 / REMOVED 0 / MODIFIED 99（全 ROLE，TEXT+SEVERE=0） | `feat(phase1): persist revisions from cross-day diff (P1.4)` |
 | **P1.5** | Data Layer Benchmark：全 gate 复现 + 报告 | 7 项 gate 全 PASS → Phase 1 收口 → Phase 2 市场方向/Theme Heat | `feat(phase1): data layer benchmark (7 gates)` |
 
 ## 10. 与既有组件的衔接（不重复造轮子）

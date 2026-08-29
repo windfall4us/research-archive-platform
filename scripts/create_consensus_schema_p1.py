@@ -14,7 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "data/analyst_consensus.db"
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3   # v2→v3（P1.4）：record_revisions old_value/new_value → old_payload_json/new_payload_json（完整 payload 回放）
 # v1→v2 (2026-08-28, P1.2 前用户决策): ingest_runs 去掉 UNIQUE(source_snapshot_id, parser_version, resolver_version)
 # → run_id 唯一主键 + 普通索引 idx_runs_snapshot_versions，允许同版本重复运行留下独立 run history（幂等重跑审计）。
 
@@ -156,8 +156,8 @@ CREATE TABLE IF NOT EXISTS record_revisions (
     severity          TEXT NOT NULL CHECK (severity IN ('ROLE','TEXT','SEVERE')),
     old_hash          TEXT,
     new_hash          TEXT,
-    old_value         TEXT,                    -- JSON 快照（旧值永不删除）
-    new_value         TEXT,                    -- JSON
+    old_payload_json  TEXT,                    -- 完整 old raw_fields+role JSON（P1.4 v3，可回放"当时改了什么"）
+    new_payload_json  TEXT,                    -- 完整 new raw_fields+role JSON
     changed_fields_json TEXT,                  -- JSON 数组
     source_snapshot_id INTEGER REFERENCES source_snapshots(snapshot_id),
     created_at        TEXT NOT NULL,
