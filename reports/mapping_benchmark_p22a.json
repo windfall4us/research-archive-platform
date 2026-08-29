@@ -1,0 +1,90 @@
+{
+  "benchmark": "P2.2A Stock→Theme Mapping",
+  "coverage": {
+    "eligible_stocks": 350,
+    "heat_eligible_stocks": 333,
+    "coverage_rate": 95.1,
+    "rows_total": 1088,
+    "rows_heat": 838,
+    "by_source": {
+      "MASTER_INDUSTRY": 177,
+      "MASTER_CONCEPT": 880,
+      "DIRECT_CONTEXT": 31
+    },
+    "by_source_heat": {
+      "MASTER_INDUSTRY": 177,
+      "MASTER_CONCEPT": 630,
+      "DIRECT_CONTEXT": 31
+    },
+    "unmapped": [
+      "000802",
+      "002192",
+      "002258",
+      "002487",
+      "002532",
+      "002674",
+      "300191",
+      "300314",
+      "300615",
+      "600272",
+      "600613",
+      "600888",
+      "601288",
+      "601777",
+      "601988",
+      "603063",
+      "603268"
+    ]
+  },
+  "precision": {
+    "board_sample_n": 20,
+    "board_precision": 100.0,
+    "board_wrong": [],
+    "board_miss": [],
+    "dc_sample_n": 20,
+    "dc_precision": 90.0,
+    "dc_wrong_weak_bindings": [
+      "603259|OTHER_CONSUMER",
+      "600428|OTHER_CONSUMER"
+    ],
+    "dc_absent": [],
+    "note": "board=板块名→L2 规则；dc=DIRECT_CONTEXT 同句语义绑定（强绑定0.62/邻接0.60）；白马风格词歧义2例已识别"
+  },
+  "conflict": {
+    "per_stock_topic_dist": {
+      "1": 95,
+      "2": 131,
+      "3": 107
+    },
+    "max_topics_per_stock": 3,
+    "top3_enforced": true,
+    "cross_l1_gte3_stocks": 16
+  },
+  "theme_coverage_heat": {
+    "TECH_SEMI": 182,
+    "TECH_AI_COMPUTE": 139,
+    "TECH_ELEC": 62,
+    "CYCL_NONFERROUS": 58,
+    "TECH_SOFTWARE": 56,
+    "CYCL_CHEMICAL": 52,
+    "OTHER_ROBOTICS": 52,
+    "NEW_ENERGY_UHV": 37,
+    "TECH_PCB": 35,
+    "MED_INNOVATIVE_DRUG": 28,
+    "OTHER_CONSUMER": 24,
+    "OTHER_BROKER": 23,
+    "TECH_OPTICS": 22,
+    "OTHER_SPACE": 21,
+    "NEW_ENERGY_SOLID_BATTERY": 19,
+    "OTHER_AGRICULTURE": 17,
+    "TECH_COMPONENT": 11
+  },
+  "guards": {
+    "invalid_source": 0,
+    "invalid_confidence": 0,
+    "tech_general_stock_mapping": 0,
+    "invalid_theme_id": 0,
+    "note": "TECH_GENERAL 不映射个股；DIRECT/INFERRED 分离（本阶段全 DIRECT，INFERRED_FROM_STOCK 留 P2.2B 消费层）；COMPOSITE_TACTICAL 不进主题方向（P2.2B 治理）"
+  },
+  "overall": "GO"
+}

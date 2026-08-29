@@ -1,0 +1,5064 @@
+{
+ "000831": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  }
+ ],
+ "002167": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600206": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  },
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600549": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 3,
+   "industry_n": 1
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600988": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 3,
+   "industry_n": 1
+  }
+ ],
+ "601600": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603663": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "000977": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.85,
+   "concept_n": 7,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "002015": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  }
+ ],
+ "002229": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002415": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "300017": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  }
+ ],
+ "300368": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300454": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.8,
+   "concept_n": 4,
+   "industry_n": 2
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300738": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300857": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.85,
+   "concept_n": 7,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "301171": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "301396": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600131": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600498": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "600536": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600666": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  }
+ ],
+ "601360": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.85,
+   "concept_n": 11,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "603220": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "603629": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603881": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  }
+ ],
+ "688229": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "000725": [
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "000988": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "002008": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "002384": [
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "002475": [
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.8,
+   "concept_n": 4,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "300433": [
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 2
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "300567": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300602": [
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "300684": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "600584": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "600745": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "603936": [
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "603958": [
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688035": [
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  }
+ ],
+ "000703": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002202": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002493": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002648": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600188": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600309": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600378": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600722": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  }
+ ],
+ "600985": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "601699": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603395": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "001258": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "001388": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "002028": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_COMPONENT",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002300": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  }
+ ],
+ "002364": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002409": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 4,
+   "industry_n": 2
+  },
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002545": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002606": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  }
+ ],
+ "301018": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "301526": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600312": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600353": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600406": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600487": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "600522": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600869": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "601126": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "601700": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  }
+ ],
+ "601869": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "603618": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "000017": [
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "000063": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "000636": [
+  {
+   "l2": "TECH_COMPONENT",
+   "confidence": 0.75,
+   "concept_n": 2,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "001309": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002156": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002432": [
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300005": [
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "300319": [
+  {
+   "l2": "TECH_COMPONENT",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "300496": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  }
+ ],
+ "300562": [
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300782": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "301308": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "301536": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "600460": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603068": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "603296": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.8,
+   "concept_n": 4,
+   "industry_n": 2
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "603738": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_COMPONENT",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "603773": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "603893": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "688110": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688123": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "688502": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688525": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 4,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "002104": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002396": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002552": [
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002558": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002818": [
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "003040": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300033": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 2
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300059": [
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.75,
+   "concept_n": 2,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300229": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.85,
+   "concept_n": 8,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300333": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300339": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.85,
+   "concept_n": 7,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "600095": [
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.75,
+   "concept_n": 2,
+   "industry_n": 1
+  }
+ ],
+ "601233": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002279": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "002491": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "301165": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603118": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688702": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300313": [
+  {
+   "l2": "OTHER_AGRICULTURE",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  },
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600127": [
+  {
+   "l2": "OTHER_AGRICULTURE",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600882": [
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "000333": [
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "001323": [
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002081": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002543": [
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300131": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300671": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603083": [
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688099": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002041": [
+  {
+   "l2": "OTHER_AGRICULTURE",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  }
+ ],
+ "300189": [
+  {
+   "l2": "OTHER_AGRICULTURE",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  }
+ ],
+ "000680": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "000922": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002031": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "002067": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002276": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002352": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002436": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002484": [
+  {
+   "l2": "TECH_COMPONENT",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002536": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002747": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.75,
+   "concept_n": 2,
+   "industry_n": 1
+  },
+  {
+   "l2": "OTHER_AGRICULTURE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002850": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002881": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "002896": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "002929": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002979": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.75,
+   "concept_n": 2,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300001": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300580": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300607": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.75,
+   "concept_n": 2,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300672": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300718": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "301013": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "301112": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "601689": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "601877": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "605111": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "605358": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 4,
+   "industry_n": 2
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "688017": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.75,
+   "concept_n": 3,
+   "industry_n": 1
+  }
+ ],
+ "688308": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688396": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 2
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688507": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688676": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688836": [
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.75,
+   "concept_n": 2,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600519": [
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  }
+ ],
+ "000426": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 1
+  }
+ ],
+ "000506": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 3,
+   "industry_n": 1
+  }
+ ],
+ "000737": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002155": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 2,
+   "industry_n": 1
+  }
+ ],
+ "002266": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  }
+ ],
+ "002716": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 3,
+   "industry_n": 1
+  }
+ ],
+ "300139": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "301026": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  }
+ ],
+ "600362": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600711": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  }
+ ],
+ "601020": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 3,
+   "industry_n": 1
+  }
+ ],
+ "601168": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  }
+ ],
+ "601212": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  }
+ ],
+ "601899": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 1
+  }
+ ],
+ "603993": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002428": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "002971": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300497": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600673": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603078": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  }
+ ],
+ "688353": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688549": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "000155": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "000657": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 3,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "000762": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002203": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002460": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300618": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  }
+ ],
+ "300706": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600338": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 2,
+   "industry_n": 1
+  },
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600367": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600641": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  },
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600714": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603799": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688530": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  },
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "000712": [
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002670": [
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.75,
+   "concept_n": 2,
+   "industry_n": 1
+  }
+ ],
+ "600030": [
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  }
+ ],
+ "002025": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "002115": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002218": [
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "003031": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300456": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300593": [
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300620": [
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "301591": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600345": [
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603228": [
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "688195": [
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "688503": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "000736": [
+  {
+   "l2": "OTHER_BROKER",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "000338": [
+  {
+   "l2": "OTHER_AGRICULTURE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603011": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_AGRICULTURE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "000710": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002517": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "002624": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "002812": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300058": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300199": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300404": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300418": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.85,
+   "concept_n": 6,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300725": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300795": [
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "301047": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "301080": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "301230": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600875": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688008": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688041": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688256": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SOFTWARE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688521": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 4,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  }
+ ],
+ "000859": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002371": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 4,
+   "industry_n": 2
+  }
+ ],
+ "002463": [
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002515": [
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300308": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300373": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.75,
+   "concept_n": 3,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300502": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300570": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300604": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  }
+ ],
+ "300751": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  }
+ ],
+ "300763": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300811": [
+  {
+   "l2": "CYCL_NONFERROUS",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "301205": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "301629": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  }
+ ],
+ "600183": [
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600438": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  }
+ ],
+ "600667": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "603186": [
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603290": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603986": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 4,
+   "industry_n": 2
+  },
+  {
+   "l2": "OTHER_ROBOTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603991": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  }
+ ],
+ "688012": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  }
+ ],
+ "688019": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 5,
+   "industry_n": 0
+  },
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  }
+ ],
+ "688037": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 4,
+   "industry_n": 2
+  }
+ ],
+ "688072": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  }
+ ],
+ "688167": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "688205": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688300": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "688301": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688313": [
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688347": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688361": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 3,
+   "industry_n": 2
+  }
+ ],
+ "688409": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  }
+ ],
+ "688432": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  }
+ ],
+ "688485": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688498": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.75,
+   "concept_n": 2,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688535": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 4,
+   "industry_n": 2
+  }
+ ],
+ "688548": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688584": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  }
+ ],
+ "688729": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  }
+ ],
+ "688825": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688981": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600132": [
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  }
+ ],
+ "002859": [
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300408": [
+  {
+   "l2": "TECH_COMPONENT",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "301511": [
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "301626": [
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603580": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300209": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002412": [
+  {
+   "l2": "OTHER_AGRICULTURE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600371": [
+  {
+   "l2": "OTHER_AGRICULTURE",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  },
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "920087": [
+  {
+   "l2": "OTHER_AGRICULTURE",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  }
+ ],
+ "300142": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  }
+ ],
+ "603127": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "688091": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "688185": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  }
+ ],
+ "603823": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002418": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_ELEC",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  }
+ ],
+ "300174": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_COMPONENT",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "000533": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "002112": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002353": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "002837": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  }
+ ],
+ "300214": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.75,
+   "concept_n": 4,
+   "industry_n": 0
+  }
+ ],
+ "300274": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300394": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "300731": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600103": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600481": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "603200": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603269": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "603887": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "920045": [
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  },
+  {
+   "l2": "TECH_OPTICS",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "601888": [
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  }
+ ],
+ "600172": [
+  {
+   "l2": "TECH_SEMI",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002821": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.7,
+   "concept_n": 3,
+   "industry_n": 0
+  }
+ ],
+ "600721": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "603259": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  }
+ ],
+ "688137": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.8,
+   "concept_n": 1,
+   "industry_n": 2
+  }
+ ],
+ "600186": [
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  },
+  {
+   "l2": "TECH_AI_COMPUTE",
+   "confidence": 0.65,
+   "concept_n": 2,
+   "industry_n": 0
+  },
+  {
+   "l2": "OTHER_AGRICULTURE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002636": [
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.75,
+   "concept_n": 1,
+   "industry_n": 1
+  }
+ ],
+ "300035": [
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "301217": [
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600110": [
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600176": [
+  {
+   "l2": "TECH_PCB",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "000592": [
+  {
+   "l2": "OTHER_AGRICULTURE",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  },
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "301130": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600664": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603087": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.8,
+   "concept_n": 2,
+   "industry_n": 2
+  }
+ ],
+ "688235": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "688266": [
+  {
+   "l2": "MED_INNOVATIVE_DRUG",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "301292": [
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "301662": [
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "603217": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  },
+  {
+   "l2": "NEW_ENERGY_SOLID_BATTERY",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "600150": [
+  {
+   "l2": "OTHER_SPACE",
+   "confidence": 0.6,
+   "concept_n": 1,
+   "industry_n": 0
+  }
+ ],
+ "002157": [
+  {
+   "l2": "OTHER_AGRICULTURE",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  }
+ ],
+ "000565": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  }
+ ],
+ "603285": [
+  {
+   "l2": "CYCL_CHEMICAL",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  }
+ ],
+ "603288": [
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  }
+ ],
+ "603057": [
+  {
+   "l2": "OTHER_CONSUMER",
+   "confidence": 0.8,
+   "concept_n": 0,
+   "industry_n": 2
+  }
+ ],
+ "603556": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  }
+ ],
+ "605196": [
+  {
+   "l2": "NEW_ENERGY_UHV",
+   "confidence": 0.75,
+   "concept_n": 0,
+   "industry_n": 1
+  }
+ ]
+}

@@ -1,0 +1,662 @@
+{
+ "MASTER_CONCEPT|885508.TI": {
+  "name": "禽流感",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_CONCEPT|885398.TI": {
+  "name": "煤化工概念",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_CONCEPT|885551.TI": {
+  "name": "氟化工概念",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_CONCEPT|885863.TI": {
+  "name": "磷化工",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_CONCEPT|885620.TI": {
+  "name": "参股券商",
+  "l2": "OTHER_BROKER"
+ },
+ "MASTER_CONCEPT|885845.TI": {
+  "name": "生物疫苗",
+  "l2": "MED_INNOVATIVE_DRUG"
+ },
+ "MASTER_CONCEPT|885570.TI": {
+  "name": "期货概念",
+  "l2": "OTHER_BROKER"
+ },
+ "MASTER_CONCEPT|885530.TI": {
+  "name": "黄金概念",
+  "l2": "CYCL_NONFERROUS"
+ },
+ "MASTER_CONCEPT|885376.TI": {
+  "name": "苹果概念",
+  "l2": "TECH_ELEC"
+ },
+ "MASTER_CONCEPT|885652.TI": {
+  "name": "钛白粉概念",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_CONCEPT|885425.TI": {
+  "name": "特高压",
+  "l2": "NEW_ENERGY_UHV"
+ },
+ "MASTER_CONCEPT|885343.TI": {
+  "name": "稀土永磁",
+  "l2": "CYCL_NONFERROUS"
+ },
+ "MASTER_CONCEPT|885574.TI": {
+  "name": "卫星导航",
+  "l2": "OTHER_SPACE"
+ },
+ "MASTER_CONCEPT|885459.TI": {
+  "name": "网络安全",
+  "l2": "TECH_SOFTWARE"
+ },
+ "MASTER_CONCEPT|885552.TI": {
+  "name": "小金属概念",
+  "l2": "CYCL_NONFERROUS"
+ },
+ "MASTER_CONCEPT|885517.TI": {
+  "name": "机器人概念",
+  "l2": "OTHER_ROBOTICS"
+ },
+ "MASTER_CONCEPT|885478.TI": {
+  "name": "智能家居",
+  "l2": "TECH_ELEC"
+ },
+ "MASTER_CONCEPT|885505.TI": {
+  "name": "生态农业",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_CONCEPT|885886.TI": {
+  "name": "超级电容",
+  "l2": "TECH_COMPONENT"
+ },
+ "MASTER_CONCEPT|885462.TI": {
+  "name": "乳业",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_CONCEPT|885756.TI": {
+  "name": "芯片概念",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_CONCEPT|885967.TI": {
+  "name": "化肥",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_CONCEPT|885454.TI": {
+  "name": "智能穿戴",
+  "l2": "TECH_ELEC"
+ },
+ "MASTER_CONCEPT|885456.TI": {
+  "name": "互联网金融",
+  "l2": "OTHER_BROKER"
+ },
+ "MASTER_CONCEPT|885633.TI": {
+  "name": "染料",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_CONCEPT|885706.TI": {
+  "name": "农机",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_CONCEPT|885525.TI": {
+  "name": "白酒概念",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_CONCEPT|885780.TI": {
+  "name": "啤酒概念",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_CONCEPT|885969.TI": {
+  "name": "金属镍",
+  "l2": "CYCL_NONFERROUS"
+ },
+ "MASTER_CONCEPT|885973.TI": {
+  "name": "金属铜",
+  "l2": "CYCL_NONFERROUS"
+ },
+ "MASTER_CONCEPT|885728.TI": {
+  "name": "人工智能",
+  "l2": "TECH_AI_COMPUTE"
+ },
+ "MASTER_CONCEPT|885865.TI": {
+  "name": "金属钴",
+  "l2": "CYCL_NONFERROUS"
+ },
+ "MASTER_CONCEPT|885768.TI": {
+  "name": "无人零售",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_CONCEPT|886042.TI": {
+  "name": "存储芯片",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_CONCEPT|886015.TI": {
+  "name": "创新药",
+  "l2": "MED_INNOVATIVE_DRUG"
+ },
+ "MASTER_CONCEPT|885812.TI": {
+  "name": "农业种植",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_CONCEPT|886032.TI": {
+  "name": "固态电池",
+  "l2": "NEW_ENERGY_SOLID_BATTERY"
+ },
+ "MASTER_CONCEPT|885925.TI": {
+  "name": "MCU芯片",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_CONCEPT|885800.TI": {
+  "name": "消费电子概念",
+  "l2": "TECH_ELEC"
+ },
+ "MASTER_CONCEPT|885809.TI": {
+  "name": "柔性屏(折叠屏)",
+  "l2": "TECH_ELEC"
+ },
+ "MASTER_CONCEPT|885844.TI": {
+  "name": "国产操作系统",
+  "l2": "TECH_SOFTWARE"
+ },
+ "MASTER_CONCEPT|885846.TI": {
+  "name": "动物疫苗",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_CONCEPT|885864.TI": {
+  "name": "光刻胶",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_CONCEPT|885887.TI": {
+  "name": "数据中心(AIDC)",
+  "l2": "TECH_AI_COMPUTE"
+ },
+ "MASTER_CONCEPT|885898.TI": {
+  "name": "免税店",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_CONCEPT|885908.TI": {
+  "name": "第三代半导体",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_CONCEPT|885945.TI": {
+  "name": "汽车芯片",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_CONCEPT|885923.TI": {
+  "name": "鸿蒙概念",
+  "l2": "TECH_SOFTWARE"
+ },
+ "MASTER_CONCEPT|885927.TI": {
+  "name": "CRO概念",
+  "l2": "MED_INNOVATIVE_DRUG"
+ },
+ "MASTER_CONCEPT|885957.TI": {
+  "name": "东数西算(算力)",
+  "l2": "TECH_AI_COMPUTE"
+ },
+ "MASTER_CONCEPT|885959.TI": {
+  "name": "PCB概念",
+  "l2": "TECH_PCB"
+ },
+ "MASTER_CONCEPT|885995.TI": {
+  "name": "粮食概念",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_CONCEPT|886008.TI": {
+  "name": "减速器",
+  "l2": "OTHER_ROBOTICS"
+ },
+ "MASTER_CONCEPT|886009.TI": {
+  "name": "先进封装",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_CONCEPT|886013.TI": {
+  "name": "信创",
+  "l2": "TECH_SOFTWARE"
+ },
+ "MASTER_CONCEPT|886019.TI": {
+  "name": "AIGC概念",
+  "l2": "TECH_SOFTWARE"
+ },
+ "MASTER_CONCEPT|886033.TI": {
+  "name": "共封装光学(CPO)",
+  "l2": "TECH_OPTICS"
+ },
+ "MASTER_CONCEPT|886044.TI": {
+  "name": "液冷服务器",
+  "l2": "TECH_AI_COMPUTE"
+ },
+ "MASTER_CONCEPT|886046.TI": {
+  "name": "MR(混合现实)",
+  "l2": "TECH_ELEC"
+ },
+ "MASTER_CONCEPT|886048.TI": {
+  "name": "英伟达概念",
+  "l2": "TECH_AI_COMPUTE"
+ },
+ "MASTER_CONCEPT|886050.TI": {
+  "name": "算力租赁",
+  "l2": "TECH_AI_COMPUTE"
+ },
+ "MASTER_CONCEPT|886051.TI": {
+  "name": "减肥药",
+  "l2": "MED_INNOVATIVE_DRUG"
+ },
+ "MASTER_CONCEPT|886054.TI": {
+  "name": "光刻机",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_CONCEPT|886058.TI": {
+  "name": "华为昇腾",
+  "l2": "TECH_AI_COMPUTE"
+ },
+ "MASTER_CONCEPT|886062.TI": {
+  "name": "多模态AI",
+  "l2": "TECH_SOFTWARE"
+ },
+ "MASTER_CONCEPT|886068.TI": {
+  "name": "AI视频",
+  "l2": "TECH_SOFTWARE"
+ },
+ "MASTER_CONCEPT|886069.TI": {
+  "name": "人形机器人",
+  "l2": "OTHER_ROBOTICS"
+ },
+ "MASTER_CONCEPT|886070.TI": {
+  "name": "AI手机",
+  "l2": "TECH_AI_COMPUTE"
+ },
+ "MASTER_CONCEPT|886071.TI": {
+  "name": "AIPC",
+  "l2": "TECH_AI_COMPUTE"
+ },
+ "MASTER_CONCEPT|886073.TI": {
+  "name": "铜缆高速连接",
+  "l2": "TECH_AI_COMPUTE"
+ },
+ "MASTER_CONCEPT|886074.TI": {
+  "name": "AI语料",
+  "l2": "TECH_SOFTWARE"
+ },
+ "MASTER_CONCEPT|886078.TI": {
+  "name": "商业航天",
+  "l2": "OTHER_SPACE"
+ },
+ "MASTER_CONCEPT|886084.TI": {
+  "name": "光纤概念",
+  "l2": "TECH_OPTICS"
+ },
+ "MASTER_CONCEPT|886085.TI": {
+  "name": "AI眼镜",
+  "l2": "TECH_AI_COMPUTE"
+ },
+ "MASTER_CONCEPT|886090.TI": {
+  "name": "智谱AI",
+  "l2": "TECH_SOFTWARE"
+ },
+ "MASTER_CONCEPT|886099.TI": {
+  "name": "AI智能体",
+  "l2": "TECH_SOFTWARE"
+ },
+ "MASTER_CONCEPT|885362.TI": {
+  "name": "云计算",
+  "l2": "TECH_AI_COMPUTE"
+ },
+ "MASTER_CONCEPT|886108.TI": {
+  "name": "AI应用",
+  "l2": "TECH_SOFTWARE"
+ },
+ "MASTER_CONCEPT|886111.TI": {
+  "name": "玻璃基板",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_CONCEPT|886112.TI": {
+  "name": "MLCC概念",
+  "l2": "TECH_COMPONENT"
+ },
+ "MASTER_INDUSTRY|881101.TI": {
+  "name": "种植业与林业",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|884001.TI": {
+  "name": "种子生产",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|884002.TI": {
+  "name": "粮食种植",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|884003.TI": {
+  "name": "其他种植业",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|884004.TI": {
+  "name": "林业",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|884012.TI": {
+  "name": "农业综合",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|881102.TI": {
+  "name": "养殖业",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|884006.TI": {
+  "name": "水产养殖",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|884275.TI": {
+  "name": "生猪养殖",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|884276.TI": {
+  "name": "肉鸡养殖",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|884277.TI": {
+  "name": "其他养殖",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|881103.TI": {
+  "name": "农产品加工",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|884011.TI": {
+  "name": "其他农产品加工",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|884278.TI": {
+  "name": "畜禽饲料",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|884279.TI": {
+  "name": "水产饲料",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|884280.TI": {
+  "name": "宠物食品",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|881108.TI": {
+  "name": "化学原料",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_INDUSTRY|884022.TI": {
+  "name": "纯碱",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_INDUSTRY|884023.TI": {
+  "name": "氯碱",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_INDUSTRY|884025.TI": {
+  "name": "其他化学原料",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_INDUSTRY|884209.TI": {
+  "name": "钛白粉",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_INDUSTRY|884281.TI": {
+  "name": "煤化工",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_INDUSTRY|881109.TI": {
+  "name": "化学制品",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_INDUSTRY|884034.TI": {
+  "name": "其他化学制品",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_INDUSTRY|884036.TI": {
+  "name": "氟化工",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_INDUSTRY|884210.TI": {
+  "name": "食品及饲料添加剂",
+  "l2": "OTHER_AGRICULTURE"
+ },
+ "MASTER_INDUSTRY|881114.TI": {
+  "name": "金属新材料",
+  "l2": "CYCL_NONFERROUS"
+ },
+ "MASTER_INDUSTRY|884056.TI": {
+  "name": "其他金属新材料",
+  "l2": "CYCL_NONFERROUS"
+ },
+ "MASTER_INDUSTRY|884055.TI": {
+  "name": "铅锌",
+  "l2": "CYCL_NONFERROUS"
+ },
+ "MASTER_INDUSTRY|881169.TI": {
+  "name": "贵金属",
+  "l2": "CYCL_NONFERROUS"
+ },
+ "MASTER_INDUSTRY|881170.TI": {
+  "name": "小金属",
+  "l2": "CYCL_NONFERROUS"
+ },
+ "MASTER_INDUSTRY|884215.TI": {
+  "name": "稀土",
+  "l2": "CYCL_NONFERROUS"
+ },
+ "MASTER_INDUSTRY|884186.TI": {
+  "name": "其他小金属",
+  "l2": "CYCL_NONFERROUS"
+ },
+ "MASTER_INDUSTRY|884218.TI": {
+  "name": "机器人",
+  "l2": "OTHER_ROBOTICS"
+ },
+ "MASTER_INDUSTRY|881121.TI": {
+  "name": "半导体",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_INDUSTRY|884091.TI": {
+  "name": "半导体材料",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_INDUSTRY|884227.TI": {
+  "name": "集成电路制造",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_INDUSTRY|884228.TI": {
+  "name": "集成电路封测",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_INDUSTRY|884229.TI": {
+  "name": "半导体设备",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_INDUSTRY|884287.TI": {
+  "name": "数字芯片设计",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_INDUSTRY|884288.TI": {
+  "name": "模拟芯片设计",
+  "l2": "TECH_SEMI"
+ },
+ "MASTER_INDUSTRY|881124.TI": {
+  "name": "消费电子",
+  "l2": "TECH_ELEC"
+ },
+ "MASTER_INDUSTRY|884098.TI": {
+  "name": "消费电子零部件及组装",
+  "l2": "TECH_ELEC"
+ },
+ "MASTER_INDUSTRY|884230.TI": {
+  "name": "品牌消费电子",
+  "l2": "TECH_ELEC"
+ },
+ "MASTER_INDUSTRY|881172.TI": {
+  "name": "电子化学品",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_INDUSTRY|881131.TI": {
+  "name": "白色家电",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884116.TI": {
+  "name": "家电零部件",
+  "l2": "TECH_ELEC"
+ },
+ "MASTER_INDUSTRY|881132.TI": {
+  "name": "黑色家电",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884118.TI": {
+  "name": "其他黑色家电",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|881173.TI": {
+  "name": "小家电",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|881133.TI": {
+  "name": "饮料制造",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884189.TI": {
+  "name": "啤酒",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884120.TI": {
+  "name": "软饮料",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|881134.TI": {
+  "name": "食品加工制造",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884126.TI": {
+  "name": "其他食品",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884233.TI": {
+  "name": "休闲食品",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884297.TI": {
+  "name": "预加工食品",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|881136.TI": {
+  "name": "服装家纺",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884234.TI": {
+  "name": "服装",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|881139.TI": {
+  "name": "家居用品",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884140.TI": {
+  "name": "其他家居用品",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884298.TI": {
+  "name": "成品家居",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884299.TI": {
+  "name": "定制家居",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|881142.TI": {
+  "name": "生物制品",
+  "l2": "MED_INNOVATIVE_DRUG"
+ },
+ "MASTER_INDUSTRY|884239.TI": {
+  "name": "疫苗",
+  "l2": "MED_INNOVATIVE_DRUG"
+ },
+ "MASTER_INDUSTRY|884240.TI": {
+  "name": "其他生物制品",
+  "l2": "MED_INNOVATIVE_DRUG"
+ },
+ "MASTER_INDUSTRY|881158.TI": {
+  "name": "零售",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884160.TI": {
+  "name": "百货零售",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884254.TI": {
+  "name": "旅游零售",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884180.TI": {
+  "name": "航天装备",
+  "l2": "OTHER_SPACE"
+ },
+ "MASTER_INDUSTRY|881157.TI": {
+  "name": "证券",
+  "l2": "OTHER_BROKER"
+ },
+ "MASTER_INDUSTRY|884272.TI": {
+  "name": "化妆品",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|884027.TI": {
+  "name": "磷肥及磷化工",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_INDUSTRY|881264.TI": {
+  "name": "化学纤维",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_INDUSTRY|881265.TI": {
+  "name": "塑料制品",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_INDUSTRY|884046.TI": {
+  "name": "其他塑料制品",
+  "l2": "CYCL_CHEMICAL"
+ },
+ "MASTER_INDUSTRY|884092.TI": {
+  "name": "印制电路板",
+  "l2": "TECH_PCB"
+ },
+ "MASTER_INDUSTRY|884093.TI": {
+  "name": "被动元件",
+  "l2": "TECH_COMPONENT"
+ },
+ "MASTER_INDUSTRY|881273.TI": {
+  "name": "白酒",
+  "l2": "OTHER_CONSUMER"
+ },
+ "MASTER_INDUSTRY|881278.TI": {
+  "name": "电网设备",
+  "l2": "NEW_ENERGY_UHV"
+ },
+ "MASTER_INDUSTRY|884088.TI": {
+  "name": "输变电设备",
+  "l2": "NEW_ENERGY_UHV"
+ },
+ "MASTER_INDUSTRY|881272.TI": {
+  "name": "软件开发",
+  "l2": "TECH_SOFTWARE"
+ },
+ "MASTER_INDUSTRY|884295.TI": {
+  "name": "垂直应用软件",
+  "l2": "TECH_SOFTWARE"
+ },
+ "MASTER_INDUSTRY|884296.TI": {
+  "name": "横向通用软件",
+  "l2": "TECH_SOFTWARE"
+ },
+ "MASTER_INDUSTRY|884302.TI": {
+  "name": "硅料硅片",
+  "l2": "TECH_SEMI"
+ }
+}
