@@ -1,0 +1,183 @@
+{
+  "input_and_versions": {
+    "schema_version": 3,
+    "source_snapshots": [
+      {
+        "snapshot_id": 7,
+        "source": "vip0",
+        "snapshot_date": "2026-08-27",
+        "record_count": 851
+      },
+      {
+        "snapshot_id": 1,
+        "source": "vip0",
+        "snapshot_date": "2026-08-28",
+        "record_count": 902
+      }
+    ],
+    "ingest_runs_count": 13,
+    "parser_versions": [
+      {
+        "parser_version": "p14-diff-v2",
+        "c": 3,
+        "latest": 13
+      },
+      {
+        "parser_version": "v1.1",
+        "c": 10,
+        "latest": 12
+      }
+    ]
+  },
+  "rerun": [
+    {
+      "script": "ingest_consensus_p12.py",
+      "exit": 0,
+      "run_id": 14,
+      "inserted": 0,
+      "skipped": 934,
+      "hash": "478a7c4f712b8bce",
+      "error_count": 0
+    },
+    {
+      "script": "ingest_position_p13.py",
+      "exit": 0,
+      "run_id": 15,
+      "inserted": 0,
+      "skipped": 124,
+      "hash": "8826975fa9b8fb14",
+      "error_count": 0
+    },
+    {
+      "script": "ingest_revision_p14.py",
+      "exit": 0,
+      "run_id": 16,
+      "inserted": 0,
+      "skipped": 336,
+      "hash": "24e470236701e0e1",
+      "error_count": 0
+    }
+  ],
+  "G1_duplicate_ingest": {
+    "pass": true,
+    "detail": [
+      {
+        "script": "ingest_consensus_p12.py",
+        "exit": 0,
+        "run_id": 14,
+        "inserted": 0,
+        "skipped": 934,
+        "hash": "478a7c4f712b8bce",
+        "error_count": 0
+      },
+      {
+        "script": "ingest_position_p13.py",
+        "exit": 0,
+        "run_id": 15,
+        "inserted": 0,
+        "skipped": 124,
+        "hash": "8826975fa9b8fb14",
+        "error_count": 0
+      },
+      {
+        "script": "ingest_revision_p14.py",
+        "exit": 0,
+        "run_id": 16,
+        "inserted": 0,
+        "skipped": 336,
+        "hash": "24e470236701e0e1",
+        "error_count": 0
+      }
+    ]
+  },
+  "G7_repeat_run_consistent": {
+    "pass": true,
+    "detail": {
+      "events": {
+        "pre": "478a7c4f712b8bce",
+        "post": "478a7c4f712b8bce"
+      },
+      "positions": {
+        "pre": "8826975fa9b8fb14",
+        "post": "8826975fa9b8fb14"
+      },
+      "revisions": {
+        "pre": "24e470236701e0e1",
+        "post": "24e470236701e0e1"
+      }
+    }
+  },
+  "G2_a_share_resolvable": {
+    "pass": true,
+    "detail": "total=937, resolvable=937, by=[('ALIAS', 30), ('EXACT', 907)]"
+  },
+  "G3_false_executed": {
+    "pass": true,
+    "detail": "risk_executed=121 (BUY族+SELL族), non_reproducible=0",
+    "items": []
+  },
+  "G4_holding_to_buy": {
+    "pass": true,
+    "detail": "position_snapshots not_holding=0, buy_like=0"
+  },
+  "G5_revision_traceable": {
+    "pass": true,
+    "detail": "revisions=336, orphan=0, non_contiguous_logicals=0"
+  },
+  "G6_source_lineage": {
+    "pass": true,
+    "detail": "bad_lineage=0 (events+positions+revisions)"
+  },
+  "A1_row_counts": {
+    "analyst_stock_events": 937,
+    "analyst_position_snapshots": 124,
+    "record_revisions": 336,
+    "analyst_profiles": 10,
+    "ingest_runs": 16
+  },
+  "A2_entity_bucket": {
+    "STOCK": 808,
+    "THEME": 34,
+    "COMPOSITE": 35,
+    "MARKET": 9,
+    "OUT_OF_SCOPE": 11,
+    "UNKNOWN": 5
+  },
+  "A3_conflict_audit": {
+    "CLEAR+HOLDING": 0,
+    "SELL+HOLDING": 1
+  },
+  "A4_revision_severity": {
+    "ROLE": 99,
+    "SEVERE": 237
+  },
+  "A5_versions": {
+    "schema_version": 3,
+    "parser": "v1.1",
+    "resolver": "exact-alias-v1",
+    "snapshots": [
+      "2026-08-27",
+      "2026-08-28"
+    ]
+  },
+  "data_contract": {
+    "analyst_stock_events": "完整事件事实层，存全部 11 类动作（TRADE/OBSERVATION/STATE/COMPOSITE_TACTICAL/UNKNOWN）",
+    "analyst_position_snapshots": "日终确认持仓观察值，position_state 仅 HOLDING（CHECK 强制）",
+    "position_snapshot_derives_buy": false,
+    "event_position_dual_track": "允许并存（ADD/LOW_BUY/REDUCE/SELL + HOLDING 合法；CLEAR+HOLDING 需审计）",
+    "composite_theme_market_oos": "不强拆为 A 股个股事件；仅 A_SHARE 落 events/positions",
+    "revision": "append-only，不物理覆盖历史（old_payload/new_payload 完整回放）",
+    "security_master": "独立 DB（security_master.db），只读引用，不复制",
+    "parser_baseline": "v1.1 LOCKED；Q/R/S gap 走独立版本升级，不在 Phase 2 内修改"
+  },
+  "Overall": "GO",
+  "GateSummary": {
+    "G1_duplicate_ingest": "✅",
+    "G7_repeat_run_consistent": "✅",
+    "G2_a_share_resolvable": "✅",
+    "G3_false_executed": "✅",
+    "G4_holding_to_buy": "✅",
+    "G5_revision_traceable": "✅",
+    "G6_source_lineage": "✅"
+  }
+}
