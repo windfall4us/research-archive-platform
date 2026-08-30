@@ -1,5 +1,8 @@
 # run_consensus_pipeline.py 设计文档 — Phase 1~4 自动化总控
 
+> 状态：✅ 已实现并验证（commit 1f9208c + 1852ce1，2026-08-30）
+> dry-run 全链路 GO 验证通过；真实发布验证通过（生产+测试盒 snapshot md5 一致、API latest_date=2026-08-29、HTML 公网 200）
+
 ## 目标
 
 把「手动跑 Phase 1~4 → 发布器自动发布」升级为「Phase 1~4 自动运行 → 全链路 GO → 才调用发布器」。
