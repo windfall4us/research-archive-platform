@@ -1,0 +1,5013 @@
+[
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_SEMI",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 7,
+      "raw": 0.1429
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 0,
+      "negative": 0,
+      "net": 1,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 5.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 13.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 18.0,
+      "hold": 12.0,
+      "unknown": 0.0,
+      "directional_value": -1.8833,
+      "tactical_activity": 0.3333,
+      "event_count": 50
+    },
+    "holding": {
+      "stocks": 9,
+      "analysts": 6,
+      "weighted_support": 5.5,
+      "snapshot_count": 11
+    }
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_OPTICS",
+    "coverage": {
+      "analysts": 3,
+      "direct_analyst_count": 3,
+      "eligible_analysts": 7,
+      "raw": 0.4286
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 1,
+      "negative": 0,
+      "net": 2,
+      "units": 3
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 2.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 7.0,
+      "hold": 2.0,
+      "unknown": 0.0,
+      "directional_value": 0.5333,
+      "tactical_activity": 0.0,
+      "event_count": 11
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 1,
+      "weighted_support": 0.6667,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_AI_COMPUTE",
+    "coverage": {
+      "analysts": 4,
+      "direct_analyst_count": 4,
+      "eligible_analysts": 7,
+      "raw": 0.5714
+    },
+    "mention": {
+      "positive": 3,
+      "neutral": 0,
+      "negative": 1,
+      "net": 2,
+      "units": 4
+    },
+    "trade": {
+      "buy": 2.0,
+      "add": 7.0,
+      "low_buy": 2.0,
+      "trial": 2.0,
+      "reduce": 10.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 25.0,
+      "hold": 10.0,
+      "unknown": 0.0,
+      "directional_value": 2.2667,
+      "tactical_activity": 0.8333,
+      "event_count": 61
+    },
+    "holding": {
+      "stocks": 7,
+      "analysts": 4,
+      "weighted_support": 3.3333,
+      "snapshot_count": 8
+    }
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_COMPONENT",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 7,
+      "raw": 0.2857
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 0,
+      "negative": 1,
+      "net": 0,
+      "units": 2
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 2.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 3
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.3333,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_PCB",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 0.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.7333,
+      "tactical_activity": 0.0,
+      "event_count": 4
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.3333,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_ELEC",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 2.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 6.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 14.0,
+      "hold": 9.0,
+      "unknown": 0.0,
+      "directional_value": 0.1667,
+      "tactical_activity": 0.3333,
+      "event_count": 34
+    },
+    "holding": {
+      "stocks": 7,
+      "analysts": 4,
+      "weighted_support": 3.1667,
+      "snapshot_count": 8
+    }
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_SOFTWARE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 3.0,
+      "low_buy": 1.0,
+      "trial": 1.0,
+      "reduce": 5.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 9.0,
+      "hold": 3.0,
+      "unknown": 0.0,
+      "directional_value": 1.0333,
+      "tactical_activity": 0.5,
+      "event_count": 24
+    },
+    "holding": {
+      "stocks": 3,
+      "analysts": 3,
+      "weighted_support": 1.3333,
+      "snapshot_count": 3
+    }
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_GENERAL",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 1.0,
+      "trial": 1.0,
+      "reduce": 4.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 2.0,
+      "hold": 4.0,
+      "unknown": 0.0,
+      "directional_value": -0.95,
+      "tactical_activity": 0.0,
+      "event_count": 12
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 1,
+      "weighted_support": 2.0,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "CYCL_NONFERROUS",
+    "coverage": {
+      "analysts": 3,
+      "direct_analyst_count": 3,
+      "eligible_analysts": 7,
+      "raw": 0.4286
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 1,
+      "net": 0,
+      "units": 3
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 3.0,
+      "low_buy": 2.0,
+      "trial": 1.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 5.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 3.2167,
+      "tactical_activity": 0.0,
+      "event_count": 13
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 1.0,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "CYCL_CHEMICAL",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 7,
+      "raw": 0.1429
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 4.0,
+      "unknown": 0.0,
+      "directional_value": 0.1333,
+      "tactical_activity": 0.0,
+      "event_count": 6
+    },
+    "holding": {
+      "stocks": 4,
+      "analysts": 3,
+      "weighted_support": 1.6667,
+      "snapshot_count": 4
+    }
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 1.0,
+      "trial": 1.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.3667,
+      "tactical_activity": 0.0,
+      "event_count": 3
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "NEW_ENERGY_UHV",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 4.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 0.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 2.4,
+      "tactical_activity": 0.0,
+      "event_count": 7
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "OTHER_BROKER",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 2.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 3
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "OTHER_AGRICULTURE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 0.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 1
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "OTHER_ROBOTICS",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 7,
+      "raw": 0.1429
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 2.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 7.0,
+      "hold": 2.0,
+      "unknown": 0.0,
+      "directional_value": 0.6667,
+      "tactical_activity": 0.0,
+      "event_count": 12
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 2,
+      "weighted_support": 1.3333,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "OTHER_SPACE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 3.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": -0.2667,
+      "tactical_activity": 0.0,
+      "event_count": 5
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.3333,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "OTHER_CONSUMER",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 2.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 3.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": -0.2167,
+      "tactical_activity": 0.0,
+      "event_count": 7
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_SEMI",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 1,
+      "raw": 1.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 3.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.9667,
+      "tactical_activity": 0.0,
+      "event_count": 6
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_OPTICS",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 1,
+      "raw": 1.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_AI_COMPUTE",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 1,
+      "raw": 1.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 2.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 0.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.7833,
+      "tactical_activity": 0.5,
+      "event_count": 5
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_COMPONENT",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_PCB",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 0.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.2,
+      "tactical_activity": 0.0,
+      "event_count": 1
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_ELEC",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 2.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 0.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 1.0333,
+      "tactical_activity": 0.5,
+      "event_count": 4
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_SOFTWARE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 0.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.0167,
+      "tactical_activity": 0.0,
+      "event_count": 2
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_GENERAL",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "CYCL_NONFERROUS",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 0.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.5,
+      "tactical_activity": 0.0,
+      "event_count": 3
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "CYCL_CHEMICAL",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 2.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 0.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 1.1,
+      "tactical_activity": 0.0,
+      "event_count": 3
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "NEW_ENERGY_UHV",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "OTHER_BROKER",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "OTHER_AGRICULTURE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "OTHER_ROBOTICS",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "OTHER_SPACE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "OTHER_CONSUMER",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 1,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_SEMI",
+    "coverage": {
+      "analysts": 4,
+      "direct_analyst_count": 4,
+      "eligible_analysts": 7,
+      "raw": 0.5714
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 1,
+      "negative": 1,
+      "net": 1,
+      "units": 4
+    },
+    "trade": {
+      "buy": 6.0,
+      "add": 9.0,
+      "low_buy": 2.0,
+      "trial": 3.0,
+      "reduce": 10.0,
+      "sell": 5.0,
+      "clear": 1.0,
+      "watch": 45.0,
+      "hold": 15.0,
+      "unknown": 1.0,
+      "directional_value": 4.6667,
+      "tactical_activity": 0.8333,
+      "event_count": 99
+    },
+    "holding": {
+      "stocks": 14,
+      "analysts": 5,
+      "weighted_support": 8.5,
+      "snapshot_count": 14
+    }
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_OPTICS",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 7,
+      "raw": 0.2857
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 0,
+      "negative": 0,
+      "net": 2,
+      "units": 2
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 3.0,
+      "low_buy": 1.0,
+      "trial": 1.0,
+      "reduce": 3.0,
+      "sell": 1.0,
+      "clear": 1.0,
+      "watch": 4.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.0333,
+      "tactical_activity": 0.0,
+      "event_count": 15
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.3333,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_AI_COMPUTE",
+    "coverage": {
+      "analysts": 3,
+      "direct_analyst_count": 3,
+      "eligible_analysts": 7,
+      "raw": 0.4286
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 1,
+      "negative": 0,
+      "net": 2,
+      "units": 3
+    },
+    "trade": {
+      "buy": 2.0,
+      "add": 9.0,
+      "low_buy": 2.0,
+      "trial": 3.0,
+      "reduce": 10.0,
+      "sell": 2.0,
+      "clear": 0.0,
+      "watch": 39.0,
+      "hold": 6.0,
+      "unknown": 2.0,
+      "directional_value": 1.9833,
+      "tactical_activity": 1.1667,
+      "event_count": 78
+    },
+    "holding": {
+      "stocks": 6,
+      "analysts": 3,
+      "weighted_support": 3.0,
+      "snapshot_count": 6
+    }
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_COMPONENT",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 7,
+      "raw": 0.2857
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 0,
+      "negative": 0,
+      "net": 2,
+      "units": 2
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 4
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_PCB",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 1.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 7.0,
+      "hold": 3.0,
+      "unknown": 0.0,
+      "directional_value": 0.6,
+      "tactical_activity": 0.0,
+      "event_count": 15
+    },
+    "holding": {
+      "stocks": 3,
+      "analysts": 2,
+      "weighted_support": 1.1667,
+      "snapshot_count": 3
+    }
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_ELEC",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 3.0,
+      "add": 4.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 3.0,
+      "sell": 3.0,
+      "clear": 0.0,
+      "watch": 21.0,
+      "hold": 3.0,
+      "unknown": 2.0,
+      "directional_value": 1.2833,
+      "tactical_activity": 0.0,
+      "event_count": 40
+    },
+    "holding": {
+      "stocks": 3,
+      "analysts": 2,
+      "weighted_support": 1.5,
+      "snapshot_count": 3
+    }
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_SOFTWARE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 2.0,
+      "add": 2.0,
+      "low_buy": 1.0,
+      "trial": 1.0,
+      "reduce": 5.0,
+      "sell": 2.0,
+      "clear": 0.0,
+      "watch": 10.0,
+      "hold": 3.0,
+      "unknown": 0.0,
+      "directional_value": 0.2833,
+      "tactical_activity": 1.6667,
+      "event_count": 30
+    },
+    "holding": {
+      "stocks": 3,
+      "analysts": 2,
+      "weighted_support": 1.1667,
+      "snapshot_count": 3
+    }
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_GENERAL",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 7,
+      "raw": 0.2857
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 0,
+      "negative": 0,
+      "net": 2,
+      "units": 2
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 7,
+      "raw": 0.2857
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 0,
+      "net": 1,
+      "units": 2
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 7.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.9667,
+      "tactical_activity": 0.0,
+      "event_count": 10
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "CYCL_NONFERROUS",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 7,
+      "raw": 0.1429
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 1,
+      "net": -1,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 4.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 2.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 8.0,
+      "hold": 6.0,
+      "unknown": 0.0,
+      "directional_value": 1.45,
+      "tactical_activity": 0.0,
+      "event_count": 21
+    },
+    "holding": {
+      "stocks": 6,
+      "analysts": 2,
+      "weighted_support": 5.3333,
+      "snapshot_count": 6
+    }
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "CYCL_CHEMICAL",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 7,
+      "raw": 0.1429
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 4.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 3.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 11.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 1.5333,
+      "tactical_activity": 0.0,
+      "event_count": 20
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 7.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": -0.1667,
+      "tactical_activity": 0.0,
+      "event_count": 10
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 7,
+      "raw": 0.1429
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 0,
+      "negative": 0,
+      "net": 1,
+      "units": 1
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "NEW_ENERGY_UHV",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 2.0,
+      "add": 5.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 2.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 10.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 3.9,
+      "tactical_activity": 1.0,
+      "event_count": 21
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "OTHER_BROKER",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 2.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": -0.0333,
+      "tactical_activity": 0.3333,
+      "event_count": 6
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.3333,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "OTHER_AGRICULTURE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 2.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.2667,
+      "tactical_activity": 0.0,
+      "event_count": 3
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "OTHER_ROBOTICS",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 10.0,
+      "hold": 3.0,
+      "unknown": 0.0,
+      "directional_value": 0.4,
+      "tactical_activity": 0.0,
+      "event_count": 15
+    },
+    "holding": {
+      "stocks": 3,
+      "analysts": 2,
+      "weighted_support": 1.1667,
+      "snapshot_count": 3
+    }
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "OTHER_SPACE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 6.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": -0.1667,
+      "tactical_activity": 0.0,
+      "event_count": 7
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "OTHER_CONSUMER",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 4.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.4,
+      "tactical_activity": 0.0,
+      "event_count": 5
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_SEMI",
+    "coverage": {
+      "analysts": 4,
+      "direct_analyst_count": 4,
+      "eligible_analysts": 9,
+      "raw": 0.4444
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 2,
+      "negative": 0,
+      "net": 2,
+      "units": 4
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 1.0,
+      "low_buy": 5.0,
+      "trial": 0.0,
+      "reduce": 5.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 18.0,
+      "hold": 11.0,
+      "unknown": 0.0,
+      "directional_value": 1.3667,
+      "tactical_activity": 0.5,
+      "event_count": 43
+    },
+    "holding": {
+      "stocks": 9,
+      "analysts": 4,
+      "weighted_support": 5.1667,
+      "snapshot_count": 9
+    }
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_OPTICS",
+    "coverage": {
+      "analysts": 3,
+      "direct_analyst_count": 3,
+      "eligible_analysts": 9,
+      "raw": 0.3333
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 1,
+      "negative": 0,
+      "net": 2,
+      "units": 3
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 3.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 2.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 0.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.6,
+      "tactical_activity": 0.0,
+      "event_count": 6
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.3333,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_AI_COMPUTE",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 0,
+      "negative": 0,
+      "net": 1,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 4.0,
+      "low_buy": 2.0,
+      "trial": 1.0,
+      "reduce": 5.0,
+      "sell": 0.0,
+      "clear": 1.0,
+      "watch": 19.0,
+      "hold": 6.0,
+      "unknown": 0.0,
+      "directional_value": 0.9,
+      "tactical_activity": 0.5,
+      "event_count": 39
+    },
+    "holding": {
+      "stocks": 5,
+      "analysts": 4,
+      "weighted_support": 2.1667,
+      "snapshot_count": 5
+    }
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_COMPONENT",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 9,
+      "raw": 0.2222
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 0,
+      "negative": 0,
+      "net": 2,
+      "units": 2
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_PCB",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 4.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 4
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_ELEC",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 1.0,
+      "watch": 13.0,
+      "hold": 5.0,
+      "unknown": 0.0,
+      "directional_value": -0.0833,
+      "tactical_activity": 0.0,
+      "event_count": 21
+    },
+    "holding": {
+      "stocks": 4,
+      "analysts": 4,
+      "weighted_support": 1.8333,
+      "snapshot_count": 4
+    }
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_SOFTWARE",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 2.0,
+      "sell": 0.0,
+      "clear": 1.0,
+      "watch": 8.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": -0.15,
+      "tactical_activity": 0.0,
+      "event_count": 14
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_GENERAL",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 9,
+      "raw": 0.2222
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 0,
+      "net": 1,
+      "units": 2
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "coverage": {
+      "analysts": 3,
+      "direct_analyst_count": 3,
+      "eligible_analysts": 9,
+      "raw": 0.3333
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 1,
+      "negative": 0,
+      "net": 2,
+      "units": 3
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 4.0,
+      "hold": 2.0,
+      "unknown": 0.0,
+      "directional_value": -0.2667,
+      "tactical_activity": 0.0,
+      "event_count": 7
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 2,
+      "weighted_support": 1.5,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "CYCL_NONFERROUS",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 1,
+      "net": -1,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 3.0,
+      "hold": 3.0,
+      "unknown": 0.0,
+      "directional_value": 0.55,
+      "tactical_activity": 0.0,
+      "event_count": 8
+    },
+    "holding": {
+      "stocks": 3,
+      "analysts": 1,
+      "weighted_support": 2.5,
+      "snapshot_count": 3
+    }
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "CYCL_CHEMICAL",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 2.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 4.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": -0.4167,
+      "tactical_activity": 0.0,
+      "event_count": 9
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 0.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.85,
+      "tactical_activity": 0.0,
+      "event_count": 3
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "NEW_ENERGY_UHV",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 5.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 5
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "OTHER_BROKER",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 2
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "OTHER_AGRICULTURE",
+    "coverage": {
+      "analysts": 4,
+      "direct_analyst_count": 4,
+      "eligible_analysts": 9,
+      "raw": 0.4444
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 2,
+      "negative": 0,
+      "net": 2,
+      "units": 4
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 2
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "OTHER_ROBOTICS",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 0,
+      "negative": 0,
+      "net": 1,
+      "units": 1
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 1.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 9.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.95,
+      "tactical_activity": 0.0,
+      "event_count": 13
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "OTHER_SPACE",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 0,
+      "negative": 0,
+      "net": 1,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 4.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 4
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "OTHER_CONSUMER",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 2.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 1.0,
+      "event_count": 4
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_SEMI",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 6,
+      "raw": 0.3333
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 2,
+      "negative": 0,
+      "net": 0,
+      "units": 2
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 3.0,
+      "low_buy": 4.0,
+      "trial": 1.0,
+      "reduce": 16.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 18.0,
+      "hold": 4.0,
+      "unknown": 0.0,
+      "directional_value": -2.0,
+      "tactical_activity": 1.3333,
+      "event_count": 49
+    },
+    "holding": {
+      "stocks": 4,
+      "analysts": 4,
+      "weighted_support": 2.1667,
+      "snapshot_count": 4
+    }
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_OPTICS",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 6,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 3.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 2.0,
+      "sell": 0.0,
+      "clear": 1.0,
+      "watch": 2.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.4667,
+      "tactical_activity": 0.0,
+      "event_count": 9
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_AI_COMPUTE",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 6,
+      "raw": 0.1667
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 3.0,
+      "add": 4.0,
+      "low_buy": 3.0,
+      "trial": 1.0,
+      "reduce": 11.0,
+      "sell": 0.0,
+      "clear": 1.0,
+      "watch": 22.0,
+      "hold": 3.0,
+      "unknown": 0.0,
+      "directional_value": 0.6,
+      "tactical_activity": 0.3333,
+      "event_count": 49
+    },
+    "holding": {
+      "stocks": 3,
+      "analysts": 3,
+      "weighted_support": 1.1667,
+      "snapshot_count": 3
+    }
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_COMPONENT",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 6,
+      "raw": 0.1667
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 2.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": -0.3333,
+      "tactical_activity": 0.0,
+      "event_count": 6
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.3333,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_PCB",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 6,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 2.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": -0.25,
+      "tactical_activity": 0.0,
+      "event_count": 3
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_ELEC",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 6,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 0.0,
+      "low_buy": 1.0,
+      "trial": 1.0,
+      "reduce": 5.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 12.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": -0.4333,
+      "tactical_activity": 0.0,
+      "event_count": 20
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_SOFTWARE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 6,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 2.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 6.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 10.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": -0.4667,
+      "tactical_activity": 0.3333,
+      "event_count": 21
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.3333,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_GENERAL",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 6,
+      "raw": 0.3333
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 2,
+      "negative": 0,
+      "net": 0,
+      "units": 2
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 6,
+      "raw": 0.3333
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 2,
+      "negative": 0,
+      "net": 0,
+      "units": 2
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 2.0,
+      "unknown": 0.0,
+      "directional_value": -0.1667,
+      "tactical_activity": 0.0,
+      "event_count": 4
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 2,
+      "weighted_support": 1.5,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "CYCL_NONFERROUS",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 6,
+      "raw": 0.3333
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 0,
+      "net": 1,
+      "units": 2
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 1.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 5.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 6.0,
+      "unknown": 0.0,
+      "directional_value": -0.25,
+      "tactical_activity": 0.0,
+      "event_count": 15
+    },
+    "holding": {
+      "stocks": 5,
+      "analysts": 3,
+      "weighted_support": 4.3333,
+      "snapshot_count": 5
+    }
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "CYCL_CHEMICAL",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 6,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 7.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.4833,
+      "tactical_activity": 0.0,
+      "event_count": 11
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 6,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 0.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": -0.25,
+      "tactical_activity": 0.0,
+      "event_count": 1
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 6,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "NEW_ENERGY_UHV",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 6,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 3.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 4.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": -0.9167,
+      "tactical_activity": 0.0,
+      "event_count": 7
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "OTHER_BROKER",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 6,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 5.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": -0.05,
+      "tactical_activity": 0.0,
+      "event_count": 7
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "OTHER_AGRICULTURE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 6,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 1
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "OTHER_ROBOTICS",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 6,
+      "raw": 0.1667
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 2.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 4.0,
+      "sell": 1.0,
+      "clear": 1.0,
+      "watch": 11.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": -0.8333,
+      "tactical_activity": 0.0,
+      "event_count": 19
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "OTHER_SPACE",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 6,
+      "raw": 0.1667
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 1,
+      "net": -1,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 2.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 2.0,
+      "hold": 3.0,
+      "unknown": 0.0,
+      "directional_value": -0.1,
+      "tactical_activity": 0.0,
+      "event_count": 8
+    },
+    "holding": {
+      "stocks": 3,
+      "analysts": 2,
+      "weighted_support": 1.1667,
+      "snapshot_count": 3
+    }
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "OTHER_CONSUMER",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 6,
+      "raw": 0.3333
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 0,
+      "net": 1,
+      "units": 2
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 5.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 6
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_SEMI",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 7,
+      "raw": 0.1429
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 2.0,
+      "add": 3.0,
+      "low_buy": 2.0,
+      "trial": 2.0,
+      "reduce": 2.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 6.0,
+      "hold": 7.0,
+      "unknown": 0.0,
+      "directional_value": 3.8667,
+      "tactical_activity": 0.5,
+      "event_count": 25
+    },
+    "holding": {
+      "stocks": 6,
+      "analysts": 3,
+      "weighted_support": 3.8333,
+      "snapshot_count": 6
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_OPTICS",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 7,
+      "raw": 0.1429
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 2.0,
+      "low_buy": 4.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 3.0,
+      "hold": 4.0,
+      "unknown": 0.0,
+      "directional_value": 1.7,
+      "tactical_activity": 0.5,
+      "event_count": 14
+    },
+    "holding": {
+      "stocks": 4,
+      "analysts": 3,
+      "weighted_support": 1.6667,
+      "snapshot_count": 4
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_AI_COMPUTE",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 7,
+      "raw": 0.1429
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 1,
+      "net": -1,
+      "units": 1
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 3.0,
+      "low_buy": 5.0,
+      "trial": 1.0,
+      "reduce": 2.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 9.0,
+      "hold": 9.0,
+      "unknown": 0.0,
+      "directional_value": 1.9667,
+      "tactical_activity": 0.3333,
+      "event_count": 32
+    },
+    "holding": {
+      "stocks": 9,
+      "analysts": 6,
+      "weighted_support": 4.6667,
+      "snapshot_count": 9
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_COMPONENT",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_PCB",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 3.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.3333,
+      "event_count": 5
+    },
+    "holding": {
+      "stocks": 3,
+      "analysts": 3,
+      "weighted_support": 1.0,
+      "snapshot_count": 3
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_ELEC",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 1.0,
+      "low_buy": 2.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 3.0,
+      "hold": 4.0,
+      "unknown": 0.0,
+      "directional_value": 0.85,
+      "tactical_activity": 0.6667,
+      "event_count": 12
+    },
+    "holding": {
+      "stocks": 3,
+      "analysts": 3,
+      "weighted_support": 1.1667,
+      "snapshot_count": 3
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_SOFTWARE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 1.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 2.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": -0.3667,
+      "tactical_activity": 0.0,
+      "event_count": 6
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_GENERAL",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 7,
+      "raw": 0.1429
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 0,
+      "negative": 0,
+      "net": 1,
+      "units": 1
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "CYCL_NONFERROUS",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 7,
+      "raw": 0.2857
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 0,
+      "net": 1,
+      "units": 2
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 6.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 5.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 4.0,
+      "hold": 6.0,
+      "unknown": 0.0,
+      "directional_value": 1.6,
+      "tactical_activity": 0.0,
+      "event_count": 22
+    },
+    "holding": {
+      "stocks": 5,
+      "analysts": 3,
+      "weighted_support": 4.8333,
+      "snapshot_count": 6
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "CYCL_CHEMICAL",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": -0.25,
+      "tactical_activity": 0.3333,
+      "event_count": 4
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.2,
+      "tactical_activity": 0.0,
+      "event_count": 2
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "NEW_ENERGY_UHV",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 7,
+      "raw": 0.1429
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 4.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.2667,
+      "tactical_activity": 0.0,
+      "event_count": 6
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "OTHER_BROKER",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 7,
+      "raw": 0.2857
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 0,
+      "net": 1,
+      "units": 2
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 2.0,
+      "hold": 2.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 4
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 2,
+      "weighted_support": 0.8333,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "OTHER_AGRICULTURE",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 7,
+      "raw": 0.1429
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 0,
+      "negative": 0,
+      "net": 1,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 0.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": -0.25,
+      "tactical_activity": 0.0,
+      "event_count": 1
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "OTHER_ROBOTICS",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 1.0,
+      "low_buy": 2.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 2.0,
+      "hold": 3.0,
+      "unknown": 0.0,
+      "directional_value": 1.2667,
+      "tactical_activity": 0.3333,
+      "event_count": 9
+    },
+    "holding": {
+      "stocks": 3,
+      "analysts": 3,
+      "weighted_support": 1.6667,
+      "snapshot_count": 3
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "OTHER_SPACE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 7,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 2
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.3333,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "OTHER_CONSUMER",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 7,
+      "raw": 0.2857
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 0,
+      "net": 1,
+      "units": 2
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 2.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": -0.75,
+      "tactical_activity": 0.0,
+      "event_count": 4
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_SEMI",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 9,
+      "raw": 0.2222
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 0,
+      "net": 1,
+      "units": 2
+    },
+    "trade": {
+      "buy": 3.0,
+      "add": 2.0,
+      "low_buy": 5.0,
+      "trial": 1.0,
+      "reduce": 2.0,
+      "sell": 0.0,
+      "clear": 1.0,
+      "watch": 12.0,
+      "hold": 6.0,
+      "unknown": 0.0,
+      "directional_value": 4.2833,
+      "tactical_activity": 1.0,
+      "event_count": 33
+    },
+    "holding": {
+      "stocks": 6,
+      "analysts": 4,
+      "weighted_support": 3.8333,
+      "snapshot_count": 6
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_OPTICS",
+    "coverage": {
+      "analysts": 3,
+      "direct_analyst_count": 3,
+      "eligible_analysts": 9,
+      "raw": 0.3333
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 1,
+      "negative": 0,
+      "net": 2,
+      "units": 3
+    },
+    "trade": {
+      "buy": 2.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 1.0,
+      "watch": 9.0,
+      "hold": 3.0,
+      "unknown": 0.0,
+      "directional_value": 0.3333,
+      "tactical_activity": 0.0,
+      "event_count": 15
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 2,
+      "weighted_support": 1.0,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_AI_COMPUTE",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 5.0,
+      "add": 2.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 3.0,
+      "sell": 1.0,
+      "clear": 1.0,
+      "watch": 24.0,
+      "hold": 3.0,
+      "unknown": 0.0,
+      "directional_value": 2.4667,
+      "tactical_activity": 0.0,
+      "event_count": 40
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 1,
+      "weighted_support": 0.8333,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_COMPONENT",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 1
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_PCB",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 0,
+      "negative": 0,
+      "net": 1,
+      "units": 1
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 2.0,
+      "unknown": 0.0,
+      "directional_value": 0.7333,
+      "tactical_activity": 0.0,
+      "event_count": 6
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 2,
+      "weighted_support": 0.8333,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_ELEC",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 2.0,
+      "add": 0.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 11.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 1.0167,
+      "tactical_activity": 0.0,
+      "event_count": 16
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.3333,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_SOFTWARE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 8.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": -0.1667,
+      "tactical_activity": 0.0,
+      "event_count": 10
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.3333,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_GENERAL",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 9,
+      "raw": 0.2222
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 0,
+      "net": 1,
+      "units": 2
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 9,
+      "raw": 0.2222
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 2,
+      "negative": 0,
+      "net": 0,
+      "units": 2
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 3.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": -0.4,
+      "tactical_activity": 0.0,
+      "event_count": 4
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "CYCL_NONFERROUS",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 9,
+      "raw": 0.2222
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 0,
+      "net": 1,
+      "units": 2
+    },
+    "trade": {
+      "buy": 2.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 5.0,
+      "hold": 7.0,
+      "unknown": 0.0,
+      "directional_value": 0.9833,
+      "tactical_activity": 0.0,
+      "event_count": 16
+    },
+    "holding": {
+      "stocks": 7,
+      "analysts": 2,
+      "weighted_support": 5.0,
+      "snapshot_count": 7
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "CYCL_CHEMICAL",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 9,
+      "raw": 0.2222
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 0,
+      "net": 1,
+      "units": 2
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 1.0,
+      "reduce": 4.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 4.0,
+      "hold": 5.0,
+      "unknown": 0.0,
+      "directional_value": -0.6833,
+      "tactical_activity": 0.0,
+      "event_count": 15
+    },
+    "holding": {
+      "stocks": 5,
+      "analysts": 3,
+      "weighted_support": 3.0,
+      "snapshot_count": 5
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "NEW_ENERGY_UHV",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 4.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.0,
+      "tactical_activity": 0.0,
+      "event_count": 4
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "OTHER_BROKER",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 3.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.3333,
+      "tactical_activity": 0.0,
+      "event_count": 5
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "OTHER_AGRICULTURE",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 9,
+      "raw": 0.2222
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 0,
+      "negative": 0,
+      "net": 2,
+      "units": 2
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 2.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": -0.55,
+      "tactical_activity": 0.0,
+      "event_count": 6
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "OTHER_ROBOTICS",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 2.0,
+      "add": 1.0,
+      "low_buy": 1.0,
+      "trial": 1.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 7.0,
+      "hold": 2.0,
+      "unknown": 0.0,
+      "directional_value": 1.1333,
+      "tactical_activity": 0.0,
+      "event_count": 15
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 2,
+      "weighted_support": 1.3333,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "OTHER_SPACE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 1.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": -0.2333,
+      "tactical_activity": 0.0,
+      "event_count": 3
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "OTHER_CONSUMER",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 6.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 0.35,
+      "tactical_activity": 0.0,
+      "event_count": 8
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_SEMI",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 9,
+      "raw": 0.2222
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 2,
+      "negative": 0,
+      "net": 0,
+      "units": 2
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 7.0,
+      "low_buy": 3.0,
+      "trial": 6.0,
+      "reduce": 7.0,
+      "sell": 3.0,
+      "clear": 0.0,
+      "watch": 40.0,
+      "hold": 3.0,
+      "unknown": 0.0,
+      "directional_value": 1.0333,
+      "tactical_activity": 0.5,
+      "event_count": 71
+    },
+    "holding": {
+      "stocks": 3,
+      "analysts": 3,
+      "weighted_support": 1.3333,
+      "snapshot_count": 3
+    }
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_OPTICS",
+    "coverage": {
+      "analysts": 4,
+      "direct_analyst_count": 4,
+      "eligible_analysts": 9,
+      "raw": 0.4444
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 3,
+      "negative": 0,
+      "net": 1,
+      "units": 4
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 2.0,
+      "low_buy": 2.0,
+      "trial": 3.0,
+      "reduce": 1.0,
+      "sell": 2.0,
+      "clear": 0.0,
+      "watch": 9.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 1.3667,
+      "tactical_activity": 0.0,
+      "event_count": 21
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.3333,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_AI_COMPUTE",
+    "coverage": {
+      "analysts": 3,
+      "direct_analyst_count": 3,
+      "eligible_analysts": 9,
+      "raw": 0.3333
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 0,
+      "negative": 1,
+      "net": 1,
+      "units": 3
+    },
+    "trade": {
+      "buy": 6.0,
+      "add": 11.0,
+      "low_buy": 6.0,
+      "trial": 5.0,
+      "reduce": 9.0,
+      "sell": 2.0,
+      "clear": 0.0,
+      "watch": 38.0,
+      "hold": 3.0,
+      "unknown": 0.0,
+      "directional_value": 6.6833,
+      "tactical_activity": 0.0,
+      "event_count": 80
+    },
+    "holding": {
+      "stocks": 3,
+      "analysts": 3,
+      "weighted_support": 1.3333,
+      "snapshot_count": 3
+    }
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_COMPONENT",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 0.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 1.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.7333,
+      "tactical_activity": 0.0,
+      "event_count": 3
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_PCB",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 3.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 11.0,
+      "hold": 2.0,
+      "unknown": 0.0,
+      "directional_value": 1.0167,
+      "tactical_activity": 0.5,
+      "event_count": 18
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 2,
+      "weighted_support": 0.8333,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_ELEC",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 2.0,
+      "low_buy": 3.0,
+      "trial": 1.0,
+      "reduce": 2.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 16.0,
+      "hold": 2.0,
+      "unknown": 0.0,
+      "directional_value": 1.2,
+      "tactical_activity": 0.0,
+      "event_count": 28
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 2,
+      "weighted_support": 0.8333,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_SOFTWARE",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 3.0,
+      "low_buy": 1.0,
+      "trial": 1.0,
+      "reduce": 1.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 8.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 1.3167,
+      "tactical_activity": 0.0,
+      "event_count": 15
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.5,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_GENERAL",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 9,
+      "raw": 0.2222
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 0,
+      "negative": 1,
+      "net": 0,
+      "units": 2
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 5.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": -1.3,
+      "tactical_activity": 0.0,
+      "event_count": 7
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "CYCL_NONFERROUS",
+    "coverage": {
+      "analysts": 4,
+      "direct_analyst_count": 4,
+      "eligible_analysts": 9,
+      "raw": 0.4444
+    },
+    "mention": {
+      "positive": 2,
+      "neutral": 2,
+      "negative": 0,
+      "net": 2,
+      "units": 4
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 3.0,
+      "low_buy": 4.0,
+      "trial": 1.0,
+      "reduce": 0.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 17.0,
+      "hold": 2.0,
+      "unknown": 0.0,
+      "directional_value": 3.7333,
+      "tactical_activity": 1.0,
+      "event_count": 30
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 1,
+      "weighted_support": 1.3333,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "CYCL_CHEMICAL",
+    "coverage": {
+      "analysts": 3,
+      "direct_analyst_count": 3,
+      "eligible_analysts": 9,
+      "raw": 0.3333
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 2,
+      "negative": 0,
+      "net": 1,
+      "units": 3
+    },
+    "trade": {
+      "buy": 3.0,
+      "add": 1.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 12.0,
+      "hold": 2.0,
+      "unknown": 0.0,
+      "directional_value": 1.4333,
+      "tactical_activity": 0.0,
+      "event_count": 21
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 1,
+      "weighted_support": 0.8333,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 2.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 2.0,
+      "hold": 1.0,
+      "unknown": 0.0,
+      "directional_value": 1.6333,
+      "tactical_activity": 0.0,
+      "event_count": 7
+    },
+    "holding": {
+      "stocks": 1,
+      "analysts": 1,
+      "weighted_support": 0.3333,
+      "snapshot_count": 1
+    }
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "NEW_ENERGY_UHV",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 9,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 3.0,
+      "low_buy": 2.0,
+      "trial": 0.0,
+      "reduce": 0.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 4.0,
+      "hold": 2.0,
+      "unknown": 0.0,
+      "directional_value": 1.3833,
+      "tactical_activity": 0.0,
+      "event_count": 11
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 2,
+      "weighted_support": 0.8333,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "OTHER_BROKER",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 3.0,
+      "add": 0.0,
+      "low_buy": 0.0,
+      "trial": 0.0,
+      "reduce": 2.0,
+      "sell": 0.0,
+      "clear": 0.0,
+      "watch": 3.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 1.8333,
+      "tactical_activity": 0.0,
+      "event_count": 8
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "OTHER_AGRICULTURE",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 9,
+      "raw": 0.2222
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 0,
+      "net": 1,
+      "units": 2
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 0.0,
+      "low_buy": 3.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 7.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": 0.2833,
+      "tactical_activity": 0.0,
+      "event_count": 12
+    },
+    "holding": null
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "OTHER_ROBOTICS",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 0,
+      "negative": 0,
+      "net": 1,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 2.0,
+      "low_buy": 2.0,
+      "trial": 0.0,
+      "reduce": 3.0,
+      "sell": 3.0,
+      "clear": 0.0,
+      "watch": 13.0,
+      "hold": 2.0,
+      "unknown": 0.0,
+      "directional_value": -0.6333,
+      "tactical_activity": 0.0,
+      "event_count": 25
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 2,
+      "weighted_support": 0.6667,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "OTHER_SPACE",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 0.0,
+      "add": 1.0,
+      "low_buy": 2.0,
+      "trial": 3.0,
+      "reduce": 2.0,
+      "sell": 1.0,
+      "clear": 0.0,
+      "watch": 6.0,
+      "hold": 2.0,
+      "unknown": 0.0,
+      "directional_value": 0.5333,
+      "tactical_activity": 0.0,
+      "event_count": 17
+    },
+    "holding": {
+      "stocks": 2,
+      "analysts": 1,
+      "weighted_support": 0.8333,
+      "snapshot_count": 2
+    }
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "OTHER_CONSUMER",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 9,
+      "raw": 0.1111
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": {
+      "buy": 1.0,
+      "add": 0.0,
+      "low_buy": 1.0,
+      "trial": 0.0,
+      "reduce": 1.0,
+      "sell": 2.0,
+      "clear": 0.0,
+      "watch": 11.0,
+      "hold": 0.0,
+      "unknown": 0.0,
+      "directional_value": -0.15,
+      "tactical_activity": 0.0,
+      "event_count": 16
+    },
+    "holding": null
+  }
+]

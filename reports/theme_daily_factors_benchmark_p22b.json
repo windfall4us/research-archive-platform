@@ -1,0 +1,85 @@
+{
+  "benchmark": "P2.2B Theme Daily Factors",
+  "overall": "GO",
+  "gates": {
+    "G1_direct_adt_dedupe": {
+      "pass": true,
+      "aggregated_adt_units": 134,
+      "raw_mentions": 186,
+      "mismatch_rows": 0,
+      "note": "186 原始 DIRECT mention 聚合为 analyst-theme-day 单位后进入 factor"
+    },
+    "G2_conf_060_gate": {
+      "pass": true,
+      "mapping_rows_total": 1092,
+      "heat_mapping_stocks": 337,
+      "heat_conf_values": [
+        0.6,
+        0.62,
+        0.65,
+        0.7,
+        0.75,
+        0.8,
+        0.85
+      ],
+      "used_mapping_rows": 842,
+      "note": "trade/holding 重建时仅消费 confidence>=0.60 的映射行（heat_map 构造即过滤）"
+    },
+    "G3_excluded_events": {
+      "pass": true,
+      "excluded_ids": [
+        1093,
+        1095,
+        1107
+      ],
+      "excluded_leaked_into_eligible": [],
+      "eligible_event_count": 934,
+      "note": "eligible 查询已排除 3 治理事件，trade 重建仅遍历 eligible（G3/G6 共用此集合）"
+    },
+    "G4_composite_no_split": {
+      "pass": true,
+      "composite_tactical_count": 18,
+      "composite_not_dot": [],
+      "note": "COMPOSITE_TACTICAL 全为 DO_T（方向0），天然不产生多主题 buy 信号；fractional 亦确保单事件不放大"
+    },
+    "G5_dot_no_direction": {
+      "pass": true,
+      "tactical_activity_sum": 17.9997,
+      "do_t_events": 18,
+      "theory_tactical_sum": 18.0,
+      "note": "DO_T 只计 tactical_activity，不进 directional_value"
+    },
+    "G6_fractional_conservation": {
+      "pass": true,
+      "violations": [],
+      "note": "fractional：单事件映射 N 主题时每主题 weight/N，Σ=weight 守恒（防膨胀）"
+    },
+    "G7_lineage": {
+      "pass": true,
+      "bad_lineage": [],
+      "note": "coverage/mention←analyst_theme_mentions, trade←analyst_stock_events, holding←analyst_position_snapshots"
+    },
+    "G8_rerun_dedupe": {
+      "pass": true,
+      "total_rows": 152,
+      "unique_keys": 152,
+      "dup_keys": 0,
+      "note": "(date,theme) 唯一；重跑覆盖式写回 JSON，不累积重复"
+    }
+  },
+  "grid": {
+    "rows": 152,
+    "dates": 8,
+    "themes": 19,
+    "active_rows": 131
+  },
+  "fact_sources": {
+    "physical_events": 937,
+    "excluded_events": 3,
+    "eligible_events": 934,
+    "direct_mentions_raw": 186,
+    "adt_units_after_dedupe": 134,
+    "holding_snapshots": 124,
+    "heat_mapped_stocks": 337
+  }
+}
