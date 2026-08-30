@@ -407,7 +407,16 @@ def build():
         p = ROOT / rel
         try:
             data = json.loads(p.read_text(encoding="utf-8"))
-            n = len(data) if isinstance(data, list) else (len(data.get("days", {})) if rel.endswith("all_dates.json") else len(data.get("per_stock", {})))
+            if isinstance(data, list):
+                n = len(data)
+            elif rel.endswith("all_dates.json"):
+                n = len(data.get("days", {}))
+            elif rel.endswith("stock_consensus_factors.json"):      # P3.1 明细在 per_stock_total
+                n = len(data.get("per_stock_total", {}))
+            elif rel.endswith("analyst_action_flow.json"):           # P3.2 明细在 per_stock_flow_summary
+                n = len(data.get("per_stock_flow_summary", {}))
+            else:
+                n = len(data.get("per_stock", {}))
         except Exception:
             n = -1
         pipeline[rel.split("/")[-1]] = {"file": rel, "md5": md5_file(p), "rows": n}

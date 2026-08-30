@@ -364,7 +364,7 @@ def main():
     # 6) 生成并发布 HTML
     date = latest_data or datetime.now(BEIJING_TZ).strftime("%Y-%m-%d")
     HTML_OUT_DIR.mkdir(parents=True, exist_ok=True)
-    rc, out = run("render_consensus_snapshot_html.py", str(snap_path), str(HTML_OUT_DIR / f"{date}.html"))
+    rc, out = run("render_consensus_snapshot_html.py", "--out-dir", str(HTML_OUT_DIR))
     if rc != 0:
         fail("HTML render fail", f"render_consensus_snapshot_html 失败:\n{out}")
     local_html = HTML_OUT_DIR / f"{date}.html"
