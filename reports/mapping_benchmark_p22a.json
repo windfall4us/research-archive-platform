@@ -2,33 +2,31 @@
   "benchmark": "P2.2A Stock→Theme Mapping",
   "coverage": {
     "eligible_stocks": 350,
-    "heat_eligible_stocks": 333,
-    "coverage_rate": 95.1,
-    "rows_total": 1088,
-    "rows_heat": 838,
+    "heat_eligible_stocks": 337,
+    "coverage_rate": 96.3,
+    "rows_total": 1092,
+    "rows_heat": 842,
     "by_source": {
       "MASTER_INDUSTRY": 177,
       "MASTER_CONCEPT": 880,
-      "DIRECT_CONTEXT": 31
+      "DIRECT_CONTEXT": 31,
+      "MANUAL": 4
     },
     "by_source_heat": {
       "MASTER_INDUSTRY": 177,
       "MASTER_CONCEPT": 630,
-      "DIRECT_CONTEXT": 31
+      "DIRECT_CONTEXT": 31,
+      "MANUAL": 4
     },
     "unmapped": [
       "000802",
-      "002192",
-      "002258",
       "002487",
-      "002532",
       "002674",
       "300191",
       "300314",
       "300615",
       "600272",
       "600613",
-      "600888",
       "601288",
       "601777",
       "601988",
@@ -52,7 +50,7 @@
   },
   "conflict": {
     "per_stock_topic_dist": {
-      "1": 95,
+      "1": 99,
       "2": 131,
       "3": 107
     },
@@ -64,9 +62,9 @@
     "TECH_SEMI": 182,
     "TECH_AI_COMPUTE": 139,
     "TECH_ELEC": 62,
-    "CYCL_NONFERROUS": 58,
+    "CYCL_NONFERROUS": 61,
     "TECH_SOFTWARE": 56,
-    "CYCL_CHEMICAL": 52,
+    "CYCL_CHEMICAL": 53,
     "OTHER_ROBOTICS": 52,
     "NEW_ENERGY_UHV": 37,
     "TECH_PCB": 35,

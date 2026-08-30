@@ -1,0 +1,206 @@
+{
+  "phase": "P2.4",
+  "overall": "GO",
+  "gates": {
+    "G10": {
+      "pass": true,
+      "detail": "重跑成功; 行数差异=无"
+    },
+    "G11": {
+      "pass": true,
+      "detail": "hash 差异=无（4 个输出）"
+    },
+    "G12": {
+      "pass": true,
+      "detail": "原始快照被修改=无（5 个）"
+    },
+    "G1": {
+      "pass": true,
+      "detail": "market 行=69, UNKNOWN=9, eligible=60; P2.0D 固化 aggregation_eligible_market_views=60"
+    },
+    "G2": {
+      "pass": true,
+      "detail": "mentions=186, orphan_record=0, orphan_snapshot=0"
+    },
+    "G3": {
+      "pass": true,
+      "detail": "eligible=350, heat_stocks=337, coverage=96.3%（P2.2A benchmark 要求 ≥95%）; unmapped=13 只（P2.2A 判定可接受）"
+    },
+    "G4": {
+      "pass": true,
+      "detail": "exclusions 表命中=3（应 3）; 泄漏进 eligible 计算集合=0（应 0，即 3 事件全部被 exclusions 表覆盖）"
+    },
+    "G8": {
+      "pass": true,
+      "detail": "08-16 19 行全 LOW_SIGNAL（非状态=无，高置信=无）; heat=0 行 34 全可解释（34）"
+    },
+    "G9": {
+      "pass": true,
+      "detail": "非法跳转=无"
+    },
+    "G5": {
+      "pass": true,
+      "detail": "P2.2B benchmark exit=0（0=GO）"
+    },
+    "G6": {
+      "pass": true,
+      "detail": "P2.2D benchmark exit=0（0=GO）"
+    },
+    "G7": {
+      "pass": true,
+      "detail": "P2.3 benchmark exit=0（0=GO）"
+    }
+  },
+  "audits": {
+    "A1_0816_low_signal_isolation": {
+      "rows": 19,
+      "top": {
+        "theme_id": "TECH_SEMI",
+        "heat_score": 67.71,
+        "heat_level": "HEATING",
+        "heat_status": "LOW_SIGNAL",
+        "signal_confidence": "LOW",
+        "theme_signal_analysts": 1
+      },
+      "interpretation": "08-16 全 19 行 LOW_SIGNAL；Top1 半导体 热度 67.71 但仅 1 位分析师有有效信号 → 低置信而非加热"
+    },
+    "A2_tech_ai_compute_cooling_boundary": {
+      "date": "2026-08-28",
+      "theme": "TECH_AI_COMPUTE",
+      "heat": 24.93,
+      "d1": 11.97,
+      "d3": 10.27,
+      "observed": "EMERGING",
+      "effective": "COOLING",
+      "note": "TRANSITION_BLOCKED",
+      "drivers": [
+        "TRADE_ACCELERATION",
+        "COVERAGE_EXPANSION",
+        "MENTION_POSITIVE_SHIFT",
+        "HOLDING_SUPPORT_STRENGTHENING"
+      ],
+      "interpretation": "已明显回暖(d1=+11.97,d3=+10.27,heat=24.93)但 effective 仍 COOLING：transition graph 中 COOLING 只能经 HEATING(≥25) 回暖，24.93 差 0.07 未到阈值。这是 v1 保守规则（不因单次 EMERGING 跳出 COOLING）的预期结果，非 bug。留待样本 15-20 日后观察是否需加 COOLING→EMERGING 边。"
+    },
+    "A3_daily_top_theme_momentum_explainable": {
+      "by_date": {
+        "2026-08-14": {
+          "top_theme": "TECH_AI_COMPUTE",
+          "top_heat": 36.61,
+          "top_level": "COOL",
+          "top_status": "VALID",
+          "momentum_eff": null,
+          "momentum_obs": "UNCLASSIFIED_BASELINE"
+        },
+        "2026-08-16": {
+          "top_theme": "TECH_SEMI",
+          "top_heat": 67.71,
+          "top_level": "HEATING",
+          "top_status": "LOW_SIGNAL",
+          "momentum_eff": null,
+          "momentum_obs": "HEATING"
+        },
+        "2026-08-17": {
+          "top_theme": "TECH_SEMI",
+          "top_heat": 32.98,
+          "top_level": "COOL",
+          "top_status": "VALID",
+          "momentum_eff": "HEATING",
+          "momentum_obs": "HEATING"
+        },
+        "2026-08-18": {
+          "top_theme": "TECH_SEMI",
+          "top_heat": 35.35,
+          "top_level": "COOL",
+          "top_status": "VALID",
+          "momentum_eff": "STABLE",
+          "momentum_obs": "STABLE"
+        },
+        "2026-08-19": {
+          "top_theme": "CYCL_NONFERROUS",
+          "top_heat": 21.94,
+          "top_level": "COLD",
+          "top_status": "VALID",
+          "momentum_eff": "COOLING",
+          "momentum_obs": "EMERGING"
+        },
+        "2026-08-26": {
+          "top_theme": "CYCL_NONFERROUS",
+          "top_heat": 22.7,
+          "top_level": "COLD",
+          "top_status": "VALID",
+          "momentum_eff": "COOLING",
+          "momentum_obs": "STABLE"
+        },
+        "2026-08-27": {
+          "top_theme": "TECH_SEMI",
+          "top_heat": 26.85,
+          "top_level": "COOL",
+          "top_status": "VALID",
+          "momentum_eff": "HEATING",
+          "momentum_obs": "HEATING"
+        },
+        "2026-08-28": {
+          "top_theme": "CYCL_NONFERROUS",
+          "top_heat": 25.47,
+          "top_level": "COOL",
+          "top_status": "VALID",
+          "momentum_eff": "HEATING",
+          "momentum_obs": "HEATING"
+        }
+      }
+    }
+  },
+  "reports": {
+    "data_parser_readiness": {
+      "p20b": {
+        "overall": "GO (P2.0B)"
+      },
+      "p20c": {
+        "overall": "GO (P2.0C)"
+      },
+      "p20d": {
+        "overall": "GO (P2.0D)"
+      },
+      "key": {
+        "mv_total": 69,
+        "mv_eligible": 60,
+        "tm_total": 186,
+        "stock_events": 937,
+        "exclusions": 3
+      }
+    },
+    "market_direction": {
+      "overall": "GO (P2.1)",
+      "notes": "按日聚合 + 三轴独立 + Coverage Gate；风格分组解释层"
+    },
+    "theme_heat": {
+      "overall": "GO (P2.2C/P2.2D)",
+      "grid": "152 行（8 日期 × 19 L2）",
+      "zero_explainable": "34/34"
+    },
+    "theme_momentum": {
+      "overall": "GO (P2.3)",
+      "rows": 152,
+      "eff_dist": {
+        "FADING": 13,
+        "DISCOVERY": 23,
+        "COOLING": 20,
+        "HEATING": 3,
+        "EMERGING": 5,
+        "STABLE": 1
+      }
+    }
+  },
+  "rerun": {
+    "ok": true,
+    "steps": [
+      "P2.0B market_view_ingest",
+      "P2.0C theme_mention_extract",
+      "P2.2A stock_theme_mapping",
+      "P2.2B theme_daily_factors",
+      "P2.2C theme_heat_score",
+      "P2.3 theme_momentum",
+      "P2.1 market_direction"
+    ]
+  }
+}

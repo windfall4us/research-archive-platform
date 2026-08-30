@@ -37,8 +37,15 @@ P22 = ROOT / "data" / "p22a"
 LEXICON = ROOT / "scripts" / "theme_lexicon_p20c.json"
 VALID_FROM = "2026-08-30"
 
-# 人工确认的 MANUAL 补充（用户确认后在此追加；当前留空待确认）
-MANUAL_SEEDS = {}
+# 人工确认的 MANUAL 补充（P2.2A 验收时人工补录，固化进脚本保证可重建：
+# 002192 融捷股份→CYCL_NONFERROUS / 002532 天山铝业→CYCL_NONFERROUS /
+# 002258 利尔化学→CYCL_CHEMICAL / 600888 新疆众和→CYCL_NONFERROUS）
+MANUAL_SEEDS = {
+    ("002192", "CYCL_NONFERROUS"): 0.85,
+    ("002532", "CYCL_NONFERROUS"): 0.85,
+    ("002258", "CYCL_CHEMICAL"): 0.85,
+    ("600888", "CYCL_NONFERROUS"): 0.85,
+}
 
 SORT_PRIORITY = {"DIRECT_STRONG": 100.0, "DIRECT_NEIGHBOR": 95.0, "MASTER_INDUSTRY": 90.0, "MASTER_CONCEPT": 80.0}
 HEAT_MIN = 0.60
