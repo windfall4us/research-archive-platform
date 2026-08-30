@@ -112,6 +112,9 @@ def build():
     pos_count = {}
     for code, n in con.execute("SELECT stock_code, COUNT(*) FROM analyst_position_snapshots GROUP BY stock_code"):
         pos_count[str(code).zfill(6)] = n
+    n_positions_total = con.execute("SELECT COUNT(*) FROM analyst_position_snapshots").fetchone()[0]
+    n_theme_mentions_total = con.execute("SELECT COUNT(*) FROM analyst_theme_mentions").fetchone()[0]
+    n_stock_events_total = con.execute("SELECT COUNT(*) FROM analyst_stock_events").fetchone()[0]
     con.close()
 
     # ---- 索引产物 ----
@@ -430,9 +433,9 @@ def build():
             "n_stocks": len(f41.get("per_stock", {})),
             "n_mapped": len(f41.get("per_stock", {})) - n_unmapped,
             "n_unmapped": n_unmapped,
-            "n_stock_events": f33.get("summary", {}).get("n_stocks") and None or None,  # 由 pipeline 提供行级
-            "n_theme_mentions": 186,
-            "n_positions": 124,
+            "n_stock_events": n_stock_events_total,
+            "n_theme_mentions": n_theme_mentions_total,
+            "n_positions": n_positions_total,
             "system_status": "HEALTHY",
             "signal_warnings": {"LOW_SIGNAL": low_signal, "INSUFFICIENT_DATA": insuff},
             "pipeline": pipeline,
