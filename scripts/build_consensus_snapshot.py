@@ -115,7 +115,11 @@ def build():
     n_positions_total = con.execute("SELECT COUNT(*) FROM analyst_position_snapshots").fetchone()[0]
     n_theme_mentions_total = con.execute("SELECT COUNT(*) FROM analyst_theme_mentions").fetchone()[0]
     n_stock_events_total = con.execute("SELECT COUNT(*) FROM analyst_stock_events").fetchone()[0]
+    # 个股共识新鲜度：P3.3/P4.x 实际消费的个股事件/持仓最新日期（08-29 若只有市场观点无个股事件 → 停在上一事件日）
+    ev_max = con.execute("SELECT MAX(event_date) FROM analyst_stock_events").fetchone()[0]
+    pos_max = con.execute("SELECT MAX(snapshot_date) FROM analyst_position_snapshots").fetchone()[0]
     con.close()
+    stock_asof = max([d for d in (ev_max, pos_max) if d]) if (ev_max or pos_max) else None
 
     # ---- 索引产物 ----
     # theme 名称/热度：p22c 按 (date, theme_id)；p23 动量；p22b 原始因子
@@ -189,12 +193,15 @@ def build():
         "holding_turning_negative": p42_summary.get("n_holding_turning_negative", 0),
     }
 
-    # 最新日热主题 TOP（heat_score 降序，取前 10）
+    # 最新日热主题：分层（用户 2026-08-30 产品口径）
+    #   * top_themes   = heat_status ∈ {VALID, LOW_SIGNAL}  → 进入正式「今日主题 TOP」
+    #   * insuff_themes = heat_status == INSUFFICIENT_DATA   → 单独「数据不足主题」区，仅供观察，不参与排名
     latest_heat = heat_by.get(latest_date, {})
     top_themes = []
+    insuff_themes = []
     for tid, r in latest_heat.items():
         mom = mom_by.get(latest_date, {}).get(tid, {})
-        top_themes.append({
+        entry = {
             "theme_id": tid,
             "theme_name": r.get("theme_name", tid),
             "heat_score": r.get("heat_score"),
@@ -202,9 +209,19 @@ def build():
             "heat_status": r.get("heat_status"),
             "signal_confidence": r.get("signal_confidence"),
             "momentum_state": mom.get("effective_momentum_state") or mom.get("observed_momentum_state"),
-        })
+        }
+        (insuff_themes if r.get("heat_status") == "INSUFFICIENT_DATA" else top_themes).append(entry)
     top_themes.sort(key=lambda x: -(x["heat_score"] or 0))
+    insuff_themes.sort(key=lambda x: -(x["heat_score"] or 0))
     overview["top_themes"] = top_themes[:10]
+    overview["insuff_themes"] = insuff_themes
+    # 数据质量摘要（顶部 KPI：主题正常 / 低信号 / 数据不足）
+    overview["data_quality"] = {
+        "valid": sum(1 for t in top_themes if t["heat_status"] == "VALID"),
+        "low_signal": sum(1 for t in top_themes if t["heat_status"] == "LOW_SIGNAL"),
+        "insufficient": len(insuff_themes),
+        "total": len(latest_heat),
+    }
 
     # ---- 组装 themes（latest + history）----
     theme_ids = sorted({r["theme_id"] for r in f22c})
@@ -429,6 +446,28 @@ def build():
     low_signal = sorted(tid for tid, r in latest_heat.items() if r.get("signal_confidence") == "LOW")
     insuff = sorted(tid for tid, r in latest_heat.items() if r.get("heat_status") in ("INSUFFICIENT_DATA", "LOW_SIGNAL"))
 
+    # ---- per-layer freshness（2026-08-30 产品口径：各数据层有自己的 as_of，不用单一 meta.latest_date）----
+    theme_dates = sorted({r["date"] for r in f22c})
+    freshness = {
+        "latest": latest_date,
+        "market": {
+            "as_of": latest_date,
+            "note": "P2.1 市场方向（all_dates.json 最新日）",
+        },
+        "themes": {
+            "as_of": theme_dates[-1] if theme_dates else latest_date,
+            "note": "P2.2C 主题热度（theme_heat_scores.json 最新日）",
+        },
+        "stock_consensus": {
+            "as_of": stock_asof,
+            "note": "P3.3 个股共识（DB 个股事件/持仓截至日，无新事件则停在上一事件日）",
+        },
+        "cross_layer": {
+            "as_of": stock_asof,
+            "note": "P4.3 跨层状态（状态主要由个股共识驱动，故随 stock_consensus）",
+        },
+    }
+
     snapshot = {
         "meta": {
             "schema_version": "1.0",
@@ -447,6 +486,8 @@ def build():
             "n_positions": n_positions_total,
             "system_status": "HEALTHY",
             "signal_warnings": {"LOW_SIGNAL": low_signal, "INSUFFICIENT_DATA": insuff},
+            "freshness": freshness,
+            "data_quality": overview["data_quality"],
             "pipeline": pipeline,
         },
         "overview": overview,
