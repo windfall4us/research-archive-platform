@@ -155,6 +155,22 @@
     "note": "SELF_HOLD_NO_OBSERVED"
   },
   {
+    "date": "2026-08-29",
+    "theme_id": "CYCL_CHEMICAL",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": "DISCOVERY",
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
+  },
+  {
     "date": "2026-08-14",
     "theme_id": "CYCL_NONFERROUS",
     "theme_name": "有色",
@@ -317,6 +333,22 @@
     "note": "UPGRADE"
   },
   {
+    "date": "2026-08-29",
+    "theme_id": "CYCL_NONFERROUS",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": "HEATING",
+    "momentum_status": null,
+    "signal_confidence": "MEDIUM",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
+  },
+  {
     "date": "2026-08-14",
     "theme_id": "MED_INNOVATIVE_DRUG",
     "theme_name": "创新药",
@@ -471,6 +503,22 @@
     "note": "PENDING_DOWNGRADE"
   },
   {
+    "date": "2026-08-29",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": "EMERGING",
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
+  },
+  {
     "date": "2026-08-14",
     "theme_id": "NEW_ENERGY_ELECTROLYTE",
     "theme_name": "电解液/VC",
@@ -615,6 +663,22 @@
     "note": "NO_STATE"
   },
   {
+    "date": "2026-08-29",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": null,
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
+  },
+  {
     "date": "2026-08-14",
     "theme_id": "NEW_ENERGY_SOLID_BATTERY",
     "theme_name": "固态电池",
@@ -752,6 +816,22 @@
       "HOLDING_SUPPORT_STRENGTHENING"
     ],
     "note": "NO_STATE"
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": null,
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
   },
   {
     "date": "2026-08-14",
@@ -904,6 +984,22 @@
       "HOLDING_SUPPORT_STRENGTHENING"
     ],
     "note": "NO_STATE"
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "NEW_ENERGY_UHV",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": null,
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
   },
   {
     "date": "2026-08-14",
@@ -1062,6 +1158,22 @@
     "note": "SELF_HOLD_NO_OBSERVED"
   },
   {
+    "date": "2026-08-29",
+    "theme_id": "OTHER_AGRICULTURE",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": "DISCOVERY",
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
+  },
+  {
     "date": "2026-08-14",
     "theme_id": "OTHER_BROKER",
     "theme_name": "券商",
@@ -1216,6 +1328,22 @@
     "note": "NO_STATE"
   },
   {
+    "date": "2026-08-29",
+    "theme_id": "OTHER_BROKER",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": null,
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
+  },
+  {
     "date": "2026-08-14",
     "theme_id": "OTHER_CONSUMER",
     "theme_name": "消费白马",
@@ -1364,6 +1492,22 @@
       "HOLDING_SUPPORT_WEAKENING"
     ],
     "note": "TRANSITION_BLOCKED"
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "OTHER_CONSUMER",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": "DISCOVERY",
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
   },
   {
     "date": "2026-08-14",
@@ -1526,6 +1670,22 @@
     "note": "NO_STATE"
   },
   {
+    "date": "2026-08-29",
+    "theme_id": "OTHER_ROBOTICS",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": null,
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
+  },
+  {
     "date": "2026-08-14",
     "theme_id": "OTHER_SPACE",
     "theme_name": "商业航天",
@@ -1678,6 +1838,22 @@
       "HOLDING_SUPPORT_STRENGTHENING"
     ],
     "note": "STATE_MACHINE_ENTRY"
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "OTHER_SPACE",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": "FADING",
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
   },
   {
     "date": "2026-08-14",
@@ -1845,6 +2021,22 @@
     "note": "TRANSITION_BLOCKED"
   },
   {
+    "date": "2026-08-29",
+    "theme_id": "TECH_AI_COMPUTE",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": "COOLING",
+    "momentum_status": null,
+    "signal_confidence": "LOW",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
+  },
+  {
     "date": "2026-08-14",
     "theme_id": "TECH_COMPONENT",
     "theme_name": "电子元件",
@@ -2000,6 +2192,22 @@
     "note": "TRANSITION_BLOCKED"
   },
   {
+    "date": "2026-08-29",
+    "theme_id": "TECH_COMPONENT",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": "DISCOVERY",
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
+  },
+  {
     "date": "2026-08-14",
     "theme_id": "TECH_ELEC",
     "theme_name": "消费电子",
@@ -2149,6 +2357,22 @@
       "HOLDING_SUPPORT_STRENGTHENING"
     ],
     "note": "SELF_HOLD"
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "TECH_ELEC",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": "FADING",
+    "momentum_status": null,
+    "signal_confidence": "LOW",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
   },
   {
     "date": "2026-08-14",
@@ -2302,6 +2526,22 @@
       "MENTION_NEGATIVE_SHIFT"
     ],
     "note": "SELF_HOLD_NO_OBSERVED"
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "TECH_GENERAL",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": "DISCOVERY",
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
   },
   {
     "date": "2026-08-14",
@@ -2465,6 +2705,22 @@
     "note": "TRANSITION_BLOCKED"
   },
   {
+    "date": "2026-08-29",
+    "theme_id": "TECH_OPTICS",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": "COOLING",
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
+  },
+  {
     "date": "2026-08-14",
     "theme_id": "TECH_PCB",
     "theme_name": "PCB电路板",
@@ -2615,6 +2871,22 @@
       "MENTION_NEGATIVE_SHIFT"
     ],
     "note": "SELF_HOLD_NO_OBSERVED"
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "TECH_PCB",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": "FADING",
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
   },
   {
     "date": "2026-08-14",
@@ -2784,6 +3056,22 @@
     "note": "SEVERE_DROP_IMMEDIATE"
   },
   {
+    "date": "2026-08-29",
+    "theme_id": "TECH_SEMI",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": "COOLING",
+    "momentum_status": null,
+    "signal_confidence": "LOW",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
+  },
+  {
     "date": "2026-08-14",
     "theme_id": "TECH_SOFTWARE",
     "theme_name": "软件",
@@ -2929,5 +3217,21 @@
       "COVERAGE_EXPANSION"
     ],
     "note": "NO_STATE"
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "TECH_SOFTWARE",
+    "heat_score": null,
+    "delta_1d": null,
+    "delta_3d": null,
+    "delta1_reference_date": null,
+    "delta1_reference_status": null,
+    "observed_momentum_state": null,
+    "effective_momentum_state": null,
+    "momentum_status": null,
+    "signal_confidence": "NONE",
+    "heat_status": "INSUFFICIENT_DATA",
+    "momentum_drivers": [],
+    "note": "INSUFFICIENT_DATA_SKIP"
   }
 ]

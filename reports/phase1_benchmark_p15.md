@@ -2,35 +2,35 @@
 
 ## 1. 输入与版本
 - schema_version: 3
-- source_snapshots: ['2026-08-27', '2026-08-28']
-- ingest_runs: 13 条；parser 版本: [{'parser_version': 'p14-diff-v2', 'c': 3, 'latest': 13}, {'parser_version': 'v1.1', 'c': 10, 'latest': 12}]
+- source_snapshots: ['2026-08-27', '2026-08-28', '2026-08-29']
+- ingest_runs: 52 条；parser 版本: [{'parser_version': 'p14-diff-v2', 'c': 16, 'latest': 52}, {'parser_version': 'v1.1', 'c': 36, 'latest': 51}]
 - 重跑链路: ingest_consensus_p12.py, ingest_position_p13.py, ingest_revision_p14.py
 
 ## 2. 全链路重跑（幂等）
 | script | run_id | inserted | skipped | hash | error |
 |---|---|---|---|---|---|
-| ingest_consensus_p12.py | 14 | 0 | 934 | 478a7c4f712b8bce | 0 |
-| ingest_position_p13.py | 15 | 0 | 124 | 8826975fa9b8fb14 | 0 |
-| ingest_revision_p14.py | 16 | 0 | 336 | 24e470236701e0e1 | 0 |
+| ingest_consensus_p12.py | 53 | 0 | 934 | 478a7c4f712b8bce | 0 |
+| ingest_position_p13.py | 54 | 0 | 124 | 8826975fa9b8fb14 | 0 |
+| ingest_revision_p14.py | 55 | 0 | 336 | 1ee63afa17b577d7 | 0 |
 
 ## 3. 7 个核心 Gate
 
 | Gate | 判定 | 明细 |
 |---|---|---|
-| G1_duplicate_ingest | ✅ | [{'script': 'ingest_consensus_p12.py', 'exit': 0, 'run_id': 14, 'inserted': 0, 'skipped': 934, 'hash': '478a7c4f712b8bce', 'error_count': 0}, {'script': 'ingest_position_p13.py', 'exit': 0, 'run_id': 15, 'inserted': 0, 'skipped': 124, 'hash': '8826975fa9b8fb14', 'error_count': 0}, {'script': 'ingest_revision_p14.py', 'exit': 0, 'run_id': 16, 'inserted': 0, 'skipped': 336, 'hash': '24e470236701e0e1', 'error_count': 0}] |
+| G1_duplicate_ingest | ✅ | [{'script': 'ingest_consensus_p12.py', 'exit': 0, 'run_id': 53, 'inserted': 0, 'skipped': 934, 'hash': '478a7c4f712b8bce', 'error_count': 0}, {'script': 'ingest_position_p13.py', 'exit': 0, 'run_id': 54, 'inserted': 0, 'skipped': 124, 'hash': '8826975fa9b8fb14', 'error_count': 0}, {'script': 'ingest_revision_p14.py', 'exit': 0, 'run_id': 55, 'inserted': 0, 'skipped': 336, 'hash': '1ee63afa17b577d7', 'error_count': 0}] |
 | G2_a_share_resolvable | ✅ | total=937, resolvable=937, by=[('ALIAS', 30), ('EXACT', 907)] |
 | G3_false_executed | ✅ | risk_executed=121 (BUY族+SELL族), non_reproducible=0 |
 | G4_holding_to_buy | ✅ | position_snapshots not_holding=0, buy_like=0 |
-| G5_revision_traceable | ✅ | revisions=336, orphan=0, non_contiguous_logicals=0 |
+| G5_revision_traceable | ✅ | revisions=491, orphan=0, non_contiguous_logicals=0 |
 | G6_source_lineage | ✅ | bad_lineage=0 (events+positions+revisions) |
-| G7_repeat_run_consistent | ✅ | {'events': {'pre': '478a7c4f712b8bce', 'post': '478a7c4f712b8bce'}, 'positions': {'pre': '8826975fa9b8fb14', 'post': '8826975fa9b8fb14'}, 'revisions': {'pre': '24e470236701e0e1', 'post': '24e470236701e0e1'}} |
+| G7_repeat_run_consistent | ✅ | {'events': {'pre': '478a7c4f712b8bce', 'post': '478a7c4f712b8bce'}, 'positions': {'pre': '8826975fa9b8fb14', 'post': '8826975fa9b8fb14'}, 'revisions': {'pre': '1ee63afa17b577d7', 'post': '1ee63afa17b577d7'}} |
 
 ## 4. 辅助审计指标
-- A1 行数: {'analyst_stock_events': 937, 'analyst_position_snapshots': 124, 'record_revisions': 336, 'analyst_profiles': 10, 'ingest_runs': 16}
-- A2 分层: {'STOCK': 808, 'THEME': 34, 'COMPOSITE': 35, 'MARKET': 9, 'OUT_OF_SCOPE': 11, 'UNKNOWN': 5}
+- A1 行数: {'analyst_stock_events': 937, 'analyst_position_snapshots': 124, 'record_revisions': 600, 'analyst_profiles': 10, 'ingest_runs': 55}
+- A2 分层: {'STOCK': 696, 'THEME': 34, 'COMPOSITE': 35, 'MARKET': 9, 'OUT_OF_SCOPE': 9, 'UNKNOWN': 7}
 - A3 冲突: {'CLEAR+HOLDING': 0, 'SELL+HOLDING': 1}
-- A4 revision severity: {'ROLE': 99, 'SEVERE': 237}
-- A5 版本: {'schema_version': 3, 'parser': 'v1.1', 'resolver': 'exact-alias-v1', 'snapshots': ['2026-08-27', '2026-08-28']}
+- A4 revision severity: {'ROLE': 208, 'SEVERE': 392}
+- A5 版本: {'schema_version': 3, 'parser': 'v1.1', 'resolver': 'exact-alias-v1', 'snapshots': ['2026-08-27', '2026-08-28', '2026-08-29']}
 
 ## 5. Data Contract Summary（Phase 1 锁定边界）
 

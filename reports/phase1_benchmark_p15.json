@@ -13,19 +13,25 @@
         "source": "vip0",
         "snapshot_date": "2026-08-28",
         "record_count": 902
+      },
+      {
+        "snapshot_id": 23,
+        "source": "vip0",
+        "snapshot_date": "2026-08-29",
+        "record_count": 790
       }
     ],
-    "ingest_runs_count": 13,
+    "ingest_runs_count": 52,
     "parser_versions": [
       {
         "parser_version": "p14-diff-v2",
-        "c": 3,
-        "latest": 13
+        "c": 16,
+        "latest": 52
       },
       {
         "parser_version": "v1.1",
-        "c": 10,
-        "latest": 12
+        "c": 36,
+        "latest": 51
       }
     ]
   },
@@ -33,7 +39,7 @@
     {
       "script": "ingest_consensus_p12.py",
       "exit": 0,
-      "run_id": 14,
+      "run_id": 53,
       "inserted": 0,
       "skipped": 934,
       "hash": "478a7c4f712b8bce",
@@ -42,7 +48,7 @@
     {
       "script": "ingest_position_p13.py",
       "exit": 0,
-      "run_id": 15,
+      "run_id": 54,
       "inserted": 0,
       "skipped": 124,
       "hash": "8826975fa9b8fb14",
@@ -51,10 +57,10 @@
     {
       "script": "ingest_revision_p14.py",
       "exit": 0,
-      "run_id": 16,
+      "run_id": 55,
       "inserted": 0,
       "skipped": 336,
-      "hash": "24e470236701e0e1",
+      "hash": "1ee63afa17b577d7",
       "error_count": 0
     }
   ],
@@ -64,7 +70,7 @@
       {
         "script": "ingest_consensus_p12.py",
         "exit": 0,
-        "run_id": 14,
+        "run_id": 53,
         "inserted": 0,
         "skipped": 934,
         "hash": "478a7c4f712b8bce",
@@ -73,7 +79,7 @@
       {
         "script": "ingest_position_p13.py",
         "exit": 0,
-        "run_id": 15,
+        "run_id": 54,
         "inserted": 0,
         "skipped": 124,
         "hash": "8826975fa9b8fb14",
@@ -82,10 +88,10 @@
       {
         "script": "ingest_revision_p14.py",
         "exit": 0,
-        "run_id": 16,
+        "run_id": 55,
         "inserted": 0,
         "skipped": 336,
-        "hash": "24e470236701e0e1",
+        "hash": "1ee63afa17b577d7",
         "error_count": 0
       }
     ]
@@ -102,8 +108,8 @@
         "post": "8826975fa9b8fb14"
       },
       "revisions": {
-        "pre": "24e470236701e0e1",
-        "post": "24e470236701e0e1"
+        "pre": "1ee63afa17b577d7",
+        "post": "1ee63afa17b577d7"
       }
     }
   },
@@ -122,7 +128,7 @@
   },
   "G5_revision_traceable": {
     "pass": true,
-    "detail": "revisions=336, orphan=0, non_contiguous_logicals=0"
+    "detail": "revisions=491, orphan=0, non_contiguous_logicals=0"
   },
   "G6_source_lineage": {
     "pass": true,
@@ -131,25 +137,25 @@
   "A1_row_counts": {
     "analyst_stock_events": 937,
     "analyst_position_snapshots": 124,
-    "record_revisions": 336,
+    "record_revisions": 600,
     "analyst_profiles": 10,
-    "ingest_runs": 16
+    "ingest_runs": 55
   },
   "A2_entity_bucket": {
-    "STOCK": 808,
+    "STOCK": 696,
     "THEME": 34,
     "COMPOSITE": 35,
     "MARKET": 9,
-    "OUT_OF_SCOPE": 11,
-    "UNKNOWN": 5
+    "OUT_OF_SCOPE": 9,
+    "UNKNOWN": 7
   },
   "A3_conflict_audit": {
     "CLEAR+HOLDING": 0,
     "SELL+HOLDING": 1
   },
   "A4_revision_severity": {
-    "ROLE": 99,
-    "SEVERE": 237
+    "ROLE": 208,
+    "SEVERE": 392
   },
   "A5_versions": {
     "schema_version": 3,
@@ -157,7 +163,8 @@
     "resolver": "exact-alias-v1",
     "snapshots": [
       "2026-08-27",
-      "2026-08-28"
+      "2026-08-28",
+      "2026-08-29"
     ]
   },
   "data_contract": {

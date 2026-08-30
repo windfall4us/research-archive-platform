@@ -3,8 +3,8 @@
 日期：2026-08-30　连接键：stock_theme_mapping（conf>=0.60 heat 映射）
 
 ## 主题层（Phase 2）
-- 8 个交易日 × 19 个主题（heat+momentum 均有）= 152 行
-- 日期：2026-08-14 ~ 2026-08-28
+- 9 个交易日 × 19 个主题（heat+momentum 均有）= 171 行
+- 日期：2026-08-14 ~ 2026-08-29
 
 ## 个股层（Phase 3）
 - eligible 股票：350（全有 consensus）

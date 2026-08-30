@@ -36,7 +36,40 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 DB = ROOT / "data/analyst_consensus.db"
-SNAP = ROOT / "data/analyst_snapshots/vip0_timeline_20260828.json"
+
+# 审计/验收参考基准快照（自动发现：record_revisions 最新两个 snapshot_date 对应的时间线快照）。
+# 冻结阶段后随日期推进自动更新，不改算法语义。无 revision 时回退到 08-28 基线。
+def _latest_rev_snapshot_pair():
+    try:
+        import sqlite3 as _sq
+        _c = _sq.connect(DB)
+        dates = sorted(r[0] for r in _c.execute(
+            "SELECT DISTINCT snapshot_date FROM record_revisions"))
+        _c.close()
+    except Exception:
+        dates = []
+    if len(dates) >= 2:
+        a, b = dates[-2], dates[-1]
+    else:
+        a = b = "2026-08-28"
+    fmt = lambda d: "".join(d.split("-"))
+    return (ROOT / f"data/analyst_snapshots/vip0_timeline_{fmt(a)}.json",
+            ROOT / f"data/analyst_snapshots/vip0_timeline_{fmt(b)}.json")
+
+
+def _latest_snapshot_file():
+    """最新时间线快照（用于 A2 分层审计）。"""
+    try:
+        import sqlite3 as _sq
+        _c = _sq.connect(DB)
+        dates = sorted(r[0] for r in _c.execute(
+            "SELECT DISTINCT snapshot_date FROM source_snapshots"))
+        _c.close()
+    except Exception:
+        dates = []
+    d = dates[-1] if dates else "2026-08-28"
+    fmt = lambda x: "".join(x.split("-"))
+    return ROOT / f"data/analyst_snapshots/vip0_timeline_{fmt(d)}.json"
 
 from action_temporal_parser_v11_p0b import parse as parse_v11
 from ingest_consensus_p12 import Resolver, collect_source_records
@@ -149,8 +182,9 @@ def main() -> int:
 
     # G5 revision 可追踪 100%（每条能在 before/after 快照反查 + revision_no 连续）
     from diff_analyst_snapshots_v2 import load_sections, logical_key, record_id as _rid
-    before = load_sections(ROOT / "data/analyst_snapshots/vip0_timeline_20260827.json")
-    after = load_sections(ROOT / "data/analyst_snapshots/vip0_timeline_20260828.json")
+    _bp, _ap = _latest_rev_snapshot_pair()
+    before = load_sections(_bp)
+    after = load_sections(_ap)
     known = {_rid(s, logical_key(s)) for s in before} | {_rid(s, logical_key(s)) for s in after}
     rev_rids = [r[0] for r in con.execute("SELECT DISTINCT source_record_id FROM record_revisions")]
     orphan = [rid for rid in rev_rids if rid not in known]
@@ -184,8 +218,8 @@ def main() -> int:
     }
     out["A1_row_counts"] = a1
 
-    # A2 分层分布（08-28 快照 resolver 分层，与 P1.2 口径一致）
-    d = json.loads(SNAP.read_bytes().decode("utf-8"))
+    # A2 分层分布（最新快照 resolver 分层，与 P1.2 口径一致）
+    d = json.loads(_latest_snapshot_file().read_bytes().decode("utf-8"))
     resolver = Resolver()
     bucket = Counter()
     for r in collect_source_records(d):

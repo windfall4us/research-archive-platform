@@ -12,7 +12,7 @@
 | G6 | ✅ | 覆盖完整：P3.1 cell 716 / P3.3 股票 350 |
 | G7 | ✅ | DO_T/WATCH/HOLD 进净买入 = 0/0/0 |
 | G8 | ✅ | 全链路重跑 hash 一致（4 输出） |
-| G9 | ✅ | 原始层未改：source_snapshots 2 行不变 + 快照 hash 不变 |
+| G9 | ✅ | 原始层未改：source_snapshots 3 行不变 + 快照 hash 不变 |
 | G10 | ✅ | 子 benchmark P3.1/P3.2/P3.3 exit = 0/0/0（0=GO） |
 
 ## Phase 3 分层总结

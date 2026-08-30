@@ -5009,5 +5009,366 @@
       "event_count": 16
     },
     "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "TECH_SEMI",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 3,
+      "raw": 0.3333
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 1,
+      "net": -1,
+      "units": 1
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "TECH_OPTICS",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "TECH_AI_COMPUTE",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 3,
+      "raw": 0.3333
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "TECH_COMPONENT",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "TECH_PCB",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "TECH_ELEC",
+    "coverage": {
+      "analysts": 1,
+      "direct_analyst_count": 1,
+      "eligible_analysts": 3,
+      "raw": 0.3333
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 1,
+      "negative": 0,
+      "net": 0,
+      "units": 1
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "TECH_SOFTWARE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "TECH_GENERAL",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "CYCL_NONFERROUS",
+    "coverage": {
+      "analysts": 2,
+      "direct_analyst_count": 2,
+      "eligible_analysts": 3,
+      "raw": 0.6667
+    },
+    "mention": {
+      "positive": 1,
+      "neutral": 1,
+      "negative": 0,
+      "net": 1,
+      "units": 2
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "CYCL_CHEMICAL",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "NEW_ENERGY_UHV",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "OTHER_BROKER",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "OTHER_AGRICULTURE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "OTHER_ROBOTICS",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "OTHER_SPACE",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
+  },
+  {
+    "date": "2026-08-29",
+    "theme_id": "OTHER_CONSUMER",
+    "coverage": {
+      "analysts": 0,
+      "direct_analyst_count": 0,
+      "eligible_analysts": 3,
+      "raw": 0.0
+    },
+    "mention": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0,
+      "net": 0,
+      "units": 0
+    },
+    "trade": null,
+    "holding": null
   }
 ]

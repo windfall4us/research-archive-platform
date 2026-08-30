@@ -5,7 +5,7 @@
 | Gate | 判定 | 关键值 |
 | --- | --- | --- |
 | G1 | ✅ | 全链路重跑 hash 一致（4 输出，rerun {"p40": 0, "p41": 0, "p42": 0, "p43": 0}） |
-| G2 | ✅ | 原始层未改：source_snapshots 2 行 + 快照 hash 不变 |
+| G2 | ✅ | 原始层未改：source_snapshots 3 行 + 快照 hash 不变 |
 | G3 | ✅ | 分母 350 = 350 = 350 = 350（P4.0/P4.1/P4.2/P4.3） |
 | G4 | ✅ | 映射 337 = 337，UNMAPPED 13 |
 | G5 | ✅ | CONFIRMED_BULLISH 14 全→CONFIRMED；STOCK_THEME_DIVERGENCE 54 全→DIVERGING/REVERSING |

@@ -1,0 +1,44 @@
+{
+  "date": "2026-08-29",
+  "direction_score": 0.0,
+  "direction": "NEUTRAL",
+  "eligible_analysts": 3,
+  "coverage_status": "LOW_COVERAGE",
+  "market_direction_status": "NEUTRAL",
+  "bullish": 1,
+  "neutral": 1,
+  "bearish": 1,
+  "dominant_share": 0.3333,
+  "consensus_level": "LOW_CONSENSUS",
+  "risk": {
+    "high": 3,
+    "medium": 0,
+    "low": 0,
+    "dominant": "HIGH"
+  },
+  "position_bias": {
+    "REDUCE": 1,
+    "WAIT": 1
+  },
+  "style_groups": {
+    "LONG_TERM": {
+      "count": 1,
+      "group_total": 2,
+      "coverage_rate": 0.5,
+      "coverage_status": "NORMAL",
+      "sample_size_warning": true,
+      "direction_score": 0.0,
+      "direction": "NEUTRAL"
+    },
+    "SWING": {
+      "count": 2,
+      "group_total": 3,
+      "coverage_rate": 0.6667,
+      "coverage_status": "NORMAL",
+      "sample_size_warning": false,
+      "direction_score": 0.0,
+      "direction": "NEUTRAL"
+    }
+  },
+  "style_available": true
+}

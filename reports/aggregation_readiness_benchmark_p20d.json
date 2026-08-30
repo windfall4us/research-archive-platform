@@ -5,8 +5,8 @@
     "physical_stock_events": 937,
     "excluded_stock_events": 3,
     "aggregation_eligible_stock_events": 934,
-    "aggregation_eligible_market_views": 60,
-    "aggregation_eligible_theme_mentions": 186
+    "aggregation_eligible_market_views": 63,
+    "aggregation_eligible_theme_mentions": 193
   },
   "gates": {
     "G1_COMPOSITE_residual": {
@@ -17,13 +17,13 @@
     },
     "G2_daily_view_lineage": {
       "pass": true,
-      "total": 262,
+      "total": 274,
       "null_snapshot": 0,
       "orphan_snapshot": 0
     },
     "G3_theme_mention_lineage": {
       "pass": true,
-      "total": 186,
+      "total": 193,
       "orphan_record": 0,
       "null_snapshot": 0,
       "orphan_snapshot": 0
@@ -37,11 +37,11 @@
     },
     "G5_market_view_unknown": {
       "pass": true,
-      "total": 69,
+      "total": 72,
       "unknown": 9,
-      "unknown_rate": 13.0,
+      "unknown_rate": 12.5,
       "threshold": "≤20%",
-      "eligible": 60,
+      "eligible": 63,
       "excluded_from_aggregation": 9,
       "note": "excluded(direction=UNKNOWN) 不进入 Market Consensus 聚合口径"
     },
@@ -59,18 +59,18 @@
       "eligible": 934
     },
     "daily_views": {
-      "total": 262,
-      "core_theme": 69,
-      "trend": 62,
-      "logic": 62,
-      "market": 69
+      "total": 274,
+      "core_theme": 72,
+      "trend": 65,
+      "logic": 65,
+      "market": 72
     },
     "theme_mentions": {
-      "total": 186,
-      "eligible": 186
+      "total": 193,
+      "eligible": 193
     },
-    "source_snapshots": 2,
-    "ingest_runs": 16
+    "source_snapshots": 3,
+    "ingest_runs": 43
   },
   "eligible_stock_events_category": {
     "TRADE": 354,
@@ -80,9 +80,9 @@
     "UNKNOWN": 2
   },
   "market_view_direction_dist": {
-    "NEUTRAL": 26,
+    "NEUTRAL": 27,
     "UNKNOWN": 9,
-    "BULLISH": 24,
-    "BEARISH": 10
+    "BULLISH": 25,
+    "BEARISH": 11
   }
 }
