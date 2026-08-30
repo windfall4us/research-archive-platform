@@ -1,0 +1,10 @@
+P2.3 Theme Momentum 8-Gate Benchmark — 8/8 PASS
+Overall = GO
+[PASS] G1: Δ1 复算 133 行，bad=0
+[PASS] G2: Δ3 复算 133 行，bad=0
+[PASS] G3: BASELINE 语义 bad=0
+[PASS] G4: DISCOVERY 历史条件 bad=0（5 个 DISCOVERY）
+[PASS] G5: FADING 条件 bad=0（17 个 FADING）
+[PASS] G6: LOW_SIGNAL 升级 gate bad=0（35 个低置信日）
+[PASS] G7: transition graph bad=0
+[PASS] G8: hysteresis bad=0（真实确认=0，严重恶化即时=2，合成防抖 bad=0）
