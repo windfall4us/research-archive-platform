@@ -120,18 +120,30 @@ PHASE1_SETUP = [
 SNAPSHOT_DIR = ROOT / "data" / "analyst_snapshots"
 
 # 本地交易日历（用户 2026-08-30 锁定：非交易日 → NON_TRADING_DAY → silent exit 0，不制造假告警）
+# 2026-08-30 修正：从 chinese_calendar（法定工作日历）换成真正的 A 股交易所日历
+#   —— data/calendar/trading_days_<year>.json 的 days[].is_open（周末永不开市 + 官方休市区间，
+#      同花顺金融 API /api/a-share/calendar/trading-days 交叉验证；chinese_calendar 仅作审计）
 CALENDAR_DIR = ROOT / "data" / "calendar"
 
 
 def is_trading_day(date_str: str) -> bool:
     """判断目标日是否为 A 股交易日。
 
-    优先读本地日历 data/calendar/trading_days_<year>.json（chinese_calendar 生成，
-    含国务院调休，离线确定性）；无该年日历 → 回退周一~五工作日判断（节假日可能误判但保守可容忍）。
+    读交易所日历 data/calendar/trading_days_<year>.json 的 days[].is_open（权威 Gate）：
+      is_open=True  → 当日必须等待数据（交易日）
+      is_open=False → NON_TRADING_DAY → silent exit 0
+    日历缺失该日（未来窗口外）→ 兜底：周六日永不开市（A 股铁律），周一~五乐观视为交易日。
+    注：chinese_calendar（法定工作日历）不再作为 Gate——周末调休上班日是法定工作日但 A 股休市，
+        若误判会产生 23:20 假告警（用户 2026-08-30 锁定）。
     """
     try:
         year = date_str[:4]
         cal = json.loads((CALENDAR_DIR / f"trading_days_{year}.json").read_text(encoding="utf-8"))
+        days = cal.get("days") or []
+        for d in days:
+            if d.get("date") == date_str:
+                return bool(d.get("is_open"))
+        # 兼容旧格式（无 days 数组时用 trading_days 列表）
         return date_str in set(cal.get("trading_days", []))
     except Exception:
         d = datetime.strptime(date_str, "%Y-%m-%d")

@@ -65,9 +65,14 @@ run_consensus_pipeline.py
    G11 验证「重跑前采样 vs 重跑后」hash 一致（同输入→同输出），不做跨交易日 hash 比较。
 ```
 
-## 交易日判断（2026-08-30 新增）
+## 交易日判断（2026-08-30 新增，08-30 修正为交易所日历）
 
-- 本地日历 `data/calendar/trading_days_<year>.json`（chinese_calendar 生成，含国务院调休，离线确定性）
+- 本地日历 `data/calendar/trading_days_<year>.json` 的 `days[].is_open` —— **A 股交易所日历**：
+  周末永不开市（A 股铁律，调休上班日也不开市）+ 官方休市区间（上交所上证公告〔2025〕45号，沪深北一致），
+  同花顺金融 API `/api/a-share/calendar/trading-days` 交叉验证（窗口内逐日零不匹配）。
+  生成器：`scripts/build_trading_calendar.py`（可复现）。
+- ⚠️ 不用 `chinese_calendar`（法定工作日历）作 Gate——周末调休上班日是法定工作日但 A 股休市，
+  会误判为应有数据 → 23:20 假告警（2026 年有 6 个此类日，已全数排除）。chinese_calendar 仅作审计。
 - 目标日非交易日 → `NON_TRADING_DAY → silent exit 0`（不发布、不告警，**带 --alert 也不告警**）
 - 真正该报警的是「应有数据的交易日到 23:20 仍未就绪」→ exit 2 + 告警
 
