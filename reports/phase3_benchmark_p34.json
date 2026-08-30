@@ -1,0 +1,61 @@
+{
+  "generated_at": "P3.4 v1",
+  "overall": "GO",
+  "gates": {
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "G4": true,
+    "G5": true,
+    "G6": true,
+    "G7": true,
+    "G8": true,
+    "G9": true,
+    "G10": true
+  },
+  "gates_passed": 10,
+  "gates_total": 10,
+  "rerun_exit": {
+    "p30": 0,
+    "p31": 0,
+    "p32": 0,
+    "p33": 0
+  },
+  "sub_benchmark_exit": {
+    "p31": 0,
+    "p32": 0,
+    "p33": 0
+  },
+  "layer_summary": {
+    "readiness_p30": {
+      "eligible_events": 934,
+      "stocks": 350,
+      "analysts": 10,
+      "dates": 8,
+      "positions": 124,
+      "dual_evidence": 79
+    },
+    "factors_p31": {
+      "cells": 716,
+      "positive": 205,
+      "negative": 149
+    },
+    "action_flow_p32": {
+      "pairs": 474
+    },
+    "score_p33": {
+      "stocks": 350,
+      "state_dist": {
+        "NEUTRAL": 203,
+        "NEGATIVE": 56,
+        "POSITIVE": 82,
+        "STRONG_POSITIVE": 9
+      }
+    }
+  },
+  "audits": {
+    "A1": true,
+    "A2": true,
+    "A3_note": "最负 action_net = -1.3（STRONG_NEGATIVE 需 ≤ -2.0 且 strength∈STRONG/MEDIUM，数据未达 → 无强负共识，分析师群体偏多头）"
+  }
+}

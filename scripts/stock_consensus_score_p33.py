@@ -146,6 +146,8 @@ for code, a in agg.items():
         "n_holding_records": a["holding_records"],
         "positive_weighted": round(a["positive_weighted"], 4),
         "negative_weighted": round(a["negative_weighted"], 4),
+        "pos_events": a["pos_events"],
+        "neg_events": a["neg_events"],
         "action_net": action_net,
         "holding_net": holding_net,
         "consensus_raw": consensus_raw,
