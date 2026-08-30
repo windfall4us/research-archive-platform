@@ -1,0 +1,5654 @@
+{
+  "generated_at": "P4.3 v1",
+  "summary": {
+    "n_stocks": 350,
+    "state_distribution": {
+      "NEUTRAL": 143,
+      "WEAKENING": 87,
+      "CONFIRMED": 19,
+      "DISCOVERY": 27,
+      "DIVERGING": 45,
+      "UNMAPPED": 13,
+      "REVERSING": 13,
+      "CONFIRMING": 3
+    },
+    "linkage_to_state_map": {
+      "CONFIRMED_BULLISH": {
+        "CONFIRMED": 14
+      },
+      "STOCK_THEME_DIVERGENCE": {
+        "DIVERGING": 45,
+        "REVERSING": 9
+      },
+      "CONFIRMED_BEARISH": {
+        "CONFIRMED": 5,
+        "CONFIRMING": 1
+      },
+      "THEME_CONFIRMED_STOCK": {
+        "CONFIRMING": 2
+      },
+      "NEUTRAL": {
+        "NEUTRAL": 143,
+        "WEAKENING": 87,
+        "DISCOVERY": 27,
+        "REVERSING": 4
+      },
+      "UNMAPPED": {
+        "UNMAPPED": 13
+      }
+    },
+    "state_rules_v1": {
+      "UNMAPPED": "无主题映射",
+      "REVERSING": "曾看多但持仓/观点操作转负，且主题未升温支撑",
+      "CONFIRMED": "三维共振（个股+主题同向+动作正）+ 分歧<0.5",
+      "CONFIRMING": "方向同向但分歧≥0.5 或仅 THEME_CONFIRMED_STOCK",
+      "DIVERGING": "个股与主题方向相反（S·T<0）",
+      "WEAKENING": "主题退潮（COOLING/FADING）但个股残留/中性",
+      "DISCOVERY": "主题刚开始升温（HEATING/EMERGING/DISCOVERY）但个股未跟上",
+      "NEUTRAL": "无明确信号"
+    },
+    "note": "横截面状态（8 天样本）；时间序列转移状态机待样本 15-20 日后升级 v2"
+  },
+  "per_stock": {
+    "000017": {
+      "stock_code": "000017",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "000063": {
+      "stock_code": "000063",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "000155": {
+      "stock_code": "000155",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "000333": {
+      "stock_code": "000333",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "000338": {
+      "stock_code": "000338",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_AGRICULTURE",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "000426": {
+      "stock_code": "000426",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bullish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BULLISH",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "000506": {
+      "stock_code": "000506",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bullish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BULLISH",
+      "consensus_state": "STRONG_POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "000533": {
+      "stock_code": "000533",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "000565": {
+      "stock_code": "000565",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "000592": {
+      "stock_code": "000592",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "OTHER_AGRICULTURE",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 0.5
+    },
+    "000636": {
+      "stock_code": "000636",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "TECH_COMPONENT",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "000657": {
+      "stock_code": "000657",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "000680": {
+      "stock_code": "000680",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "000703": {
+      "stock_code": "000703",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "000710": {
+      "stock_code": "000710",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "000712": {
+      "stock_code": "000712",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "OTHER_BROKER",
+      "theme_momentum": null,
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "000725": {
+      "stock_code": "000725",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_ELEC",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "000736": {
+      "stock_code": "000736",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_BROKER",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "000737": {
+      "stock_code": "000737",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "000762": {
+      "stock_code": "000762",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.75,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 1.0
+    },
+    "000802": {
+      "stock_code": "000802",
+      "cross_layer_state": "UNMAPPED",
+      "state_notes": [
+        "no_theme_mapping"
+      ],
+      "linkage_signal": "UNMAPPED",
+      "consensus_state": "NEUTRAL",
+      "S": null,
+      "T": null,
+      "theme": null,
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "000831": {
+      "stock_code": "000831",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.625,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 0.5
+    },
+    "000859": {
+      "stock_code": "000859",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "000922": {
+      "stock_code": "000922",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "000977": {
+      "stock_code": "000977",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "000988": {
+      "stock_code": "000988",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "001258": {
+      "stock_code": "001258",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "001309": {
+      "stock_code": "001309",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "001323": {
+      "stock_code": "001323",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "001388": {
+      "stock_code": "001388",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002008": {
+      "stock_code": "002008",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002015": {
+      "stock_code": "002015",
+      "cross_layer_state": "REVERSING",
+      "state_notes": [
+        "positive_but_holding_or_view_turning_negative"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "002025": {
+      "stock_code": "002025",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002028": {
+      "stock_code": "002028",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "002031": {
+      "stock_code": "002031",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002041": {
+      "stock_code": "002041",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "OTHER_AGRICULTURE",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002067": {
+      "stock_code": "002067",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002081": {
+      "stock_code": "002081",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002104": {
+      "stock_code": "002104",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002112": {
+      "stock_code": "002112",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002115": {
+      "stock_code": "002115",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002155": {
+      "stock_code": "002155",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bullish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BULLISH",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002156": {
+      "stock_code": "002156",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 0.5
+    },
+    "002157": {
+      "stock_code": "002157",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_AGRICULTURE",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002167": {
+      "stock_code": "002167",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002192": {
+      "stock_code": "002192",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002202": {
+      "stock_code": "002202",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002203": {
+      "stock_code": "002203",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bullish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BULLISH",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002218": {
+      "stock_code": "002218",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "OTHER_SPACE",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002229": {
+      "stock_code": "002229",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002258": {
+      "stock_code": "002258",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002266": {
+      "stock_code": "002266",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "002276": {
+      "stock_code": "002276",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002279": {
+      "stock_code": "002279",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002300": {
+      "stock_code": "002300",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002352": {
+      "stock_code": "002352",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002353": {
+      "stock_code": "002353",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002364": {
+      "stock_code": "002364",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002371": {
+      "stock_code": "002371",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002384": {
+      "stock_code": "002384",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_PCB",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "002396": {
+      "stock_code": "002396",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002409": {
+      "stock_code": "002409",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002412": {
+      "stock_code": "002412",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002415": {
+      "stock_code": "002415",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002418": {
+      "stock_code": "002418",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002428": {
+      "stock_code": "002428",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bullish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BULLISH",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002432": {
+      "stock_code": "002432",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_ELEC",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002436": {
+      "stock_code": "002436",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_PCB",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002460": {
+      "stock_code": "002460",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bullish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BULLISH",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002463": {
+      "stock_code": "002463",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_PCB",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002475": {
+      "stock_code": "002475",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_ELEC",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002484": {
+      "stock_code": "002484",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "TECH_COMPONENT",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002487": {
+      "stock_code": "002487",
+      "cross_layer_state": "UNMAPPED",
+      "state_notes": [
+        "no_theme_mapping"
+      ],
+      "linkage_signal": "UNMAPPED",
+      "consensus_state": "POSITIVE",
+      "S": null,
+      "T": null,
+      "theme": null,
+      "theme_momentum": null,
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002491": {
+      "stock_code": "002491",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002493": {
+      "stock_code": "002493",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 0.5
+    },
+    "002515": {
+      "stock_code": "002515",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002517": {
+      "stock_code": "002517",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002532": {
+      "stock_code": "002532",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bullish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BULLISH",
+      "consensus_state": "STRONG_POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002536": {
+      "stock_code": "002536",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.625,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "002543": {
+      "stock_code": "002543",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_ELEC",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002545": {
+      "stock_code": "002545",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002552": {
+      "stock_code": "002552",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_PCB",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002558": {
+      "stock_code": "002558",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002606": {
+      "stock_code": "002606",
+      "cross_layer_state": "REVERSING",
+      "state_notes": [
+        "positive_but_holding_or_view_turning_negative"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "002624": {
+      "stock_code": "002624",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002636": {
+      "stock_code": "002636",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_PCB",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002648": {
+      "stock_code": "002648",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "002670": {
+      "stock_code": "002670",
+      "cross_layer_state": "REVERSING",
+      "state_notes": [
+        "positive_but_holding_or_view_turning_negative"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "OTHER_BROKER",
+      "theme_momentum": null,
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "002674": {
+      "stock_code": "002674",
+      "cross_layer_state": "UNMAPPED",
+      "state_notes": [
+        "no_theme_mapping"
+      ],
+      "linkage_signal": "UNMAPPED",
+      "consensus_state": "NEUTRAL",
+      "S": null,
+      "T": null,
+      "theme": null,
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "002716": {
+      "stock_code": "002716",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002747": {
+      "stock_code": "002747",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002812": {
+      "stock_code": "002812",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002818": {
+      "stock_code": "002818",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002821": {
+      "stock_code": "002821",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002837": {
+      "stock_code": "002837",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002850": {
+      "stock_code": "002850",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002859": {
+      "stock_code": "002859",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "NEW_ENERGY_SOLID_BATTERY",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "002881": {
+      "stock_code": "002881",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002896": {
+      "stock_code": "002896",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002929": {
+      "stock_code": "002929",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002971": {
+      "stock_code": "002971",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "002979": {
+      "stock_code": "002979",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "003031": {
+      "stock_code": "003031",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "003040": {
+      "stock_code": "003040",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300001": {
+      "stock_code": "300001",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300005": {
+      "stock_code": "300005",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300017": {
+      "stock_code": "300017",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300033": {
+      "stock_code": "300033",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300035": {
+      "stock_code": "300035",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "NEW_ENERGY_SOLID_BATTERY",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300058": {
+      "stock_code": "300058",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300059": {
+      "stock_code": "300059",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_BROKER",
+      "theme_momentum": null,
+      "divergence_score": 0.5,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 1.0
+    },
+    "300131": {
+      "stock_code": "300131",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300139": {
+      "stock_code": "300139",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bullish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BULLISH",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "300142": {
+      "stock_code": "300142",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "300174": {
+      "stock_code": "300174",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300189": {
+      "stock_code": "300189",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_AGRICULTURE",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300191": {
+      "stock_code": "300191",
+      "cross_layer_state": "UNMAPPED",
+      "state_notes": [
+        "no_theme_mapping"
+      ],
+      "linkage_signal": "UNMAPPED",
+      "consensus_state": "NEUTRAL",
+      "S": null,
+      "T": null,
+      "theme": null,
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300199": {
+      "stock_code": "300199",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300209": {
+      "stock_code": "300209",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300214": {
+      "stock_code": "300214",
+      "cross_layer_state": "REVERSING",
+      "state_notes": [
+        "positive_but_holding_or_view_turning_negative"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "300229": {
+      "stock_code": "300229",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300274": {
+      "stock_code": "300274",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "300308": {
+      "stock_code": "300308",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.5
+    },
+    "300313": {
+      "stock_code": "300313",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_AGRICULTURE",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "300314": {
+      "stock_code": "300314",
+      "cross_layer_state": "UNMAPPED",
+      "state_notes": [
+        "no_theme_mapping"
+      ],
+      "linkage_signal": "UNMAPPED",
+      "consensus_state": "NEGATIVE",
+      "S": null,
+      "T": null,
+      "theme": null,
+      "theme_momentum": null,
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300319": {
+      "stock_code": "300319",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "TECH_COMPONENT",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300333": {
+      "stock_code": "300333",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300339": {
+      "stock_code": "300339",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300368": {
+      "stock_code": "300368",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300373": {
+      "stock_code": "300373",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300394": {
+      "stock_code": "300394",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.5417,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "300404": {
+      "stock_code": "300404",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300408": {
+      "stock_code": "300408",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "TECH_COMPONENT",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300418": {
+      "stock_code": "300418",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300433": {
+      "stock_code": "300433",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_ELEC",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300454": {
+      "stock_code": "300454",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "300456": {
+      "stock_code": "300456",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.625,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "300496": {
+      "stock_code": "300496",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300497": {
+      "stock_code": "300497",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "300502": {
+      "stock_code": "300502",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_OPTICS",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300562": {
+      "stock_code": "300562",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300567": {
+      "stock_code": "300567",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300570": {
+      "stock_code": "300570",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300580": {
+      "stock_code": "300580",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300593": {
+      "stock_code": "300593",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "OTHER_SPACE",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300602": {
+      "stock_code": "300602",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_ELEC",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300604": {
+      "stock_code": "300604",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300607": {
+      "stock_code": "300607",
+      "cross_layer_state": "REVERSING",
+      "state_notes": [
+        "positive_but_holding_or_view_turning_negative"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.5,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 0.5
+    },
+    "300615": {
+      "stock_code": "300615",
+      "cross_layer_state": "UNMAPPED",
+      "state_notes": [
+        "no_theme_mapping"
+      ],
+      "linkage_signal": "UNMAPPED",
+      "consensus_state": "NEUTRAL",
+      "S": null,
+      "T": null,
+      "theme": null,
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300618": {
+      "stock_code": "300618",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bullish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BULLISH",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "300620": {
+      "stock_code": "300620",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "OTHER_SPACE",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.875,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 1.0
+    },
+    "300671": {
+      "stock_code": "300671",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300672": {
+      "stock_code": "300672",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300684": {
+      "stock_code": "300684",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "300706": {
+      "stock_code": "300706",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300718": {
+      "stock_code": "300718",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300725": {
+      "stock_code": "300725",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300731": {
+      "stock_code": "300731",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300738": {
+      "stock_code": "300738",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300751": {
+      "stock_code": "300751",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "300763": {
+      "stock_code": "300763",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 0.5
+    },
+    "300782": {
+      "stock_code": "300782",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300795": {
+      "stock_code": "300795",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "300811": {
+      "stock_code": "300811",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "300857": {
+      "stock_code": "300857",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "301013": {
+      "stock_code": "301013",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "301018": {
+      "stock_code": "301018",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "301026": {
+      "stock_code": "301026",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "301047": {
+      "stock_code": "301047",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "301080": {
+      "stock_code": "301080",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bullish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BULLISH",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "301112": {
+      "stock_code": "301112",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "301130": {
+      "stock_code": "301130",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "301165": {
+      "stock_code": "301165",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "301171": {
+      "stock_code": "301171",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "301205": {
+      "stock_code": "301205",
+      "cross_layer_state": "REVERSING",
+      "state_notes": [
+        "positive_but_holding_or_view_turning_negative"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.75,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "301217": {
+      "stock_code": "301217",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.625,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "301230": {
+      "stock_code": "301230",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "301292": {
+      "stock_code": "301292",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "NEW_ENERGY_SOLID_BATTERY",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "301308": {
+      "stock_code": "301308",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "301396": {
+      "stock_code": "301396",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.875,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 1.0
+    },
+    "301511": {
+      "stock_code": "301511",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_ELEC",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "301526": {
+      "stock_code": "301526",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "301536": {
+      "stock_code": "301536",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "301591": {
+      "stock_code": "301591",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "301626": {
+      "stock_code": "301626",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_ELEC",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "301629": {
+      "stock_code": "301629",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "301662": {
+      "stock_code": "301662",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "NEW_ENERGY_SOLID_BATTERY",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "600030": {
+      "stock_code": "600030",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_BROKER",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600095": {
+      "stock_code": "600095",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "OTHER_BROKER",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "600103": {
+      "stock_code": "600103",
+      "cross_layer_state": "REVERSING",
+      "state_notes": [
+        "positive_but_holding_or_view_turning_negative"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "STRONG_POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.625,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "600110": {
+      "stock_code": "600110",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "NEW_ENERGY_SOLID_BATTERY",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600127": {
+      "stock_code": "600127",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_AGRICULTURE",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "600131": {
+      "stock_code": "600131",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600132": {
+      "stock_code": "600132",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600150": {
+      "stock_code": "600150",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "OTHER_SPACE",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "600172": {
+      "stock_code": "600172",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600176": {
+      "stock_code": "600176",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_PCB",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600183": {
+      "stock_code": "600183",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_PCB",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.5
+    },
+    "600186": {
+      "stock_code": "600186",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600188": {
+      "stock_code": "600188",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 0.5
+    },
+    "600206": {
+      "stock_code": "600206",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.75,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 1.0
+    },
+    "600272": {
+      "stock_code": "600272",
+      "cross_layer_state": "UNMAPPED",
+      "state_notes": [
+        "no_theme_mapping"
+      ],
+      "linkage_signal": "UNMAPPED",
+      "consensus_state": "NEGATIVE",
+      "S": null,
+      "T": null,
+      "theme": null,
+      "theme_momentum": null,
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "600309": {
+      "stock_code": "600309",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600312": {
+      "stock_code": "600312",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600338": {
+      "stock_code": "600338",
+      "cross_layer_state": "CONFIRMING",
+      "state_notes": [
+        "bullish_direction_confirming"
+      ],
+      "linkage_signal": "THEME_CONFIRMED_STOCK",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "600345": {
+      "stock_code": "600345",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "OTHER_SPACE",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "600353": {
+      "stock_code": "600353",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600362": {
+      "stock_code": "600362",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "600367": {
+      "stock_code": "600367",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "600371": {
+      "stock_code": "600371",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "OTHER_AGRICULTURE",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "600378": {
+      "stock_code": "600378",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600406": {
+      "stock_code": "600406",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600428": {
+      "stock_code": "600428",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "600438": {
+      "stock_code": "600438",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600460": {
+      "stock_code": "600460",
+      "cross_layer_state": "REVERSING",
+      "state_notes": [
+        "positive_but_holding_or_view_turning_negative"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "600481": {
+      "stock_code": "600481",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600487": {
+      "stock_code": "600487",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.5,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "600498": {
+      "stock_code": "600498",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "600519": {
+      "stock_code": "600519",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600522": {
+      "stock_code": "600522",
+      "cross_layer_state": "REVERSING",
+      "state_notes": [
+        "positive_but_holding_or_view_turning_negative"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "STRONG_POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "600536": {
+      "stock_code": "600536",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "600549": {
+      "stock_code": "600549",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600584": {
+      "stock_code": "600584",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600613": {
+      "stock_code": "600613",
+      "cross_layer_state": "UNMAPPED",
+      "state_notes": [
+        "no_theme_mapping"
+      ],
+      "linkage_signal": "UNMAPPED",
+      "consensus_state": "NEUTRAL",
+      "S": null,
+      "T": null,
+      "theme": null,
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600641": {
+      "stock_code": "600641",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "600664": {
+      "stock_code": "600664",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600666": {
+      "stock_code": "600666",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600667": {
+      "stock_code": "600667",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "600673": {
+      "stock_code": "600673",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "600711": {
+      "stock_code": "600711",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "600714": {
+      "stock_code": "600714",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600721": {
+      "stock_code": "600721",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "600722": {
+      "stock_code": "600722",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600745": {
+      "stock_code": "600745",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "600869": {
+      "stock_code": "600869",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600875": {
+      "stock_code": "600875",
+      "cross_layer_state": "REVERSING",
+      "state_notes": [
+        "positive_but_holding_or_view_turning_negative"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "600882": {
+      "stock_code": "600882",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600888": {
+      "stock_code": "600888",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "600985": {
+      "stock_code": "600985",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "600988": {
+      "stock_code": "600988",
+      "cross_layer_state": "CONFIRMING",
+      "state_notes": [
+        "bullish_direction_confirming"
+      ],
+      "linkage_signal": "THEME_CONFIRMED_STOCK",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "601020": {
+      "stock_code": "601020",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "601126": {
+      "stock_code": "601126",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "601168": {
+      "stock_code": "601168",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bullish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BULLISH",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "601212": {
+      "stock_code": "601212",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bullish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BULLISH",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "601233": {
+      "stock_code": "601233",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "601288": {
+      "stock_code": "601288",
+      "cross_layer_state": "UNMAPPED",
+      "state_notes": [
+        "no_theme_mapping"
+      ],
+      "linkage_signal": "UNMAPPED",
+      "consensus_state": "NEUTRAL",
+      "S": null,
+      "T": null,
+      "theme": null,
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "601360": {
+      "stock_code": "601360",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "601600": {
+      "stock_code": "601600",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "601689": {
+      "stock_code": "601689",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "601699": {
+      "stock_code": "601699",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "601700": {
+      "stock_code": "601700",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "601777": {
+      "stock_code": "601777",
+      "cross_layer_state": "UNMAPPED",
+      "state_notes": [
+        "no_theme_mapping"
+      ],
+      "linkage_signal": "UNMAPPED",
+      "consensus_state": "POSITIVE",
+      "S": null,
+      "T": null,
+      "theme": null,
+      "theme_momentum": null,
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "601869": {
+      "stock_code": "601869",
+      "cross_layer_state": "REVERSING",
+      "state_notes": [
+        "positive_but_holding_or_view_turning_negative"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.6667,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "601877": {
+      "stock_code": "601877",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "601888": {
+      "stock_code": "601888",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "601899": {
+      "stock_code": "601899",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "601988": {
+      "stock_code": "601988",
+      "cross_layer_state": "UNMAPPED",
+      "state_notes": [
+        "no_theme_mapping"
+      ],
+      "linkage_signal": "UNMAPPED",
+      "consensus_state": "NEUTRAL",
+      "S": null,
+      "T": null,
+      "theme": null,
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603011": {
+      "stock_code": "603011",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "603057": {
+      "stock_code": "603057",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603063": {
+      "stock_code": "603063",
+      "cross_layer_state": "UNMAPPED",
+      "state_notes": [
+        "no_theme_mapping"
+      ],
+      "linkage_signal": "UNMAPPED",
+      "consensus_state": "NEUTRAL",
+      "S": null,
+      "T": null,
+      "theme": null,
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603068": {
+      "stock_code": "603068",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603078": {
+      "stock_code": "603078",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603083": {
+      "stock_code": "603083",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_ELEC",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "603087": {
+      "stock_code": "603087",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "603118": {
+      "stock_code": "603118",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bearish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BEARISH",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 0.5
+    },
+    "603127": {
+      "stock_code": "603127",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603186": {
+      "stock_code": "603186",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_PCB",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.5
+    },
+    "603200": {
+      "stock_code": "603200",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "603217": {
+      "stock_code": "603217",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603220": {
+      "stock_code": "603220",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "603228": {
+      "stock_code": "603228",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_PCB",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "603259": {
+      "stock_code": "603259",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.625,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.5
+    },
+    "603268": {
+      "stock_code": "603268",
+      "cross_layer_state": "UNMAPPED",
+      "state_notes": [
+        "no_theme_mapping"
+      ],
+      "linkage_signal": "UNMAPPED",
+      "consensus_state": "NEUTRAL",
+      "S": null,
+      "T": null,
+      "theme": null,
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603269": {
+      "stock_code": "603269",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603285": {
+      "stock_code": "603285",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603288": {
+      "stock_code": "603288",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603290": {
+      "stock_code": "603290",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603296": {
+      "stock_code": "603296",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "STRONG_POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "603395": {
+      "stock_code": "603395",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603556": {
+      "stock_code": "603556",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603580": {
+      "stock_code": "603580",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603618": {
+      "stock_code": "603618",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "603629": {
+      "stock_code": "603629",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "603663": {
+      "stock_code": "603663",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603738": {
+      "stock_code": "603738",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "TECH_COMPONENT",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603773": {
+      "stock_code": "603773",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603799": {
+      "stock_code": "603799",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bullish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BULLISH",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "603823": {
+      "stock_code": "603823",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "603881": {
+      "stock_code": "603881",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603887": {
+      "stock_code": "603887",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "603893": {
+      "stock_code": "603893",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "603936": {
+      "stock_code": "603936",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_PCB",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603958": {
+      "stock_code": "603958",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "OTHER_CONSUMER",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "603986": {
+      "stock_code": "603986",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603991": {
+      "stock_code": "603991",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "603993": {
+      "stock_code": "603993",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "CYCL_NONFERROUS",
+      "theme_momentum": "HEATING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "605111": {
+      "stock_code": "605111",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "605196": {
+      "stock_code": "605196",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "605358": {
+      "stock_code": "605358",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 0.5
+    },
+    "688008": {
+      "stock_code": "688008",
+      "cross_layer_state": "REVERSING",
+      "state_notes": [
+        "positive_but_holding_or_view_turning_negative"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "STRONG_POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "688012": {
+      "stock_code": "688012",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688017": {
+      "stock_code": "688017",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688019": {
+      "stock_code": "688019",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688035": {
+      "stock_code": "688035",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_ELEC",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688037": {
+      "stock_code": "688037",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bearish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BEARISH",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688041": {
+      "stock_code": "688041",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "STRONG_POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688072": {
+      "stock_code": "688072",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688091": {
+      "stock_code": "688091",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688099": {
+      "stock_code": "688099",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 0.0
+    },
+    "688110": {
+      "stock_code": "688110",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "688123": {
+      "stock_code": "688123",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "688137": {
+      "stock_code": "688137",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688167": {
+      "stock_code": "688167",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bearish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BEARISH",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688185": {
+      "stock_code": "688185",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688195": {
+      "stock_code": "688195",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "OTHER_SPACE",
+      "theme_momentum": "FADING",
+      "divergence_score": 0.625,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "688205": {
+      "stock_code": "688205",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688229": {
+      "stock_code": "688229",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688235": {
+      "stock_code": "688235",
+      "cross_layer_state": "DISCOVERY",
+      "state_notes": [
+        "theme_rising_stock_not_yet"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688256": {
+      "stock_code": "688256",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688266": {
+      "stock_code": "688266",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bullish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BULLISH",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 1,
+      "theme": "MED_INNOVATIVE_DRUG",
+      "theme_momentum": "EMERGING",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688300": {
+      "stock_code": "688300",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688301": {
+      "stock_code": "688301",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688308": {
+      "stock_code": "688308",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688313": {
+      "stock_code": "688313",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_OPTICS",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688347": {
+      "stock_code": "688347",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.625,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 1.0
+    },
+    "688353": {
+      "stock_code": "688353",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688361": {
+      "stock_code": "688361",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "688396": {
+      "stock_code": "688396",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 0.5
+    },
+    "688409": {
+      "stock_code": "688409",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688432": {
+      "stock_code": "688432",
+      "cross_layer_state": "REVERSING",
+      "state_notes": [
+        "positive_but_holding_or_view_turning_negative"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "STRONG_POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.875,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 0.5
+    },
+    "688485": {
+      "stock_code": "688485",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bearish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BEARISH",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688498": {
+      "stock_code": "688498",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.5
+    },
+    "688502": {
+      "stock_code": "688502",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.625,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688503": {
+      "stock_code": "688503",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688507": {
+      "stock_code": "688507",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": 0,
+      "theme": "TECH_SOFTWARE",
+      "theme_momentum": null,
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688521": {
+      "stock_code": "688521",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.75,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.5
+    },
+    "688525": {
+      "stock_code": "688525",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688530": {
+      "stock_code": "688530",
+      "cross_layer_state": "CONFIRMED",
+      "state_notes": [
+        "bearish_resonance_low_divergence"
+      ],
+      "linkage_signal": "CONFIRMED_BEARISH",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688535": {
+      "stock_code": "688535",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688548": {
+      "stock_code": "688548",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "POSITIVE",
+      "S": 1,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688549": {
+      "stock_code": "688549",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "CYCL_CHEMICAL",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688584": {
+      "stock_code": "688584",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688676": {
+      "stock_code": "688676",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "NEW_ENERGY_UHV",
+      "theme_momentum": null,
+      "divergence_score": 0.125,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "688702": {
+      "stock_code": "688702",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "688729": {
+      "stock_code": "688729",
+      "cross_layer_state": "CONFIRMING",
+      "state_notes": [
+        "bearish_direction_confirming"
+      ],
+      "linkage_signal": "CONFIRMED_BEARISH",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.5,
+      "holding_action_divergence": 1.0,
+      "view_action_divergence": 1.0
+    },
+    "688825": {
+      "stock_code": "688825",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEGATIVE",
+      "S": -1,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.5
+    },
+    "688836": {
+      "stock_code": "688836",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_ROBOTICS",
+      "theme_momentum": null,
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    },
+    "688981": {
+      "stock_code": "688981",
+      "cross_layer_state": "WEAKENING",
+      "state_notes": [
+        "theme_fading_stock_residual"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": -1,
+      "theme": "TECH_SEMI",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.25,
+      "holding_action_divergence": 0.5,
+      "view_action_divergence": 0.0
+    },
+    "920045": {
+      "stock_code": "920045",
+      "cross_layer_state": "DIVERGING",
+      "state_notes": [
+        "stock_theme_opposite_direction"
+      ],
+      "linkage_signal": "STOCK_THEME_DIVERGENCE",
+      "consensus_state": "STRONG_POSITIVE",
+      "S": 1,
+      "T": -1,
+      "theme": "TECH_AI_COMPUTE",
+      "theme_momentum": "COOLING",
+      "divergence_score": 0.375,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.5
+    },
+    "920087": {
+      "stock_code": "920087",
+      "cross_layer_state": "NEUTRAL",
+      "state_notes": [
+        "no_clear_signal"
+      ],
+      "linkage_signal": "NEUTRAL",
+      "consensus_state": "NEUTRAL",
+      "S": 0,
+      "T": 0,
+      "theme": "OTHER_AGRICULTURE",
+      "theme_momentum": "DISCOVERY",
+      "divergence_score": 0.0,
+      "holding_action_divergence": 0.0,
+      "view_action_divergence": 0.0
+    }
+  }
+}
