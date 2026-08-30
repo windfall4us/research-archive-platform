@@ -65,6 +65,44 @@
       "factor_score_mismatches": 0,
       "samples": [],
       "note": "重算每个 factor score 与 JSON 比对，验证幂等一致性"
+    },
+    "G9_signal_governance": {
+      "pass": true,
+      "violations": [],
+      "d16_forced_boundary": {
+        "rows_scored": 19,
+        "verdict": "PASS",
+        "detail": [
+          [
+            "TECH_SEMI",
+            67.71,
+            "HEATING",
+            "LOW_SIGNAL",
+            "LOW",
+            1
+          ],
+          [
+            "TECH_OPTICS",
+            37.5,
+            "COOL",
+            "LOW_SIGNAL",
+            "LOW",
+            1
+          ],
+          [
+            "TECH_AI_COMPUTE",
+            61.98,
+            "ACTIVE",
+            "LOW_SIGNAL",
+            "LOW",
+            1
+          ]
+        ]
+      },
+      "combo_HEATING_LOW_SIGNAL_exists": {
+        "heat_level_HEATING_with_LOW_SIGNAL": true
+      },
+      "note": "signal_confidence 阈值一致性 + heat_status 优先级 + 08-16 强制边界样本 + 治理层不覆盖 heat_level"
     }
   }
 }

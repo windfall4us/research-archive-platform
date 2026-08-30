@@ -239,6 +239,30 @@ def compute():
                               WHERE m.stock_code=p.stock_code AND m.theme_id=? AND m.confidence>=?)""",
                 (d, t, HEAT_MIN))}
 
+            # --- 信号置信度层（P2.2C 治理补丁）---
+            # theme_signal_analysts = 当日对该主题产生有效信号的 unique analysts
+            # 信号来源：DIRECT mention ∪ TRADE ∪ DO_T(战术性建仓) ∪ HOLDING
+            # 目的：区分「数学正确但样本太少」的高分（如 08-16 单分析师日 100% coverage）
+            signal_analysts = (set(mention_adt.get((d, t), {}).keys())
+                              | set(trade_adt_raw.get((d, t), {}).keys())
+                              | set(trade_tactical.get((d, t), {}).keys())
+                              | set(hold_adt_raw.get((d, t), {}).keys()))
+            theme_signal_analysts = len(signal_analysts)
+            if theme_signal_analysts >= 4:
+                signal_confidence = "HIGH"
+            elif theme_signal_analysts >= 2:
+                signal_confidence = "MEDIUM"
+            elif theme_signal_analysts == 1:
+                signal_confidence = "LOW"
+            else:
+                signal_confidence = "NONE"
+            # 当日全分析师覆盖（三个源并集，反映当日总数据广度）
+            daily_eligible_analysts = len(
+                per_date_mention_analysts.get(d, set())
+                | per_date_trade_analysts.get(d, set())
+                | per_date_holding_analysts.get(d, set())
+            )
+
             # --- Heat 合成（Missing ≠ Zero：只在可用因子间重归一）---
             factors = [
                 ("coverage", cov_score, W_COVERAGE, avail["coverage"]),
@@ -262,6 +286,15 @@ def compute():
             else:
                 completeness = "INSUFFICIENT_DATA"
 
+            # --- heat_status：输出状态（组合 data_completeness + signal_confidence）---
+            # 优先级：completeness < 0.60 优先；否则 signal_analysts < 2 → LOW_SIGNAL；否则 VALID
+            if data_completeness < 0.60:
+                heat_status = "INSUFFICIENT_DATA"
+            elif theme_signal_analysts < 2:
+                heat_status = "LOW_SIGNAL"
+            else:
+                heat_status = "VALID"
+
             # 档位（无时间序列含义）
             if heat_score is None:
                 level = "NO_DATA"
@@ -282,6 +315,10 @@ def compute():
                 "theme_name": theme_names.get(t, t),
                 "heat_score": round(heat_score, 2) if heat_score is not None else None,
                 "heat_level": level,
+                "heat_status": heat_status,
+                "signal_confidence": signal_confidence,
+                "theme_signal_analysts": theme_signal_analysts,
+                "daily_eligible_analysts": daily_eligible_analysts,
                 "factors": {
                     "coverage": {
                         "score": round(cov_score, 2) if cov_score is not None else None,

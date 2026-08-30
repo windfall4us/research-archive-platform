@@ -307,8 +307,58 @@ def main():
           "note": "重算每个 factor score 与 JSON 比对，验证幂等一致性"}
 
     gates.update({"G7_manual_recalc": g7, "G8_rerun_consistency": g8})
-    print("=== G7-G8 ===")
-    for k, g in [("G7_manual_recalc", g7), ("G8_rerun_consistency", g8)]:
+
+    # ========== G9 signal governance 内部一致性 ==========
+    # (1) signal_confidence 与 theme_signal_analysts 阈值一致
+    # (2) heat_status 优先级：completeness<0.60 → INSUFFICIENT_DATA > signal_analysts<2 → LOW_SIGNAL > VALID
+    # (3) 08-16 强制边界样本：所有该日 scored 行必须 heat_status=LOW_SIGNAL 且 signal_confidence=LOW
+    # (4) 治理层不改 heat_score：heat_score 与 G7 独立复算一致（已由 G7 覆盖，此处做交叉断言）
+    g9_bad = []
+    # (1) confidence 阈值
+    for r in grid:
+        n = r["theme_signal_analysts"]
+        exp = "HIGH" if n >= 4 else "MEDIUM" if n >= 2 else "LOW" if n == 1 else "NONE"
+        if r["signal_confidence"] != exp:
+            g9_bad.append((r["date"], r["theme_id"], "conf_mismatch", n, r["signal_confidence"], exp))
+    # (2) status 优先级
+    for r in grid:
+        comp = r["data_completeness"]
+        n = r["theme_signal_analysts"]
+        if comp < 0.60:
+            exp = "INSUFFICIENT_DATA"
+        elif n < 2:
+            exp = "LOW_SIGNAL"
+        else:
+            exp = "VALID"
+        if r["heat_status"] != exp:
+            g9_bad.append((r["date"], r["theme_id"], "status_mismatch", comp, n, r["heat_status"], exp))
+        # (3) 反向：signal_analysts 必须 <= daily_eligible_analysts
+        if n > r["daily_eligible_analysts"]:
+            g9_bad.append((r["date"], r["theme_id"], "signal_gt_eligible", n, r["daily_eligible_analysts"]))
+    # (3) 08-16 强制边界样本
+    # 该日只有 laofan 一位分析师 → 所有主题必须 heat_status=LOW_SIGNAL（signal_analysts<2）
+    # signal_confidence 允许 LOW（sig=1）或 NONE（sig=0）——两者都代表「单分析师或零信号日」
+    d16_scored = [r for r in grid if r["date"] == "2026-08-16" and r["heat_score"] is not None]
+    d16_violations = [r["theme_id"] for r in d16_scored
+                      if r["heat_status"] != "LOW_SIGNAL"
+                      or r["signal_confidence"] not in ("LOW", "NONE")
+                      or r["theme_signal_analysts"] > 1]
+    d16_expected = "PASS" if not d16_violations else "FAIL"
+    # (4) 治理层不覆盖 heat_level（HEATING 与 LOW_SIGNAL 是合法组合）
+    combo_check = {"heat_level_HEATING_with_LOW_SIGNAL": any(
+        r["heat_level"] == "HEATING" and r["heat_status"] == "LOW_SIGNAL" for r in grid)}
+    g9 = {"pass": len(g9_bad) == 0 and d16_expected == "PASS",
+          "violations": g9_bad[:10],
+          "d16_forced_boundary": {"rows_scored": len(d16_scored), "verdict": d16_expected,
+                                  "detail": [(r["theme_id"], r["heat_score"], r["heat_level"],
+                                              r["heat_status"], r["signal_confidence"],
+                                              r["theme_signal_analysts"]) for r in d16_scored[:3]]},
+          "combo_HEATING_LOW_SIGNAL_exists": combo_check,
+          "note": "signal_confidence 阈值一致性 + heat_status 优先级 + 08-16 强制边界样本 + 治理层不覆盖 heat_level"}
+
+    gates.update({"G9_signal_governance": g9})
+    print("=== G7-G9 ===")
+    for k, g in [("G7_manual_recalc", g7), ("G8_rerun_consistency", g8), ("G9_signal_governance", g9)]:
         print(f"  {k}: {'PASS' if g['pass'] else 'FAIL'}")
 
     overall = "GO" if all(g["pass"] for g in gates.values()) else "NO-GO"
