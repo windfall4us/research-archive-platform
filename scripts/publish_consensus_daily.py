@@ -9,9 +9,11 @@ publish_consensus_daily.py — 市场共识雷达「物化 + 发布」每日管�
 职责边界（用户锁定）：
   * 只做「物化 + 发布」，绝不修改 Phase 1~4 冻结算法/评分/状态规则
   * 前置审计：仅当最近一次 Phase 1~4 产物新鲜（mtime 在 --max-age-hours 内）才执行
-  * 防重复发布：若 snapshot md5 与生产已上传一致 → 视为已是最新，跳过上传/HTML（静默）
+  * 防重复发布：若 snapshot 内容指纹与生产已上传一致（排除 meta.generated_at）→ 视为已是最新，
+    跳过上传/HTML（静默）。注：generated_at 派生自产物 mtime，Phase 1~4 每次重算刷新 mtime，
+    故跨运行比较必须用内容指纹而非整文件 md5。
   * 数据一致性：snapshot.meta.latest_date 必须 == all_dates 最新数据日（数据日≠运行日）
-  * 幂等：同输入 → 同 snapshot md5
+  * 幂等：同输入 → 同内容指纹（排除 generated_at；整文件 md5 随 mtime 刷新变化，属预期）
 
 两级告警（用户锁定）：
   * 不带 --alert：产物未就绪 → 静默跳过（22:50 主检测）
@@ -89,6 +91,24 @@ def md5_file(p: Path) -> str:
         for chunk in iter(lambda: f.read(1 << 20), b""):
             h.update(chunk)
     return h.hexdigest()
+
+
+def content_fingerprint(data: bytes) -> str:
+    """内容指纹：整文件 JSON 的 md5，但排除 meta.generated_at。
+
+    generated_at 派生自输入产物 mtime——Phase 1~4 每次重算会覆盖写产物（内容不变、
+    mtime 刷新），导致 generated_at 更新、整文件 md5 变化。防重复/幂等判定若用整文件
+    md5，第二次运行永远不会 SKIPPED（每次 cron 都重复上传）。改为内容指纹后：
+    内容（数据）相同 → 指纹相同 → SKIPPED，线上稳定不重复上传。
+    """
+    try:
+        obj = json.loads(data.decode("utf-8"))
+        if isinstance(obj, dict):
+            obj.get("meta", {}).pop("generated_at", None)
+        return hashlib.md5(json.dumps(obj, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()
+    except Exception:
+        # 非 JSON（理论不发生）→ 退回整文件 md5
+        return hashlib.md5(data).hexdigest()
 
 
 def get_latest_data_day() -> str | None:
@@ -174,15 +194,16 @@ def _connect(target: dict):
     return s
 
 
-def remote_md5(target: dict) -> str | None:
-    """读取远端已上传 snapshot 的 md5（不存在返回 None）。"""
+def remote_fingerprint(target: dict) -> str | None:
+    """读取远端已上传 snapshot 的内容指纹（不存在/读取失败返回 None）。"""
     try:
         s = _connect(target)
         sftp = s.open_sftp()
         f = sftp.open(target["path"], "rb")
         data = f.read(); f.close(); sftp.close(); s.close()
-        return hashlib.md5(data).hexdigest()
-    except Exception:
+        return content_fingerprint(data)
+    except Exception as e:
+        log(f"  ⚠️ 远端指纹读取失败 {target['name']} ({target['host']}): {e} → 无法判定重复，回退安全重传")
         return None
 
 
@@ -331,7 +352,7 @@ def main():
     _tmp = Path(tempfile.mkdtemp(prefix="snap_idem_"))
     try:
         rc_tmp, _ = run("build_consensus_snapshot.py", "--out", str(_tmp / "snap.json"))
-        idem_h = md5_file(_tmp / "snap.json") if rc_tmp == 0 else None
+        idem_h = content_fingerprint((_tmp / "snap.json").read_bytes()) if rc_tmp == 0 else None
     except Exception as e:
         idem_h = None
         log(f"  ⚠️ 幂等自检临时 build 异常: {e}")
@@ -341,12 +362,13 @@ def main():
     if rc != 0:
         fail("builder error", f"build_consensus_snapshot 失败:\n{out}")
     after = md5_file(snap_path)
-    log(f"✅ snapshot 生成: md5={after[:12]} (before={before[:12] if before else 'N/A'})")
-    # 幂等自检断言：临时副本与正式 build 必须一致（同输入 → 同 md5）
-    if idem_h is not None and idem_h != after:
-        fail("snapshot hash mismatch", f"同输入重建 md5 不一致: tmp={idem_h[:12]} vs 正式={after[:12]}，幂等契约被破坏")
+    after_fp = content_fingerprint(snap_path.read_bytes())
+    log(f"✅ snapshot 生成: md5={after[:12]} (before={before[:12] if before else 'N/A'}) · content_fp={after_fp[:12]}")
+    # 幂等自检断言：临时副本与正式 build 必须内容等价（同输入 → 同内容指纹）
+    if idem_h is not None and idem_h != after_fp:
+        fail("snapshot hash mismatch", f"同输入重建内容指纹不一致: tmp={idem_h[:12]} vs 正式={after_fp[:12]}，幂等契约被破坏")
     if idem_h is not None:
-        log(f"✅ 幂等自检通过（同输入重建 md5 一致 {idem_h[:12]}）")
+        log(f"✅ 幂等自检通过（同输入重建内容指纹一致 {idem_h[:12]}）")
     shutil.rmtree(_tmp, ignore_errors=True)
 
     # 3) 校验
@@ -360,11 +382,13 @@ def main():
         log("PUBLISH_OK (dry-run，未上传/未发布)")
         sys.exit(0)
 
-    # 4) 防重复发布：与生产已上传 md5 对比（始终静默）
+    # 4) 防重复发布：与生产已上传「内容指纹」对比（始终静默）。
+    #    比较排除 meta.generated_at（随产物 mtime 每次重算刷新）→ 内容一致即 SKIPPED。
     if not args.force:
-        prod_md5 = remote_md5(TARGETS[0])
-        if prod_md5 and prod_md5 == after:
-            log(f"PUBLISH_SKIPPED 生产已是该版本 (md5={after[:12]})，无需重复发布")
+        prod_fp = remote_fingerprint(TARGETS[0])
+        after_fp = content_fingerprint(snap_path.read_bytes())
+        if prod_fp and prod_fp == after_fp:
+            log(f"PUBLISH_SKIPPED 生产已是该版本 (content_fp={after_fp[:12]})，无需重复发布")
             sys.exit(0)
 
     # 5) 上传双环境 + 各自 API 验证

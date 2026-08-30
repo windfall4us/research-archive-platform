@@ -28,18 +28,29 @@ run_consensus_pipeline.py — 市场共识雷达 Phase 1~4 自动化总控
 
 用法：
   python3 scripts/run_consensus_pipeline.py                 # 默认：全链路 + publish
+  python3 scripts/run_consensus_pipeline.py --alert         # 补偿检测：产物/目标日未就绪也告警（23:20 用）
+  python3 scripts/run_consensus_pipeline.py --target-date 2026-08-29  # 指定目标交易日（默认=北京今天）
+  python3 scripts/run_consensus_pipeline.py --force                    # 透传 publish：强制发布（跳过 md5 防重复）
   python3 scripts/run_consensus_pipeline.py --dry-run       # 只跑 Phase1~4 + 各 benchmark，不 publish
   python3 scripts/run_consensus_pipeline.py --no-publish    # 同 dry-run（别名）
   python3 scripts/run_consensus_pipeline.py --no-telegram   # 禁用 Telegram 告警（仅日志）
   python3 scripts/run_consensus_pipeline.py --max-age-hours 48   # 放宽输入产物新鲜窗口
 
+并发保护（用户锁定 2026-08-30）：
+  * 同日锁：logs/consensus_pipeline/run.lock (fcntl flock) — 22:50 未结束时 23:20 撞锁直接静默退出，不并发
+  * run_id：YYYYMMDD-HHMMSS，写入当日日志头部 + 耗时报告
+  * 目标交易日校验：--target-date 日期的 timeline 快照必须已归档（vip0_timeline_<date>.json），
+    否则视为「今日源头数据未就绪」→ exit 2（不带 --alert 静默 / 带 --alert 告警），
+    绝不拿旧日完整产物通过 Gate 后误发布；旧 snapshot 保持在线不覆盖
+
 退出码：
-  0 = 全链路 GO（已 publish）或 dry-run 通过
+  0 = 全链路 GO（已 publish）/ dry-run 通过 / 撞锁静默跳过
   1 = 失败（已告警）
-  2 = 产物未就绪（不带 --alert 时静默，主检测）
+  2 = 产物未就绪 / 目标交易日数据未就绪（不带 --alert 时静默，主检测；带 --alert 时已告警）
 """
 
 import argparse
+import fcntl
 import json
 import subprocess
 import sys
@@ -134,14 +145,34 @@ def log(msg: str):
 # ---- 日志：全量日志 + 阶段耗时 ----
 LOGFILE: Path | None = None
 RUNTIME: dict = {}
+RUN_ID: str = ""
+LOCK_FILE: object | None = None
+PIPELINE_LOG_DIR = LOGS_DIR / "consensus_pipeline"
+
+
+def acquire_lock() -> bool:
+    """同日锁（fcntl flock）：同一时刻只允许一个总控实例。
+
+    22:50 主任务尚未结束时 23:20 补偿任务撞锁 → 返回 False，调用方静默退出（不并发、不抢发布）。
+    """
+    global LOCK_FILE
+    try:
+        PIPELINE_LOG_DIR.mkdir(parents=True, exist_ok=True)
+        _lf = open(PIPELINE_LOG_DIR / "run.lock", "w")
+        fcntl.flock(_lf, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        LOCK_FILE = _lf
+        return True
+    except OSError:
+        return False
 
 
 def init_logs(date_str: str):
-    global LOGFILE
-    LOGS_DIR.mkdir(parents=True, exist_ok=True)
-    LOGFILE = LOGS_DIR / f"consensus_pipeline_{date_str}.log"
+    global LOGFILE, RUN_ID
+    RUN_ID = datetime.now(BEIJING_TZ).strftime("%Y%m%d-%H%M%S")
+    PIPELINE_LOG_DIR.mkdir(parents=True, exist_ok=True)
+    LOGFILE = PIPELINE_LOG_DIR / f"{date_str}.log"
     with open(LOGFILE, "a", encoding="utf-8") as f:
-        f.write(f"\n{'='*70}\n[{now()}] === run_consensus_pipeline 启动 ===\n")
+        f.write(f"\n{'='*70}\n[{now()}] === run_consensus_pipeline 启动 (run_id={RUN_ID}) ===\n")
 
 
 def tee(msg: str):
@@ -306,24 +337,56 @@ def main():
     ap.add_argument("--dry-run", action="store_true", help="只跑 Phase1~4 + 各 benchmark，不 publish")
     ap.add_argument("--no-publish", action="store_true", help="同 --dry-run（别名）")
     ap.add_argument("--no-telegram", action="store_true", help="禁用 Telegram 告警（仅日志）")
+    ap.add_argument("--alert", action="store_true", help="补偿检测模式：产物/目标日未就绪也告警（23:20 用）")
+    ap.add_argument("--target-date", default=datetime.now(BEIJING_TZ).strftime("%Y-%m-%d"),
+                    help="目标交易日 YYYY-MM-DD（默认=北京今天；该日 timeline 快照必须已归档）")
+    ap.add_argument("--force", action="store_true", help="透传 publish：跳过 md5 防重复，强制上传/发布")
     ap.add_argument("--max-age-hours", type=float, default=36.0, help="输入产物新鲜窗口（小时）")
     args = ap.parse_args()
 
     do_publish = not (args.dry_run or args.no_publish)
     date_str = datetime.now(BEIJING_TZ).strftime("%Y-%m-%d")
     init_logs(date_str)
-    tee(f"run_consensus_pipeline 启动 · publish={'YES' if do_publish else 'NO(dry-run)'} · 新鲜窗口={args.max_age_hours}h")
+    tee(f"run_consensus_pipeline 启动 (run_id={RUN_ID}) · "
+        f"publish={'YES' if do_publish else 'NO(dry-run)'} · "
+        f"target_date={args.target_date} · 新鲜窗口={args.max_age_hours}h"
+        + (" · 补偿检测(告警)" if args.alert else " · 主检测(静默)"))
 
-    # 0) 前置审计
+    # 同日锁：撞锁 → 静默跳过（22:50 未结束时 23:20 不并发）
+    if not acquire_lock():
+        tee("PIPELINE_SKIPPED 另一总控实例运行中（同日锁），静默跳过")
+        sys.exit(0)
+
+    # 0) 前置审计：Phase1~4 输入产物新鲜
     ok, issues = audit_inputs(args.max_age_hours)
     if not ok:
         tee("前置审计不满足（Phase1~4 输入产物未就绪）:")
         for it in issues:
             tee(f"  - {it}")
-        if not args.no_telegram:
+        if args.alert and not args.no_telegram:
             send_telegram_alert("前置条件未满足", "; ".join(issues), 2)
-        tee("PIPELINE_SKIPPED 产物未就绪")
+        tee("PIPELINE_SKIPPED 产物未就绪" + ("（已告警）" if args.alert else "（静默，等待补偿检测）"))
         sys.exit(2)
+
+    # 0b) 目标交易日校验：目标日 timeline 快照必须已归档 + 最新快照日期与目标对齐。
+    #   防止「今日源头数据未归档，却拿旧日完整产物通过 Gate 误发布」。
+    target_snap = SNAPSHOT_DIR / f"vip0_timeline_{args.target_date.replace('-', '')}.json"
+    if not target_snap.exists():
+        tee(f"目标交易日 {args.target_date} 快照未归档: {target_snap.name}")
+        tee("→ 不运行 Phase1~4（今日源头数据未就绪），旧 snapshot 保持在线不覆盖")
+        if args.alert and not args.no_telegram:
+            send_telegram_alert("目标交易日数据未就绪",
+                                f"{args.target_date} 快照未归档: {target_snap.name}", 2)
+        tee("PIPELINE_SKIPPED 目标数据未就绪" + ("（已告警）" if args.alert else "（静默，等待补偿检测）"))
+        sys.exit(2)
+    latest, _prev = discover_timeline_snapshots()
+    if latest and snapshot_date(latest) != args.target_date:
+        tee(f"❌ 最新快照日期 {snapshot_date(latest)} ≠ 目标交易日 {args.target_date}（数据未对齐）")
+        if args.alert and not args.no_telegram:
+            send_telegram_alert("目标交易日数据未对齐",
+                                f"latest={snapshot_date(latest)} vs target={args.target_date}", 2)
+        sys.exit(2)
+    tee(f"✅ 目标交易日 {args.target_date} 快照就绪（{target_snap.name}），数据对齐")
 
     # 1~4) 各阶段
     all_go = True
@@ -336,7 +399,8 @@ def main():
     try:
         REPORTS_DIR.mkdir(parents=True, exist_ok=True)
         (REPORTS_DIR / f"consensus_pipeline_runtime_{date_str}.json").write_text(
-            json.dumps({"date": date_str, "runtime_s": RUNTIME, "overall": "GO" if all_go else "NO-GO"},
+            json.dumps({"date": date_str, "run_id": RUN_ID, "runtime_s": RUNTIME,
+                        "overall": "GO" if all_go else "NO-GO"},
                        ensure_ascii=False, indent=2), encoding="utf-8")
     except Exception as e:
         tee(f"⚠️ 耗时报告写入失败: {e}")
@@ -351,9 +415,10 @@ def main():
         tee("dry-run 模式：不调用 publish（Phase1~4 已重算完成）")
         sys.exit(0)
 
-    # 调用发布器
-    tee("→ 调用 publish_consensus_daily.py 发布")
-    rc, out = run("publish_consensus_daily.py", timeout=1800)
+    # 调用发布器（--force 透传：强制跳过 md5 防重复）
+    tee("→ 调用 publish_consensus_daily.py 发布" + ("（--force 强制）" if args.force else ""))
+    pub_args = ["--force"] if args.force else []
+    rc, out = run("publish_consensus_daily.py", *pub_args, timeout=1800)
     if rc != 0:
         tee(f"❌ publish 失败 (exit {rc}):\n{out}")
         # publish 已自带告警；这里补充阶段上下文
