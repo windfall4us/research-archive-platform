@@ -1,0 +1,8185 @@
+[
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_SEMI",
+    "theme_name": "半导体",
+    "heat_score": 23.41,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 14.29,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 14.29,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 0,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -1.8833,
+        "analyst_capped_value": -0.55,
+        "clipped_per_analyst": {
+          "laofan": -0.0167,
+          "zhenge": 0.0,
+          "tianyingju": -1.0,
+          "gelan": 0.0,
+          "youzi": -0.3333,
+          "qingbei": 0.0,
+          "yaogu": 0.0,
+          "limengchen": 0.8
+        },
+        "tactical_activity": 0.3333,
+        "active_analysts": 8,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 77.78,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 5.5,
+        "capped_value": 4.6667,
+        "capped_per_analyst": {
+          "laofan": 0.5,
+          "zhenge": 0.8333,
+          "tianyingju": 1.0,
+          "gelan": 1.0,
+          "qingbei": 0.3333,
+          "limengchen": 1.0
+        },
+        "stocks": 9,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_OPTICS",
+    "theme_name": "光通信",
+    "heat_score": 23.89,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 42.86,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 3,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 28.57,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 1,
+        "negative": 0,
+        "net": 2
+      },
+      "trade": {
+        "score": 6.67,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.5333,
+        "analyst_capped_value": 0.5333,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "zhenge": 0.2667,
+          "tianyingju": 0.2667,
+          "gelan": 0.0,
+          "youzi": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 5,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 11.11,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.6667,
+        "capped_value": 0.6667,
+        "capped_per_analyst": {
+          "zhenge": 0.6667
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_AI_COMPUTE",
+    "theme_name": "AI算力",
+    "heat_score": 36.61,
+    "heat_level": "COOL",
+    "factors": {
+      "coverage": {
+        "score": 57.14,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 4,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 28.57,
+        "weight": 0.25,
+        "available": true,
+        "positive": 3,
+        "neutral": 0,
+        "negative": 1,
+        "net": 2
+      },
+      "trade": {
+        "score": 13.75,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 2.2667,
+        "analyst_capped_value": 1.1,
+        "clipped_per_analyst": {
+          "laofan": -0.5833,
+          "zhenge": 0.0,
+          "tianyingju": 1.0,
+          "gelan": 0.0,
+          "youzi": 0.3333,
+          "qingbei": 0.0,
+          "yaogu": 0.0,
+          "limengchen": 0.35
+        },
+        "tactical_activity": 0.8333,
+        "active_analysts": 8,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 44.44,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 3.3333,
+        "capped_value": 2.6667,
+        "capped_per_analyst": {
+          "laofan": 0.3333,
+          "zhenge": 0.3333,
+          "tianyingju": 1.0,
+          "gelan": 1.0
+        },
+        "stocks": 7,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_COMPONENT",
+    "theme_name": "电子元件",
+    "heat_score": 9.68,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 28.57,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 0,
+        "negative": 1,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "gelan": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 5.56,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.3333,
+        "capped_value": 0.3333,
+        "capped_per_analyst": {
+          "gelan": 0.3333
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_PCB",
+    "theme_name": "PCB电路板",
+    "heat_score": 3.4,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 9.17,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.7333,
+        "analyst_capped_value": 0.7333,
+        "clipped_per_analyst": {
+          "zhenge": 0.0,
+          "tianyingju": 0.5,
+          "limengchen": 0.2333
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 5.56,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.3333,
+        "capped_value": 0.3333,
+        "capped_per_analyst": {
+          "zhenge": 0.3333
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_ELEC",
+    "theme_name": "消费电子",
+    "heat_score": 10.52,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 2.08,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.1667,
+        "analyst_capped_value": 0.1667,
+        "clipped_per_analyst": {
+          "laofan": -0.1833,
+          "zhenge": 0.0,
+          "tianyingju": 0.35,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "qingbei": 0.0
+        },
+        "tactical_activity": 0.3333,
+        "active_analysts": 6,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 50.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 3.1667,
+        "capped_value": 3.0,
+        "capped_per_analyst": {
+          "laofan": 0.8333,
+          "zhenge": 1.0,
+          "gelan": 0.8333,
+          "qingbei": 0.3333
+        },
+        "stocks": 7,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_SOFTWARE",
+    "theme_name": "软件",
+    "heat_score": 6.06,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 6.46,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.0333,
+        "analyst_capped_value": 0.5167,
+        "clipped_per_analyst": {
+          "laofan": -0.4167,
+          "tianyingju": 1.0,
+          "gelan": 0.0,
+          "youzi": -0.4167,
+          "qingbei": 0.0,
+          "limengchen": 0.35
+        },
+        "tactical_activity": 0.5,
+        "active_analysts": 6,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 22.22,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.3333,
+        "capped_value": 1.3333,
+        "capped_per_analyst": {
+          "laofan": 0.3333,
+          "tianyingju": 0.5,
+          "gelan": 0.5
+        },
+        "stocks": 3,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "TECH_GENERAL",
+    "theme_name": "科技整体",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "theme_name": "创新药",
+    "heat_score": 3.33,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.95,
+        "analyst_capped_value": -0.95,
+        "clipped_per_analyst": {
+          "laofan": -0.3,
+          "tianyingju": -0.75,
+          "youzi": 0.1
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 16.67,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 2.0,
+        "capped_value": 1.0,
+        "capped_per_analyst": {
+          "tianyingju": 1.0
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "CYCL_NONFERROUS",
+    "theme_name": "有色",
+    "heat_score": 20.04,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 42.86,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 3,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 1,
+        "negative": 1,
+        "net": 0
+      },
+      "trade": {
+        "score": 15.42,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 3.2167,
+        "analyst_capped_value": 1.2333,
+        "clipped_per_analyst": {
+          "tianyingju": 1.0,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "limengchen": 0.2333
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 16.67,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.0,
+        "capped_value": 1.0,
+        "capped_per_analyst": {
+          "gelan": 1.0
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "CYCL_CHEMICAL",
+    "theme_name": "化工",
+    "heat_score": 10.26,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 14.29,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 1.67,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.1333,
+        "analyst_capped_value": 0.1333,
+        "clipped_per_analyst": {
+          "tianyingju": 0.1333,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "qingbei": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 27.78,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.6667,
+        "capped_value": 1.6667,
+        "capped_per_analyst": {
+          "tianyingju": 0.5,
+          "gelan": 0.8333,
+          "qingbei": 0.3333
+        },
+        "stocks": 4,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "theme_name": "固态电池",
+    "heat_score": 1.15,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 4.58,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.3667,
+        "analyst_capped_value": 0.3667,
+        "clipped_per_analyst": {
+          "tianyingju": 0.1333,
+          "limengchen": 0.2333
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "theme_name": "电解液/VC",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "NEW_ENERGY_UHV",
+    "theme_name": "特高压",
+    "heat_score": 4.38,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 17.5,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 2.4,
+        "analyst_capped_value": 1.4,
+        "clipped_per_analyst": {
+          "tianyingju": 1.0,
+          "youzi": 0.4
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "OTHER_BROKER",
+    "theme_name": "券商",
+    "heat_score": 1.67,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "tianyingju": 0.0,
+          "gelan": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 8.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "tianyingju": 0.5
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "OTHER_AGRICULTURE",
+    "theme_name": "农业",
+    "heat_score": 1.67,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "tianyingju": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 1,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 8.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "tianyingju": 0.5
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "OTHER_ROBOTICS",
+    "theme_name": "机器人",
+    "heat_score": 10.81,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 14.29,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 8.33,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.6667,
+        "analyst_capped_value": 0.6667,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "zhenge": 0.0,
+          "tianyingju": 0.8333,
+          "gelan": 0.0,
+          "youzi": -0.1667,
+          "qingbei": 0.0,
+          "yaogu": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 7,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 22.22,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.3333,
+        "capped_value": 1.3333,
+        "capped_per_analyst": {
+          "zhenge": 0.3333,
+          "tianyingju": 1.0
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "OTHER_SPACE",
+    "theme_name": "商业航天",
+    "heat_score": 1.11,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.2667,
+        "analyst_capped_value": -0.2667,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "zhenge": -0.2667,
+          "gelan": 0.0,
+          "youzi": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 5.56,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.3333,
+        "capped_value": 0.3333,
+        "capped_per_analyst": {
+          "zhenge": 0.3333
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-14",
+    "theme_id": "OTHER_CONSUMER",
+    "theme_name": "消费白马",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.2167,
+        "analyst_capped_value": -0.2167,
+        "clipped_per_analyst": {
+          "laofan": 0.2,
+          "tianyingju": 0.0,
+          "youzi": -0.4167
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 8
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_SEMI",
+    "theme_name": "半导体",
+    "heat_score": 67.71,
+    "heat_level": "HEATING",
+    "factors": {
+      "coverage": {
+        "score": 100.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 96.67,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.9667,
+        "analyst_capped_value": 0.9667,
+        "clipped_per_analyst": {
+          "laofan": 0.9667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 1,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_OPTICS",
+    "theme_name": "光通信",
+    "heat_score": 37.5,
+    "heat_level": "COOL",
+    "factors": {
+      "coverage": {
+        "score": 100.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_AI_COMPUTE",
+    "theme_name": "AI算力",
+    "heat_score": 61.98,
+    "heat_level": "ACTIVE",
+    "factors": {
+      "coverage": {
+        "score": 100.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 78.33,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.7833,
+        "analyst_capped_value": 0.7833,
+        "clipped_per_analyst": {
+          "laofan": 0.7833
+        },
+        "tactical_activity": 0.5,
+        "active_analysts": 1,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_COMPONENT",
+    "theme_name": "电子元件",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_PCB",
+    "theme_name": "PCB电路板",
+    "heat_score": 6.25,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 20.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.2,
+        "analyst_capped_value": 0.2,
+        "clipped_per_analyst": {
+          "laofan": 0.2
+        },
+        "tactical_activity": 0,
+        "active_analysts": 1,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_ELEC",
+    "theme_name": "消费电子",
+    "heat_score": 31.25,
+    "heat_level": "COOL",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 100.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.0333,
+        "analyst_capped_value": 1.0,
+        "clipped_per_analyst": {
+          "laofan": 1.0
+        },
+        "tactical_activity": 0.5,
+        "active_analysts": 1,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_SOFTWARE",
+    "theme_name": "软件",
+    "heat_score": 0.52,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 1.67,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0167,
+        "analyst_capped_value": 0.0167,
+        "clipped_per_analyst": {
+          "laofan": 0.0167
+        },
+        "tactical_activity": 0,
+        "active_analysts": 1,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "TECH_GENERAL",
+    "theme_name": "科技整体",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "theme_name": "创新药",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "CYCL_NONFERROUS",
+    "theme_name": "有色",
+    "heat_score": 15.62,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 50.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.5,
+        "analyst_capped_value": 0.5,
+        "clipped_per_analyst": {
+          "laofan": 0.5
+        },
+        "tactical_activity": 0,
+        "active_analysts": 1,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "CYCL_CHEMICAL",
+    "theme_name": "化工",
+    "heat_score": 31.25,
+    "heat_level": "COOL",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 100.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.1,
+        "analyst_capped_value": 1.0,
+        "clipped_per_analyst": {
+          "laofan": 1.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 1,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "theme_name": "固态电池",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "theme_name": "电解液/VC",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "NEW_ENERGY_UHV",
+    "theme_name": "特高压",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "OTHER_BROKER",
+    "theme_name": "券商",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "OTHER_AGRICULTURE",
+    "theme_name": "农业",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "OTHER_ROBOTICS",
+    "theme_name": "机器人",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "OTHER_SPACE",
+    "theme_name": "商业航天",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-16",
+    "theme_id": "OTHER_CONSUMER",
+    "theme_name": "消费白马",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 1
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 1
+      },
+      "holding": {
+        "score": null,
+        "weight": 0.2,
+        "available": false,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 0
+      }
+    },
+    "data_completeness": 0.8,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_SEMI",
+    "theme_name": "半导体",
+    "heat_score": 32.98,
+    "heat_level": "COOL",
+    "factors": {
+      "coverage": {
+        "score": 57.14,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 4,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 14.29,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 1,
+        "negative": 1,
+        "net": 1
+      },
+      "trade": {
+        "score": 2.41,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 4.6667,
+        "analyst_capped_value": 0.2167,
+        "clipped_per_analyst": {
+          "laofan": 1.0,
+          "zhenge": -0.35,
+          "tianyingju": -0.5333,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "qingbei": -0.2667,
+          "panfeng": 0.0333,
+          "limengchen": 0.0,
+          "yaogu": 0.3333
+        },
+        "tactical_activity": 0.8333,
+        "active_analysts": 9,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 58.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 8.5,
+        "capped_value": 3.5,
+        "capped_per_analyst": {
+          "laofan": 1.0,
+          "zhenge": 0.3333,
+          "tianyingju": 1.0,
+          "gelan": 0.8333,
+          "qingbei": 0.3333
+        },
+        "stocks": 14,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_OPTICS",
+    "theme_name": "光通信",
+    "heat_score": 16.92,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 28.57,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 28.57,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 0,
+        "negative": 0,
+        "net": 2
+      },
+      "trade": {
+        "score": 0.37,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0333,
+        "analyst_capped_value": 0.0333,
+        "clipped_per_analyst": {
+          "zhenge": -0.1,
+          "yaogu": -0.2667,
+          "panfeng": -0.3667,
+          "limengchen": 0.0,
+          "tianyingju": 0.7667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 5,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 5.56,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.3333,
+        "capped_value": 0.3333,
+        "capped_per_analyst": {
+          "zhenge": 0.3333
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_AI_COMPUTE",
+    "theme_name": "AI算力",
+    "heat_score": 29.49,
+    "heat_level": "COOL",
+    "factors": {
+      "coverage": {
+        "score": 42.86,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 3,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 28.57,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 1,
+        "negative": 0,
+        "net": 2
+      },
+      "trade": {
+        "score": 15.74,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.9833,
+        "analyst_capped_value": 1.4167,
+        "clipped_per_analyst": {
+          "laofan": -0.1833,
+          "zhenge": 0.4,
+          "gelan": -0.5,
+          "youzi": 0.0,
+          "qingbei": -0.2667,
+          "yaogu": 0.4833,
+          "panfeng": 0.1333,
+          "limengchen": 0.35,
+          "tianyingju": 1.0
+        },
+        "tactical_activity": 1.1667,
+        "active_analysts": 9,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 27.78,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 3.0,
+        "capped_value": 1.6667,
+        "capped_per_analyst": {
+          "zhenge": 0.3333,
+          "tianyingju": 1.0,
+          "qingbei": 0.3333
+        },
+        "stocks": 6,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_COMPONENT",
+    "theme_name": "电子元件",
+    "heat_score": 17.38,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 28.57,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 28.57,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 0,
+        "negative": 0,
+        "net": 2
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "gelan": 0.0,
+          "yaogu": -0.2667,
+          "limengchen": 0.0,
+          "tianyingju": 0.2667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 8.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "gelan": 0.5
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_PCB",
+    "theme_name": "PCB电路板",
+    "heat_score": 5.56,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 6.67,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.6,
+        "analyst_capped_value": 0.6,
+        "clipped_per_analyst": {
+          "laofan": 0.9,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "qingbei": 0.0,
+          "yaogu": -0.2667,
+          "limengchen": -0.1667,
+          "tianyingju": 0.1333
+        },
+        "tactical_activity": 0,
+        "active_analysts": 7,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 19.44,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.1667,
+        "capped_value": 1.1667,
+        "capped_per_analyst": {
+          "tianyingju": 0.8333,
+          "gelan": 0.3333
+        },
+        "stocks": 3,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_ELEC",
+    "theme_name": "消费电子",
+    "heat_score": 8.56,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 14.26,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.2833,
+        "analyst_capped_value": 1.2833,
+        "clipped_per_analyst": {
+          "laofan": 0.9333,
+          "zhenge": 0.0833,
+          "tianyingju": 0.8,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "yaogu": -0.5333
+        },
+        "tactical_activity": 0,
+        "active_analysts": 6,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 25.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.5,
+        "capped_value": 1.5,
+        "capped_per_analyst": {
+          "tianyingju": 1.0,
+          "gelan": 0.5
+        },
+        "stocks": 3,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_SOFTWARE",
+    "theme_name": "软件",
+    "heat_score": 4.68,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 3.15,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.2833,
+        "analyst_capped_value": 0.2833,
+        "clipped_per_analyst": {
+          "laofan": -0.5333,
+          "zhenge": 0.3333,
+          "qingbei": -0.2667,
+          "limengchen": 0.35,
+          "tianyingju": 0.0667,
+          "yaogu": 0.3333
+        },
+        "tactical_activity": 1.6667,
+        "active_analysts": 6,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 19.44,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.1667,
+        "capped_value": 1.1667,
+        "capped_per_analyst": {
+          "tianyingju": 0.8333,
+          "qingbei": 0.3333
+        },
+        "stocks": 3,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "TECH_GENERAL",
+    "theme_name": "科技整体",
+    "heat_score": 15.71,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 28.57,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 28.57,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 0,
+        "negative": 0,
+        "net": 2
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "theme_name": "创新药",
+    "heat_score": 14.83,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 28.57,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 14.29,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 1,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 10.74,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.9667,
+        "analyst_capped_value": 0.9667,
+        "clipped_per_analyst": {
+          "youzi": 0.0,
+          "tianyingju": 0.6333,
+          "yaogu": 0.3333
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "CYCL_NONFERROUS",
+    "theme_name": "有色",
+    "heat_score": 13.27,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 14.29,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 1,
+        "net": -1
+      },
+      "trade": {
+        "score": 9.26,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.45,
+        "analyst_capped_value": 0.8333,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "youzi": 0.0,
+          "limengchen": -0.1667,
+          "tianyingju": 1.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 33.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 5.3333,
+        "capped_value": 2.0,
+        "capped_per_analyst": {
+          "tianyingju": 1.0,
+          "youzi": 1.0
+        },
+        "stocks": 6,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "CYCL_CHEMICAL",
+    "theme_name": "化工",
+    "heat_score": 10.21,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 14.29,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 17.04,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.5333,
+        "analyst_capped_value": 1.5333,
+        "clipped_per_analyst": {
+          "laofan": -0.1667,
+          "tianyingju": 0.8167,
+          "youzi": 0.0,
+          "yaogu": 0.4833,
+          "panfeng": 0.4
+        },
+        "tactical_activity": 0,
+        "active_analysts": 5,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 8.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "laofan": 0.5
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "theme_name": "固态电池",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.1667,
+        "analyst_capped_value": -0.1667,
+        "clipped_per_analyst": {
+          "yaogu": -0.2667,
+          "limengchen": -0.1667,
+          "laofan": 0.0,
+          "tianyingju": 0.2667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "theme_name": "电解液/VC",
+    "heat_score": 7.86,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 14.29,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 14.29,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 0,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "NEW_ENERGY_UHV",
+    "theme_name": "特高压",
+    "heat_score": 8.15,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 25.93,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 3.9,
+        "analyst_capped_value": 2.3333,
+        "clipped_per_analyst": {
+          "gelan": 0.0,
+          "youzi": 1.0,
+          "tianyingju": 1.0,
+          "yaogu": 0.3333
+        },
+        "tactical_activity": 1.0,
+        "active_analysts": 4,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 8.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "gelan": 0.5
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "OTHER_BROKER",
+    "theme_name": "券商",
+    "heat_score": 1.11,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.0333,
+        "analyst_capped_value": -0.0333,
+        "clipped_per_analyst": {
+          "laofan": 0.1333,
+          "tianyingju": -0.1667
+        },
+        "tactical_activity": 0.3333,
+        "active_analysts": 2,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 5.56,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.3333,
+        "capped_value": 0.3333,
+        "capped_per_analyst": {
+          "tianyingju": 0.3333
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "OTHER_AGRICULTURE",
+    "theme_name": "农业",
+    "heat_score": 0.74,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 2.96,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.2667,
+        "analyst_capped_value": 0.2667,
+        "clipped_per_analyst": {
+          "laofan": 0.2667,
+          "tianyingju": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "OTHER_ROBOTICS",
+    "theme_name": "机器人",
+    "heat_score": 5.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 4.44,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.4,
+        "analyst_capped_value": 0.4,
+        "clipped_per_analyst": {
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "limengchen": 0.0,
+          "laofan": 0.0,
+          "tianyingju": 0.4
+        },
+        "tactical_activity": 0,
+        "active_analysts": 5,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 19.44,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.1667,
+        "capped_value": 1.1667,
+        "capped_per_analyst": {
+          "tianyingju": 0.8333,
+          "gelan": 0.3333
+        },
+        "stocks": 3,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "OTHER_SPACE",
+    "theme_name": "商业航天",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.1667,
+        "analyst_capped_value": -0.1667,
+        "clipped_per_analyst": {
+          "zhenge": -0.1667,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "tianyingju": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-17",
+    "theme_id": "OTHER_CONSUMER",
+    "theme_name": "消费白马",
+    "heat_score": 1.11,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 4.44,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.4,
+        "analyst_capped_value": 0.4,
+        "clipped_per_analyst": {
+          "youzi": 0.0,
+          "tianyingju": 0.4
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_SEMI",
+    "theme_name": "半导体",
+    "heat_score": 35.35,
+    "heat_level": "COOL",
+    "factors": {
+      "coverage": {
+        "score": 44.44,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 4,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 22.22,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 2,
+        "negative": 0,
+        "net": 2
+      },
+      "trade": {
+        "score": 15.19,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.3667,
+        "analyst_capped_value": 1.3667,
+        "clipped_per_analyst": {
+          "laofan": -0.6667,
+          "zhenge": 0.2667,
+          "tianyingju": 0.8833,
+          "gelan": 0.1,
+          "youzi": 0.0,
+          "qingbei": 0.0,
+          "panfeng": 0.35,
+          "limengchen": 0.7,
+          "yaogu": -0.2667
+        },
+        "tactical_activity": 0.5,
+        "active_analysts": 9,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 63.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 5.1667,
+        "capped_value": 3.1667,
+        "capped_per_analyst": {
+          "laofan": 1.0,
+          "zhenge": 0.3333,
+          "tianyingju": 1.0,
+          "gelan": 0.8333
+        },
+        "stocks": 9,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_OPTICS",
+    "theme_name": "光通信",
+    "heat_score": 18.56,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 33.33,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 3,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 22.22,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 1,
+        "negative": 0,
+        "net": 2
+      },
+      "trade": {
+        "score": 6.67,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.6,
+        "analyst_capped_value": 0.6,
+        "clipped_per_analyst": {
+          "laofan": -0.0667,
+          "zhenge": 0.2667,
+          "tianyingju": 0.4
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 6.67,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.3333,
+        "capped_value": 0.3333,
+        "capped_per_analyst": {
+          "zhenge": 0.3333
+        },
+        "stocks": 1,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_AI_COMPUTE",
+    "theme_name": "AI算力",
+    "heat_score": 17.28,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 11.11,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 0,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 10.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.9,
+        "analyst_capped_value": 0.9,
+        "clipped_per_analyst": {
+          "laofan": 0.2833,
+          "zhenge": -0.0667,
+          "tianyingju": 0.5833,
+          "gelan": 0.35,
+          "youzi": 0.0,
+          "qingbei": 0.0,
+          "yaogu": -0.25
+        },
+        "tactical_activity": 0.5,
+        "active_analysts": 7,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 43.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 2.1667,
+        "capped_value": 2.1667,
+        "capped_per_analyst": {
+          "zhenge": 0.3333,
+          "tianyingju": 0.5,
+          "gelan": 0.8333,
+          "youzi": 0.5
+        },
+        "stocks": 5,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_COMPONENT",
+    "theme_name": "电子元件",
+    "heat_score": 12.22,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 22.22,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 22.22,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 0,
+        "negative": 0,
+        "net": 2
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_PCB",
+    "theme_name": "PCB电路板",
+    "heat_score": 3.33,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "tianyingju": 0.0,
+          "youzi": 0.0,
+          "qingbei": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_ELEC",
+    "theme_name": "消费电子",
+    "heat_score": 7.33,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.0833,
+        "analyst_capped_value": -0.0833,
+        "clipped_per_analyst": {
+          "laofan": 0.5,
+          "zhenge": -0.3333,
+          "tianyingju": 0.0,
+          "gelan": -0.25,
+          "youzi": 0.0,
+          "qingbei": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 6,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 36.67,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.8333,
+        "capped_value": 1.8333,
+        "capped_per_analyst": {
+          "laofan": 0.5,
+          "tianyingju": 0.5,
+          "gelan": 0.3333,
+          "youzi": 0.5
+        },
+        "stocks": 4,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_SOFTWARE",
+    "theme_name": "软件",
+    "heat_score": 5.33,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.15,
+        "analyst_capped_value": -0.15,
+        "clipped_per_analyst": {
+          "laofan": 0.35,
+          "zhenge": -0.3333,
+          "tianyingju": -0.1667,
+          "gelan": 0.0,
+          "qingbei": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 5,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 10.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "tianyingju": 0.5
+        },
+        "stocks": 1,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "TECH_GENERAL",
+    "theme_name": "科技整体",
+    "heat_score": 9.44,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 22.22,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 11.11,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 1,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "theme_name": "创新药",
+    "heat_score": 21.56,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 33.33,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 3,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 22.22,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 1,
+        "negative": 0,
+        "net": 2
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.2667,
+        "analyst_capped_value": -0.2667,
+        "clipped_per_analyst": {
+          "tianyingju": 0.0,
+          "youzi": 0.0,
+          "panfeng": 0.0,
+          "yaogu": -0.2667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 30.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.5,
+        "capped_value": 1.5,
+        "capped_per_analyst": {
+          "tianyingju": 1.0,
+          "youzi": 0.5
+        },
+        "stocks": 2,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "CYCL_NONFERROUS",
+    "theme_name": "有色",
+    "heat_score": 8.86,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 1,
+        "net": -1
+      },
+      "trade": {
+        "score": 6.11,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.55,
+        "analyst_capped_value": 0.55,
+        "clipped_per_analyst": {
+          "tianyingju": 0.55
+        },
+        "tactical_activity": 0,
+        "active_analysts": 1,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 20.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 2.5,
+        "capped_value": 1.0,
+        "capped_per_analyst": {
+          "tianyingju": 1.0
+        },
+        "stocks": 3,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "CYCL_CHEMICAL",
+    "theme_name": "化工",
+    "heat_score": 5.33,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.4167,
+        "analyst_capped_value": -0.4167,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "tianyingju": -0.25,
+          "youzi": 0.0,
+          "yaogu": -0.5167,
+          "panfeng": 0.35
+        },
+        "tactical_activity": 0,
+        "active_analysts": 5,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 10.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "tianyingju": 0.5
+        },
+        "stocks": 1,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "theme_name": "固态电池",
+    "heat_score": 2.36,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 9.44,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.85,
+        "analyst_capped_value": 0.85,
+        "clipped_per_analyst": {
+          "laofan": 0.85,
+          "tianyingju": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "theme_name": "电解液/VC",
+    "heat_score": 3.33,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "NEW_ENERGY_UHV",
+    "theme_name": "特高压",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "tianyingju": 0.0,
+          "gelan": 0.0,
+          "youzi": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "OTHER_BROKER",
+    "theme_name": "券商",
+    "heat_score": 2.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "tianyingju": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 1,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 10.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "tianyingju": 0.5
+        },
+        "stocks": 1,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "OTHER_AGRICULTURE",
+    "theme_name": "农业",
+    "heat_score": 20.89,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 44.44,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 4,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 22.22,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 2,
+        "negative": 0,
+        "net": 2
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "tianyingju": 0.0,
+          "youzi": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 10.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "tianyingju": 0.5
+        },
+        "stocks": 1,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "OTHER_ROBOTICS",
+    "theme_name": "机器人",
+    "heat_score": 8.75,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 11.11,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 0,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 10.56,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.95,
+        "analyst_capped_value": 0.95,
+        "clipped_per_analyst": {
+          "laofan": 0.95,
+          "tianyingju": 0.0,
+          "gelan": 0.0,
+          "youzi": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "OTHER_SPACE",
+    "theme_name": "商业航天",
+    "heat_score": 6.11,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 11.11,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 0,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "tianyingju": 0.0,
+          "youzi": 0.0,
+          "qingbei": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-18",
+    "theme_id": "OTHER_CONSUMER",
+    "theme_name": "消费白马",
+    "heat_score": 5.33,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "tianyingju": 0.0,
+          "youzi": 0.0,
+          "panfeng": 0.0
+        },
+        "tactical_activity": 1.0,
+        "active_analysts": 3,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 10.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "youzi": 0.5
+        },
+        "stocks": 1,
+        "eligible": 5
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_SEMI",
+    "theme_name": "半导体",
+    "heat_score": 17.22,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 33.33,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 2,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -2.0,
+        "analyst_capped_value": -0.6667,
+        "clipped_per_analyst": {
+          "laofan": -1.0,
+          "gelan": 0.0,
+          "youzi": 0.3333,
+          "yaogu": 0.0,
+          "limengchen": 1.0,
+          "tianyingju": -1.0
+        },
+        "tactical_activity": 1.3333,
+        "active_analysts": 6,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 36.11,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 2.1667,
+        "capped_value": 2.1667,
+        "capped_per_analyst": {
+          "laofan": 0.5,
+          "tianyingju": 0.3333,
+          "yaogu": 0.3333,
+          "limengchen": 1.0
+        },
+        "stocks": 4,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_OPTICS",
+    "theme_name": "光通信",
+    "heat_score": 1.94,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 7.78,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.4667,
+        "analyst_capped_value": 0.4667,
+        "clipped_per_analyst": {
+          "laofan": -0.2333,
+          "tianyingju": 0.7
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_AI_COMPUTE",
+    "theme_name": "AI算力",
+    "heat_score": 11.32,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 16.67,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 9.72,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.6,
+        "analyst_capped_value": 0.5833,
+        "clipped_per_analyst": {
+          "laofan": -0.4,
+          "gelan": 0.0,
+          "youzi": 1.0,
+          "tianyingju": -0.6,
+          "yaogu": 0.2333,
+          "limengchen": 0.35
+        },
+        "tactical_activity": 0.3333,
+        "active_analysts": 6,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 19.44,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.1667,
+        "capped_value": 1.1667,
+        "capped_per_analyst": {
+          "laofan": 0.5,
+          "tianyingju": 0.3333,
+          "yaogu": 0.3333
+        },
+        "stocks": 3,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_COMPONENT",
+    "theme_name": "电子元件",
+    "heat_score": 6.11,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 16.67,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.3333,
+        "analyst_capped_value": -0.3333,
+        "clipped_per_analyst": {
+          "laofan": -0.1667,
+          "limengchen": -0.4,
+          "tianyingju": 0.0,
+          "yaogu": 0.2333
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 5.56,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.3333,
+        "capped_value": 0.3333,
+        "capped_per_analyst": {
+          "yaogu": 0.3333
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_PCB",
+    "theme_name": "PCB电路板",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.25,
+        "analyst_capped_value": -0.25,
+        "clipped_per_analyst": {
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "tianyingju": -0.25
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_ELEC",
+    "theme_name": "消费电子",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.4333,
+        "analyst_capped_value": -0.3167,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "gelan": 0.0,
+          "youzi": 0.6833,
+          "tianyingju": -1.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_SOFTWARE",
+    "theme_name": "软件",
+    "heat_score": 1.11,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.4667,
+        "analyst_capped_value": -0.4667,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "youzi": 0.3333,
+          "tianyingju": -0.8
+        },
+        "tactical_activity": 0.3333,
+        "active_analysts": 3,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 5.56,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.3333,
+        "capped_value": 0.3333,
+        "capped_per_analyst": {
+          "tianyingju": 0.3333
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "TECH_GENERAL",
+    "theme_name": "科技整体",
+    "heat_score": 10.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 33.33,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 2,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "theme_name": "创新药",
+    "heat_score": 15.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 33.33,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 2,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.1667,
+        "analyst_capped_value": -0.1667,
+        "clipped_per_analyst": {
+          "youzi": 0.0,
+          "tianyingju": -0.1667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 25.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.5,
+        "capped_value": 1.5,
+        "capped_per_analyst": {
+          "tianyingju": 1.0,
+          "youzi": 0.5
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "CYCL_NONFERROUS",
+    "theme_name": "有色",
+    "heat_score": 21.94,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 33.33,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 16.67,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 1,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.25,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "laofan": 1.0,
+          "gelan": 0.0,
+          "yaogu": 0.0,
+          "tianyingju": -1.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 38.89,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 4.3333,
+        "capped_value": 2.3333,
+        "capped_per_analyst": {
+          "tianyingju": 1.0,
+          "gelan": 1.0,
+          "yaogu": 0.3333
+        },
+        "stocks": 5,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "CYCL_CHEMICAL",
+    "theme_name": "化工",
+    "heat_score": 3.68,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 8.06,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.4833,
+        "analyst_capped_value": 0.4833,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "youzi": 0.3333,
+          "tianyingju": 0.15
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 8.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "youzi": 0.5
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "theme_name": "固态电池",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.25,
+        "analyst_capped_value": -0.25,
+        "clipped_per_analyst": {
+          "tianyingju": -0.25
+        },
+        "tactical_activity": 0,
+        "active_analysts": 1,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "theme_name": "电解液/VC",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "NEW_ENERGY_UHV",
+    "theme_name": "特高压",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.9167,
+        "analyst_capped_value": -0.9167,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "tianyingju": -0.9167
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "OTHER_BROKER",
+    "theme_name": "券商",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.05,
+        "analyst_capped_value": -0.05,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "youzi": 0.0,
+          "tianyingju": -0.05
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "OTHER_AGRICULTURE",
+    "theme_name": "农业",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "tianyingju": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 1,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "OTHER_ROBOTICS",
+    "theme_name": "机器人",
+    "heat_score": 5.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 16.67,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.8333,
+        "analyst_capped_value": -0.8333,
+        "clipped_per_analyst": {
+          "laofan": -0.2333,
+          "gelan": 0.0,
+          "limengchen": -0.4,
+          "tianyingju": -0.2,
+          "youzi": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 5,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "OTHER_SPACE",
+    "theme_name": "商业航天",
+    "heat_score": 8.89,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 16.67,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 1,
+        "net": -1
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.1,
+        "analyst_capped_value": -0.1,
+        "clipped_per_analyst": {
+          "laofan": -0.1667,
+          "youzi": 0.0,
+          "yaogu": 0.2333,
+          "tianyingju": -0.1667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 19.44,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.1667,
+        "capped_value": 1.1667,
+        "capped_per_analyst": {
+          "youzi": 0.5,
+          "yaogu": 0.6667
+        },
+        "stocks": 3,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-19",
+    "theme_id": "OTHER_CONSUMER",
+    "theme_name": "消费白马",
+    "heat_score": 15.83,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 33.33,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 6
+      },
+      "mention": {
+        "score": 16.67,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 1,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "youzi": 0.0,
+          "tianyingju": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 6
+      },
+      "holding": {
+        "score": 8.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "youzi": 0.5
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_SEMI",
+    "theme_name": "半导体",
+    "heat_score": 20.58,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 14.29,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 41.85,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 3.8667,
+        "analyst_capped_value": 3.7667,
+        "clipped_per_analyst": {
+          "laofan": 1.0,
+          "zhenge": 0.35,
+          "tianyingju": 0.7833,
+          "gelan": 0.4,
+          "yaogu": 0.2333,
+          "limengchen": 1.0
+        },
+        "tactical_activity": 0.5,
+        "active_analysts": 6,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 29.17,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 3.8333,
+        "capped_value": 2.3333,
+        "capped_per_analyst": {
+          "zhenge": 0.3333,
+          "gelan": 1.0,
+          "limengchen": 1.0
+        },
+        "stocks": 6,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_OPTICS",
+    "theme_name": "光通信",
+    "heat_score": 13.17,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 14.29,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 18.89,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.7,
+        "analyst_capped_value": 1.7,
+        "clipped_per_analyst": {
+          "laofan": 0.4667,
+          "zhenge": 0.7,
+          "tianyingju": 0.2667,
+          "gelan": 0.0,
+          "panfeng": 0.2667
+        },
+        "tactical_activity": 0.5,
+        "active_analysts": 5,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 20.83,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.6667,
+        "capped_value": 1.6667,
+        "capped_per_analyst": {
+          "zhenge": 0.8333,
+          "tianyingju": 0.5,
+          "panfeng": 0.3333
+        },
+        "stocks": 4,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_AI_COMPUTE",
+    "theme_name": "AI算力",
+    "heat_score": 19.7,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 14.29,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 1,
+        "net": -1
+      },
+      "trade": {
+        "score": 20.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.9667,
+        "analyst_capped_value": 1.8,
+        "clipped_per_analyst": {
+          "laofan": 1.0,
+          "zhenge": 0.35,
+          "tianyingju": 0.1,
+          "gelan": 0.75,
+          "youzi": 0.0,
+          "yaogu": -0.2667,
+          "panfeng": 0.2667,
+          "qingbei": -0.4
+        },
+        "tactical_activity": 0.3333,
+        "active_analysts": 8,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 52.08,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 4.6667,
+        "capped_value": 4.1667,
+        "capped_per_analyst": {
+          "laofan": 0.5,
+          "zhenge": 0.8333,
+          "tianyingju": 0.5,
+          "gelan": 1.0,
+          "yaogu": 1.0,
+          "panfeng": 0.3333
+        },
+        "stocks": 9,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_COMPONENT",
+    "theme_name": "电子元件",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_PCB",
+    "theme_name": "PCB电路板",
+    "heat_score": 2.5,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "zhenge": 0.0,
+          "tianyingju": 0.0,
+          "youzi": 0.0
+        },
+        "tactical_activity": 0.3333,
+        "active_analysts": 3,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 12.5,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.0,
+        "capped_value": 1.0,
+        "capped_per_analyst": {
+          "zhenge": 0.3333,
+          "tianyingju": 0.3333,
+          "youzi": 0.3333
+        },
+        "stocks": 3,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_ELEC",
+    "theme_name": "消费电子",
+    "heat_score": 5.28,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 9.44,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.85,
+        "analyst_capped_value": 0.85,
+        "clipped_per_analyst": {
+          "laofan": 0.2333,
+          "zhenge": 0.0,
+          "tianyingju": 0.0,
+          "gelan": 0.35,
+          "youzi": 0.0,
+          "panfeng": 0.2667
+        },
+        "tactical_activity": 0.6667,
+        "active_analysts": 6,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 14.58,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.1667,
+        "capped_value": 1.1667,
+        "capped_per_analyst": {
+          "zhenge": 0.3333,
+          "gelan": 0.5,
+          "youzi": 0.3333
+        },
+        "stocks": 3,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_SOFTWARE",
+    "theme_name": "软件",
+    "heat_score": 1.25,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.3667,
+        "analyst_capped_value": -0.3667,
+        "clipped_per_analyst": {
+          "laofan": 0.2,
+          "tianyingju": -0.1667,
+          "gelan": 0.0,
+          "qingbei": -0.4
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 6.25,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "gelan": 0.5
+        },
+        "stocks": 1,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "TECH_GENERAL",
+    "theme_name": "科技整体",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "theme_name": "创新药",
+    "heat_score": 7.86,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 14.29,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 14.29,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 0,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "CYCL_NONFERROUS",
+    "theme_name": "有色",
+    "heat_score": 22.7,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 28.57,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 14.29,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 1,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 12.22,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.6,
+        "analyst_capped_value": 1.1,
+        "clipped_per_analyst": {
+          "laofan": 0.3,
+          "tianyingju": 1.0,
+          "gelan": 0.0,
+          "qingbei": -1.0,
+          "panfeng": 0.8,
+          "zhenge": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 6,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 37.5,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 4.8333,
+        "capped_value": 3.0,
+        "capped_per_analyst": {
+          "laofan": 1.0,
+          "tianyingju": 1.0,
+          "gelan": 1.0
+        },
+        "stocks": 5,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "CYCL_CHEMICAL",
+    "theme_name": "化工",
+    "heat_score": 1.25,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.25,
+        "analyst_capped_value": -0.25,
+        "clipped_per_analyst": {
+          "tianyingju": -0.25,
+          "youzi": 0.0
+        },
+        "tactical_activity": 0.3333,
+        "active_analysts": 2,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 6.25,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "youzi": 0.5
+        },
+        "stocks": 1,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "theme_name": "固态电池",
+    "heat_score": 0.56,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 2.22,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.2,
+        "analyst_capped_value": 0.2,
+        "clipped_per_analyst": {
+          "laofan": 0.2
+        },
+        "tactical_activity": 0,
+        "active_analysts": 1,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "theme_name": "电解液/VC",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "NEW_ENERGY_UHV",
+    "theme_name": "特高压",
+    "heat_score": 6.28,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 14.29,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 2.96,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.2667,
+        "analyst_capped_value": 0.2667,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "tianyingju": 0.2667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 6.25,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "laofan": 0.5
+        },
+        "stocks": 1,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "OTHER_BROKER",
+    "theme_name": "券商",
+    "heat_score": 14.23,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 28.57,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 14.29,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 1,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "tianyingju": 0.0,
+          "gelan": 0.0,
+          "youzi": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 10.42,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.8333,
+        "capped_value": 0.8333,
+        "capped_per_analyst": {
+          "tianyingju": 0.3333,
+          "youzi": 0.5
+        },
+        "stocks": 2,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "OTHER_AGRICULTURE",
+    "theme_name": "农业",
+    "heat_score": 7.86,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 14.29,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 14.29,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 0,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.25,
+        "analyst_capped_value": -0.25,
+        "clipped_per_analyst": {
+          "youzi": -0.25
+        },
+        "tactical_activity": 0,
+        "active_analysts": 1,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "OTHER_ROBOTICS",
+    "theme_name": "机器人",
+    "heat_score": 7.69,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 14.07,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.2667,
+        "analyst_capped_value": 1.2667,
+        "clipped_per_analyst": {
+          "laofan": 0.2333,
+          "zhenge": 0.0,
+          "tianyingju": 0.8,
+          "yaogu": 0.2333,
+          "panfeng": 0.0
+        },
+        "tactical_activity": 0.3333,
+        "active_analysts": 5,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 20.83,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.6667,
+        "capped_value": 1.6667,
+        "capped_per_analyst": {
+          "zhenge": 0.3333,
+          "tianyingju": 1.0,
+          "panfeng": 0.3333
+        },
+        "stocks": 3,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "OTHER_SPACE",
+    "theme_name": "商业航天",
+    "heat_score": 0.83,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "youzi": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 4.17,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.3333,
+        "capped_value": 0.3333,
+        "capped_per_analyst": {
+          "youzi": 0.3333
+        },
+        "stocks": 1,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-26",
+    "theme_id": "OTHER_CONSUMER",
+    "theme_name": "消费白马",
+    "heat_score": 13.39,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 28.57,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 7
+      },
+      "mention": {
+        "score": 14.29,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 1,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.75,
+        "analyst_capped_value": -0.75,
+        "clipped_per_analyst": {
+          "tianyingju": 0.0,
+          "youzi": -0.75,
+          "zhenge": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 6.25,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "tianyingju": 0.5
+        },
+        "stocks": 1,
+        "eligible": 8
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_SEMI",
+    "theme_name": "半导体",
+    "heat_score": 26.85,
+    "heat_level": "COOL",
+    "factors": {
+      "coverage": {
+        "score": 22.22,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 11.11,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 1,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 31.85,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 4.2833,
+        "analyst_capped_value": 2.8667,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "zhenge": -0.3333,
+          "gelan": 0.1333,
+          "yaogu": 0.5667,
+          "panfeng": 0.5,
+          "limengchen": 1.0,
+          "tianyingju": 1.0
+        },
+        "tactical_activity": 1.0,
+        "active_analysts": 7,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 47.22,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 3.8333,
+        "capped_value": 2.8333,
+        "capped_per_analyst": {
+          "zhenge": 0.5,
+          "tianyingju": 0.8333,
+          "yaogu": 0.5,
+          "limengchen": 1.0
+        },
+        "stocks": 6,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_OPTICS",
+    "theme_name": "光通信",
+    "heat_score": 19.81,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 33.33,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 3,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 22.22,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 1,
+        "negative": 0,
+        "net": 2
+      },
+      "trade": {
+        "score": 3.7,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.3333,
+        "analyst_capped_value": 0.3333,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "zhenge": -0.3333,
+          "gelan": 0.0,
+          "yaogu": 0.3333,
+          "panfeng": 0.3333,
+          "tianyingju": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 6,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 16.67,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.0,
+        "capped_value": 1.0,
+        "capped_per_analyst": {
+          "zhenge": 0.5,
+          "tianyingju": 0.5
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_AI_COMPUTE",
+    "theme_name": "AI算力",
+    "heat_score": 12.96,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 27.41,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 2.4667,
+        "analyst_capped_value": 2.4667,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "zhenge": 0.6667,
+          "gelan": 0.0,
+          "youzi": 0.5,
+          "yaogu": 0.7333,
+          "panfeng": 0.3333,
+          "tianyingju": 0.2333
+        },
+        "tactical_activity": 0,
+        "active_analysts": 7,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 13.89,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.8333,
+        "capped_value": 0.8333,
+        "capped_per_analyst": {
+          "tianyingju": 0.8333
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_COMPONENT",
+    "theme_name": "电子元件",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "gelan": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 1,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_PCB",
+    "theme_name": "PCB电路板",
+    "heat_score": 10.93,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 11.11,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 0,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 8.15,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.7333,
+        "analyst_capped_value": 0.7333,
+        "clipped_per_analyst": {
+          "zhenge": 0.0,
+          "gelan": 0.1333,
+          "youzi": 0.3333,
+          "yaogu": 0.0,
+          "tianyingju": 0.2667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 5,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 13.89,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.8333,
+        "capped_value": 0.8333,
+        "capped_per_analyst": {
+          "zhenge": 0.3333,
+          "yaogu": 0.5
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_ELEC",
+    "theme_name": "消费电子",
+    "heat_score": 3.94,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 11.3,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.0167,
+        "analyst_capped_value": 1.0167,
+        "clipped_per_analyst": {
+          "zhenge": 0.0,
+          "gelan": 0.0,
+          "youzi": 0.5,
+          "yaogu": -0.1667,
+          "panfeng": 0.0,
+          "yixiantian": 0.0,
+          "tianyingju": 0.6833
+        },
+        "tactical_activity": 0,
+        "active_analysts": 7,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 5.56,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.3333,
+        "capped_value": 0.3333,
+        "capped_per_analyst": {
+          "zhenge": 0.3333
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_SOFTWARE",
+    "theme_name": "软件",
+    "heat_score": 1.11,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.1667,
+        "analyst_capped_value": -0.1667,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "zhenge": 0.0,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "yaogu": 0.0,
+          "tianyingju": -0.1667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 6,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 5.56,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.3333,
+        "capped_value": 0.3333,
+        "capped_per_analyst": {
+          "tianyingju": 0.3333
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "TECH_GENERAL",
+    "theme_name": "科技整体",
+    "heat_score": 9.44,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 22.22,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 11.11,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 1,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "theme_name": "创新药",
+    "heat_score": 6.67,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 22.22,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 2,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.4,
+        "analyst_capped_value": -0.4,
+        "clipped_per_analyst": {
+          "zhenge": 0.0,
+          "youzi": -0.4,
+          "yixiantian": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "CYCL_NONFERROUS",
+    "theme_name": "有色",
+    "heat_score": 17.18,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 22.22,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 11.11,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 1,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 10.93,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.9833,
+        "analyst_capped_value": 0.9833,
+        "clipped_per_analyst": {
+          "laofan": -0.25,
+          "youzi": 0.3333,
+          "panfeng": 0.5,
+          "yixiantian": 0.0,
+          "tianyingju": 0.4,
+          "zhenge": 0.0,
+          "yaogu": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 7,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 25.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 5.0,
+        "capped_value": 1.5,
+        "capped_per_analyst": {
+          "laofan": 0.5,
+          "tianyingju": 1.0
+        },
+        "stocks": 7,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "CYCL_CHEMICAL",
+    "theme_name": "化工",
+    "heat_score": 17.78,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 22.22,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 11.11,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 1,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.6833,
+        "analyst_capped_value": -0.6833,
+        "clipped_per_analyst": {
+          "laofan": -0.85,
+          "youzi": 0.0,
+          "yaogu": -0.1667,
+          "tianyingju": 0.3333
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 41.67,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 3.0,
+        "capped_value": 2.5,
+        "capped_per_analyst": {
+          "laofan": 1.0,
+          "tianyingju": 1.0,
+          "youzi": 0.5
+        },
+        "stocks": 5,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "theme_name": "固态电池",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "theme_name": "电解液/VC",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "NEW_ENERGY_UHV",
+    "theme_name": "特高压",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {
+          "gelan": 0.0,
+          "yaogu": 0.0,
+          "tianyingju": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "OTHER_BROKER",
+    "theme_name": "券商",
+    "heat_score": 2.59,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 3.7,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.3333,
+        "analyst_capped_value": 0.3333,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "zhenge": 0.0,
+          "youzi": 0.3333,
+          "yaogu": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 8.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "youzi": 0.5
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "OTHER_AGRICULTURE",
+    "theme_name": "农业",
+    "heat_score": 13.89,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 22.22,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 22.22,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 0,
+        "negative": 0,
+        "net": 2
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.55,
+        "analyst_capped_value": -0.55,
+        "clipped_per_analyst": {
+          "zhenge": 0.0,
+          "youzi": -0.9,
+          "yaogu": 0.35,
+          "tianyingju": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 8.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "tianyingju": 0.5
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "OTHER_ROBOTICS",
+    "theme_name": "机器人",
+    "heat_score": 7.59,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 12.59,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.1333,
+        "analyst_capped_value": 1.1333,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "zhenge": 0.0,
+          "gelan": 0.1333,
+          "yaogu": 0.4,
+          "panfeng": 0.3333,
+          "yixiantian": 0.0,
+          "tianyingju": 0.2667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 7,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 22.22,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.3333,
+        "capped_value": 1.3333,
+        "capped_per_analyst": {
+          "zhenge": 0.3333,
+          "tianyingju": 1.0
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "OTHER_SPACE",
+    "theme_name": "商业航天",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.2333,
+        "analyst_capped_value": -0.2333,
+        "clipped_per_analyst": {
+          "youzi": -0.5,
+          "tianyingju": 0.2667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-27",
+    "theme_id": "OTHER_CONSUMER",
+    "theme_name": "消费白马",
+    "heat_score": 2.64,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 3.89,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.35,
+        "analyst_capped_value": 0.35,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "zhenge": 0.0,
+          "yaogu": 0.35,
+          "yixiantian": 0.0,
+          "tianyingju": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 5,
+        "eligible": 9
+      },
+      "holding": {
+        "score": 8.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "tianyingju": 0.5
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_SEMI",
+    "theme_name": "半导体",
+    "heat_score": 11.11,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 22.22,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 2,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.0333,
+        "analyst_capped_value": -0.1833,
+        "clipped_per_analyst": {
+          "laofan": -0.1,
+          "zhenge": 0.0,
+          "tianyingju": 1.0,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "yaogu": 0.0667,
+          "panfeng": -0.65,
+          "limengchen": -1.0,
+          "yixiantian": 0.5
+        },
+        "tactical_activity": 0.5,
+        "active_analysts": 9,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 22.22,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.3333,
+        "capped_value": 1.3333,
+        "capped_per_analyst": {
+          "laofan": 0.5,
+          "tianyingju": 0.3333,
+          "yaogu": 0.5
+        },
+        "stocks": 3,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_OPTICS",
+    "theme_name": "光通信",
+    "heat_score": 20.01,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 44.44,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 4,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 11.11,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 3,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 11.17,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.3667,
+        "analyst_capped_value": 1.1167,
+        "clipped_per_analyst": {
+          "laofan": 0.2667,
+          "zhenge": 1.0,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "yaogu": -0.0333,
+          "panfeng": -0.2667,
+          "tianyingju": 0.15
+        },
+        "tactical_activity": 0,
+        "active_analysts": 7,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 5.56,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.3333,
+        "capped_value": 0.3333,
+        "capped_per_analyst": {
+          "tianyingju": 0.3333
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_AI_COMPUTE",
+    "theme_name": "AI算力",
+    "heat_score": 24.93,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 33.33,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 3,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 11.11,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 0,
+        "negative": 1,
+        "net": 1
+      },
+      "trade": {
+        "score": 30.83,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 6.6833,
+        "analyst_capped_value": 3.0833,
+        "clipped_per_analyst": {
+          "laofan": 0.2667,
+          "zhenge": 1.0,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "qingbei": 0.0,
+          "yaogu": 1.0,
+          "panfeng": -0.5167,
+          "limengchen": -0.1667,
+          "tianyingju": 1.0,
+          "yixiantian": 0.5
+        },
+        "tactical_activity": 0,
+        "active_analysts": 10,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 22.22,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.3333,
+        "capped_value": 1.3333,
+        "capped_per_analyst": {
+          "gelan": 0.3333,
+          "yaogu": 0.5,
+          "limengchen": 0.5
+        },
+        "stocks": 3,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_COMPONENT",
+    "theme_name": "电子元件",
+    "heat_score": 5.17,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 7.33,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.7333,
+        "analyst_capped_value": 0.7333,
+        "clipped_per_analyst": {
+          "youzi": 0.0,
+          "yaogu": 0.7333
+        },
+        "tactical_activity": 0,
+        "active_analysts": 2,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_PCB",
+    "theme_name": "PCB电路板",
+    "heat_score": 8.53,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 9.67,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.0167,
+        "analyst_capped_value": 0.9667,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "zhenge": 0.0,
+          "youzi": 0.0,
+          "yaogu": 1.0,
+          "panfeng": -0.2667,
+          "tianyingju": 0.0,
+          "limengchen": 0.2333
+        },
+        "tactical_activity": 0.5,
+        "active_analysts": 7,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 13.89,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.8333,
+        "capped_value": 0.8333,
+        "capped_per_analyst": {
+          "laofan": 0.5,
+          "zhenge": 0.3333
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_ELEC",
+    "theme_name": "消费电子",
+    "heat_score": 9.11,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 12.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.2,
+        "analyst_capped_value": 1.2,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "zhenge": 0.3333,
+          "tianyingju": 0.8333,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "qingbei": 0.0,
+          "yaogu": 0.0667,
+          "limengchen": 0.2333,
+          "yixiantian": -0.2667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 9,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 13.89,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.8333,
+        "capped_value": 0.8333,
+        "capped_per_analyst": {
+          "zhenge": 0.3333,
+          "tianyingju": 0.5
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_SOFTWARE",
+    "theme_name": "软件",
+    "heat_score": 7.5,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 10.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.3167,
+        "analyst_capped_value": 1.0,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "tianyingju": 1.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 8.33,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.5,
+        "capped_value": 0.5,
+        "capped_per_analyst": {
+          "tianyingju": 0.5
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "TECH_GENERAL",
+    "theme_name": "科技整体",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "MED_INNOVATIVE_DRUG",
+    "theme_name": "创新药",
+    "heat_score": 6.67,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 22.22,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 0,
+        "negative": 1,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -1.3,
+        "analyst_capped_value": -1.3,
+        "clipped_per_analyst": {
+          "youzi": -0.5,
+          "panfeng": -0.8,
+          "yixiantian": 0.0,
+          "tianyingju": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "CYCL_NONFERROUS",
+    "theme_name": "有色",
+    "heat_score": 25.47,
+    "heat_level": "COOL",
+    "factors": {
+      "coverage": {
+        "score": 44.44,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 4,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 22.22,
+        "weight": 0.25,
+        "available": true,
+        "positive": 2,
+        "neutral": 2,
+        "negative": 0,
+        "net": 2
+      },
+      "trade": {
+        "score": 13.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 3.7333,
+        "analyst_capped_value": 1.3,
+        "clipped_per_analyst": {
+          "zhenge": 0.0,
+          "tianyingju": 1.0,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "yaogu": 0.2333,
+          "panfeng": -0.4,
+          "limengchen": 0.4667,
+          "yixiantian": 0.0
+        },
+        "tactical_activity": 1.0,
+        "active_analysts": 8,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 16.67,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 1.3333,
+        "capped_value": 1.0,
+        "capped_per_analyst": {
+          "tianyingju": 1.0
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "CYCL_CHEMICAL",
+    "theme_name": "化工",
+    "heat_score": 18.26,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 33.33,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 3,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 11.11,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 2,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 10.83,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.4333,
+        "analyst_capped_value": 1.0833,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "tianyingju": 0.35,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "yaogu": 1.0,
+          "panfeng": -0.2667,
+          "yixiantian": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 7,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 13.89,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.8333,
+        "capped_value": 0.8333,
+        "capped_per_analyst": {
+          "tianyingju": 0.8333
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+    "theme_name": "固态电池",
+    "heat_score": 5.19,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 16.33,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.6333,
+        "analyst_capped_value": 1.6333,
+        "clipped_per_analyst": {
+          "laofan": 0.8,
+          "tianyingju": 0.6,
+          "limengchen": 0.2333
+        },
+        "tactical_activity": 0,
+        "active_analysts": 3,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 5.56,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.3333,
+        "capped_value": 0.3333,
+        "capped_per_analyst": {
+          "tianyingju": 0.3333
+        },
+        "stocks": 1,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "NEW_ENERGY_ELECTROLYTE",
+    "theme_name": "电解液/VC",
+    "heat_score": 0.0,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0,
+        "analyst_capped_value": 0.0,
+        "clipped_per_analyst": {},
+        "tactical_activity": 0,
+        "active_analysts": 0,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "NEW_ENERGY_UHV",
+    "theme_name": "特高压",
+    "heat_score": 6.15,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 0.0,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 0,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 0,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 13.5,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.3833,
+        "analyst_capped_value": 1.35,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "zhenge": 0.0,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "yaogu": 0.35,
+          "limengchen": 0.0,
+          "tianyingju": 1.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 7,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 13.89,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.8333,
+        "capped_value": 0.8333,
+        "capped_per_analyst": {
+          "gelan": 0.3333,
+          "limengchen": 0.5
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "OTHER_BROKER",
+    "theme_name": "券商",
+    "heat_score": 6.67,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 13.33,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 1.8333,
+        "analyst_capped_value": 1.3333,
+        "clipped_per_analyst": {
+          "laofan": 0.5,
+          "zhenge": 1.0,
+          "youzi": 0.0,
+          "tianyingju": -0.1667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 4,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "OTHER_AGRICULTURE",
+    "theme_name": "农业",
+    "heat_score": 10.15,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 22.22,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 2,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 11.11,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 1,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 2.83,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.2833,
+        "analyst_capped_value": 0.2833,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "youzi": 0.0,
+          "qingbei": 0.0,
+          "yaogu": 0.5333,
+          "yixiantian": 0.0,
+          "tianyingju": -0.25
+        },
+        "tactical_activity": 0,
+        "active_analysts": 6,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "OTHER_ROBOTICS",
+    "theme_name": "机器人",
+    "heat_score": 8.33,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 11.11,
+        "weight": 0.25,
+        "available": true,
+        "positive": 1,
+        "neutral": 0,
+        "negative": 0,
+        "net": 1
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.6333,
+        "analyst_capped_value": -0.6333,
+        "clipped_per_analyst": {
+          "laofan": 0.0,
+          "zhenge": 0.0,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "yaogu": -0.2,
+          "panfeng": -0.2667,
+          "yixiantian": -0.2667,
+          "tianyingju": 0.1
+        },
+        "tactical_activity": 0,
+        "active_analysts": 8,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 11.11,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.6667,
+        "capped_value": 0.6667,
+        "capped_per_analyst": {
+          "zhenge": 0.3333,
+          "gelan": 0.3333
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "OTHER_SPACE",
+    "theme_name": "商业航天",
+    "heat_score": 7.44,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 5.33,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": 0.5333,
+        "analyst_capped_value": 0.5333,
+        "clipped_per_analyst": {
+          "laofan": 0.2667,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "yaogu": 0.4667,
+          "panfeng": -0.2667,
+          "tianyingju": 0.2333,
+          "limengchen": -0.1667
+        },
+        "tactical_activity": 0,
+        "active_analysts": 7,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 13.89,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0.8333,
+        "capped_value": 0.8333,
+        "capped_per_analyst": {
+          "tianyingju": 0.8333
+        },
+        "stocks": 2,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  },
+  {
+    "date": "2026-08-28",
+    "theme_id": "OTHER_CONSUMER",
+    "theme_name": "消费白马",
+    "heat_score": 3.33,
+    "heat_level": "COLD",
+    "factors": {
+      "coverage": {
+        "score": 11.11,
+        "weight": 0.3,
+        "available": true,
+        "analysts": 1,
+        "eligible": 9
+      },
+      "mention": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "positive": 0,
+        "neutral": 1,
+        "negative": 0,
+        "net": 0
+      },
+      "trade": {
+        "score": 0.0,
+        "weight": 0.25,
+        "available": true,
+        "raw_directional_value": -0.15,
+        "analyst_capped_value": -0.15,
+        "clipped_per_analyst": {
+          "zhenge": 0.3333,
+          "gelan": 0.0,
+          "youzi": 0.0,
+          "yaogu": -0.2167,
+          "yixiantian": -0.2667,
+          "tianyingju": 0.0
+        },
+        "tactical_activity": 0,
+        "active_analysts": 6,
+        "eligible": 10
+      },
+      "holding": {
+        "score": 0.0,
+        "weight": 0.2,
+        "available": true,
+        "weighted_support": 0,
+        "capped_value": 0.0,
+        "capped_per_analyst": {},
+        "stocks": 0,
+        "eligible": 6
+      }
+    },
+    "data_completeness": 1.0,
+    "completeness_level": "NORMAL"
+  }
+]

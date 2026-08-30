@@ -1,0 +1,70 @@
+{
+  "overall": "GO",
+  "gates": {
+    "G1_score_range": {
+      "pass": true,
+      "scored_rows": 152,
+      "out_of_range": [],
+      "min_score": 0.0,
+      "max_score": 67.71
+    },
+    "G2_weights": {
+      "pass": true,
+      "violations": [],
+      "weights_expected": {
+        "coverage": 0.3,
+        "mention": 0.25,
+        "trade": 0.25,
+        "holding": 0.2
+      },
+      "total_weight": 1.0
+    },
+    "G3_mention_no_dup": {
+      "pass": true,
+      "mismatch_rows": 0,
+      "note": "mention.pos/neg/neu 按 (analyst,theme,day) 聚合后分桶，单分析师不重复计权"
+    },
+    "G4_trade_analyst_cap": {
+      "pass": true,
+      "violations": [],
+      "clip_effective_cases": 35,
+      "note": "每个 (analyst,theme,day) raw 先 clip(-1,+1) 再聚合；防止高频分析师等价于多分析师共识"
+    },
+    "G5_holding_analyst_cap": {
+      "pass": true,
+      "violations": [],
+      "cap_effective_cases": 19,
+      "note": "每个 (analyst,theme,day) fractional(1/N) 后 min(1.0)；防止持仓股数竞赛"
+    },
+    "G6_missing_not_zero": {
+      "pass": true,
+      "violations": [],
+      "missing_source_days": [
+        {
+          "date": "2026-08-16",
+          "availability": {
+            "coverage": true,
+            "mention": true,
+            "trade": true,
+            "holding": false
+          },
+          "expected_completeness": 0.8
+        }
+      ],
+      "note": "Missing≠Zero：数据源缺失 → score=None 且权重从分母剔除（P1.3 契约）"
+    },
+    "G7_manual_recalc": {
+      "pass": true,
+      "checked_rows": 152,
+      "mismatches": [],
+      "note": "对每个 scored 行独立重算 coverage/mention/trade/holding score 与 heat，容差 0.02"
+    },
+    "G8_rerun_consistency": {
+      "pass": true,
+      "recomputed_rows": 152,
+      "factor_score_mismatches": 0,
+      "samples": [],
+      "note": "重算每个 factor score 与 JSON 比对，验证幂等一致性"
+    }
+  }
+}
