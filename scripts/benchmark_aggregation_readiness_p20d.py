@@ -19,17 +19,22 @@ benchmark_aggregation_readiness_p20d.py — P2.0D Aggregation Readiness Benchmar
   G6 Theme normalization —— 同 theme_id 归一化一致；词典无一词多 L2
 
 运行：python3 scripts/benchmark_aggregation_readiness_p20d.py
-输出：reports/aggregation_readiness_benchmark_p20d.json + .md
+输出：reports/runtime/aggregation_readiness_p20d_<date>.json + .md（冻结报告 aggregation_readiness_benchmark_p20d.* immutable）
 """
 
 import json
 import sqlite3
 from collections import Counter
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+BEIJING_TZ = timezone(timedelta(hours=8))
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "data" / "analyst_consensus.db"
 LEXICON = ROOT / "scripts" / "theme_lexicon_p20c.json"
+# 运行时报告输出目录（Freeze Baseline 冻结报告 aggregation_readiness_benchmark_p20d.* 保持 immutable，
+# 不再被本脚本覆盖；运行结果写 reports/runtime/<name>_<date>.*，用户 2026-08-30 锁定）
+RUNTIME_DIR = ROOT / "reports" / "runtime"
 
 EXCLUDED_IDS = (1093, 1095, 1107)  # consensus_event_exclusions 治理的 COMPOSITE_MISRESOLVED
 UNKNOWN_THRESHOLD = 0.20           # G5 可接受范围（默认 ≤20%，报告中说明供复核）
@@ -158,7 +163,9 @@ def main():
             "SELECT market_direction FROM analyst_daily_views WHERE view_type='market'"))),
     }
 
-    out_json = ROOT / "reports" / "aggregation_readiness_benchmark_p20d.json"
+    _date = datetime.now(BEIJING_TZ).strftime("%Y-%m-%d")
+    out_json = RUNTIME_DIR / f"aggregation_readiness_p20d_{_date}.json"
+    out_json.parent.mkdir(parents=True, exist_ok=True)
     out_json.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
 
     lines = [
@@ -190,7 +197,7 @@ def main():
         "## 结论",
         f"**{overall}** —— " + ("三路事实达到可安全聚合状态，Phase 2 输入层完整，可进入 P2.1 Market Direction + P2.2 Theme Heat。" if overall == "GO" else "存在未通过 Gate，需修复后再验收。"),
     ]
-    out_md = ROOT / "reports" / "aggregation_readiness_benchmark_p20d.md"
+    out_md = RUNTIME_DIR / f"aggregation_readiness_p20d_{_date}.md"
     out_md.write_text("\n".join(lines), encoding="utf-8")
 
     print(f"Overall = {overall}")

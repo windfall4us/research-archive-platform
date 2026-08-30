@@ -7,3 +7,6 @@ data/analyst_snapshots/vip0_timeline_*.json
 
 # Phase 0A 解析中间产物（可脚本再生成）
 data/analyst_snapshots/p0a_parsed_records.json
+
+# Rolling Runtime Expectation 运行时报告（每日变化，不入库；冻结基线报告保持入库 immutable）
+reports/runtime/

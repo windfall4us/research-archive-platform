@@ -119,6 +119,24 @@ PHASE1_SETUP = [
 # timeline 快照目录（Phase 1 ingest 输入）
 SNAPSHOT_DIR = ROOT / "data" / "analyst_snapshots"
 
+# 本地交易日历（用户 2026-08-30 锁定：非交易日 → NON_TRADING_DAY → silent exit 0，不制造假告警）
+CALENDAR_DIR = ROOT / "data" / "calendar"
+
+
+def is_trading_day(date_str: str) -> bool:
+    """判断目标日是否为 A 股交易日。
+
+    优先读本地日历 data/calendar/trading_days_<year>.json（chinese_calendar 生成，
+    含国务院调休，离线确定性）；无该年日历 → 回退周一~五工作日判断（节假日可能误判但保守可容忍）。
+    """
+    try:
+        year = date_str[:4]
+        cal = json.loads((CALENDAR_DIR / f"trading_days_{year}.json").read_text(encoding="utf-8"))
+        return date_str in set(cal.get("trading_days", []))
+    except Exception:
+        d = datetime.strptime(date_str, "%Y-%m-%d")
+        return d.weekday() < 5
+
 # Phase 1~4 输入产物（与 publish 一致；血缘审计用）
 INPUT_FILES = [
     "reports/market_consensus/all_dates.json",
@@ -223,6 +241,80 @@ def discover_timeline_snapshots() -> tuple[Path | None, Path | None]:
     latest = snaps[-1]
     prev = snaps[-2] if len(snaps) >= 2 else None
     return latest, prev
+
+
+def write_runtime_report(date_str: str, overall: str, publish_rc: int | None = None):
+    """每次自动运行生成 reports/runtime/consensus_pipeline_<date>.{json,md}。
+
+    记录当日 eligible_market_views / events / positions / themes / fingerprint / Overall。
+    用户 2026-08-30 锁定三层分离：冻结基线(phase2/3/4_benchmark*/freeze_record) immutable；
+    本文件为 Rolling Runtime Expectation，每天按目标交易日数据动态记录。
+    """
+    RUNTIME_DIR = REPORTS_DIR / "runtime"
+    RUNTIME_DIR.mkdir(parents=True, exist_ok=True)
+    snap_path = ROOT / "data" / "consensus" / "consensus_daily_snapshot.json"
+    meta = {}
+    try:
+        snap = json.loads(snap_path.read_text(encoding="utf-8"))
+        meta = snap.get("meta", {})
+    except Exception:
+        pass
+    # eligible_market_views：直接从 DB 按口径关系算（market 行 - UNKNOWN）
+    eligible_market_views = None
+    try:
+        import sqlite3
+        con = sqlite3.connect(ROOT / "data" / "analyst_consensus.db")
+        mv_total = con.execute("SELECT COUNT(*) FROM analyst_daily_views WHERE view_type='market'").fetchone()[0]
+        mv_unknown = con.execute(
+            "SELECT COUNT(*) FROM analyst_daily_views WHERE view_type='market' AND market_direction='UNKNOWN'").fetchone()[0]
+        con.close()
+        eligible_market_views = mv_total - mv_unknown
+    except Exception:
+        pass
+    # snapshot 内容指纹（排除 generated_at，与 publish 防重复同口径）
+    fingerprint = None
+    try:
+        import hashlib
+        obj = json.loads(snap_path.read_text(encoding="utf-8"))
+        obj.get("meta", {}).pop("generated_at", None)
+        fingerprint = hashlib.md5(
+            json.dumps(obj, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()[:16]
+    except Exception:
+        pass
+    rec = {
+        "date": date_str, "run_id": RUN_ID, "overall": overall, "publish_rc": publish_rc,
+        "eligible_market_views": eligible_market_views,
+        "events": meta.get("n_stock_events"),
+        "positions": meta.get("n_positions"),
+        "themes": meta.get("n_themes"),
+        "theme_mentions": meta.get("n_theme_mentions"),
+        "latest_date": meta.get("latest_date"),
+        "fingerprint": fingerprint,
+        "runtime_s": RUNTIME,
+    }
+    (RUNTIME_DIR / f"consensus_pipeline_{date_str}.json").write_text(
+        json.dumps(rec, ensure_ascii=False, indent=2), encoding="utf-8")
+    lines = [
+        "# 市场共识雷达 · 运行时报告",
+        "",
+        f"**date**: {date_str} | **run_id**: {RUN_ID} | **Overall**: `{overall}`"
+        + (f" | publish_rc: {publish_rc}" if publish_rc is not None else ""),
+        "",
+        "| 指标 | 值 |",
+        "|---|---|",
+        f"| eligible_market_views | {eligible_market_views} |",
+        f"| events (stock events) | {meta.get('n_stock_events')} |",
+        f"| positions | {meta.get('n_positions')} |",
+        f"| themes | {meta.get('n_themes')} |",
+        f"| theme_mentions | {meta.get('n_theme_mentions')} |",
+        f"| latest_date | {meta.get('latest_date')} |",
+        f"| fingerprint (内容指纹, 排除 generated_at) | `{fingerprint}` |",
+        f"| 阶段耗时 | {json.dumps(RUNTIME, ensure_ascii=False)} |",
+        "",
+        "> 冻结基线（phase2/3/4_benchmark*/freeze_record）保持 immutable；本文件为 Rolling Runtime Expectation。",
+    ]
+    (RUNTIME_DIR / f"consensus_pipeline_{date_str}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    tee(f"📊 运行时报告 → reports/runtime/consensus_pipeline_{date_str}.json + .md (Overall={overall})")
 
 
 def snapshot_date(p: Path) -> str:
@@ -357,6 +449,13 @@ def main():
         tee("PIPELINE_SKIPPED 另一总控实例运行中（同日锁），静默跳过")
         sys.exit(0)
 
+    # 0a) 交易日判断：非交易日 → NON_TRADING_DAY → silent exit 0（不发布、不告警）
+    #    用户 2026-08-30 锁定：真正该报警的是「应有数据的交易日到 23:20 仍未就绪」，
+    #    周末/非交易日不制造假告警。日历: data/calendar/trading_days_<year>.json。
+    if not is_trading_day(args.target_date):
+        tee(f"NON_TRADING_DAY {args.target_date} 非交易日，静默跳过（不发布、不告警）")
+        sys.exit(0)
+
     # 0) 前置审计：Phase1~4 输入产物新鲜
     ok, issues = audit_inputs(args.max_age_hours)
     if not ok:
@@ -406,12 +505,14 @@ def main():
         tee(f"⚠️ 耗时报告写入失败: {e}")
 
     if not all_go:
+        write_runtime_report(date_str, "NO-GO")
         tee("❌ Overall NO-GO：任一 Phase 未通过，不发布（旧 snapshot 保持在线）")
         sys.exit(1)
 
     # Overall Gate
     tee("\n✅ Overall GO：4 个 Phase benchmark 全部通过")
     if not do_publish:
+        write_runtime_report(date_str, "GO")
         tee("dry-run 模式：不调用 publish（Phase1~4 已重算完成）")
         sys.exit(0)
 
@@ -420,9 +521,11 @@ def main():
     pub_args = ["--force"] if args.force else []
     rc, out = run("publish_consensus_daily.py", *pub_args, timeout=1800)
     if rc != 0:
+        write_runtime_report(date_str, "GO", publish_rc=rc)
         tee(f"❌ publish 失败 (exit {rc}):\n{out}")
         # publish 已自带告警；这里补充阶段上下文
         sys.exit(1)
+    write_runtime_report(date_str, "GO", publish_rc=rc)
     tee("✅ 全链路完成：Phase1~4 GO + publish OK")
     sys.exit(0)
 

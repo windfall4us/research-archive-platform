@@ -16,11 +16,11 @@
     },
     "G1": {
       "pass": true,
-      "detail": "market 行=72, UNKNOWN=9, eligible=63; P2.0D 固化 aggregation_eligible_market_views=63"
+      "detail": "market 行=69, UNKNOWN=9, eligible=60; P2.0D 固化 aggregation_eligible_market_views=60"
     },
     "G2": {
       "pass": true,
-      "detail": "mentions=193, orphan_record=0, orphan_snapshot=0"
+      "detail": "mentions=186, orphan_record=0, orphan_snapshot=0"
     },
     "G3": {
       "pass": true,
@@ -32,7 +32,7 @@
     },
     "G8": {
       "pass": true,
-      "detail": "08-16 19 行全 LOW_SIGNAL（非状态=无，高置信=无）; heat=0 行 49 全可解释（49）"
+      "detail": "08-16 19 行全 LOW_SIGNAL（非状态=无，高置信=无）; heat=0 行 34 全可解释（34）"
     },
     "G9": {
       "pass": true,
@@ -146,14 +146,6 @@
           "top_status": "VALID",
           "momentum_eff": "HEATING",
           "momentum_obs": "HEATING"
-        },
-        "2026-08-29": {
-          "top_theme": "CYCL_NONFERROUS",
-          "top_heat": 51.52,
-          "top_level": "ACTIVE",
-          "top_status": "INSUFFICIENT_DATA",
-          "momentum_eff": "HEATING",
-          "momentum_obs": null
         }
       }
     }
@@ -170,9 +162,9 @@
         "overall": "GO (P2.0D)"
       },
       "key": {
-        "mv_total": 72,
-        "mv_eligible": 63,
-        "tm_total": 193,
+        "mv_total": 69,
+        "mv_eligible": 60,
+        "tm_total": 186,
         "stock_events": 937,
         "exclusions": 3
       }
@@ -183,18 +175,18 @@
     },
     "theme_heat": {
       "overall": "GO (P2.2C/P2.2D)",
-      "grid": "171 行（9 日期 × 19 L2）",
-      "zero_explainable": "49/49"
+      "grid": "152 行（8 日期 × 19 L2）",
+      "zero_explainable": "34/34"
     },
     "theme_momentum": {
       "overall": "GO (P2.3)",
-      "rows": 171,
+      "rows": 152,
       "eff_dist": {
-        "FADING": 16,
-        "DISCOVERY": 28,
-        "COOLING": 23,
-        "HEATING": 4,
-        "EMERGING": 6,
+        "FADING": 13,
+        "DISCOVERY": 23,
+        "COOLING": 20,
+        "HEATING": 3,
+        "EMERGING": 5,
         "STABLE": 1
       }
     }

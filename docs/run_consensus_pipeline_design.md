@@ -1,8 +1,9 @@
 # run_consensus_pipeline.py 设计文档 — Phase 1~4 自动化总控
 
-> 状态：✅ 已实现并验证（commit 1f9208c + 1852ce1 + 待提交，2026-08-30）
-> dry-run 全链路 GO 验证通过；真实发布验证通过（生产+测试盒 snapshot 一致、API latest_date=2026-08-29、HTML 公网 200）
+> 状态：✅ 已实现并验证（commit 1f9208c + 1852ce1 + 564aeab + 待提交，2026-08-30）
+> dry-run 全链路 GO 验证通过；真实发布验证通过（生产+测试盒 snapshot 一致、API latest_date、HTML 公网 200）
 > cron 已切换：22:50/23:20 由「只发布」升级为「总控运行」（旧 publisher cron 已停用，publish 保留为总控子程序）
+> 基线口径 2026-08-30 锁定：冻结基线不滚动；运行时基线动态；G1 验关系而非固定数量；G11 验同输入确定性而非跨日 hash
 
 ## 目标
 
@@ -49,6 +50,33 @@ run_consensus_pipeline.py
 6. 成功静默
 7. 失败 Telegram 告警
 8. 不因为单个展示层问题回改冻结算法
+
+## 基线三层分离（用户 2026-08-30 锁定，G1/G11 口径）
+
+```
+1. Freeze Baseline（冻结基线）           —— Phase 1~4 当时验收数据，永久不可修改
+   reports/phase2_benchmark_p24.* / phase3_benchmark_p34.* / phase4_benchmark_p44.*
+   reports/aggregation_readiness_benchmark_p20d.* / phase{2,3,4}_freeze_record.md
+   → 脚本不再覆盖写（benchmark 输出改写到 reports/runtime/）；误改已回退（eligible 60 恢复）
+2. Runtime Invariants（运行时结构规则）  —— eligible 关系 / lineage / exclusion / enum /
+   score 范围 / transition legality 等。G1 验证「eligible = market 行 - UNKNOWN」关系式，
+   不绑定冻结绝对数（60→63→…合法增长不触发 NO-GO）。
+3. Same-input Determinism（同输入确定性）—— 当前 target_date 重跑 rows/hash/fingerprint 必须一致。
+   G11 验证「重跑前采样 vs 重跑后」hash 一致（同输入→同输出），不做跨交易日 hash 比较。
+```
+
+## 交易日判断（2026-08-30 新增）
+
+- 本地日历 `data/calendar/trading_days_<year>.json`（chinese_calendar 生成，含国务院调休，离线确定性）
+- 目标日非交易日 → `NON_TRADING_DAY → silent exit 0`（不发布、不告警，**带 --alert 也不告警**）
+- 真正该报警的是「应有数据的交易日到 23:20 仍未就绪」→ exit 2 + 告警
+
+## Rolling Runtime Expectation 报告（2026-08-30 新增）
+
+- 每次自动运行生成 `reports/runtime/consensus_pipeline_<date>.{json,md}`（不入库，gitignore）
+- 记录：eligible_market_views / events / positions / themes / theme_mentions / latest_date /
+  fingerprint（snapshot 内容指纹，排除 generated_at）/ Overall / publish_rc / 阶段耗时
+- benchmark 子报告同样写 reports/runtime/（phase2_benchmark_p24_<date>.* / aggregation_readiness_p20d_<date>.*）
 
 ## 并发保护（2026-08-30 新增，用户锁定 4 项）
 

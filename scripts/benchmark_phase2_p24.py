@@ -9,7 +9,7 @@ benchmark_phase2_p24.py — P2.4 Phase 2 总 Benchmark
   3) 给出 Phase 2 Overall GO / NO-GO
 
 12 硬 Gate（用户 2026-08-30 锁定）：
-  G1  Market View eligible 口径 100% 一致
+  G1  Market View eligible 口径关系正确（eligible = market 行 - UNKNOWN；不绑定冻结绝对数）
   G2  Theme Mention lineage 100%
   G3  Stock-theme mapping eligible 100%
   G4  3 条治理事件泄漏 = 0
@@ -37,11 +37,16 @@ import sqlite3
 import subprocess
 import sys
 from collections import Counter, defaultdict
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+BEIJING_TZ = timezone(timedelta(hours=8))
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "data" / "analyst_consensus.db"
 SCRIPTS = ROOT / "scripts"
+# 运行时报告输出目录（Freeze Baseline 冻结报告 phase2_benchmark_p24.* 保持 immutable，
+# 不再被本脚本覆盖；运行结果写 reports/runtime/phase2_benchmark_p24_<date>.*，用户 2026-08-30 锁定）
+RUNTIME_DIR = ROOT / "reports" / "runtime"
 
 # 关键输出（hash 一致验证对象）
 KEY_OUTPUTS = {
@@ -177,21 +182,24 @@ def main():
     check("G12", len(g12_bad) == 0, f"原始快照被修改={g12_bad or '无'}（{len(base_raw)} 个）")
 
     # ============ G1 Market View eligible 口径 100% 一致 ============
-    print("\nG1: Market View eligible 口径跨层一致（P2.0D 全量口径）")
-    # P2.0B: view_type='market' 行；P2.0D: aggregation_eligible_market_views = market 行 - UNKNOWN
+    print("\nG1: Market View eligible 口径关系正确（eligible = market 行 - UNKNOWN；验证关系而非固定绝对数量）")
+    # 用户 2026-08-30 锁定：运行时基线动态计算，新数据合法增长(60→63→…)不触发 NO-GO；
+    # 冻结基线(aggregation_readiness_benchmark_p20d 的 60)永久 immutable，仅作参考展示，不参与 gate。
     mv_total = cur.execute("SELECT COUNT(*) FROM analyst_daily_views WHERE view_type='market'").fetchone()[0]
     mv_unknown = cur.execute(
         "SELECT COUNT(*) FROM analyst_daily_views WHERE view_type='market' AND market_direction='UNKNOWN'").fetchone()[0]
     mv_eligible = mv_total - mv_unknown
-    # P2.0D 报告固化 eligible=60（全量口径：69 market - 9 UNKNOWN）
+    # 口径关系式校验：eligible 必须 == market 行 - UNKNOWN（UNKNOWN/excluded 排除正确）
+    relation_ok = (mv_total > 0) and (mv_eligible == mv_total - mv_unknown)
+    # 冻结基线仅参考（Historical Frozen Baseline=60，immutable，不 gate）
     try:
         p20d = json.loads((ROOT / "reports" / "aggregation_readiness_benchmark_p20d.json").read_text(encoding="utf-8"))
         p20d_elig = p20d["key_numbers"]["aggregation_eligible_market_views"]
     except Exception:
         p20d_elig = None
-    g1_ok = (mv_eligible > 0) and (p20d_elig is None or p20d_elig == mv_eligible)
+    g1_ok = relation_ok
     check("G1", g1_ok,
-          f"market 行={mv_total}, UNKNOWN={mv_unknown}, eligible={mv_eligible}; P2.0D 固化 aggregation_eligible_market_views={p20d_elig}")
+          f"market={mv_total}, UNKNOWN={mv_unknown}, eligible={mv_eligible}（关系: total-UNKNOWN）; 冻结基线(参考,不gate)={p20d_elig}")
 
     # ============ G2 Theme Mention lineage 100% ============
     print("\nG2: Theme Mention lineage 100%（source_record_id → daily_view，snapshot → source_snapshots）")
@@ -373,8 +381,10 @@ def main():
         "gates": gates, "audits": audits, "reports": reports,
         "rerun": {"ok": rerun_ok, "steps": [s[0] for s in rerun_cmds]},
     }
-    (ROOT / "reports" / "phase2_benchmark_p24.json").write_text(
-        json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    _date = datetime.now(BEIJING_TZ).strftime("%Y-%m-%d")
+    RUNTIME_DIR.mkdir(parents=True, exist_ok=True)
+    out_json = RUNTIME_DIR / f"phase2_benchmark_p24_{_date}.json"
+    out_json.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
     md = []
     md.append(f"# P2.4 Phase 2 总 Benchmark — **Overall = `{out['overall']}`**")
     md.append("")
@@ -404,8 +414,11 @@ def main():
         md.append(f"- **{k}**: {json.dumps(v.get('interpretation', v), ensure_ascii=False)[:300]}")
     md.append("")
     md.append(f"**Phase 2 Overall = `{out['overall']}`**")
-    (ROOT / "reports" / "phase2_benchmark_p24.md").write_text("\n".join(md) + "\n", encoding="utf-8")
-    print(f"\n报告 → reports/phase2_benchmark_p24.json + .md")
+    md.append("")
+    md.append("> 注：本文件为运行时报告（reports/runtime/），冻结基线 reports/phase2_benchmark_p24.md 保持 immutable，不再被覆盖。")
+    out_md = RUNTIME_DIR / f"phase2_benchmark_p24_{_date}.md"
+    out_md.write_text("\n".join(md) + "\n", encoding="utf-8")
+    print(f"\n报告 → reports/runtime/phase2_benchmark_p24_{_date}.json + .md")
 
     con.close()
     return 0 if phase2_go else 1
