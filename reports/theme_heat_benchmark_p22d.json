@@ -1,0 +1,1531 @@
+{
+  "overall": "GO",
+  "gates": {
+    "G1_top_themes_business": {
+      "pass": true,
+      "violations": [],
+      "top1_by_date": {
+        "2026-08-14": {
+          "theme": "TECH_AI_COMPUTE",
+          "heat": 36.61,
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        "2026-08-16": {
+          "theme": "TECH_SEMI",
+          "heat": 67.71,
+          "status": "LOW_SIGNAL",
+          "conf": "LOW"
+        },
+        "2026-08-17": {
+          "theme": "TECH_SEMI",
+          "heat": 32.98,
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        "2026-08-18": {
+          "theme": "TECH_SEMI",
+          "heat": 35.35,
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        "2026-08-19": {
+          "theme": "CYCL_NONFERROUS",
+          "heat": 21.94,
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        "2026-08-26": {
+          "theme": "CYCL_NONFERROUS",
+          "heat": 22.7,
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        "2026-08-27": {
+          "theme": "TECH_SEMI",
+          "heat": 26.85,
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        "2026-08-28": {
+          "theme": "CYCL_NONFERROUS",
+          "heat": 25.47,
+          "status": "VALID",
+          "conf": "HIGH"
+        }
+      },
+      "note": "每日 Top3 无零信号主题；VALID 日 Top1 置信 ≥ MEDIUM"
+    },
+    "G2_ranking_stability": {
+      "pass": true,
+      "violations": [],
+      "valid_pairs_compared": 5,
+      "note": "VALID 相邻交易日同一主题 heat 变化 < 50（排除单分析师日）"
+    },
+    "G3_negative_suppression": {
+      "pass": true,
+      "violations": [],
+      "neg_trade_rows": 35,
+      "neg_mention_rows": 4,
+      "neg_heat_high_rows": 0,
+      "note": "负面 raw_dir / mention net 被 max(0,·) 压到 0；负向日不升入 HEATING/HOT"
+    },
+    "G4_zero_direct_limited_lift": {
+      "pass": true,
+      "violations": [],
+      "cases": [
+        {
+          "date": "2026-08-14",
+          "theme_id": "TECH_PCB",
+          "raw_dir": 0.73,
+          "trade_score": 9.17,
+          "heat": 3.4,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-14",
+          "theme_id": "TECH_ELEC",
+          "raw_dir": 0.17,
+          "trade_score": 2.08,
+          "heat": 10.52,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-14",
+          "theme_id": "TECH_SOFTWARE",
+          "raw_dir": 1.03,
+          "trade_score": 6.46,
+          "heat": 6.06,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-14",
+          "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+          "raw_dir": 0.37,
+          "trade_score": 4.58,
+          "heat": 1.15,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-14",
+          "theme_id": "NEW_ENERGY_UHV",
+          "raw_dir": 2.4,
+          "trade_score": 17.5,
+          "heat": 4.38,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-16",
+          "theme_id": "TECH_PCB",
+          "raw_dir": 0.2,
+          "trade_score": 20.0,
+          "heat": 6.25,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-16",
+          "theme_id": "TECH_ELEC",
+          "raw_dir": 1.03,
+          "trade_score": 100.0,
+          "heat": 31.25,
+          "level": "COOL"
+        },
+        {
+          "date": "2026-08-16",
+          "theme_id": "TECH_SOFTWARE",
+          "raw_dir": 0.02,
+          "trade_score": 1.67,
+          "heat": 0.52,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-16",
+          "theme_id": "CYCL_NONFERROUS",
+          "raw_dir": 0.5,
+          "trade_score": 50.0,
+          "heat": 15.62,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-16",
+          "theme_id": "CYCL_CHEMICAL",
+          "raw_dir": 1.1,
+          "trade_score": 100.0,
+          "heat": 31.25,
+          "level": "COOL"
+        },
+        {
+          "date": "2026-08-17",
+          "theme_id": "TECH_PCB",
+          "raw_dir": 0.6,
+          "trade_score": 6.67,
+          "heat": 5.56,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-17",
+          "theme_id": "TECH_ELEC",
+          "raw_dir": 1.28,
+          "trade_score": 14.26,
+          "heat": 8.56,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-17",
+          "theme_id": "TECH_SOFTWARE",
+          "raw_dir": 0.28,
+          "trade_score": 3.15,
+          "heat": 4.68,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-17",
+          "theme_id": "NEW_ENERGY_UHV",
+          "raw_dir": 3.9,
+          "trade_score": 25.93,
+          "heat": 8.15,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-17",
+          "theme_id": "OTHER_AGRICULTURE",
+          "raw_dir": 0.27,
+          "trade_score": 2.96,
+          "heat": 0.74,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-17",
+          "theme_id": "OTHER_ROBOTICS",
+          "raw_dir": 0.4,
+          "trade_score": 4.44,
+          "heat": 5.0,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-17",
+          "theme_id": "OTHER_CONSUMER",
+          "raw_dir": 0.4,
+          "trade_score": 4.44,
+          "heat": 1.11,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-18",
+          "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+          "raw_dir": 0.85,
+          "trade_score": 9.44,
+          "heat": 2.36,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-19",
+          "theme_id": "TECH_OPTICS",
+          "raw_dir": 0.47,
+          "trade_score": 7.78,
+          "heat": 1.94,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-19",
+          "theme_id": "CYCL_CHEMICAL",
+          "raw_dir": 0.48,
+          "trade_score": 8.06,
+          "heat": 3.68,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-26",
+          "theme_id": "TECH_ELEC",
+          "raw_dir": 0.85,
+          "trade_score": 9.44,
+          "heat": 5.28,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-26",
+          "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+          "raw_dir": 0.2,
+          "trade_score": 2.22,
+          "heat": 0.56,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-26",
+          "theme_id": "OTHER_ROBOTICS",
+          "raw_dir": 1.27,
+          "trade_score": 14.07,
+          "heat": 7.69,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-27",
+          "theme_id": "TECH_ELEC",
+          "raw_dir": 1.02,
+          "trade_score": 11.3,
+          "heat": 3.94,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-27",
+          "theme_id": "OTHER_BROKER",
+          "raw_dir": 0.33,
+          "trade_score": 3.7,
+          "heat": 2.59,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-27",
+          "theme_id": "OTHER_ROBOTICS",
+          "raw_dir": 1.13,
+          "trade_score": 12.59,
+          "heat": 7.59,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-27",
+          "theme_id": "OTHER_CONSUMER",
+          "raw_dir": 0.35,
+          "trade_score": 3.89,
+          "heat": 2.64,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-28",
+          "theme_id": "NEW_ENERGY_SOLID_BATTERY",
+          "raw_dir": 1.63,
+          "trade_score": 16.33,
+          "heat": 5.19,
+          "level": "COLD"
+        },
+        {
+          "date": "2026-08-28",
+          "theme_id": "NEW_ENERGY_UHV",
+          "raw_dir": 1.38,
+          "trade_score": 13.5,
+          "heat": 6.15,
+          "level": "COLD"
+        }
+      ],
+      "note": "cov=0 但 trade 流入 → trade_score>0 有限抬升，heat<65 不冲高（对比 DIRECT 主题 raw_dir 同量级可达 ~25）"
+    },
+    "G5_single_analyst_low_signal": {
+      "pass": true,
+      "rows_16": 19,
+      "violations": [],
+      "top_16": {
+        "theme": "TECH_SEMI",
+        "heat": 67.71,
+        "level": "HEATING",
+        "status": "LOW_SIGNAL",
+        "conf": "LOW",
+        "sig_analysts": 1
+      },
+      "interpretation": "解释口径：半导体 热度 67.71 但仅 1 位分析师有有效信号，低置信（而非『正在加热』）",
+      "note": "08-16 全 19 行 LOW_SIGNAL；heat_level 保留数学值，由 heat_status 承载置信度"
+    },
+    "G6_factor_contrib_explainable": {
+      "pass": true,
+      "violations": [],
+      "contrib_sample": {
+        "2026-08-14 TECH_AI_COMPUTE": {
+          "heat": 36.61,
+          "factors": {
+            "coverage": {
+              "score": 57.14,
+              "weight": 0.3,
+              "contrib_pct": 46.8
+            },
+            "mention": {
+              "score": 28.57,
+              "weight": 0.25,
+              "contrib_pct": 19.5
+            },
+            "trade": {
+              "score": 13.75,
+              "weight": 0.25,
+              "contrib_pct": 9.4
+            },
+            "holding": {
+              "score": 44.44,
+              "weight": 0.2,
+              "contrib_pct": 24.3
+            }
+          }
+        },
+        "2026-08-14 TECH_OPTICS": {
+          "heat": 23.89,
+          "factors": {
+            "coverage": {
+              "score": 42.86,
+              "weight": 0.3,
+              "contrib_pct": 53.8
+            },
+            "mention": {
+              "score": 28.57,
+              "weight": 0.25,
+              "contrib_pct": 29.9
+            },
+            "trade": {
+              "score": 6.67,
+              "weight": 0.25,
+              "contrib_pct": 7.0
+            },
+            "holding": {
+              "score": 11.11,
+              "weight": 0.2,
+              "contrib_pct": 9.3
+            }
+          }
+        },
+        "2026-08-14 TECH_SEMI": {
+          "heat": 23.41,
+          "factors": {
+            "coverage": {
+              "score": 14.29,
+              "weight": 0.3,
+              "contrib_pct": 18.3
+            },
+            "mention": {
+              "score": 14.29,
+              "weight": 0.25,
+              "contrib_pct": 15.3
+            },
+            "trade": {
+              "score": 0.0,
+              "weight": 0.25,
+              "contrib_pct": 0.0
+            },
+            "holding": {
+              "score": 77.78,
+              "weight": 0.2,
+              "contrib_pct": 66.5
+            }
+          }
+        },
+        "2026-08-17 TECH_SEMI": {
+          "heat": 32.98,
+          "factors": {
+            "coverage": {
+              "score": 57.14,
+              "weight": 0.3,
+              "contrib_pct": 52.0
+            },
+            "mention": {
+              "score": 14.29,
+              "weight": 0.25,
+              "contrib_pct": 10.8
+            },
+            "trade": {
+              "score": 2.41,
+              "weight": 0.25,
+              "contrib_pct": 1.8
+            },
+            "holding": {
+              "score": 58.33,
+              "weight": 0.2,
+              "contrib_pct": 35.4
+            }
+          }
+        },
+        "2026-08-17 TECH_AI_COMPUTE": {
+          "heat": 29.49,
+          "factors": {
+            "coverage": {
+              "score": 42.86,
+              "weight": 0.3,
+              "contrib_pct": 43.6
+            },
+            "mention": {
+              "score": 28.57,
+              "weight": 0.25,
+              "contrib_pct": 24.2
+            },
+            "trade": {
+              "score": 15.74,
+              "weight": 0.25,
+              "contrib_pct": 13.3
+            },
+            "holding": {
+              "score": 27.78,
+              "weight": 0.2,
+              "contrib_pct": 18.8
+            }
+          }
+        },
+        "2026-08-17 TECH_COMPONENT": {
+          "heat": 17.38,
+          "factors": {
+            "coverage": {
+              "score": 28.57,
+              "weight": 0.3,
+              "contrib_pct": 49.3
+            },
+            "mention": {
+              "score": 28.57,
+              "weight": 0.25,
+              "contrib_pct": 41.1
+            },
+            "trade": {
+              "score": 0.0,
+              "weight": 0.25,
+              "contrib_pct": 0.0
+            },
+            "holding": {
+              "score": 8.33,
+              "weight": 0.2,
+              "contrib_pct": 9.6
+            }
+          }
+        },
+        "2026-08-18 TECH_SEMI": {
+          "heat": 35.35,
+          "factors": {
+            "coverage": {
+              "score": 44.44,
+              "weight": 0.3,
+              "contrib_pct": 37.7
+            },
+            "mention": {
+              "score": 22.22,
+              "weight": 0.25,
+              "contrib_pct": 15.7
+            },
+            "trade": {
+              "score": 15.19,
+              "weight": 0.25,
+              "contrib_pct": 10.7
+            },
+            "holding": {
+              "score": 63.33,
+              "weight": 0.2,
+              "contrib_pct": 35.8
+            }
+          }
+        },
+        "2026-08-18 MED_INNOVATIVE_DRUG": {
+          "heat": 21.56,
+          "factors": {
+            "coverage": {
+              "score": 33.33,
+              "weight": 0.3,
+              "contrib_pct": 46.4
+            },
+            "mention": {
+              "score": 22.22,
+              "weight": 0.25,
+              "contrib_pct": 25.8
+            },
+            "trade": {
+              "score": 0.0,
+              "weight": 0.25,
+              "contrib_pct": 0.0
+            },
+            "holding": {
+              "score": 30.0,
+              "weight": 0.2,
+              "contrib_pct": 27.8
+            }
+          }
+        },
+        "2026-08-18 OTHER_AGRICULTURE": {
+          "heat": 20.89,
+          "factors": {
+            "coverage": {
+              "score": 44.44,
+              "weight": 0.3,
+              "contrib_pct": 63.8
+            },
+            "mention": {
+              "score": 22.22,
+              "weight": 0.25,
+              "contrib_pct": 26.6
+            },
+            "trade": {
+              "score": 0.0,
+              "weight": 0.25,
+              "contrib_pct": 0.0
+            },
+            "holding": {
+              "score": 10.0,
+              "weight": 0.2,
+              "contrib_pct": 9.6
+            }
+          }
+        },
+        "2026-08-19 CYCL_NONFERROUS": {
+          "heat": 21.94,
+          "factors": {
+            "coverage": {
+              "score": 33.33,
+              "weight": 0.3,
+              "contrib_pct": 45.6
+            },
+            "mention": {
+              "score": 16.67,
+              "weight": 0.25,
+              "contrib_pct": 19.0
+            },
+            "trade": {
+              "score": 0.0,
+              "weight": 0.25,
+              "contrib_pct": 0.0
+            },
+            "holding": {
+              "score": 38.89,
+              "weight": 0.2,
+              "contrib_pct": 35.5
+            }
+          }
+        },
+        "2026-08-19 TECH_SEMI": {
+          "heat": 17.22,
+          "factors": {
+            "coverage": {
+              "score": 33.33,
+              "weight": 0.3,
+              "contrib_pct": 58.1
+            },
+            "mention": {
+              "score": 0.0,
+              "weight": 0.25,
+              "contrib_pct": 0.0
+            },
+            "trade": {
+              "score": 0.0,
+              "weight": 0.25,
+              "contrib_pct": 0.0
+            },
+            "holding": {
+              "score": 36.11,
+              "weight": 0.2,
+              "contrib_pct": 41.9
+            }
+          }
+        },
+        "2026-08-19 OTHER_CONSUMER": {
+          "heat": 15.83,
+          "factors": {
+            "coverage": {
+              "score": 33.33,
+              "weight": 0.3,
+              "contrib_pct": 63.2
+            },
+            "mention": {
+              "score": 16.67,
+              "weight": 0.25,
+              "contrib_pct": 26.3
+            },
+            "trade": {
+              "score": 0.0,
+              "weight": 0.25,
+              "contrib_pct": 0.0
+            },
+            "holding": {
+              "score": 8.33,
+              "weight": 0.2,
+              "contrib_pct": 10.5
+            }
+          }
+        },
+        "2026-08-26 CYCL_NONFERROUS": {
+          "heat": 22.7,
+          "factors": {
+            "coverage": {
+              "score": 28.57,
+              "weight": 0.3,
+              "contrib_pct": 37.8
+            },
+            "mention": {
+              "score": 14.29,
+              "weight": 0.25,
+              "contrib_pct": 15.7
+            },
+            "trade": {
+              "score": 12.22,
+              "weight": 0.25,
+              "contrib_pct": 13.5
+            },
+            "holding": {
+              "score": 37.5,
+              "weight": 0.2,
+              "contrib_pct": 33.0
+            }
+          }
+        },
+        "2026-08-26 TECH_SEMI": {
+          "heat": 20.58,
+          "factors": {
+            "coverage": {
+              "score": 14.29,
+              "weight": 0.3,
+              "contrib_pct": 20.8
+            },
+            "mention": {
+              "score": 0.0,
+              "weight": 0.25,
+              "contrib_pct": 0.0
+            },
+            "trade": {
+              "score": 41.85,
+              "weight": 0.25,
+              "contrib_pct": 50.8
+            },
+            "holding": {
+              "score": 29.17,
+              "weight": 0.2,
+              "contrib_pct": 28.3
+            }
+          }
+        },
+        "2026-08-26 TECH_AI_COMPUTE": {
+          "heat": 19.7,
+          "factors": {
+            "coverage": {
+              "score": 14.29,
+              "weight": 0.3,
+              "contrib_pct": 21.8
+            },
+            "mention": {
+              "score": 0.0,
+              "weight": 0.25,
+              "contrib_pct": 0.0
+            },
+            "trade": {
+              "score": 20.0,
+              "weight": 0.25,
+              "contrib_pct": 25.4
+            },
+            "holding": {
+              "score": 52.08,
+              "weight": 0.2,
+              "contrib_pct": 52.9
+            }
+          }
+        },
+        "2026-08-27 TECH_SEMI": {
+          "heat": 26.85,
+          "factors": {
+            "coverage": {
+              "score": 22.22,
+              "weight": 0.3,
+              "contrib_pct": 24.8
+            },
+            "mention": {
+              "score": 11.11,
+              "weight": 0.25,
+              "contrib_pct": 10.3
+            },
+            "trade": {
+              "score": 31.85,
+              "weight": 0.25,
+              "contrib_pct": 29.7
+            },
+            "holding": {
+              "score": 47.22,
+              "weight": 0.2,
+              "contrib_pct": 35.2
+            }
+          }
+        },
+        "2026-08-27 TECH_OPTICS": {
+          "heat": 19.81,
+          "factors": {
+            "coverage": {
+              "score": 33.33,
+              "weight": 0.3,
+              "contrib_pct": 50.5
+            },
+            "mention": {
+              "score": 22.22,
+              "weight": 0.25,
+              "contrib_pct": 28.0
+            },
+            "trade": {
+              "score": 3.7,
+              "weight": 0.25,
+              "contrib_pct": 4.7
+            },
+            "holding": {
+              "score": 16.67,
+              "weight": 0.2,
+              "contrib_pct": 16.8
+            }
+          }
+        },
+        "2026-08-27 CYCL_CHEMICAL": {
+          "heat": 17.78,
+          "factors": {
+            "coverage": {
+              "score": 22.22,
+              "weight": 0.3,
+              "contrib_pct": 37.5
+            },
+            "mention": {
+              "score": 11.11,
+              "weight": 0.25,
+              "contrib_pct": 15.6
+            },
+            "trade": {
+              "score": 0.0,
+              "weight": 0.25,
+              "contrib_pct": 0.0
+            },
+            "holding": {
+              "score": 41.67,
+              "weight": 0.2,
+              "contrib_pct": 46.9
+            }
+          }
+        },
+        "2026-08-28 CYCL_NONFERROUS": {
+          "heat": 25.47,
+          "factors": {
+            "coverage": {
+              "score": 44.44,
+              "weight": 0.3,
+              "contrib_pct": 52.3
+            },
+            "mention": {
+              "score": 22.22,
+              "weight": 0.25,
+              "contrib_pct": 21.8
+            },
+            "trade": {
+              "score": 13.0,
+              "weight": 0.25,
+              "contrib_pct": 12.8
+            },
+            "holding": {
+              "score": 16.67,
+              "weight": 0.2,
+              "contrib_pct": 13.1
+            }
+          }
+        },
+        "2026-08-28 TECH_AI_COMPUTE": {
+          "heat": 24.93,
+          "factors": {
+            "coverage": {
+              "score": 33.33,
+              "weight": 0.3,
+              "contrib_pct": 40.1
+            },
+            "mention": {
+              "score": 11.11,
+              "weight": 0.25,
+              "contrib_pct": 11.1
+            },
+            "trade": {
+              "score": 30.83,
+              "weight": 0.25,
+              "contrib_pct": 30.9
+            },
+            "holding": {
+              "score": 22.22,
+              "weight": 0.2,
+              "contrib_pct": 17.8
+            }
+          }
+        },
+        "2026-08-28 TECH_OPTICS": {
+          "heat": 20.01,
+          "factors": {
+            "coverage": {
+              "score": 44.44,
+              "weight": 0.3,
+              "contrib_pct": 66.6
+            },
+            "mention": {
+              "score": 11.11,
+              "weight": 0.25,
+              "contrib_pct": 13.9
+            },
+            "trade": {
+              "score": 11.17,
+              "weight": 0.25,
+              "contrib_pct": 14.0
+            },
+            "holding": {
+              "score": 5.56,
+              "weight": 0.2,
+              "contrib_pct": 5.6
+            }
+          }
+        }
+      },
+      "note": "heat_score = Σ(score×w)/Σ(avail_w) 对每个 VALID 行成立；贡献占比可解释"
+    },
+    "G7_business_sanity": {
+      "pass": true,
+      "violations": [],
+      "tech_general_rows": 8,
+      "tech_general_signal_rows": [
+        {
+          "date": "2026-08-17",
+          "heat": 15.71,
+          "status": "VALID",
+          "conf": "MEDIUM",
+          "cov_analysts": 2,
+          "mention_net": 2,
+          "trd_raw": 0,
+          "hold_support": 0
+        },
+        {
+          "date": "2026-08-18",
+          "heat": 9.44,
+          "status": "VALID",
+          "conf": "MEDIUM",
+          "cov_analysts": 2,
+          "mention_net": 1,
+          "trd_raw": 0,
+          "hold_support": 0
+        },
+        {
+          "date": "2026-08-19",
+          "heat": 10.0,
+          "status": "VALID",
+          "conf": "MEDIUM",
+          "cov_analysts": 2,
+          "mention_net": 0,
+          "trd_raw": 0,
+          "hold_support": 0
+        },
+        {
+          "date": "2026-08-27",
+          "heat": 9.44,
+          "status": "VALID",
+          "conf": "MEDIUM",
+          "cov_analysts": 2,
+          "mention_net": 1,
+          "trd_raw": 0,
+          "hold_support": 0
+        }
+      ],
+      "med_drug_0828_heat": 6.67,
+      "nf_0828_factors": {
+        "cov": 44.44,
+        "hold": 16.67,
+        "trd": 13.0,
+        "heat": 25.47
+      },
+      "note": "无个股映射主题(TECH_GENERAL)交易/持仓通道恒 0、DIRECT mention 通道合法；负面回落主题低热；榜首有基本面因子支撑；网格完整"
+    },
+    "G8_fact_layer_idempotent": {
+      "pass": true,
+      "violations": [],
+      "compared_rows": 152,
+      "note": "P2.2C raw 字段与 P2.2B 一致：Heat 层未篡改事实层"
+    }
+  },
+  "audit": {
+    "2026-08-14": {
+      "top5": [
+        {
+          "theme": "TECH_AI_COMPUTE",
+          "heat": 36.61,
+          "level": "COOL",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_OPTICS",
+          "heat": 23.89,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_SEMI",
+          "heat": 23.41,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "CYCL_NONFERROUS",
+          "heat": 20.04,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "OTHER_ROBOTICS",
+          "heat": 10.81,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        }
+      ],
+      "bottom5": [
+        {
+          "theme": "NEW_ENERGY_SOLID_BATTERY",
+          "heat": 1.15,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        },
+        {
+          "theme": "OTHER_SPACE",
+          "heat": 1.11,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_GENERAL",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        },
+        {
+          "theme": "NEW_ENERGY_ELECTROLYTE",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        },
+        {
+          "theme": "OTHER_CONSUMER",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        }
+      ]
+    },
+    "2026-08-16": {
+      "top5": [
+        {
+          "theme": "TECH_SEMI",
+          "heat": 67.71,
+          "level": "HEATING",
+          "status": "LOW_SIGNAL",
+          "conf": "LOW"
+        },
+        {
+          "theme": "TECH_AI_COMPUTE",
+          "heat": 61.98,
+          "level": "ACTIVE",
+          "status": "LOW_SIGNAL",
+          "conf": "LOW"
+        },
+        {
+          "theme": "TECH_OPTICS",
+          "heat": 37.5,
+          "level": "COOL",
+          "status": "LOW_SIGNAL",
+          "conf": "LOW"
+        },
+        {
+          "theme": "TECH_ELEC",
+          "heat": 31.25,
+          "level": "COOL",
+          "status": "LOW_SIGNAL",
+          "conf": "LOW"
+        },
+        {
+          "theme": "CYCL_CHEMICAL",
+          "heat": 31.25,
+          "level": "COOL",
+          "status": "LOW_SIGNAL",
+          "conf": "LOW"
+        }
+      ],
+      "bottom5": [
+        {
+          "theme": "OTHER_BROKER",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        },
+        {
+          "theme": "OTHER_AGRICULTURE",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        },
+        {
+          "theme": "OTHER_ROBOTICS",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        },
+        {
+          "theme": "OTHER_SPACE",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        },
+        {
+          "theme": "OTHER_CONSUMER",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        }
+      ]
+    },
+    "2026-08-17": {
+      "top5": [
+        {
+          "theme": "TECH_SEMI",
+          "heat": 32.98,
+          "level": "COOL",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_AI_COMPUTE",
+          "heat": 29.49,
+          "level": "COOL",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_COMPONENT",
+          "heat": 17.38,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_OPTICS",
+          "heat": 16.92,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_GENERAL",
+          "heat": 15.71,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        }
+      ],
+      "bottom5": [
+        {
+          "theme": "OTHER_BROKER",
+          "heat": 1.11,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        },
+        {
+          "theme": "OTHER_CONSUMER",
+          "heat": 1.11,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        },
+        {
+          "theme": "OTHER_AGRICULTURE",
+          "heat": 0.74,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        },
+        {
+          "theme": "NEW_ENERGY_SOLID_BATTERY",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "OTHER_SPACE",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        }
+      ]
+    },
+    "2026-08-18": {
+      "top5": [
+        {
+          "theme": "TECH_SEMI",
+          "heat": 35.35,
+          "level": "COOL",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "MED_INNOVATIVE_DRUG",
+          "heat": 21.56,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "OTHER_AGRICULTURE",
+          "heat": 20.89,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_OPTICS",
+          "heat": 18.56,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_AI_COMPUTE",
+          "heat": 17.28,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        }
+      ],
+      "bottom5": [
+        {
+          "theme": "TECH_PCB",
+          "heat": 3.33,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        },
+        {
+          "theme": "NEW_ENERGY_ELECTROLYTE",
+          "heat": 3.33,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "LOW"
+        },
+        {
+          "theme": "NEW_ENERGY_SOLID_BATTERY",
+          "heat": 2.36,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        },
+        {
+          "theme": "OTHER_BROKER",
+          "heat": 2.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "LOW"
+        },
+        {
+          "theme": "NEW_ENERGY_UHV",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        }
+      ]
+    },
+    "2026-08-19": {
+      "top5": [
+        {
+          "theme": "CYCL_NONFERROUS",
+          "heat": 21.94,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_SEMI",
+          "heat": 17.22,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "OTHER_CONSUMER",
+          "heat": 15.83,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "MED_INNOVATIVE_DRUG",
+          "heat": 15.0,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        },
+        {
+          "theme": "TECH_AI_COMPUTE",
+          "heat": 11.32,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        }
+      ],
+      "bottom5": [
+        {
+          "theme": "NEW_ENERGY_SOLID_BATTERY",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "LOW"
+        },
+        {
+          "theme": "NEW_ENERGY_ELECTROLYTE",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        },
+        {
+          "theme": "NEW_ENERGY_UHV",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        },
+        {
+          "theme": "OTHER_BROKER",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        },
+        {
+          "theme": "OTHER_AGRICULTURE",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "LOW"
+        }
+      ]
+    },
+    "2026-08-26": {
+      "top5": [
+        {
+          "theme": "CYCL_NONFERROUS",
+          "heat": 22.7,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_SEMI",
+          "heat": 20.58,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_AI_COMPUTE",
+          "heat": 19.7,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "OTHER_BROKER",
+          "heat": 14.23,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "OTHER_CONSUMER",
+          "heat": 13.39,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        }
+      ],
+      "bottom5": [
+        {
+          "theme": "OTHER_SPACE",
+          "heat": 0.83,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        },
+        {
+          "theme": "NEW_ENERGY_SOLID_BATTERY",
+          "heat": 0.56,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "LOW"
+        },
+        {
+          "theme": "TECH_COMPONENT",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        },
+        {
+          "theme": "TECH_GENERAL",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        },
+        {
+          "theme": "NEW_ENERGY_ELECTROLYTE",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        }
+      ]
+    },
+    "2026-08-27": {
+      "top5": [
+        {
+          "theme": "TECH_SEMI",
+          "heat": 26.85,
+          "level": "COOL",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_OPTICS",
+          "heat": 19.81,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "CYCL_CHEMICAL",
+          "heat": 17.78,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "CYCL_NONFERROUS",
+          "heat": 17.18,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "OTHER_AGRICULTURE",
+          "heat": 13.89,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        }
+      ],
+      "bottom5": [
+        {
+          "theme": "TECH_COMPONENT",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "LOW"
+        },
+        {
+          "theme": "NEW_ENERGY_SOLID_BATTERY",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        },
+        {
+          "theme": "NEW_ENERGY_ELECTROLYTE",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        },
+        {
+          "theme": "NEW_ENERGY_UHV",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        },
+        {
+          "theme": "OTHER_SPACE",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        }
+      ]
+    },
+    "2026-08-28": {
+      "top5": [
+        {
+          "theme": "CYCL_NONFERROUS",
+          "heat": 25.47,
+          "level": "COOL",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_AI_COMPUTE",
+          "heat": 24.93,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_OPTICS",
+          "heat": 20.01,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "CYCL_CHEMICAL",
+          "heat": 18.26,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_SEMI",
+          "heat": 11.11,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        }
+      ],
+      "bottom5": [
+        {
+          "theme": "NEW_ENERGY_SOLID_BATTERY",
+          "heat": 5.19,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        },
+        {
+          "theme": "TECH_COMPONENT",
+          "heat": 5.17,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "MEDIUM"
+        },
+        {
+          "theme": "OTHER_CONSUMER",
+          "heat": 3.33,
+          "level": "COLD",
+          "status": "VALID",
+          "conf": "HIGH"
+        },
+        {
+          "theme": "TECH_GENERAL",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        },
+        {
+          "theme": "NEW_ENERGY_ELECTROLYTE",
+          "heat": 0.0,
+          "level": "COLD",
+          "status": "LOW_SIGNAL",
+          "conf": "NONE"
+        }
+      ]
+    }
+  }
+}
