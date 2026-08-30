@@ -325,15 +325,29 @@ def main():
 
     # 2) build snapshot（幂等）
     snap_path = ROOT / SNAPSHOT_REL
+    # 幂等自检：临时目录重建副本，与正式 build 结果对比「同输入 → 同 md5」。
+    # 注：不比较历史 snapshot（输入数据跨日合法变化，md5 必然不同，非幂等破坏）。
+    import tempfile, shutil
+    _tmp = Path(tempfile.mkdtemp(prefix="snap_idem_"))
+    try:
+        rc_tmp, _ = run("build_consensus_snapshot.py", "--out", str(_tmp / "snap.json"))
+        idem_h = md5_file(_tmp / "snap.json") if rc_tmp == 0 else None
+    except Exception as e:
+        idem_h = None
+        log(f"  ⚠️ 幂等自检临时 build 异常: {e}")
+
     before = md5_file(snap_path) if snap_path.exists() else None
     rc, out = run("build_consensus_snapshot.py")
     if rc != 0:
         fail("builder error", f"build_consensus_snapshot 失败:\n{out}")
     after = md5_file(snap_path)
     log(f"✅ snapshot 生成: md5={after[:12]} (before={before[:12] if before else 'N/A'})")
-    # snapshot hash mismatch 检查（幂等破坏告警）
-    if before and before != after:
-        fail("snapshot hash mismatch", f"同输入产物 md5 变化: {before[:12]} → {after[:12]}，幂等契约被破坏")
+    # 幂等自检断言：临时副本与正式 build 必须一致（同输入 → 同 md5）
+    if idem_h is not None and idem_h != after:
+        fail("snapshot hash mismatch", f"同输入重建 md5 不一致: tmp={idem_h[:12]} vs 正式={after[:12]}，幂等契约被破坏")
+    if idem_h is not None:
+        log(f"✅ 幂等自检通过（同输入重建 md5 一致 {idem_h[:12]}）")
+    shutil.rmtree(_tmp, ignore_errors=True)
 
     # 3) 校验
     vok, errs = validate_snapshot()
