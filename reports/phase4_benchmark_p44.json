@@ -1,0 +1,62 @@
+{
+  "generated_at": "P4.4 v1",
+  "overall": "GO",
+  "gates": {
+    "G1": true,
+    "G2": true,
+    "G3": true,
+    "G4": true,
+    "G5": true,
+    "G6": true,
+    "G7": true,
+    "G8": true,
+    "G9": true,
+    "G10": true
+  },
+  "gates_passed": 10,
+  "gates_total": 10,
+  "rerun_exit": {
+    "p40": 0,
+    "p41": 0,
+    "p42": 0,
+    "p43": 0
+  },
+  "sub_benchmark_exit": {
+    "p41": 0,
+    "p42": 0,
+    "p43": 0
+  },
+  "layer_summary": {
+    "readiness_p40": {
+      "n_mapped": 337,
+      "n_unmapped": 13
+    },
+    "linkage_p41": {
+      "NEUTRAL": 261,
+      "CONFIRMED_BULLISH": 14,
+      "STOCK_THEME_DIVERGENCE": 54,
+      "UNMAPPED": 13,
+      "THEME_CONFIRMED_STOCK": 2,
+      "CONFIRMED_BEARISH": 6
+    },
+    "divergence_p42": {
+      "high_div": 37,
+      "holding_turning_neg": 18
+    },
+    "state_p43": {
+      "NEUTRAL": 143,
+      "WEAKENING": 87,
+      "CONFIRMED": 19,
+      "DISCOVERY": 27,
+      "DIVERGING": 45,
+      "UNMAPPED": 13,
+      "REVERSING": 13,
+      "CONFIRMING": 3
+    }
+  },
+  "audits": {
+    "A1": true,
+    "A2": true,
+    "A3_note": "分布 {\"NEUTRAL\": 143, \"WEAKENING\": 87, \"CONFIRMED\": 19, \"DISCOVERY\": 27, \"DIVERGING\": 45, \"UNMAPPED\": 13, \"REVERSING\": 13, \"CONFIRMING\": 3}：CONFIRMED+DIVERGING+REVERSING 共 77（有信号占比合理），NEUTRAL 143（无信号/弱信号池）"
+  }
+}
