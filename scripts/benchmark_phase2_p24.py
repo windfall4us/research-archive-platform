@@ -112,8 +112,33 @@ def main():
     print("P2.4 Phase 2 总 Benchmark — 串联 P2.0B→P2.0C→P2.0D→P2.1→P2.2A/B/C/D→P2.3")
     print("=" * 74)
 
+    # ============ [预热] 全链路重建（2026-08-31 用户批准：G10/G11 验同输入确定性而非跨日状态） ============
+    # 背景：base 基线若取自"上次运行遗留的旧数据状态"，与"本次含新快照日的重建"比较，会因数据
+    #   自然累积（新快照日新增股票/提及）而误判 G10/G11。预热先把 DB/文件重建到当前输入下的干净
+    #   状态，随后记录基线并同输入重跑第二遍——G10/G11 比较"当前输入重建 vs 同输入重跑"，
+    #   验证可重建确定性（用户 2026-08-30 裁决：G11 验同输入确定性而非跨日 hash）。
+    print("\n[预热] 全链路重建到当前输入状态（P2.0B→P2.0C→P2.2A→P2.2B→P2.2C→P2.3→P2.1）")
+    rerun_cmds = [
+        ("P2.0B market_view_ingest", "market_view_ingest_p20b.py"),
+        ("P2.0C theme_mention_extract", "theme_mention_extract_v1.py"),
+        ("P2.2A stock_theme_mapping", "stock_theme_mapping_p22a.py"),
+        ("P2.2B theme_daily_factors", "theme_daily_factors_p22b.py"),
+        ("P2.2C theme_heat_score", "theme_heat_score_p22c.py"),
+        ("P2.3 theme_momentum", "theme_momentum_p23.py"),
+        ("P2.1 market_direction", "market_direction_p21.py"),
+    ]
+    preheat_ok = True
+    for name, script in rerun_cmds:
+        code, _ = run_benchmark(name, script)
+        if code != 0:
+            preheat_ok = False
+    if not preheat_ok:
+        print("❌ 预热失败：无法建立当前输入的干净重建基线，G10/G11 判定无意义。终止。")
+        sys.exit(1)
+    print("  ✅ 预热完成：DB/文件已重建为当前输入下的干净状态")
+
     # ============ 阶段 0：基线快照（hash + 表行数 + 原始快照） ============
-    print("\n[阶段 0] 记录重跑前基线")
+    print("\n[阶段 0] 记录基线（当前输入重建后的状态）")
     base_hash = {k: sha256(p) for k, p in KEY_OUTPUTS.items() if p.exists()}
     con = sqlite3.connect(DB)
     cur = con.cursor()
@@ -127,17 +152,8 @@ def main():
         base_raw[f.name] = sha256(f)
     print(f"  关键输出 {len(base_hash)} 个、表 {len(base_rows)} 张、原始快照 {len(base_raw)} 个 hash 已记录")
 
-    # ============ 阶段 1：全链路重跑（可重建验证） ============
-    print("\n[阶段 1] 全链路重跑（P2.0B → P2.0C → P2.2A → P2.2B → P2.2C → P2.3 → P2.1）")
-    rerun_cmds = [
-        ("P2.0B market_view_ingest", "market_view_ingest_p20b.py"),
-        ("P2.0C theme_mention_extract", "theme_mention_extract_v1.py"),
-        ("P2.2A stock_theme_mapping", "stock_theme_mapping_p22a.py"),
-        ("P2.2B theme_daily_factors", "theme_daily_factors_p22b.py"),
-        ("P2.2C theme_heat_score", "theme_heat_score_p22c.py"),
-        ("P2.3 theme_momentum", "theme_momentum_p23.py"),
-        ("P2.1 market_direction", "market_direction_p21.py"),
-    ]
+    # ============ 阶段 1：全链路重跑（同输入第二遍，可重建确定性验证） ============
+    print("\n[阶段 1] 全链路重跑（同输入第二遍，P2.0B → P2.0C → P2.2A → P2.2B → P2.2C → P2.3 → P2.1）")
     rerun_ok = True
     for name, script in rerun_cmds:
         p = subprocess.run([sys.executable, str(SCRIPTS / script)], capture_output=True, text=True, cwd=ROOT, timeout=600)

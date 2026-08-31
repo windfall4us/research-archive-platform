@@ -181,12 +181,18 @@ def main() -> int:
     out["G4_holding_to_buy"] = {"pass": g4, "detail": f"position_snapshots not_holding={pos_not_holding}, buy_like={pos_buy_like}"}
 
     # G5 revision 可追踪 100%（每条能在 before/after 快照反查 + revision_no 连续）
+    # 2026-08-31 修正（用户批准）：排除 change_type='REMOVED' 的 rid——REMOVED 是时间线滚动清除的
+    #   合法审计证据（记录已不存在于任何当前快照），不应要求其在最新快照对中可反查。
+    #   orphan 判定只针对仍"存活"（非 REMOVED）的 revision rid。
     from diff_analyst_snapshots_v2 import load_sections, logical_key, record_id as _rid
     _bp, _ap = _latest_rev_snapshot_pair()
     before = load_sections(_bp)
     after = load_sections(_ap)
     known = {_rid(s, logical_key(s)) for s in before} | {_rid(s, logical_key(s)) for s in after}
+    removed_rids = {r[0] for r in con.execute(
+        "SELECT DISTINCT source_record_id FROM record_revisions WHERE change_type='REMOVED'")}
     rev_rids = [r[0] for r in con.execute("SELECT DISTINCT source_record_id FROM record_revisions")]
+    rev_rids = [rid for rid in rev_rids if rid not in removed_rids]
     orphan = [rid for rid in rev_rids if rid not in known]
     # revision_no 连续
     bad_no = 0
