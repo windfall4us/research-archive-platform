@@ -29,6 +29,7 @@ JSON_OUT = ROOT / "data" / "p43" / "cross_layer_state.json"
 SCRIPT = ROOT / "scripts" / "cross_layer_state_p43.py"
 P41 = ROOT / "data" / "p41" / "stock_theme_linkage.json"
 P42 = ROOT / "data" / "p42" / "consensus_divergence.json"
+P30 = ROOT / "data" / "p30" / "stock_consensus_readiness.json"
 
 def sha1(p):
     return hashlib.sha1(Path(p).read_bytes()).hexdigest()
@@ -43,9 +44,13 @@ d = json.loads(JSON_OUT.read_text(encoding="utf-8"))
 s = d["per_stock"]
 p41 = json.loads(P41.read_text(encoding="utf-8"))["per_stock"]
 p42 = json.loads(P42.read_text(encoding="utf-8"))["per_stock"]
+p30 = json.loads(P30.read_text(encoding="utf-8"))
 
-g1 = len(s) == 350
-g3 = sum(1 for v in s.values() if v["cross_layer_state"] == "UNMAPPED") == 13
+# G1：覆盖 == P4.1 覆盖（动态跨层，防滚动累积误判）
+g1 = len(s) == len(p41)
+# G3：UNMAPPED == P4.1 unmapped（动态跨层）
+g3 = sum(1 for v in s.values() if v["cross_layer_state"] == "UNMAPPED") == \
+     sum(1 for v in p41.values() if not v["mapped"])
 
 # G4-G8 子集约束
 g4 = all(v["linkage_signal"] in ("CONFIRMED_BULLISH", "CONFIRMED_BEARISH") and v["divergence_score"] < 0.5
@@ -94,7 +99,7 @@ g2 = all(decide(code, p41[code]) == v["cross_layer_state"] for code, v in s.item
 db = sqlite3.connect(DB); db.row_factory = sqlite3.Row
 c = db.cursor()
 n_excl = c.execute("SELECT COUNT(*) FROM consensus_event_exclusions").fetchone()[0]
-g10 = n_excl == 3
+g10 = n_excl == p30["events"]["excluded"]  # 动态：治理事件数 == P3.0 excluded
 
 gates = {"G1": g1, "G2": g2, "G3": g3, "G4": g4, "G5": g5, "G6": g6, "G7": g7, "G8": g8, "G9": g9, "G10": g10}
 n_pass = sum(gates.values())
@@ -108,9 +113,9 @@ lines.append("")
 lines.append("| Gate | 判定 | 说明 |")
 lines.append("| --- | --- | --- |")
 details = {
-    "G1": f"覆盖 {len(s)}/350",
-    "G2": "状态判定独立复算一致（全 350 只）",
-    "G3": f"UNMAPPED={sum(1 for v in s.values() if v['cross_layer_state']=='UNMAPPED')}/13",
+    "G1": f"覆盖 {len(s)}/{len(p41)}（== P4.1，动态跨层）",
+    "G2": f"状态判定独立复算一致（全 {len(s)} 只）",
+    "G3": f"UNMAPPED={sum(1 for v in s.values() if v['cross_layer_state']=='UNMAPPED')}（== P4.1 unmapped {sum(1 for v in p41.values() if not v['mapped'])}）",
     "G4": f"CONFIRMED {sum(1 for v in s.values() if v['cross_layer_state']=='CONFIRMED')} 全为三维共振低分歧",
     "G5": f"DIVERGING {sum(1 for v in s.values() if v['cross_layer_state']=='DIVERGING')} 全为 S·T<0",
     "G6": f"REVERSING {sum(1 for v in s.values() if v['cross_layer_state']=='REVERSING')} 全为持仓转负/观点异号",

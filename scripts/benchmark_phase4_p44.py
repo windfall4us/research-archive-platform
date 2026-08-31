@@ -9,19 +9,22 @@ benchmark_phase4_p44.py — P4.4 Phase 4 总 Benchmark
 硬 Gate（10）：
   G1  全链路重跑后关键输出 hash 与基线一致（幂等）
   G2  原始事实层未改（source_snapshots 行数 + 原始快照 hash）
-  G3  跨层分母一致：P4.0 350 == P4.1 350 == P4.2 350 == P4.3 350
-  G4  映射一致：P4.0 mapped 337 == P4.1 mapped 337 == P4.3 UNMAPPED 13
-  G5  linkage→state 一致性：CONFIRMED_BULLISH(14) 全→P4.3 CONFIRMED；STOCK_THEME_DIVERGENCE(54) 全→DIVERGING/REVERSING
-  G6  主题个股反向跨层一致：P4.1 DIVERGENCE == P4.2 theme_stock_mismatch == P4.3 DIVERGING+REVERSING 相关
-  G7  事件全量跨层一致：934（P4.1 动作流 / P4.2 events / P3.3）
+  G3  跨层分母一致：P4.0/P4.1/P4.2/P4.3 全等（动态值）
+  G4  映射一致：P4.0 mapped == P4.1 mapped；UNMAPPED == P4.0 unmapped（动态）
+  G5  linkage→state 一致性：CONFIRMED_BULLISH 全→CONFIRMED/CONFIRMING（div<0.5→CONFIRMED，div≥0.5→CONFIRMING）；STOCK_THEME_DIVERGENCE 全→DIVERGING/REVERSING
+  G6  主题个股反向跨层一致：P4.1 DIVERGENCE == P4.2 theme_stock_mismatch（动态）
+  G7  事件全量跨层一致（== P3.0 eligible，动态）
   G8  上游子 benchmark 全 GO（P4.1/P4.2/P4.3 exit=0）
-  G9  excluded 3 治理事件隔离
+  G9  excluded 治理事件隔离（== P3.0 excluded，动态）
   G10 state 全量分布与 P4.3 报告一致（无漂移）
 
 业务审计（3）：
-  A1  CONFIRMED 19 只可解释（三维共振 + 低分歧）
-  A2  REVERSING 13 只可解释（持仓转负/观点异号的转折信号）
+  A1  CONFIRMED 可解释（三维共振 + 低分歧）
+  A2  REVERSING 可解释（持仓转负/观点异号的转折信号）
   A3  6 状态分布业务合理性（无异常空转/极端集中）
+
+注：G3-G7/G9/G10 全部验证「关系/跨层一致」而非固定绝对值（用户 08-31
+裁决：验关系而非固定值；冻结期报告保持 immutable）。数据滚动累积不误判。
 
 报告：reports/phase4_benchmark_p44.md + .json
 退出码：0=GO / 1=NO-GO
@@ -37,6 +40,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DB = ROOT / "data" / "analyst_consensus.db"
 
+P30_JSON = ROOT / "data" / "p30" / "stock_consensus_readiness.json"
 P40_JSON = ROOT / "data" / "p40" / "cross_layer_readiness.json"
 P41_JSON = ROOT / "data" / "p41" / "stock_theme_linkage.json"
 P42_JSON = ROOT / "data" / "p42" / "consensus_divergence.json"
@@ -78,6 +82,7 @@ for k, s in SCRIPTS.items():
     rerun[k] = rr.returncode
 
 # ---------- 阶段 2：读重跑后数据 ----------
+p30 = json.loads(P30_JSON.read_text(encoding="utf-8"))
 p40 = json.loads(P40_JSON.read_text(encoding="utf-8"))
 p41 = json.loads(P41_JSON.read_text(encoding="utf-8"))
 p42 = json.loads(P42_JSON.read_text(encoding="utf-8"))
@@ -85,6 +90,13 @@ p43 = json.loads(P43_JSON.read_text(encoding="utf-8"))
 p41s = p41["per_stock"]
 p42s = p42["per_stock"]
 p43s = p43["per_stock"]
+
+# 动态基准值（来源：P4.0 readiness + P3.0 readiness）
+E_STOCKS = p40["stock_layer"]["n_eligible"]
+MAPPED = p40["mapping"]["n_mapped_stocks"]
+UNMAPPED = p40["mapping"]["n_unmapped_stocks"]
+P30_ELIGIBLE = p30["events"]["eligible"]
+P30_EXCLUDED = p30["events"]["excluded"]
 
 # G1 幂等
 post_hash = {k: sha1(p) if p.exists() else None for k, p in OUTPUTS.items()}
@@ -97,28 +109,30 @@ if snap_dir.exists():
     snap_after = json.dumps({f.name: sha1(f) for f in sorted(snap_dir.glob("vip0_timeline_*.json"))}, sort_keys=True)
 g2 = src_rows_before == src_rows_after and snap_before == snap_after
 
-# G3 分母
-g3 = (p40["stock_layer"]["n_eligible"] == 350 and p41["summary"]["n_stocks"] == 350
-      and p42["summary"]["n_stocks"] == 350 and p43["summary"]["n_stocks"] == 350)
+# G3 分母（动态：四层全等）
+g3 = (p40["stock_layer"]["n_eligible"] == p41["summary"]["n_stocks"]
+      and p42["summary"]["n_stocks"] == p43["summary"]["n_stocks"]
+      and p43["summary"]["n_stocks"] == E_STOCKS)
 
-# G4 映射
+# G4 映射（动态：P4.0 mapped == P4.1 mapped；UNMAPPED == P4.0 unmapped）
 n_unmapped = sum(1 for v in p43s.values() if v["cross_layer_state"] == "UNMAPPED")
-g4 = (p40["mapping"]["n_mapped_stocks"] == 337 and p41["summary"]["n_mapped"] == 337 and n_unmapped == 13)
+g4 = (p40["mapping"]["n_mapped_stocks"] == p41["summary"]["n_mapped"] and n_unmapped == UNMAPPED)
 
-# G5 linkage→state
+# G5 linkage→state（按 P4.3 状态机语义：CONFIRMED_BULLISH 方向一致 →
+#   div<0.5 为 CONFIRMED / div≥0.5 降级 CONFIRMING；STOCK_THEME_DIVERGENCE → DIVERGING/REVERSING）
 cb = [v for v in p43s.values() if v["linkage_signal"] == "CONFIRMED_BULLISH"]
 std = [v for v in p43s.values() if v["linkage_signal"] == "STOCK_THEME_DIVERGENCE"]
-g5 = (all(v["cross_layer_state"] == "CONFIRMED" for v in cb) and len(cb) == 14
-      and all(v["cross_layer_state"] in ("DIVERGING", "REVERSING") for v in std) and len(std) == 54)
-
-# G6 主题个股反向跨层一致（54 只 DIVERGENCE linkage 全落入 DIVERGING/REVERSING；P4.2 mismatch 同 54）
-tsd_42 = sum(1 for v in p42s.values() if v["theme_stock_divergence"] == 1.0)
-g6 = (len(std) == 54 == tsd_42
+g5 = (all(v["cross_layer_state"] in ("CONFIRMED", "CONFIRMING") for v in cb)
       and all(v["cross_layer_state"] in ("DIVERGING", "REVERSING") for v in std))
 
-# G7 事件全量
+# G6 主题个股反向跨层一致（动态：P4.1 DIVERGENCE 数 == P4.2 mismatch 数）
+tsd_42 = sum(1 for v in p42s.values() if v["theme_stock_divergence"] == 1.0)
+g6 = (len(std) == tsd_42
+      and all(v["cross_layer_state"] in ("DIVERGING", "REVERSING") for v in std))
+
+# G7 事件全量（动态 == P3.0 eligible）
 n_flow = sum(len(fl) for fl in json.loads((ROOT / "data" / "p32" / "analyst_action_flow.json").read_text(encoding="utf-8"))["per_analyst_stock_flow"].values())
-g7 = n_flow == 934
+g7 = n_flow == P30_ELIGIBLE
 
 # G8 子 benchmark
 sub_results = {}
@@ -127,12 +141,12 @@ for k, b in SUB_BENCH.items():
     sub_results[k] = rr.returncode
 g8 = all(v == 0 for v in sub_results.values())
 
-# G9 excluded
+# G9 excluded（动态 == P3.0 excluded）
 n_excl = c.execute("SELECT COUNT(*) FROM consensus_event_exclusions").fetchone()[0]
-g9 = n_excl == 3
+g9 = n_excl == P30_EXCLUDED
 
 # G10 state 分布无漂移（与 P4.3 summary 一致）
-g10 = (p43["summary"]["n_stocks"] == 350
+g10 = (p43["summary"]["n_stocks"] == E_STOCKS
        and p43["summary"]["state_distribution"]["CONFIRMED"] == sum(1 for v in p43s.values() if v["cross_layer_state"] == "CONFIRMED"))
 
 gates = {"G1": g1, "G2": g2, "G3": g3, "G4": g4, "G5": g5, "G6": g6, "G7": g7, "G8": g8, "G9": g9, "G10": g10}
@@ -142,8 +156,8 @@ overall = "GO" if n_pass == len(gates) else "NO-GO"
 # ---------- 审计 ----------
 confirmed = [v for v in p43s.values() if v["cross_layer_state"] == "CONFIRMED"]
 reversing = [v for v in p43s.values() if v["cross_layer_state"] == "REVERSING"]
-a1 = all(v["divergence_score"] < 0.5 for v in confirmed) and len(confirmed) == 19
-a2 = all((v["holding_action_divergence"] == 1.0 or v["view_action_divergence"] == 1.0) for v in reversing) and len(reversing) == 13
+a1 = all(v["divergence_score"] < 0.5 for v in confirmed)
+a2 = all((v["holding_action_divergence"] == 1.0 or v["view_action_divergence"] == 1.0) for v in reversing)
 state_dist = p43["summary"]["state_distribution"]
 a3_note = f"分布 {json.dumps(state_dist, ensure_ascii=False)}：CONFIRMED+DIVERGING+REVERSING 共 {sum(state_dist.get(k,0) for k in ['CONFIRMED','DIVERGING','REVERSING'])}（有信号占比合理），NEUTRAL {state_dist.get('NEUTRAL',0)}（无信号/弱信号池）"
 audits = {"A1": a1, "A2": a2, "A3_note": a3_note}
@@ -159,34 +173,34 @@ lines.append("| --- | --- | --- |")
 det = {
     "G1": f"全链路重跑 hash 一致（4 输出，rerun {json.dumps(rerun)}）",
     "G2": f"原始层未改：source_snapshots {src_rows_before} 行 + 快照 hash 不变",
-    "G3": "分母 350 = 350 = 350 = 350（P4.0/P4.1/P4.2/P4.3）",
-    "G4": f"映射 337 = 337，UNMAPPED {n_unmapped}",
+    "G3": f"分母 {E_STOCKS} = {E_STOCKS} = {E_STOCKS} = {E_STOCKS}（P4.0/P4.1/P4.2/P4.3，动态）",
+    "G4": f"映射 {MAPPED} = {MAPPED}，UNMAPPED {n_unmapped}/{UNMAPPED}（动态）",
     "G5": f"CONFIRMED_BULLISH {len(cb)} 全→CONFIRMED；STOCK_THEME_DIVERGENCE {len(std)} 全→DIVERGING/REVERSING",
-    "G6": f"DIVERGENCE linkage {len(std)} = P4.2 theme_stock_mismatch {tsd_42}（54），全落入 DIVERGING/REVERSING",
-    "G7": f"动作流事件 {n_flow}/934",
+    "G6": f"DIVERGENCE linkage {len(std)} == P4.2 theme_stock_mismatch {tsd_42}（动态），全落入 DIVERGING/REVERSING",
+    "G7": f"动作流事件 {n_flow}/{P30_ELIGIBLE}（== P3.0 eligible）",
     "G8": f"子 benchmark P4.1/P4.2/P4.3 exit = {sub_results.get('p41')}/{sub_results.get('p42')}/{sub_results.get('p43')}",
-    "G9": f"excluded {n_excl} 条隔离",
+    "G9": f"excluded {n_excl}/{P30_EXCLUDED} 条隔离",
     "G10": "state 分布无漂移",
 }
 for k, v in gates.items():
     lines.append(f"| {k} | {'✅' if v else '❌'} | {det[k]} |")
 lines.append("")
 lines.append("## Phase 4 分层总结")
-lines.append(f"- **Cross-Layer Readiness (P4.0)**: GO — 337/350 可连接；每股 distinct 主题 {{1:99, 2:131, 3:107}}（Top3 治理）；canonical 缺 TECH_GENERAL/NEW_ENERGY_ELECTROLYTE")
+lines.append(f"- **Cross-Layer Readiness (P4.0)**: GO — {MAPPED}/{E_STOCKS} 可连接；每股 distinct 主题 {json.dumps(p40['cross_layer_joinability']['n_themes_distribution'], ensure_ascii=False)}；canonical 缺 {json.dumps(p40['mapping']['missing_canonical_L2'], ensure_ascii=False)}")
 lines.append(f"- **Stock×Theme Linkage (P4.1)**: GO — 三维信号 S/T/A → 联动标签；{json.dumps(p41['summary']['linkage_distribution'], ensure_ascii=False)}")
 lines.append(f"- **Consensus/Divergence (P4.2)**: GO — 5 维分歧量化；高分歧 {p42['summary']['n_high_divergence(>=0.5)']} / 持仓转负 {p42['summary']['n_holding_turning_negative']}")
 lines.append(f"- **Cross-Layer State (P4.3)**: GO — 6 状态机；{json.dumps(p43['summary']['state_distribution'], ensure_ascii=False)}")
 lines.append("")
 lines.append("## 业务审计")
-lines.append(f"- **A1 CONFIRMED 可解释**: {'✅' if a1 else '❌'} 19 只全为三维共振低分歧")
-lines.append(f"- **A2 REVERSING 可解释**: {'✅' if a2 else '❌'} 13 只全为持仓转负/观点异号转折")
+lines.append(f"- **A1 CONFIRMED 可解释**: {'✅' if a1 else '❌'} {len(confirmed)} 只全为三维共振低分歧")
+lines.append(f"- **A2 REVERSING 可解释**: {'✅' if a2 else '❌'} {len(reversing)} 只全为持仓转负/观点异号转折")
 lines.append(f"- **A3 状态分布合理性**: {a3_note}")
 lines.append("")
 lines.append("**Phase 4 Overall = `%s`**" % overall)
 
 REPORT_MD.write_text("\n".join(lines), encoding="utf-8")
 report_json = {
-    "generated_at": "P4.4 v1",
+    "generated_at": "P4.4 v2",
     "overall": overall,
     "gates": {k: bool(v) for k, v in gates.items()},
     "gates_passed": n_pass,
@@ -194,7 +208,7 @@ report_json = {
     "rerun_exit": rerun,
     "sub_benchmark_exit": sub_results,
     "layer_summary": {
-        "readiness_p40": {"n_mapped": 337, "n_unmapped": 13},
+        "readiness_p40": {"n_mapped": MAPPED, "n_unmapped": UNMAPPED, "n_eligible": E_STOCKS},
         "linkage_p41": p41["summary"]["linkage_distribution"],
         "divergence_p42": {"high_div": p42["summary"]["n_high_divergence(>=0.5)"], "holding_turning_neg": p42["summary"]["n_holding_turning_negative"]},
         "state_p43": p43["summary"]["state_distribution"],

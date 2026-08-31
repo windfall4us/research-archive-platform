@@ -6,11 +6,14 @@ benchmark_analyst_action_flow_p32.py — P3.2 Gate 检查
 G1 DO_T 不当净买入（DO_T 事件进净买入 = 0）
 G2 WATCH ≠ BUY（WATCH 事件进净买入 = 0）
 G3 HOLD ≠ 新建仓（HOLD 事件进净买入 = 0）
-G4 净买入一致性（= P3.1 positive_events = 205）
+G4 净买入一致性（== P3.1 positive_events_observed，动态跨层）
 G5 excluded 3 治理事件泄漏 = 0
-G6 动作流事件全量使用（934）
+G6 动作流事件全量使用（== P3.1 eligible_events_used，动态跨层）
 G7 Stage 映射完整（无未映射 action_type 落入 UNKNOWN）
 G8 幂等（重跑输出 hash 一致）
+
+注：G4/G6 验证「跨层一致」而非固定绝对值（用户 08-31 裁决：
+验关系而非固定值；冻结期报告保持 immutable）。数据滚动累积不误判。
 
 退出码：0=GO / 1=NO-GO
 """
@@ -40,6 +43,10 @@ d = json.loads(JSON_OUT.read_text(encoding="utf-8"))
 g = d["governance"]
 p31 = json.loads(P31.read_text(encoding="utf-8"))
 
+# 动态基准值（来源：P3.1 上游 governance）
+P31_POSITIVE = p31["governance"]["positive_events_observed"]
+P31_ELIGIBLE = p31["governance"]["eligible_events_used"]
+
 # 检查 stage 映射完整性：flow 里不能有 UNKNOWN stage（除了 UNKNOWN action 本身）
 unknown_stage_events = 0
 unknown_action_events = 0
@@ -54,9 +61,9 @@ gates = {
     "G1": g["do_t_events_in_net_buy"] == 0,
     "G2": g["watch_events_in_net_buy"] == 0,
     "G3": g["hold_events_in_net_buy"] == 0,
-    "G4": g["net_buy_events"] == p31["governance"]["positive_events_observed"] == 205,
+    "G4": g["net_buy_events"] == P31_POSITIVE,  # 动态跨层：净买入 == P3.1 positive
     "G5": True,  # 查询层已排除（脚本用 NOT IN exclusions）
-    "G6": sum(len(v) for v in d["per_analyst_stock_flow"].values()) == 934,
+    "G6": sum(len(v) for v in d["per_analyst_stock_flow"].values()) == P31_ELIGIBLE,  # 动态跨层：动作流 == P3.1 eligible
     "G7": unknown_stage_events == 0,
     "G8": g8,
 }
@@ -75,9 +82,9 @@ details = {
     "G1": f"DO_T 进净买入={g['do_t_events_in_net_buy']}（应 0）",
     "G2": f"WATCH 进净买入={g['watch_events_in_net_buy']}（应 0）",
     "G3": f"HOLD 进净买入={g['hold_events_in_net_buy']}（应 0）",
-    "G4": f"净买入 {g['net_buy_events']} == P3.1 positive {p31['governance']['positive_events_observed']}（205）",
+    "G4": f"净买入 {g['net_buy_events']} == P3.1 positive {P31_POSITIVE}",
     "G5": "查询层 NOT IN exclusions（3 治理事件不进动作流）",
-    "G6": f"动作流事件 {sum(len(v) for v in d['per_analyst_stock_flow'].values())}/934（应 934）",
+    "G6": f"动作流事件 {sum(len(v) for v in d['per_analyst_stock_flow'].values())} == P3.1 eligible {P31_ELIGIBLE}",
     "G7": f"未映射 stage 事件={unknown_stage_events}（应 0；UNKNOWN action 自身 {unknown_action_events} 条除外）",
     "G8": f"幂等：重跑前后 hash {'一致' if g8 else '不一致'}",
 }

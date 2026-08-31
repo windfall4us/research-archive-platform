@@ -7,20 +7,23 @@ benchmark_phase3_p34.py — P3.4 Phase 3 总 Benchmark
 验证：可重建 / 幂等 / 跨层一致性 / 语义契约保持 / 原始层未改
 
 硬 Gate（10）：
-  G1  事件全量跨层一致：P3.1(934) == P3.2(934) == P3.3(934)
-  G2  净买入跨层一致：P3.1 positive(205) == P3.2 net_buy(205) == P3.3 pos 事件数
-  G3  净卖出跨层一致：P3.1 negative(149) == P3.2 net_sell(149)
-  G4  分层一致：P3.0 S1(56) == P3.3 STRONG(56)
-  G5  分母一致：P3.0 350 == P3.1 350 == P3.3 350
+  G1  事件全量跨层一致：P3.1(eligible) == P3.2(flow) == P3.3(事件)
+  G2  净买入跨层一致：P3.1 positive == P3.2 net_buy == P3.3 pos 事件数
+  G3  净卖出跨层一致：P3.1 negative == P3.2 net_sell
+  G4  分层一致：P3.0 S1(动态) == P3.3 STRONG
+  G5  分母一致：P3.0 n_stocks(动态) == P3.1 == P3.3
   G6  覆盖完整：P3.1/P3.3 每股都有条目，无漏
   G7  语义契约跨层保持：DO_T/WATCH/HOLD 进净买入 = 0（P3.2）
   G8  全链路重跑后关键输出 hash 与基线一致（幂等）
   G9  原始事实层未改：source_snapshots 行数 + 原始快照 hash 不变
   G10 上游权威 benchmark 全 GO（P3.1/P3.2/P3.3 子 benchmark exit=0）
 
+注：G1-G6 全部验证「跨层一致」而非固定绝对值（用户 08-31 裁决：
+验关系而非固定值；冻结期报告保持 immutable）。数据滚动累积不误判。
+
 业务审计（3）：
-  A1  Top 正共识（STRONG_POSITIVE 9 只）可解释：有明确正动作 + 持仓/多分析师
-  A2  Top 负共识（NEGATIVE）可解释
+  A1  Top 正共识（STRONG_POSITIVE）可解释：有明确正动作 + 持仓/多分析师
+  A2  Top 负共识（NEGATIVE）可解释：negative_weighted 达到阈值
   A3  无 STRONG_NEGATIVE 边界：数据最负 action_net 未达 -2.0（分析师群体偏多）
 
 报告：reports/phase3_benchmark_p34.md + .json
@@ -88,17 +91,31 @@ p31 = json.loads(P31_JSON.read_text(encoding="utf-8"))
 p32 = json.loads(P32_JSON.read_text(encoding="utf-8"))
 p33 = json.loads(P33_JSON.read_text(encoding="utf-8"))
 
+# 动态基准值（来源：P3.0 readiness 只读盘点）
+E_ELIGIBLE = p30["events"]["eligible"]
+E_STOCKS = p30["events"]["n_stocks"]
+E_ANALYSTS = p30["events"]["n_analysts"]
+E_DATES = p30["events"]["n_dates"]
+P_TOTAL = p30["positions"]["total"]
+P_STOCKS = p30["positions"]["n_stocks"]
+P_S1 = len([x for x in p30["per_stock"].values() if x["n_positions"] > 0 and x["n_event_dates"] >= 3])
+
 # ---------- Gate 计算 ----------
-g1 = (p31["governance"]["eligible_events_used"] == 934
-      and sum(len(v) for v in p32["per_analyst_stock_flow"].values()) == 934
-      and sum(v["n_events"] for v in p33["per_stock"].values()) == 934)
-g2 = (p31["governance"]["positive_events_observed"] == 205
-      and p32["governance"]["net_buy_events"] == 205
-      and sum(v["pos_events"] for v in p33["per_stock"].values()) == 205)
-g3 = p31["governance"]["negative_events_observed"] == p32["governance"]["net_sell_events"] == 149
-g4 = sum(1 for v in p33["per_stock"].values() if v["consensus_strength"] == "STRONG") == 56
-g5 = (p30["events"]["n_stocks"] == 350 and p31["n_stocks"] == 350 and p33["summary"]["n_stocks"] == 350)
-g6 = (p31["n_stock_date_cells"] >= 350 and len(p33["per_stock"]) == 350)
+# G1：事件全量跨层一致（动态）
+g1 = (p31["governance"]["eligible_events_used"] == E_ELIGIBLE
+      and sum(len(v) for v in p32["per_analyst_stock_flow"].values()) == E_ELIGIBLE
+      and sum(v["n_events"] for v in p33["per_stock"].values()) == E_ELIGIBLE)
+# G2：净买入跨层一致（动态）
+g2 = (p31["governance"]["positive_events_observed"] == p32["governance"]["net_buy_events"]
+      and sum(v["pos_events"] for v in p33["per_stock"].values()) == p32["governance"]["net_buy_events"])
+# G3：净卖出跨层一致（动态）
+g3 = p31["governance"]["negative_events_observed"] == p32["governance"]["net_sell_events"]
+# G4：分层一致（动态 S1）
+g4 = sum(1 for v in p33["per_stock"].values() if v["consensus_strength"] == "STRONG") == P_S1
+# G5：分母一致（动态）
+g5 = (p30["events"]["n_stocks"] == p31["n_stocks"] == p33["summary"]["n_stocks"])
+# G6：覆盖完整（动态）
+g6 = (p31["n_stock_date_cells"] >= p30["events"]["n_stocks"] and len(p33["per_stock"]) == p30["events"]["n_stocks"])
 g7 = (p32["governance"]["do_t_events_in_net_buy"] == 0
       and p32["governance"]["watch_events_in_net_buy"] == 0
       and p32["governance"]["hold_events_in_net_buy"] == 0)
@@ -123,11 +140,11 @@ n_pass = sum(gates.values())
 overall = "GO" if n_pass == len(gates) else "NO-GO"
 
 # ---------- 业务审计 ----------
-# A1/A2: 取 STRONG_POSITIVE / NEGATIVE 股票，看是否可解释
+# A1/A2: 取 STRONG_POSITIVE / NEGATIVE 股票，看是否可解释（数量为参考，不做固定值 gate）
 sp = [v for v in p33["per_stock"].values() if v["consensus_state"] == "STRONG_POSITIVE"]
 neg = [v for v in p33["per_stock"].values() if v["consensus_state"] == "NEGATIVE"]
-a1 = all(v["positive_weighted"] >= 1.0 for v in sp) and len(sp) == 9
-a2 = all(v["negative_weighted"] <= -0.5 for v in neg) and len(neg) == 56
+a1 = all(v["positive_weighted"] >= 1.0 for v in sp)
+a2 = all(v["negative_weighted"] <= -0.5 for v in neg)
 a3_explain = f"最负 action_net = {min(v['action_net'] for v in p33['per_stock'].values())}（STRONG_NEGATIVE 需 ≤ -2.0 且 strength∈STRONG/MEDIUM，数据未达 → 无强负共识，分析师群体偏多头）"
 audits = {"A1": a1, "A2": a2, "A3": a3_explain}
 
@@ -140,11 +157,11 @@ lines.append("")
 lines.append("| Gate | 判定 | 关键值 |")
 lines.append("| --- | --- | --- |")
 det = {
-    "G1": f"事件全量 934 = 934 = 934（P3.1/P3.2/P3.3）",
-    "G2": f"净买入 205 = 205 = 205（P3.1 positive / P3.2 net_buy / P3.3 pos）",
-    "G3": f"净卖出 149 = 149（P3.1 negative / P3.2 net_sell）",
-    "G4": f"STRONG 56 == P3.0 S1 56",
-    "G5": f"分母 350 = 350 = 350（P3.0/P3.1/P3.3）",
+    "G1": f"事件全量 {E_ELIGIBLE} = {E_ELIGIBLE} = {E_ELIGIBLE}（P3.1/P3.2/P3.3，动态跨层）",
+    "G2": f"净买入 {p31['governance']['positive_events_observed']} = {p32['governance']['net_buy_events']} = {sum(v['pos_events'] for v in p33['per_stock'].values())}（P3.1/P3.2/P3.3）",
+    "G3": f"净卖出 {p31['governance']['negative_events_observed']} = {p32['governance']['net_sell_events']}（P3.1/P3.2）",
+    "G4": f"STRONG {sum(1 for v in p33['per_stock'].values() if v['consensus_strength']=='STRONG')} == P3.0 S1 {P_S1}（动态）",
+    "G5": f"分母 {E_STOCKS} = {E_STOCKS} = {E_STOCKS}（P3.0/P3.1/P3.3，动态）",
     "G6": f"覆盖完整：P3.1 cell {p31['n_stock_date_cells']} / P3.3 股票 {p33['summary']['n_stocks']}",
     "G7": f"DO_T/WATCH/HOLD 进净买入 = 0/0/0",
     "G8": f"全链路重跑 hash 一致（4 输出）",
@@ -156,10 +173,10 @@ for k, v in gates.items():
 
 lines.append("")
 lines.append("## Phase 3 分层总结")
-lines.append(f"- **Readiness (P3.0)**: GO — 934 eligible events / 350 股 / 10 分析师 / 8 交易日；124 持仓 / 79 股；双证据 79 全重叠")
-lines.append(f"- **Factors (P3.1)**: GO — 四类事实 716 cell；正 205 / 负 149；DO_T/WATCH/HOLD 隔离")
-lines.append(f"- **Action Flow (P3.2)**: GO — 474 分析师×股票对；stage 生命周期 SCAN→ENTRY→ACCUMULATE→HOLD→REDUCE→EXIT→TACTICAL")
-lines.append(f"- **Score/State (P3.3)**: GO — 350 只；{json.dumps(p33['summary']['state_distribution'], ensure_ascii=False)}")
+lines.append(f"- **Readiness (P3.0)**: GO — {E_ELIGIBLE} eligible events / {E_STOCKS} 股 / {E_ANALYSTS} 分析师 / {E_DATES} 交易日；{P_TOTAL} 持仓 / {P_STOCKS} 股；双证据 {p30['coverage']['n_both']} 全重叠")
+lines.append(f"- **Factors (P3.1)**: GO — 四类事实 {p31['n_stock_date_cells']} cell；正 {p31['governance']['positive_events_observed']} / 负 {p31['governance']['negative_events_observed']}；DO_T/WATCH/HOLD 隔离")
+lines.append(f"- **Action Flow (P3.2)**: GO — {p32['flow_summary']['n_analyst_stock_pairs']} 分析师×股票对；stage 生命周期 SCAN→ENTRY→ACCUMULATE→HOLD→REDUCE→EXIT→TACTICAL")
+lines.append(f"- **Score/State (P3.3)**: GO — {p33['summary']['n_stocks']} 只；{json.dumps(p33['summary']['state_distribution'], ensure_ascii=False)}")
 lines.append("")
 lines.append("## 业务审计")
 lines.append(f"- **A1 Top 正共识可解释**: {'✅' if a1 else '❌'} STRONG_POSITIVE {len(sp)} 只，全部 positive_weighted ≥ 1.0")
@@ -170,7 +187,7 @@ lines.append("**Phase 3 Overall = `%s`**" % overall)
 
 REPORT_MD.write_text("\n".join(lines), encoding="utf-8")
 report_json = {
-    "generated_at": "P3.4 v1",
+    "generated_at": "P3.4 v2",
     "overall": overall,
     "gates": {k: bool(v) for k, v in gates.items()},
     "gates_passed": n_pass,
@@ -178,8 +195,8 @@ report_json = {
     "rerun_exit": rerun,
     "sub_benchmark_exit": sub_results,
     "layer_summary": {
-        "readiness_p30": {"eligible_events": 934, "stocks": 350, "analysts": 10, "dates": 8, "positions": 124, "dual_evidence": 79},
-        "factors_p31": {"cells": p31["n_stock_date_cells"], "positive": 205, "negative": 149},
+        "readiness_p30": {"eligible_events": E_ELIGIBLE, "stocks": E_STOCKS, "analysts": E_ANALYSTS, "dates": E_DATES, "positions": P_TOTAL, "dual_evidence": p30["coverage"]["n_both"]},
+        "factors_p31": {"cells": p31["n_stock_date_cells"], "positive": p31["governance"]["positive_events_observed"], "negative": p31["governance"]["negative_events_observed"]},
         "action_flow_p32": {"pairs": p32["flow_summary"]["n_analyst_stock_pairs"]},
         "score_p33": {"stocks": p33["summary"]["n_stocks"], "state_dist": p33["summary"]["state_distribution"]},
     },

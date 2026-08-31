@@ -28,6 +28,7 @@ JSON_OUT = ROOT / "data" / "p42" / "consensus_divergence.json"
 SCRIPT = ROOT / "scripts" / "consensus_divergence_p42.py"
 P33 = ROOT / "data" / "p33" / "stock_consensus_score.json"
 P41 = ROOT / "data" / "p41" / "stock_theme_linkage.json"
+P30 = ROOT / "data" / "p30" / "stock_consensus_readiness.json"
 
 ACTION_W = {"BUY": 1.0, "ADD": 0.8, "LOW_BUY": 0.7, "TRIAL": 0.4,
             "REDUCE": -0.5, "SELL": -0.8, "CLEAR": -1.0}
@@ -45,8 +46,10 @@ d = json.loads(JSON_OUT.read_text(encoding="utf-8"))
 s = d["per_stock"]
 p33 = json.loads(P33.read_text(encoding="utf-8"))["per_stock"]
 p41 = json.loads(P41.read_text(encoding="utf-8"))["per_stock"]
+p30 = json.loads(P30.read_text(encoding="utf-8"))
 
-g1 = len(s) == 350
+# G1：覆盖 == P3.3 覆盖（动态跨层，防滚动累积误判）
+g1 = len(s) == len(p33)
 
 # G2
 g2 = all(abs(v["divergence_score"] - (v["analyst_divergence"] + v["theme_stock_divergence"] +
@@ -108,7 +111,7 @@ for code, v in s.items():
 
 # G9
 n_excl = c.execute("SELECT COUNT(*) FROM consensus_event_exclusions").fetchone()[0]
-g9 = n_excl == 3
+g9 = n_excl == p30["events"]["excluded"]  # 动态：治理事件数 == P3.0 excluded
 
 gates = {"G1": g1, "G2": g2, "G3": g3, "G4": g4, "G5": g5, "G6": g6, "G7": g7, "G8": g8, "G9": g9}
 n_pass = sum(gates.values())
@@ -122,7 +125,7 @@ lines.append("")
 lines.append("| Gate | 判定 | 说明 |")
 lines.append("| --- | --- | --- |")
 details = {
-    "G1": f"覆盖 {len(s)}/350",
+    "G1": f"覆盖 {len(s)}/{len(p33)}（== P3.3，动态跨层）",
     "G2": "divergence_score = 4 维均分（容差 0.001）",
     "G3": "consensus_strength 公式复算一致",
     "G4": "analyst_divergence 复算一致",
